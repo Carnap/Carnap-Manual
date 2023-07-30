@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Carnap Manual - References</title>
+<title>The Carnap Manual - 9&nbsp; Countermodels</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,7 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./server-configuration.html" rel="prev">
+<link href="./gentzen-ND.html" rel="next">
+<link href="./translation.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -99,7 +81,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./derivations.html">Exercises</a></li><li class="breadcrumb-item"><a href="./modelchecker.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Countermodels</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -179,13 +161,13 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
  <span class="menu-text">Exercises</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./derivations.html" class="sidebar-item-text sidebar-link">
@@ -206,7 +188,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modelchecker.html" class="sidebar-item-text sidebar-link">
+  <a href="./modelchecker.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Countermodels</span></span></a>
   </div>
 </li>
@@ -356,7 +338,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -366,14 +348,23 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#simple-countermodels" id="toc-simple-countermodels" class="nav-link active" data-scroll-target="#simple-countermodels"><span class="header-section-number">9.1</span> Simple Countermodels</a></li>
+  <li><a href="#validity-countermodels" id="toc-validity-countermodels" class="nav-link" data-scroll-target="#validity-countermodels"><span class="header-section-number">9.2</span> Validity Countermodels</a></li>
+  <li><a href="#constraint-countermodels" id="toc-constraint-countermodels" class="nav-link" data-scroll-target="#constraint-countermodels"><span class="header-section-number">9.3</span> Constraint Countermodels</a></li>
+  <li><a href="#advanced-usage" id="toc-advanced-usage" class="nav-link" data-scroll-target="#advanced-usage"><span class="header-section-number">9.4</span> Advanced Usage</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Countermodels</span></h1>
 </div>
 
 
@@ -388,11 +379,147 @@ div.csl-indent {
 
 </header>
 
-<div id="refs" role="list" style="display: none">
+<p>The <code>CounterModeler</code> class indicates that a code block will contain countermodel construction exercises.</p>
+<section id="simple-countermodels" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="simple-countermodels"><span class="header-section-number">9.1</span> Simple Countermodels</h2>
+<p>You can create simple countermodel problems, checking to see if one or more formulas are true in a constructed model like this:</p>
+<pre><code>```{.CounterModeler .Simple}
+1.1 AxF(x), ExG(x)
+```</code></pre>
+<p>The result will be:</p>
+<pre class="CounterModeler Simple"><code>1.1 AxF(x), ExG(x)</code></pre>
+<p>Here is an example with some more interesting vocabulary:</p>
+<pre><code>```{.CounterModeler .Simple}
+1.2 AxAy(f(x,y) = f(y,x))
+```</code></pre>
+<p>Producing:</p>
+<pre class="CounterModeler Simple"><code>1.2 AxAy(f(x,y) = f(y,x))</code></pre>
+<p>The domain of the model must consist of one or more natural numbers. The tuples making up the extensions of predicate and relation symbols are comma-separated and enclosed in brackets, parentheses, or <code>&lt;&gt;</code> pairs, like this: <code>[0,0]</code> or this <code>&lt;1,1&gt;</code>. The tuples themselves should be separated by commas, like this: <code>[0,0],[1,0]</code>.</p>
+<p>The extension of each constant must be a natural number. The extension of a given function symbol will be a comma-separated list of tuples as above but with the arguments separated from the value by a semicolon, thus: <code>[0,0;1]</code>.</p>
+<p>Formulas containing free variables are treated as equivalent to their universal closures.</p>
+</section>
+<section id="validity-countermodels" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="validity-countermodels"><span class="header-section-number">9.2</span> Validity Countermodels</h2>
+<p>You can create a countermodel problem for showing invalidity like this:</p>
+<pre><code>```{.CounterModeler .Validity}
+1.3 AxEyF(x,y) :|-: ExAyF(y,x)
+```</code></pre>
+<p>Creating:</p>
+<pre class="CounterModeler Validity"><code>1.3 AxEyF(x,y) :|-: ExAyF(y,x)</code></pre>
+<p>Validity countermodel problems can include comma-separated lists of formulas to both the left and <em>right</em> of the turnstile. A countermodel is successful if it makes all the formulas to the left of the turnstile true and all the formulas to the right of the turnstile false.</p>
+</section>
+<section id="constraint-countermodels" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="constraint-countermodels"><span class="header-section-number">9.3</span> Constraint Countermodels</h2>
+<p>You can create a countermodel with some implicit constraints on the allowable models like this:</p>
+<pre><code>```{.CounterModeler .Constraint }
+1.4 ExEy(not x = y) : AxAyF(x,y)
+```</code></pre>
+<p>Resulting in:</p>
+<pre class="CounterModeler Constraint"><code>1.4 ExEy(not x = y) : AxAyF(x,y)</code></pre>
+<p>A countermodel with implicit constraints is successful if it makes all the formulas to the right and the left of the <code>:</code> true.</p>
+</section>
+<section id="advanced-usage" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="advanced-usage"><span class="header-section-number">9.4</span> Advanced Usage</h2>
+<section id="options" class="level4" data-number="9.4.0.1">
+<h4 data-number="9.4.0.1" class="anchored" data-anchor-id="options"><span class="header-section-number">9.4.0.1</span> Options</h4>
+<p>In addition to setting a custom point value or turning off submission by adding <code>points=VALUE</code> and <code>submission="none"</code>, several other options are available for countermodels:</p>
 
+<div class="table">
+
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>nocheck</code></td>
+<td style="text-align: left;">Disables the “check” button</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>exam</code></td>
+<td style="text-align: left;">Allows for submission of work which is incomplete or incorrect</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>strictGivens</code></td>
+<td style="text-align: left;">Makes givens immutable (see below)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>double-turnstile</code></td>
+<td style="text-align: left;">Displays a double turnstile (like so ⊨) rather than the single turnstile</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>negated-double-turnstile</code></td>
+<td style="text-align: left;">Displays a negated double turnstile (like so ⊭) rather than the single turnstile</td>
+</tr>
+</tbody>
+</table>
+</div></section>
+<section id="counterexamples" class="level4" data-number="9.4.0.2">
+<h4 data-number="9.4.0.2" class="anchored" data-anchor-id="counterexamples"><span class="header-section-number">9.4.0.2</span> Counterexamples</h4>
+<p>There are also a number of options that affect what counts as a successful countermodel. these are set using the <code>counterexample-to</code> attribute. The options are:</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Counterexample is</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>validity</code></td>
+<td style="text-align: left;">a situation in which all formulas are false</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>tautology</code></td>
+<td style="text-align: left;">Same as <code>validity</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>equivalence</code></td>
+<td style="text-align: left;">a situation in which two formulas have different truth values</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>inconsistency</code></td>
+<td style="text-align: left;">a situation in which all formulas are true</td>
+</tr>
+</tbody>
+</table>
 </div>
+<p>In the case of simple countermodels, these apply to all formulas. In the case of validity countermodels, a successful countermodel is a situation in which the formulas to the left of the turnstile are all true, and the ones to the right of the turnstile have the counterexample property. Similarly in the case of a constraint countermodel problem—all the constraints must be true, and the other formulas must have the counterexample property.</p>
+</section>
+<section id="systems" class="level4" data-number="9.4.0.3">
+<h4 data-number="9.4.0.3" class="anchored" data-anchor-id="systems"><span class="header-section-number">9.4.0.3</span> Systems</h4>
+<p>The way that formulas are parsed and displayed can also be customized. This is done by setting the <code>system</code> attribute to indicate which formal system you are drawing your syntax from. So for example,</p>
+<pre><code>~~~{.CounterModeler .Simple  system="LogicBookPD"}
+1.5 (Ax)(Ax-&gt;Bx)
+~~~</code></pre>
+<p>will generate:</p>
+<pre class="CounterModeler Simple" data-options="exam" data-system="LogicBookPD"><code>1.5 (Ax)(Ax-&gt;Bx)</code></pre>
+<p>The available systems are <code>firstOrder</code> <code>montagueQC</code> <code>magnusQL</code> <code>thomasBolducAndZachFOL</code> <code>thomasBolducAndZachFOL2019</code> <code>thomasBolducAndZachFOLPlus</code> <code>LogicBookPD</code> <code>LogicBookPDPlus</code> <code>hausmanPL</code> <code>howardSnyderPL</code> <code>ichikawaJenkinsQL</code> <code>hardegreePL</code> <code>goldfarbAltND</code> <code>goldfarbNDPlus</code> and <code>goldfarbAltNDPlus</code>.</p>
+</section>
+<section id="givens" class="level4" data-number="9.4.0.4">
+<h4 data-number="9.4.0.4" class="anchored" data-anchor-id="givens"><span class="header-section-number">9.4.0.4</span> Givens</h4>
+<p>It is also possible to give a “partial solution” to a countermodeling problem, in which the model is partly filled in, and the student needs either to complete it or correct it. To pre-populate models with “givens” in this way, write each field you want filled in, preceded by the bar character <code>|</code> and followed by a colon and what you want it filled in with, like this:</p>
+<pre><code>```{.CounterModeler .Simple}
+1.1 AxF(x), ExG(x)
+| Domain : 0,1,2
+| F(_) : 1,2
+| a : 1
+```</code></pre>
+<p>Which will produce:</p>
+<pre class="CounterModeler Simple"><code>1.1 AxF(x), ExG(x), H(a)
+| Domain : 0,1,2
+| F(_) : 1,2
+| a : 1</code></pre>
+<p>The field-names for the givens should match how the field-names would be displayed in the exercise.</p>
+<p>Ordinarily, givens function as hints. However, you can make it impossible for students to change them (thereby turning them into requirements) by adding the <code>strictGivens</code> option to your problem. Use this, for instance, to require students to use a specific domain, or to prevent them from making universal sentences vacuously true.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -630,11 +757,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./server-configuration.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Configuring Carnap</span></span>
+      <a href="./translation.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Translations</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./gentzen-ND.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Gentzen-Prawitz Natural Deduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

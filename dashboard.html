@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Carnap Manual - References</title>
+<title>The Carnap Manual - 3&nbsp; Carnap’s Course Management Dashboard</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,7 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./server-configuration.html" rel="prev">
+<link href="./pandoc.html" rel="next">
+<link href="./faq.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -99,7 +81,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./quickstart.html">Getting Started</a></li><li class="breadcrumb-item"><a href="./dashboard.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Carnap's Course Management Dashboard</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -138,13 +120,13 @@ div.csl-indent {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
  <span class="menu-text">Getting Started</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./quickstart.html" class="sidebar-item-text sidebar-link">
@@ -159,7 +141,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dashboard.html" class="sidebar-item-text sidebar-link">
+  <a href="./dashboard.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Carnap’s Course Management Dashboard</span></span></a>
   </div>
 </li>
@@ -356,7 +338,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -366,14 +348,34 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-assignment-card" id="toc-the-assignment-card" class="nav-link active" data-scroll-target="#the-assignment-card"><span class="header-section-number">3.1</span> The Assignment Card</a>
+  <ul class="collapse">
+  <li><a href="#manage-courses" id="toc-manage-courses" class="nav-link" data-scroll-target="#manage-courses"><span class="header-section-number">3.1.1</span> Manage Courses</a></li>
+  <li><a href="#assign-textbook-problems" id="toc-assign-textbook-problems" class="nav-link" data-scroll-target="#assign-textbook-problems"><span class="header-section-number">3.1.2</span> Assign Textbook Problems</a></li>
+  <li><a href="#assign-uploaded-documents" id="toc-assign-uploaded-documents" class="nav-link" data-scroll-target="#assign-uploaded-documents"><span class="header-section-number">3.1.3</span> Assign Uploaded Documents</a></li>
+  <li><a href="#manage-uploaded-documents" id="toc-manage-uploaded-documents" class="nav-link" data-scroll-target="#manage-uploaded-documents"><span class="header-section-number">3.1.4</span> Manage Uploaded Documents</a></li>
+  </ul></li>
+  <li><a href="#the-course-card" id="toc-the-course-card" class="nav-link" data-scroll-target="#the-course-card"><span class="header-section-number">3.2</span> The Course Card</a>
+  <ul class="collapse">
+  <li><a href="#course-information" id="toc-course-information" class="nav-link" data-scroll-target="#course-information"><span class="header-section-number">3.2.1</span> Course Information</a></li>
+  <li><a href="#actions-on-students" id="toc-actions-on-students" class="nav-link" data-scroll-target="#actions-on-students"><span class="header-section-number">3.2.2</span> Actions on Students</a></li>
+  <li><a href="#adding-a-co-instructor" id="toc-adding-a-co-instructor" class="nav-link" data-scroll-target="#adding-a-co-instructor"><span class="header-section-number">3.2.3</span> Adding A Co-Instructor</a></li>
+  <li><a href="#exporting-grades" id="toc-exporting-grades" class="nav-link" data-scroll-target="#exporting-grades"><span class="header-section-number">3.2.4</span> Exporting Grades</a></li>
+  <li><a href="#deleting-a-course" id="toc-deleting-a-course" class="nav-link" data-scroll-target="#deleting-a-course"><span class="header-section-number">3.2.5</span> Deleting a Course</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Carnap’s Course Management Dashboard</span></h1>
 </div>
 
 
@@ -388,11 +390,152 @@ div.csl-indent {
 
 </header>
 
-<div id="refs" role="list" style="display: none">
-
+<p>This document gives a short description of the Carnap server’s course-management dashboard.</p>
+<p>The course management dashboard will be available once you have</p>
+<ol type="1">
+<li><p><em>Created a user account</em>.</p>
+<p>To do this, just click the <a href="./auth/login">login link</a> located in the upper right hand corner of most Carnap pages.</p></li>
+<li><p><em>Upgraded your account status to “instructor”</em>.</p>
+<p>To do this, email Graham Leach-Krouse at <a href="mailto:gleachkr@ksu.edu">gleachkr@ksu.edu</a> using your institutional email address.</p></li>
+</ol>
+<p>Once you are logged in, you’ll then be able to access the course management dashboard by first,</p>
+<ol type="1">
+<li>navigating to your user page, following the link to <em>Instructor Home</em> in the menu linked to your email address in the top right corner of most pages; then</li>
+<li>from your user page, clicking the link at the very top that reads “your instructor page is here”</li>
+</ol>
+<p>You should then see the course management dashboard. The dashboard has two main parts: The <em>course card</em>, where information for your different courses is listed, and the <em>assignment card</em>, where you can assign problem sets from the <a href="./book">Carnap Book</a>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> If this is your first time on the instructor page, your course card is probably empty. So we’ll describe the assignment card first.</p>
+<section id="the-assignment-card" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="the-assignment-card"><span class="header-section-number">3.1</span> The Assignment Card</h2>
+<p>The top of the assignment card looks like this:</p>
+<p><img src="images/assignment-card.png" class="img-fluid"></p>
+<p>There are four main tabs. The first one you want to look at is probably “Manage Courses”.</p>
+<section id="manage-courses" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="manage-courses"><span class="header-section-number">3.1.1</span> Manage Courses</h3>
+<p>Within this tab, you can create a new course, by giving it a title, an optional description, a start-date, a total number of available points for the course, an end-date, and a time-zone. The time zone which is used to determine whether assignments have been received by a given due date and time. The start-date and end-date are used to determine when your course will be listed as an option for enrollment.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/course-create.png"><img src="images/course-create-thumb.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Creating a new course</figcaption>
+</figure>
 </div>
+<p>Once you’ve created a course, during the period between the start date and end date, it will:</p>
+<ol type="1">
+<li>be visible as an enrollment option for people creating new accounts, or for people editing their user information from their user pages;</li>
+<li>become visible to you as a target for assignments in the other tabs; and</li>
+<li>appear as a tab in your course card (see below).</li>
+</ol>
+<p>After the end-date of the course, the course will be archived at the bottom of the manage-courses tab, under the heading “Old Courses”. Once the course is archived, you’ll still be able to edit the course’s properties, download grades as a <code>.csv</code> file, and delete the course. If you need to reactivate an archived course, just set its end-date for some point in the future.</p>
+</section>
+<section id="assign-textbook-problems" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="assign-textbook-problems"><span class="header-section-number">3.1.2</span> Assign Textbook Problems</h3>
+<p>Within this tab, you can assign textbook problem sets from the Carnap book to your courses, setting particular due-dates and due-times. There are currently 17 problem sets available, but more are likely to appear in the future. Once a problem set is assigned to a given course, it will appear on the user-page of everyone enrolled in that course.</p>
+<p>You can also delete assigned problem sets, and replace them with new ones. Deleting an assigned problem set does not delete submitted student work, so first deleting then replacing is a safe way to change the due-date of an assignment.</p>
+<p>By default, submitted problems received on time receive 5 points each, and late submissions receive 2 points each. Both the point amount awarded for a given problem and the treatment of late problems can be customized—details in the documentation for <a href="pandoc.html">pandoc markup</a>.</p>
+<p>I find that leaving open the option to submit even <em>very</em> late work helps students who have fallen behind remain motivated, and gives them some incentive to do extra work that will make the later material easier for them to understand.</p>
+</section>
+<section id="assign-uploaded-documents" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="assign-uploaded-documents"><span class="header-section-number">3.1.3</span> Assign Uploaded Documents</h3>
+<p>Within this tab, you can assign documents created using Carnap’s <a href="pandoc.html">pandoc markup</a>. In order to assign a document, you need to first upload it in the <a href="#manage-uploaded-documents">Manage Uploaded Documents</a> tab.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/assign-doc.png"><img src="images/assign-doc-thumb.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Assigning an uploaded document</figcaption>
+</figure>
+</div>
+<p>Creating an assignment allows you to optionally associate a due-date, visibility range, grade release date, and description with the assignment.</p>
+<p>Once an assignment is assigned to given course, it will appear on the user page of everyone enrolled in the course for the duration of the date and time range of you specify (or indefinitely, if no visibility range is given). It will not be possible for students to make new submissions after the assignment ceases to be visible.</p>
+<p>The due-date affects when student work is counted as late, just like with a problem set. If the due date is omitted, then work can be turned in at any time for full credit. The grade release date determines when grades for the problems in this assignment will be released to students (before the release date, students will see that work has been submitted, but the point value will be listed as “-”). If it is omitted, scores will be released immediately.</p>
+<p>Assignments can also be equipped with access controls. Access controls require setting a password, which students will need to enter before first accessing the assignment. Access-controlled assignments can be hidden from the course. If hidden, they will not appear on the user page, but will still be accessible via their URL. It’s also possible to enter a time-limit for access controlled assignments. The time limit is measured from when the student enters first enters their password. After the limit expires the student will no longer be able to view the exam or submit problems. The time limit is based on a time-stamp of when the student began the exam, so it will expire after the designated period even if the student closes their browser.</p>
+<p>In addition to creating assignments, you can also:</p>
+<ol type="1">
+<li>edit the descriptions and due dates associated with assignments from this tab, by clicking the gear icon <span style="font-family:FontAwesome"></span>;</li>
+<li>review the work submitted in connection with this assignment, by clicking the pencil icon <span style="font-family:FontAwesome"></span>, and assign partial credit, if any of the problems from the assignment have been set to allow for incomplete submissions; and</li>
+<li>delete assignments, by clicking the trashcan icon <span style="font-family:FontAwesome"></span> next to the assignment. Deleting an assignment <em>deletes all student work associated with that assignment</em>, so be careful when doing this.</li>
+</ol>
+<p>Submitted work for assignments is graded in much the same way as work submitted for textbook problem set. Each problem counts, by default, for five points on time or two points if late. Problems assigned a custom point value count for that value if received on time, and otherwise for half that value rounding down. Late point values can be customized by setting the <code>late-credit</code> attribute—for details, see the documentation for <a href="pandoc.html">pandoc markup</a>.</p>
+</section>
+<section id="manage-uploaded-documents" class="level3" data-number="3.1.4">
+<h3 data-number="3.1.4" class="anchored" data-anchor-id="manage-uploaded-documents"><span class="header-section-number">3.1.4</span> Manage Uploaded Documents</h3>
+<p>Within this tab, you can upload and manage your documents.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/upload-doc.png"><img src="images/upload-doc-thumb.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Uploading a document</figcaption>
+</figure>
+</div>
+<p>Documents can be of three kinds:</p>
+<ul>
+<li>Problem sets and other materials created using <a href="pandoc.html">pandoc markup</a>.</li>
+<li>CSS stylesheets for custom styling of your course materials.</li>
+<li>JS scripts for more sophisticated customization of your course materials.</li>
+</ul>
+<p>Uploaded files will be interpreted as problem sets unless they have a filename extension that indicates they are something else, so unless they are called something like <code>custom-stylesheet.css</code> or <code>my-script.js</code> (because of the extensions <code>.css</code> and <code>.js</code>). For more information on how to apply custom styling and behavior, see the “other features” section in the documentation of <a href="pandoc.html">Carnap’s pandoc markup</a>.</p>
+<p>Once documents are uploaded, they can also be assigned to students as problem sets, using the <a href="#assign-uploaded-documents">Assign Uploaded Documents</a> tab.</p>
+<p>When you create a document, you’ll be able to select a “Sharing Scope”. There are four options: Public, Private, Instructors-Only, and Link-Only. The sharing scope affects whether your document can be accessed via the list of shared document that be found at <a href="./shared">carnap.io/shared</a>. Public documents are listed and available to anyone, Instructor-Only documents are only listed and available to instructors, and Private documents are unlisted and only available to you, Link-Only documents are unlisted but available (via link) to anyone. The tags you assign to a document are also used to help organize the document in the shared documents list.</p>
+<p>You can share the the link to the document that appears in your document listing, e.g., via email or your LMS. However, only Public and Link-Only documents will be accessible via this link to your students. Also, you should not use this link to share assignments or tests with your students. Instead, share the link to the <a href="#the-course-card">assignment in the course card</a>.</p>
+<p>The sharing scope doesn’t affect whether you can assign the document to students. When a document is assigned to your class, students can access the assignment associated with the document, regardless of the sharing scope you set when you uploaded it. Note that documents you plan to assign with access controls (e.g., passwords or a time limit) should have their sharing scope set to Instructor-Only or Private, since otherwise they can be viewed without restrictions.</p>
+<p>Again, to edit the attributes of an uploaded document, click the gear icon <span style="font-family:FontAwesome"></span>. You can also delete documents with the trashcan icon <span style="font-family:FontAwesome"></span>, or download them with the cloud icon <span style="font-family:FontAwesome"></span>.</p>
+</section>
+</section>
+<section id="the-course-card" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="the-course-card"><span class="header-section-number">3.2</span> The Course Card</h2>
+<p>Once you’ve created a course, the course card will look a bit like this:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/course-tab.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">The course card</figcaption>
+</figure>
+</div>
+<p>Different courses are available under different tabs.</p>
+<p>At the top (“Assignments”) you will see a list of documents you have assigned to your course, sorted by name or by due date. You can share the link to the assignments given here with your students (e.g., in the LMS). Students have to be logged in to Carnap to be able to access assignments via this link, however.</p>
+<p>Next you see a list of students registered in your course and total scores earned by those students. You can click on each student’s email address to see details of their submitted problems and points earned. See below for the <a href="#actions-on-students">possible actions you can take for students</a> using the bottons on the far right.</p>
+<section id="course-information" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="course-information"><span class="header-section-number">3.2.1</span> Course Information</h3>
+<p>Below the table of students, you’ll see some course information, including the course title, points available, number of students registered, the start and end date for your course, the time zone, the textbook, whether the course is open for enrollment, an enrollment link you can give to students, and any co-instructors. You can update the course description, points available, start and end date, whether the course is open for enrollment, and the course textbook by clicking on “Edit Information”.</p>
+<section id="opening-enrollment-for-your-students" class="level4" data-number="3.2.1.1">
+<h4 data-number="3.2.1.1" class="anchored" data-anchor-id="opening-enrollment-for-your-students"><span class="header-section-number">3.2.1.1</span> Opening Enrollment for Your Students</h4>
+<p>Students who follow the enrollment link will be prompted to register (if they’re not already registered) and automatically enrolled in your course. A short video explaining the process for students is available here: <a href="https://youtu.be/lmkWcxqxEZk">youtu.be/lmkWcxqxEZk</a>. Feel free to send your students this link along with the enrollment link.</p>
+</section>
+<section id="choosing-a-custom-textbook" class="level4" data-number="3.2.1.2">
+<h4 data-number="3.2.1.2" class="anchored" data-anchor-id="choosing-a-custom-textbook"><span class="header-section-number">3.2.1.2</span> Choosing a Custom Textbook</h4>
+<p>You can also select a custom textbook for your course. A custom textbook is a Carnap document that students will be directed to when they click the “Book” link at the top of most pages (this overrides the ordinary behavior of directing students to the built-in Carnap textbook). The linked document would ordinarily function as a table of contents, directing students to various “chapters” (other assignments), containing problems that they can complete throughout the semester.</p>
+<p>When selecting a custom textbook, you’ll need to choose a document that has already been assigned to the course—so, you’ll want to assign the textbook <em>first</em> and then set it as the textbook for the course.</p>
+<p>Once assigned, the textbook will not be shown in the “Upcoming Problems” section of your students’ user page. So you do not need to adjust the visibility of the assignment or mark it as hidden, in order to keep it from cluttering your assignment listings.</p>
+</section>
+</section>
+<section id="actions-on-students" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="actions-on-students"><span class="header-section-number">3.2.2</span> Actions on Students</h3>
+<p>A number of actions can be performed on individual students by clicking the icons in the “Actions” column:</p>
+<ol type="1">
+<li>Students can be dropped from a course by clicking the trashcan icon <span style="font-family:FontAwesome"></span>. A dropped student is removed from the course, but their data is otherwise intact. So if they are dropped by mistake, then can simply re-enroll.</li>
+<li>Students can be emailed individually by clicking the “mail” icon <span style="font-family:FontAwesome"></span> visible in the action column to the right of their name.</li>
+<li>Accessibility accommodations can be added for individual students by clicking the “clock” icon <span style="font-family:FontAwesome"></span> to the right of the student’s name. A fixed number of minutes can be added to all of the students’ timed exams, their exam times can be extended by a given factor (for example, 1.5 for time-and-a-half) and a fixed number of hours can be added to all of their due-dates. Adjustments to due-dates do not affect visibility dates for assignments, only the treatment of late work. Changes to due-dates will be reflected on the posted due-date seen on the student’s user page.</li>
+<li>Alternate due dates can be issued to individual students, for specific assignments, by clicking the “calendar plus” icon <span style="font-family:FontAwesome"></span> to the right of the student’s name. Alternate due dates will be reflected on the posted due-date seen on the student’s user page. Alternate due dates will affect whether an assignment is graded as late, and will override the visibility settings for that assignment, so that a student can continue to access the assignment and submit problems until their alternate due date expires. Assignments set as “hidden” however, will not be visible on the user page even if an alternate due date is set.</li>
+<li>Access can be re-granted to timed assignments after the timer has expired, by clicking the “full hourglass” icon <span style="font-family:FontAwesome"></span> to the right of the student’s name. Once access is re-granted, it will be as if the student never started the timed exam (although any work that they submitted on the first try will persist), so their next attempt at the exam will be timed in the same way as their first attempt.</li>
+</ol>
+</section>
+<section id="adding-a-co-instructor" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="adding-a-co-instructor"><span class="header-section-number">3.2.3</span> Adding A Co-Instructor</h3>
+<p>At the very bottom of the course card, you have the options of adding a co-instructor, editing a course’s information (including total points, description, and whether the course is open for enrollment), exporting grades, and also of deleting the course.</p>
+<p>Co-instructors are other instructors who have the same type of access to the course as the course creator. They may be useful if you have a TA or if you’re teaching a course with someone else. Co-instructors can be removed from within the course card by clicking the trash icon <span style="font-family:FontAwesome"></span> next to their name. Removing a co-instructor will also remove all assignments created by that co-instructor and all student work submitted in response to those assignments, so <em>always exercise caution when removing a co-instructor</em>!</p>
+</section>
+<section id="exporting-grades" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="exporting-grades"><span class="header-section-number">3.2.4</span> Exporting Grades</h3>
+<p>Grades are exported in <code>.csv</code> format, which most spreadsheet programs should be able to import. Grades can either be tabulated per-assignment (for import into a CMS, for example), or per-problem (for detailed analysis of course performance, or for more complex grading schemes). Students are identified by first name, last name, University ID (an arbitrary string, like their student ID number or other useful identifying information, that you can ask them to enter when registering), and their email address. If a student has not entered some piece of information, its absence is indicated with a question mark.</p>
+</section>
+<section id="deleting-a-course" class="level3" data-number="3.2.5">
+<h3 data-number="3.2.5" class="anchored" data-anchor-id="deleting-a-course"><span class="header-section-number">3.2.5</span> Deleting a Course</h3>
+<p>Deleting the course will delete all assignments associated with the course and all student work submitted in response to these assignments, so <em>always exercise caution when deleting a course</em>!</p>
 
 
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>I concede that tabbed cards are not the best UI metaphor. I’m open to suggestions on this one.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -630,11 +773,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./server-configuration.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Configuring Carnap</span></span>
+      <a href="./faq.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Frequently Asked Questions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./pandoc.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Carnap’s Pandoc MarkDown</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

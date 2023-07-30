@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Carnap Manual - References</title>
+<title>The Carnap Manual - 27&nbsp; Installing Carnap</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,7 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./server-configuration.html" rel="prev">
+<link href="./api.html" rel="next">
+<link href="./javascript.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -99,7 +81,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./administration.html">Advanced Usage</a></li><li class="breadcrumb-item"><a href="./installation.html"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Installing Carnap</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -303,13 +285,13 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
  <span class="menu-text">Advanced Usage</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./administration.html" class="sidebar-item-text sidebar-link">
@@ -336,7 +318,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./installation.html" class="sidebar-item-text sidebar-link">
+  <a href="./installation.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Installing Carnap</span></span></a>
   </div>
 </li>
@@ -356,7 +338,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -366,14 +348,28 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link active" data-scroll-target="#requirements"><span class="header-section-number">27.1</span> Requirements</a></li>
+  <li><a href="#building-carnap" id="toc-building-carnap" class="nav-link" data-scroll-target="#building-carnap"><span class="header-section-number">27.2</span> Building Carnap</a>
+  <ul class="collapse">
+  <li><a href="#installing-nix" id="toc-installing-nix" class="nav-link" data-scroll-target="#installing-nix"><span class="header-section-number">27.2.1</span> Installing Nix</a></li>
+  <li><a href="#download-the-source-code" id="toc-download-the-source-code" class="nav-link" data-scroll-target="#download-the-source-code"><span class="header-section-number">27.2.2</span> Download the Source Code</a></li>
+  <li><a href="#run-the-development-server" id="toc-run-the-development-server" class="nav-link" data-scroll-target="#run-the-development-server"><span class="header-section-number">27.2.3</span> Run the Development Server</a></li>
+  </ul></li>
+  <li><a href="#server-setup" id="toc-server-setup" class="nav-link" data-scroll-target="#server-setup"><span class="header-section-number">27.3</span> Server Setup</a></li>
+  <li><a href="#carnaps-user-documentation" id="toc-carnaps-user-documentation" class="nav-link" data-scroll-target="#carnaps-user-documentation"><span class="header-section-number">27.4</span> Carnap’s user documentation</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Installing Carnap</span></h1>
 </div>
 
 
@@ -388,11 +384,61 @@ div.csl-indent {
 
 </header>
 
-<div id="refs" role="list" style="display: none">
+<p>This guide will provide instructors for getting started with Carnap development: installing and building a local copy of the software that you can tinker with on your own machine. This is a useful thing to be able to do if you want to contribute changes and bugfixes to the project, or if you eventually want to deploy your own instance Carnap.</p>
+<!-- TODO: Link to deployment guide -->
+<section id="requirements" class="level2" data-number="27.1">
+<h2 data-number="27.1" class="anchored" data-anchor-id="requirements"><span class="header-section-number">27.1</span> Requirements</h2>
+<p>Carnap has two components: <code>Carnap-Client</code> contains the code to display and check exercises. <code>Carnap-Server</code> contains the code for the Carnap web application (administering courses, uploading exercises, submitting solutions, etc.). Both have to be built and installed for Carnap to work.</p>
+<p>To install Carnap you need: - A computer to build and run Carnap on. Currently Linux and MacOS are supported, but it is possible to build and run Carnap on Windows using the <a href="https://docs.microsoft.com/en-ca/windows/wsl/">Windows Subsystem for Linux</a>. - The source code for Carnap from <a href="https://github.com/Carnap/Carnap">GitHub</a>. - Software to build Carnap.</p>
+<p>Warning: building Carnap requires a large amount of memory (about 12GB) to compile. You should probably close all other applications and background services (Zoom, Slack, etc.) when doing it.</p>
+</section>
+<section id="building-carnap" class="level2" data-number="27.2">
+<h2 data-number="27.2" class="anchored" data-anchor-id="building-carnap"><span class="header-section-number">27.2</span> Building Carnap</h2>
+<section id="installing-nix" class="level3" data-number="27.2.1">
+<h3 data-number="27.2.1" class="anchored" data-anchor-id="installing-nix"><span class="header-section-number">27.2.1</span> Installing Nix</h3>
+<p>The easiest way to build Carnap is using the Nix package manager. Carnap comes with information Nix uses to build Carnap and all its dependencies automatically, without you having to install anything else by hand. The build using Nix will use self-contained tools to reduce the risk of incompatibilities between, e.g., a Haskell compiler you have installed and what Carnap requires.</p>
+<p>To install Nix, follow the <a href="https://nixos.org/manual/nix/stable/#chap-installation">Installation instructions</a> for your platform. On Linux, this just requires the command</p>
+<pre><code>$ sh &lt;(curl -L https://nixos.org/nix/install)</code></pre>
+<p>from the terminal command line as a user who has <code>sudo</code> access.</p>
+<p>(The <code>$</code> indicates the command line prompt, you only enter the commands to the right of it.)</p>
+<p>If you want to compile using nix on a machine where you don’t have <code>sudo</code> access, some alternative nix installation approaches are described in the <a href="https://nixos.wiki/wiki/Nix_Installation_Guide">nixos wiki</a>. In particular a <code>nix-user-chroot</code> installation has been confirmed to work for compiling Carnap.</p>
+<p>You can significantly speed up builds by using binaries for Carnap dependencies from Carnap’s <a href="https://cachix.org/">Cachix</a> instance, which has support for both Linux and macOS. To use it, say:</p>
+<pre><code>$ nix-env -iA cachix -f https://cachix.org/api/v1/install
+$ cachix use carnap</code></pre>
+</section>
+<section id="download-the-source-code" class="level3" data-number="27.2.2">
+<h3 data-number="27.2.2" class="anchored" data-anchor-id="download-the-source-code"><span class="header-section-number">27.2.2</span> Download the Source Code</h3>
+<p>The latest version of Carnap’s source code is available in the <a href="https://github.com/Carnap/Carnap">GitHub repository</a>. Click on the “Code” button. If you have <code>git</code> installed and configured for ssh access, this command should do the trick:</p>
+<pre><code>$ git clone git@github.com:Carnap/Carnap.git</code></pre>
+<p>This downloads the source code into the directory <code>Carnap</code>. Change to that directory by saying</p>
+<pre><code>$ cd Carnap</code></pre>
+</section>
+<section id="run-the-development-server" class="level3" data-number="27.2.3">
+<h3 data-number="27.2.3" class="anchored" data-anchor-id="run-the-development-server"><span class="header-section-number">27.2.3</span> Run the Development Server</h3>
+<p>Once you’re in the <code>Carnap</code> directory, you can use <code>nix</code> to build the different components of the system. Some useful recipes for building in different ways have been recorded in Carnap’s included Makefile. If you’re interested in building a simple development server (which doesn’t require any extra database or authentication configuration) then you can simply issue the command</p>
+<pre><code>make devel</code></pre>
+<p>This will build Carnap’s client-side component (the JavaScript proof-checker that runs in the browser), and will then build and activate a Carnap server. By default, you’ll be able to reach this server by navigating to <code>http://localhost:3000</code> on the computer where the server is running. Warning: as noted above, the initial build may take some time, and may require a lot of memory.</p>
+<p>Issuing <code>make devel</code> again after the initial build will reactivate the server, unless you’ve made any changes to your copy of Carnap source code. If you have made changes, then reissuing <code>make devel</code> will rebuild any parts of the client and server that are downstream from your changes, and will then reactivate the server. Some behavior of the development server (like whether the server appears at http://localhost:3000, or somewhere else) can be controlled by changing environment variables. For details, see the <a href="./server-config.html">server configuration documentation</a></p>
+</section>
+</section>
+<section id="server-setup" class="level2" data-number="27.3">
+<h2 data-number="27.3" class="anchored" data-anchor-id="server-setup"><span class="header-section-number">27.3</span> Server Setup</h2>
+<p>Once your server is configured and running, you have to provide yourself with an administrator account if you want to create any instructors.</p>
+<p>Go to your newly minted Carnap instance and log in - because you’re running in development mode, you can log in as whatever you’d like by just typing in an identifier. Then go to <code>http://localhost:3000/admin_promote</code> (or to the corresponding address if you’ve edited the settings file so that you’re serving on something other than <code>localhost:3000</code>) and click the button. You will now be the administrator of this instance. Multiple administrators are supported, but there is not yet a user interface to enable this.</p>
+<p>You can now administrate your server (including promoting instructors, and configuring LTI platforms) at <code>http://localhost:3000/master_admin</code></p>
+</section>
+<section id="carnaps-user-documentation" class="level2" data-number="27.4">
+<h2 data-number="27.4" class="anchored" data-anchor-id="carnaps-user-documentation"><span class="header-section-number">27.4</span> Carnap’s user documentation</h2>
+<blockquote class="blockquote">
+<p>Does this section belong in server configuration?</p>
+</blockquote>
+<p>The data directory (by default, <code>Carnap/dataroot</code>) can also contain a subdirectory <code>srv</code>, whose contents are directly available at <code>/srv/</code> on the Carnap instance. This is used for documentation on the production instance at <code>carnap.io</code>. The menu for Carnap instructors contains a link “Documentation” which points to <code>/srv/doc/index.md</code>.</p>
+<p>If you want site-specific documentation, you should create the directory <code>srv/doc/</code> inside your data directory, and place a MarkDown file <code>index.md</code> there as the starting point. If you want to provide Carnap’s official documentation on your Carnap instance, you can download it into said directory:</p>
+<pre><code>$ cd dataroot
+$ git clone git@github.com:Carnap/Carnap-Documentation.git srv</code></pre>
 
-</div>
 
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -630,11 +676,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./server-configuration.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Configuring Carnap</span></span>
+      <a href="./javascript.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">JavaScript Extensions for Carnap</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./api.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Carnap API</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

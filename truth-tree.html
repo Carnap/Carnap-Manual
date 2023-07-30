@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Carnap Manual - References</title>
+<title>The Carnap Manual - 13&nbsp; Truth Trees (Semantic Tableaux)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,7 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./server-configuration.html" rel="prev">
+<link href="./syntax-check.html" rel="next">
+<link href="./qualitative.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -99,7 +81,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./derivations.html">Exercises</a></li><li class="breadcrumb-item"><a href="./truth-tree.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Truth Trees (Semantic Tableaux)</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -179,13 +161,13 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
  <span class="menu-text">Exercises</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./derivations.html" class="sidebar-item-text sidebar-link">
@@ -230,7 +212,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./truth-tree.html" class="sidebar-item-text sidebar-link">
+  <a href="./truth-tree.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Truth Trees (Semantic Tableaux)</span></span></a>
   </div>
 </li>
@@ -356,7 +338,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -366,14 +348,20 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#setting-another-system" id="toc-setting-another-system" class="nav-link active" data-scroll-target="#setting-another-system"><span class="header-section-number">13.1</span> Setting another system</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Truth Trees (Semantic Tableaux)</span></h1>
 </div>
 
 
@@ -388,11 +376,52 @@ div.csl-indent {
 
 </header>
 
-<div id="refs" role="list" style="display: none">
-
+<p>Carnap supports making truth trees. A sample problem with one follows:</p>
+<pre class="TruthTree Prop"><code>1.1 A&amp;B,~(C\/D),(~B\/C)\/E,~E</code></pre>
+<p>Note that there is unfortunately <a href="https://github.com/ubc-carnap-team/Rudolf/issues/114">a bug</a> where long lines get cut off. When you begin solving the exercise, it will fix itself.</p>
+<p>The source for this sample is this:</p>
+<pre><code>```{.TruthTree .Prop}
+1.1 A&amp;B,~(C\/D),(~B\/C)\/E,~E
+```</code></pre>
+<p>Here is a screenshot of the solved version:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/truthtree-solved.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">screenshot of the solved truth tree, described next</figcaption>
+</figure>
 </div>
+<details>
+<summary>
+<strong>Description of the above truth tree</strong>
+</summary>
+<p>There’s a downward continuation from line 4 with two lines, “A”, line 5, and “B”, line 6, with “1” as the row and “&amp;” as the rule in the right margin.</p>
+<p>There’s another with “~C”, line 7, and “~D”, line 8, following from row 2, with rule “~/”.</p>
+<p>There’s a split branch on line 9 from line 3 into “~B∨C” and “E” with the rule “/”. “E” on the right branch of line 9 is marked as a contradiction between lines 9 and 4.</p>
+<p>The left branch of line 9 further branches into “~B” and “C”. “~B” is marked as a contradiction between lines 6 and 10, and “C” is marked as a contradiction between lines 7 and 10.</p>
+</details>
+<p>To solve it, the student should do the following:</p>
+<ol type="1">
+<li>Right click on line 1 (“A&amp;B”), select “Continue branch with 2 formulas”. Enter “A” as the first and “B” as the second. Row is 1, and rule is “&amp;”.</li>
+<li>Right click on line 1, select “Mark as resolved” to put a checkmark on the line.</li>
+<li>Right click on line 2 (“~(C∨D)”), select “Continue branch with 2 formulas”. Enter “~C” as the first, “~D” as the second. Row is 2, rule is “~/”.</li>
+<li>Mark line 2 as resolved as above.</li>
+<li>Right click on line 3, select “Split branch with 1 formula” and enter “~B∨C” in the left box and “E” in the right box. Row is 3, rule is “/”.</li>
+<li>Right click the right branch “E” on line 9, select “Mark branch as contradiction” and enter “9,4” in the box.</li>
+<li>Right click the left branch “~B∨C” and select “Split branch with 1 formula” and enter “~B” in the left box, “C” in the right box. Row is 9, rule is “/”.</li>
+<li>Right click “~B” on line 10 to close it as a contradiction with line 6. Enter “6,10” in the box.</li>
+<li>Right click “C” on line 10 to close it as a contradiction with line 7. Enter “7,10” in the box.</li>
+<li>Mark line 3 as resolved.</li>
+</ol>
+<section id="setting-another-system" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="setting-another-system"><span class="header-section-number">13.1</span> Setting another system</h2>
+<p>By default, truth trees operate on Ichikawa-Jenkins SL. You can change this to something else using the <code>checkFunction</code> attribute (default value is <code>"checkIchikawaJenkinsSLTableau"</code>).</p>
+<p>For example,</p>
+<pre><code>```{.TruthTree .Prop checkFunction="checkIchikawaJenkinsQLTableau"}
+1.1 P,P-&gt;Q,~Q
+```</code></pre>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -630,11 +659,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./server-configuration.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Configuring Carnap</span></span>
+      <a href="./qualitative.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Qualitative Problems</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./syntax-check.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Syntax Check Exercises</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

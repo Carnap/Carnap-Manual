@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Carnap Manual - References</title>
+<title>The Carnap Manual - 25&nbsp; LTI Information for Carnap Developers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,7 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./server-configuration.html" rel="prev">
+<link href="./javascript.html" rel="next">
+<link href="./lti.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -99,7 +81,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./administration.html">Advanced Usage</a></li><li class="breadcrumb-item"><a href="./lti-develop.html"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">LTI Information for Carnap Developers</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -303,13 +285,13 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
  <span class="menu-text">Advanced Usage</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./administration.html" class="sidebar-item-text sidebar-link">
@@ -324,7 +306,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lti-develop.html" class="sidebar-item-text sidebar-link">
+  <a href="./lti-develop.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">LTI Information for Carnap Developers</span></span></a>
   </div>
 </li>
@@ -356,7 +338,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -366,14 +348,20 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#debugging" id="toc-debugging" class="nav-link active" data-scroll-target="#debugging"><span class="header-section-number">25.1</span> Debugging</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">LTI Information for Carnap Developers</span></h1>
 </div>
 
 
@@ -388,11 +376,112 @@ div.csl-indent {
 
 </header>
 
-<div id="refs" role="list" style="display: none">
+<p>Setting up a Canvas instance or other LMS is quite burdensome for doing LTI testing. Therefore, the UBC Carnap team has kindly set up a LTI Reference Implementation platform here:</p>
+<p>https://lti-ri.imsglobal.org/platforms/1255/</p>
+<p>Configure it in Carnap at <code>/master_admin</code> with the following:</p>
+<div class="table">
 
+<table class="table">
+<thead>
+<tr class="header">
+<th>
+iss
+</th>
+<th>
+client_id
+</th>
+<th>
+OIDC Auth Endpoint
+</th>
+<th>
+JWK URL
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>
+aaaaa
+</td>
+<td>
+abcde
+</td>
+<td>
+https://lti-ri.imsglobal.org/platforms/1255/authorizations/new
+</td>
+<td>
+https://lti-ri.imsglobal.org/platforms/1255/platform_keys/1248.json
+</td>
+</tr>
+</tbody>
+
+</table>
 </div>
+<p>To perform launches, use the “Resource Links” page.</p>
+<section id="debugging" class="level2" data-number="25.1">
+<h2 data-number="25.1" class="anchored" data-anchor-id="debugging"><span class="header-section-number">25.1</span> Debugging</h2>
+<p>Carnap records LTI tokens (with student data removed) to its server logs for the purposes of debugging automatic LTI registration, allowing to find out why automatic registration is failing. If that is not sufficient, some debugging can be done client-side by looking at browser request logs in the network tab of the developer tools:</p>
+<p>Most of the process can be traced with dev tools. Note that Chrome now has a feature called “Auto-open DevTools for popups” that is ideal for debugging LTI failing to initiate properly in a popup. Remember to enable “Preserve log” before testing the problematic path.</p>
+<p>These settings are accessible here:</p>
+<p>Click the gear icon at the top right of the DevTools panel:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/devtools1.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">where that icon is</figcaption>
+</figure>
+</div>
+<p>Then the setting is in the bottom right under Global:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/devtools2.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">where the setting is</figcaption>
+</figure>
+</div>
+<hr>
+<p>Using this feature and the network tab, you can find the failing <code>initiate</code>/other request and figure out what the LMS is sending with its requests and how Carnap reacted.</p>
+<p>Let’s go through a successful sequence of requests in DevTools. My Canvas is at <code>http://ubuntu-vm:8900</code> and my Carnap is at <code>https://ubc-carnap-staging.lfcode.ca</code> (these are both test instances running on virtual machines on my computer).</p>
+<hr>
+<p>I click the “Carnap” link in the Canvas sidebar. A new tab opens, Canvas goes through a couple of pages itself before sending us to Carnap.</p>
+<p>First we have a POST to Carnap’s <code>/auth/page/lti13/initiate</code> with the following parameters in the form data:</p>
+<pre><code>iss: https://canvas.instructure.com
+login_hint: f326d6a8a55f30f47b2480586f97991ab9e602bb
+client_id: 10000000000002
+target_link_uri: https://ubc-carnap-staging.lfcode.ca/
+lti_message_hint: some-long-jwt-that-is-opaque-per-the-standard
+canvas_region: not_configured</code></pre>
+<p>The main thing to note here is that this is where Carnap has to decide where to send the user back to. This is done with a combination of <code>iss</code> and <code>client_id</code>, the latter of which is optional and we do our best if it’s not there.</p>
+<p>Carnap finds a record in its LTI platforms with the <code>iss</code>uer and <code>client_id</code> pair, so it sends a 303 redirect to <code>http://ubuntu-vm:8900/api/lti/authorize_redirect</code> as configured in the Carnap LTI settings.</p>
+<p>Carnap sends the browser a redirect to this URL:</p>
+<pre><code>http://ubuntu-vm:8900/api/lti/authorize_redirect
+    ?scope=openid
+    &amp;response_type=id_token
+    &amp;client_id=10000000000002
+    &amp;redirect_uri=https%3A%2F%2Fubc-carnap-staging.lfcode.ca%2Fauth%2Fpage%2Flti13%2Fauthenticate
+    &amp;login_hint=f326d6a8a55f30f47b2480586f97991ab9e602bb
+    &amp;state=3CjT-Wa3RKZjgge6bjPNEycuOToQdTUa1ELW3Jx38Gh6&amp;response_mode=form_post
+    &amp;nonce=eara1fJmG39MIIijSv-ehGUMJsX2SVhlYhGZdxcsCJKa
+    &amp;prompt=none
+    &amp;lti_message_hint=some-long-jwt-that-is-opaque-per-the-standard</code></pre>
+<p>Things of note in this request:</p>
+<ul>
+<li>We generate the <code>redirect_uri</code>.</li>
+<li>The <code>client_id</code>, <code>login_hint</code>, and <code>lti_message_hint</code> are just from Canvas’ initiation</li>
+<li><code>state</code> and <code>nonce</code> are just randomly generated strings we check on the way back.</li>
+<li>Some of these parameters are kept in the session by Carnap, so if cookies don’t work, we fail either at this request or the next.</li>
+</ul>
+<hr>
+<p>The browser hits Canvas at that URL, and it bounces around a bit before coming back to Carnap with a POST <code>https://ubc-carnap-staging.lfcode.ca/auth/page/lti13/authenticate</code>.</p>
+<p>Its parameters are:</p>
+<pre><code>utf8: ✓
+authenticity_token: VtRVOQdeoLQqfnzuNSa3kfg8vyuhcWj8lhsehEsmhx4ukCdsPxiT/3MYF416c+Tiyw7zGZFAGpfeTXPXAkTFRg==
+id_token: ey -- THIS IS A VERY LONG JWT TOKEN --
+state: 3CjT-Wa3RKZjgge6bjPNEycuOToQdTUa1ELW3Jx38Gh6</code></pre>
+<p>We don’t care about any of these except for the very long <code>id_token</code>, which is a JSON Web Token.</p>
+<p>Carnap receives this, performs autoregistration, and goes to the user page. Thus, this is where you will want to start looking if you are having issues with attributes getting across, for example names, emails, etc.</p>
+<p><a href="https://jwt.io/#debugger-io?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjIwMTgtMDYtMThUMjI6MzM6MjBaIn0.eyJodHRwczovL3B1cmwuaW1zZ2xvYmFsLm9yZy9zcGVjL2x0aS9jbGFpbS9tZXNzYWdlX3R5cGUiOiJMdGlSZXNvdXJjZUxpbmtSZXF1ZXN0IiwiaHR0cHM6Ly9wdXJsLmltc2dsb2JhbC5vcmcvc3BlYy9sdGkvY2xhaW0vdmVyc2lvbiI6IjEuMy4wIiwiaHR0cHM6Ly9wdXJsLmltc2dsb2JhbC5vcmcvc3BlYy9sdGkvY2xhaW0vcmVzb3VyY2VfbGluayI6eyJpZCI6IjRkZGUwNWU4Y2ExOTczYmNjYTliZmZjMTNlMTU0ODgyMGVlZTkzYTMiLCJkZXNjcmlwdGlvbiI6bnVsbCwidGl0bGUiOm51bGwsInZhbGlkYXRpb25fY29udGV4dCI6bnVsbCwiZXJyb3JzIjp7ImVycm9ycyI6e319fSwiaHR0cHM6Ly9wdXJsLmltc2dsb2JhbC5vcmcvc3BlYy9sdGktYWdzL2NsYWltL2VuZHBvaW50Ijp7InNjb3BlIjpbImh0dHBzOi8vcHVybC5pbXNnbG9iYWwub3JnL3NwZWMvbHRpLWFncy9zY29wZS9saW5laXRlbSIsImh0dHBzOi8vcHVybC5pbXNnbG9iYWwub3JnL3NwZWMvbHRpLWFncy9zY29wZS9yZXN1bHQucmVhZG9ubHkiLCJodHRwczovL3B1cmwuaW1zZ2xvYmFsLm9yZy9zcGVjL2x0aS1hZ3Mvc2NvcGUvc2NvcmUiXSwibGluZWl0ZW1zIjoiaHR0cDovL3VidW50dS12bTo4OTAwL2FwaS9sdGkvY291cnNlcy8xL2xpbmVfaXRlbXMiLCJ2YWxpZGF0aW9uX2NvbnRleHQiOm51bGwsImVycm9ycyI6eyJlcnJvcnMiOnt9fX0sImF1ZCI6IjEwMDAwMDAwMDAwMDAyIiwiYXpwIjoiMTAwMDAwMDAwMDAwMDIiLCJodHRwczovL3B1cmwuaW1zZ2xvYmFsLm9yZy9zcGVjL2x0aS9jbGFpbS9kZXBsb3ltZW50X2lkIjoiMTo0ZGRlMDVlOGNhMTk3M2JjY2E5YmZmYzEzZTE1NDg4MjBlZWU5M2EzIiwiZXhwIjoxNjEwNTMxMDAyLCJpYXQiOjE2MTA1Mjc0MDIsImlzcyI6Imh0dHBzOi8vY2FudmFzLmluc3RydWN0dXJlLmNvbSIsIm5vbmNlIjoiZWFyYTFmSm1HMzlNSUlpalN2LWVoR1VNSnNYMlNWaGxZaEdaZHhjc0NKS2EiLCJzdWIiOiI1MTk3MTg3ZS00MDcwLTQ2NGUtYjdkYy0yMjllN2M3NmFhMmUiLCJodHRwczovL3B1cmwuaW1zZ2xvYmFsLm9yZy9zcGVjL2x0aS9jbGFpbS90YXJnZXRfbGlua191cmkiOiJodHRwczovL3ViYy1jYXJuYXAtc3RhZ2luZy5sZmNvZGUuY2EvIiwiaHR0cHM6Ly9wdXJsLmltc2dsb2JhbC5vcmcvc3BlYy9sdGkvY2xhaW0vY29udGV4dCI6eyJpZCI6IjRkZGUwNWU4Y2ExOTczYmNjYTliZmZjMTNlMTU0ODgyMGVlZTkzYTMiLCJsYWJlbCI6IkMxIiwidGl0bGUiOiJUZXN0IENvdXJzZSIsInR5cGUiOlsiaHR0cDovL3B1cmwuaW1zZ2xvYmFsLm9yZy92b2NhYi9saXMvdjIvY291cnNlI0NvdXJzZU9mZmVyaW5nIl0sInZhbGlkYXRpb25fY29udGV4dCI6bnVsbCwiZXJyb3JzIjp7ImVycm9ycyI6e319fSwiaHR0cHM6Ly9wdXJsLmltc2dsb2JhbC5vcmcvc3BlYy9sdGkvY2xhaW0vdG9vbF9wbGF0Zm9ybSI6eyJndWlkIjoiQmJuMHNuMk03b1FuUGxveG5jZ0dmWkJ1UmhkN3Y5SVQ4ZU5OYWxsejpjYW52YXMtbG1zIiwibmFtZSI6IkphZGVDYW52YXMiLCJ2ZXJzaW9uIjoiY2xvdWQiLCJwcm9kdWN0X2ZhbWlseV9jb2RlIjoiY2FudmFzIiwidmFsaWRhdGlvbl9jb250ZXh0IjpudWxsLCJlcnJvcnMiOnsiZXJyb3JzIjp7fX19LCJodHRwczovL3B1cmwuaW1zZ2xvYmFsLm9yZy9zcGVjL2x0aS9jbGFpbS9sYXVuY2hfcHJlc2VudGF0aW9uIjp7ImRvY3VtZW50X3RhcmdldCI6ImlmcmFtZSIsImhlaWdodCI6ODAwLCJ3aWR0aCI6ODAwLCJyZXR1cm5fdXJsIjoiaHR0cDovL3VidW50dS12bTo4OTAwL2NvdXJzZXMvMS9leHRlcm5hbF9jb250ZW50L3N1Y2Nlc3MvZXh0ZXJuYWxfdG9vbF9yZWRpcmVjdCIsImxvY2FsZSI6ImVuLUNBIiwidmFsaWRhdGlvbl9jb250ZXh0IjpudWxsLCJlcnJvcnMiOnsiZXJyb3JzIjp7fX19LCJsb2NhbGUiOiJlbi1DQSIsImh0dHBzOi8vcHVybC5pbXNnbG9iYWwub3JnL3NwZWMvbHRpL2NsYWltL3JvbGVzIjpbImh0dHA6Ly9wdXJsLmltc2dsb2JhbC5vcmcvdm9jYWIvbGlzL3YyL2luc3RpdHV0aW9uL3BlcnNvbiNTdHVkZW50IiwiaHR0cDovL3B1cmwuaW1zZ2xvYmFsLm9yZy92b2NhYi9saXMvdjIvbWVtYmVyc2hpcCNMZWFybmVyIiwiaHR0cDovL3B1cmwuaW1zZ2xvYmFsLm9yZy92b2NhYi9saXMvdjIvc3lzdGVtL3BlcnNvbiNVc2VyIl0sImh0dHBzOi8vcHVybC5pbXNnbG9iYWwub3JnL3NwZWMvbHRpL2NsYWltL2N1c3RvbSI6e30sImh0dHBzOi8vcHVybC5pbXNnbG9iYWwub3JnL3NwZWMvbHRpLW5ycHMvY2xhaW0vbmFtZXNyb2xlc2VydmljZSI6eyJjb250ZXh0X21lbWJlcnNoaXBzX3VybCI6Imh0dHA6Ly91YnVudHUtdm06ODkwMC9hcGkvbHRpL2NvdXJzZXMvMS9uYW1lc19hbmRfcm9sZXMiLCJzZXJ2aWNlX3ZlcnNpb25zIjpbIjIuMCJdLCJ2YWxpZGF0aW9uX2NvbnRleHQiOm51bGwsImVycm9ycyI6eyJlcnJvcnMiOnt9fX0sImh0dHBzOi8vcHVybC5pbXNnbG9iYWwub3JnL3NwZWMvbHRpL2NsYWltL2x0aTExX2xlZ2FjeV91c2VyX2lkIjoiZjMyNmQ2YThhNTVmMzBmNDdiMjQ4MDU4NmY5Nzk5MWFiOWU2MDJiYiIsImVycm9ycyI6eyJlcnJvcnMiOnt9fSwicGljdHVyZSI6Imh0dHA6Ly9jYW52YXMuaW5zdHJ1Y3R1cmUuY29tL2ltYWdlcy9tZXNzYWdlcy9hdmF0YXItNTAucG5nIiwibmFtZSI6IkpvZSBVc2VyIiwiZ2l2ZW5fbmFtZSI6IkpvZSIsImZhbWlseV9uYW1lIjoiVXNlciIsImh0dHBzOi8vcHVybC5pbXNnbG9iYWwub3JnL3NwZWMvbHRpL2NsYWltL2xpcyI6eyJwZXJzb25fc291cmNlZGlkIjoiU0lTNTc4IiwiY291cnNlX29mZmVyaW5nX3NvdXJjZWRpZCI6bnVsbCwidmFsaWRhdGlvbl9jb250ZXh0IjpudWxsLCJlcnJvcnMiOnsiZXJyb3JzIjp7fX19fQ.S8877d2gIAi9tjIbhz13l8pPvSVlZjZdEAAXEzAjR3DahZC7MUooPsNeKGOgc_RVx9zBRZn1HFbkanGheZyXGg">View the token in a JWT debugging tool</a></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -630,11 +719,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./server-configuration.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Configuring Carnap</span></span>
+      <a href="./lti.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">LTI 1.3</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./javascript.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">JavaScript Extensions for Carnap</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

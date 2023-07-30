@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Carnap Manual - References</title>
+<title>The Carnap Manual - 22&nbsp; Set Theory Demo</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,7 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./server-configuration.html" rel="prev">
+<link href="./administration.html" rel="next">
+<link href="./montague.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -86,6 +68,8 @@ div.csl-indent {
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0"></script>
 <script src="https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.js"></script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -99,7 +83,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./systems.html">Supported Systems</a></li><li class="breadcrumb-item"><a href="./Set_Theory_Demo.html"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Set Theory Demo</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -246,11 +230,11 @@ div.csl-indent {
       <div class="sidebar-item-container"> 
             <a href="./systems.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Supported Systems</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./equivalences.html" class="sidebar-item-text sidebar-link">
@@ -295,7 +279,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Set_Theory_Demo.html" class="sidebar-item-text sidebar-link">
+  <a href="./Set_Theory_Demo.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Set Theory Demo</span></span></a>
   </div>
 </li>
@@ -356,7 +340,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -373,7 +357,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Set Theory Demo</span></h1>
 </div>
 
 
@@ -388,9 +372,125 @@ div.csl-indent {
 
 </header>
 
-<div id="refs" role="list" style="display: none">
-
+<p>Here’s a demo of Carnap’s (alpha-stage) support for natural deduction in set theory.</p>
+<p>The rules are those of the Carnap book’s first-order system (The one used in a proof checker constructed with <code>.FirstOrder</code>—See the documentation for <a href="montague.html">Montague Systems</a>), plus the following bi-directional replacement rules:</p>
+<div class="table">
+<table class="table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 17%">
+<col style="width: 25%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Rule</th>
+<th>Abbreviation</th>
+<th style="text-align: left;">Premises</th>
+<th style="text-align: left;">Conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Union Definition</td>
+<td><code>Def-U</code></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(τ∈σ∨τ∈θ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(x∈σ∪θ)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Intersection Definition</td>
+<td><code>Def-I</code></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(τ∈σ∧τ∈θ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(x∈σ∩θ)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Complement Definition</td>
+<td><code>Def-C</code></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(τ∈σ∧¬τ∈θ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(x∈σ/θ)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Power Set Definition</td>
+<td><code>Def-P</code></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(τ⊆θ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(τ∈Pow(θ))\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Subset Definition</td>
+<td><code>Def-S</code></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(∀x(x∈τ→x∈θ))\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(τ⊆θ)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Separation Definition</td>
+<td><code>Def-{}</code></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(τ∈θ∧φ(τ))\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(τ∈{x∈θ|φ(x)})\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Equality Definition</td>
+<td><code>Def-=</code></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(∀x(x∈τ↔x∈σ))\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(τ=σ)\)</span></td>
+</tr>
+</tbody>
+</table>
 </div>
+<p>Symbols are:</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Symbol</th>
+<th style="text-align: left;">Keyboard</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">∩</td>
+<td style="text-align: left;"><code>I</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">∪</td>
+<td style="text-align: left;"><code>U</code>,</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">∈</td>
+<td style="text-align: left;"><code>in</code>, <code>&lt;&lt;</code>, <code>&lt;e</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">⊆</td>
+<td style="text-align: left;"><code>within</code>, <code>&lt;(</code>, <code>&lt;s</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Here’s an example proof:</p>
+<pre class="Playground SeparativeST" data-init="now"><code>Ax(x in a -&gt; x within a) :PR
+Show P(a) within P(P(a))
+ Show Ax(x in P(a) -&gt; x in P(P(a)))
+  Show b in P(a) -&gt; b in P(P(a))
+   b in P(a) :AS
+   b within a:Def-P 5
+   Ax(x in b -&gt; x in a):Def-S 6
+   Show b in P(P(a))
+    Show Ax(x in b -&gt; x in P(a))
+     Show c in b -&gt; c in P(a)
+      c in b :AS
+      c in b -&gt; c in a:UI 7
+      c in a :MP 11 12
+      c in a -&gt; c within a :UI 1
+      c within a:MP 13 14
+      c in P(a):Def-P 15
+     :CD 16
+    :UD10
+    b within P(a):Def-S 9
+    b in P(P(a)):Def-P 19
+   :DD 20
+  :CD 8
+ :UD 4
+ P(a) within P(P(a)):Def-S 3
+:DD 24</code></pre>
 
 
 
@@ -630,11 +730,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./server-configuration.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Configuring Carnap</span></span>
+      <a href="./montague.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Natural Deduction in the Carnap Book</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./administration.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Carnap deployment and administration</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

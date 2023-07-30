@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Carnap Manual - References</title>
+<title>The Carnap Manual - 12&nbsp; Qualitative Problems</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,7 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./server-configuration.html" rel="prev">
+<link href="./truth-tree.html" rel="next">
+<link href="./sequent-calculus.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -86,6 +68,8 @@ div.csl-indent {
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0"></script>
 <script src="https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.js"></script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -99,7 +83,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./derivations.html">Exercises</a></li><li class="breadcrumb-item"><a href="./qualitative.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Qualitative Problems</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -179,13 +163,13 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
  <span class="menu-text">Exercises</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./derivations.html" class="sidebar-item-text sidebar-link">
@@ -224,7 +208,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./qualitative.html" class="sidebar-item-text sidebar-link">
+  <a href="./qualitative.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Qualitative Problems</span></span></a>
   </div>
 </li>
@@ -356,7 +340,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -366,14 +350,24 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#short-answer" id="toc-short-answer" class="nav-link active" data-scroll-target="#short-answer"><span class="header-section-number">12.1</span> Short Answer</a></li>
+  <li><a href="#multiple-choice" id="toc-multiple-choice" class="nav-link" data-scroll-target="#multiple-choice"><span class="header-section-number">12.2</span> Multiple Choice</a></li>
+  <li><a href="#multiple-selection" id="toc-multiple-selection" class="nav-link" data-scroll-target="#multiple-selection"><span class="header-section-number">12.3</span> Multiple Selection</a></li>
+  <li><a href="#numerical" id="toc-numerical" class="nav-link" data-scroll-target="#numerical"><span class="header-section-number">12.4</span> Numerical</a></li>
+  <li><a href="#advanced-usage" id="toc-advanced-usage" class="nav-link" data-scroll-target="#advanced-usage"><span class="header-section-number">12.5</span> Advanced Usage</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Qualitative Problems</span></h1>
 </div>
 
 
@@ -388,11 +382,140 @@ div.csl-indent {
 
 </header>
 
-<div id="refs" role="list" style="display: none">
-
+<p>the <code>QualitativeProblem</code> class indicates that a code block will contain qualitative problems, either short-answer or multiple choice questions.</p>
+<section id="short-answer" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="short-answer"><span class="header-section-number">12.1</span> Short Answer</h2>
+<p>To create a short-answer problem, use the class <code>ShortAnswer</code>, and simply provide a short answer question, like so:</p>
+<pre><code>```{.QualitativeProblem .ShortAnswer}
+1.1 How are you feeling today?
+```</code></pre>
+<p>The number indicates the exercise number. This is immediately followed by the question. The result will be:</p>
+<pre class="QualitativeProblem ShortAnswer"><code>1.1 How are you feeling today?</code></pre>
+<p>Student submissions to short-answer prompts will be recorded, but by default will not be assigned any credit. They will, however, be visible in the review section for the assignment, so it will be possible to assign them partial credit, as if they were an exam problem. The behavior for awarding credit can also be configured with the <code>give-credit</code> option, see Advanced Usage below.</p>
+</section>
+<section id="multiple-choice" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="multiple-choice"><span class="header-section-number">12.2</span> Multiple Choice</h2>
+<p>To create a multiple-choice problem, use the class <code>MultipleChoice</code>, and provide a question along with a set of answers (one per line), like so:</p>
+<pre><code>```{.QualitativeProblem .MultipleChoice}
+1.2 How are you feeling today?
+| Good!
+| +OK!
+| Meh.
+```</code></pre>
+<p>The answers should be typed as you want them to be displayed. Carnap doesn’t currently render formulas or LaTeX within multiple choice answers, and HTML escape codes like <code>&amp;or;</code> will cause some trouble for the answer-parser. If you want to include a formula with symbols, just use the symbols directly in the answer. You can copy-paste from here: ¬,→,∧,∨,∀,∃.</p>
+<p>Answers marked with a <code>+</code> or a <code>*</code> will be accepted as correct. Answers marked with a <code>-</code> or a <code>+</code> will be pre-selected. So the result of the above is:</p>
+<pre class="QualitativeProblem MultipleChoice"><code>1.2 How are you feeling today?
+| Good!
+| +OK!
+| Meh.</code></pre>
+<p>Which has “OK!” preselected and just one correct answer, namely “OK!”.</p>
+</section>
+<section id="multiple-selection" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="multiple-selection"><span class="header-section-number">12.3</span> Multiple Selection</h2>
+<p>To create a multiple-selection problem, use the class <code>MultipleSelection</code>,</p>
+<p>To create a multiple-choice problem, use the class <code>MultipleChoice</code>, and provide a question along with a set of answers (one per line), like so:</p>
+<pre><code>```{.QualitativeProblem .MultipleSelection}
+1.2 How are you feeling today?
+| - Bad!
+| + OK!
+| * I contain multitudes.
+```</code></pre>
+<p>As above, answers should be typed as you want them displayed.</p>
+<p>Answers marked with a <code>+</code> or a <code>*</code> must be selected for a correct answer, and other answers must not be selected. Answers marked with a <code>-</code> or a <code>+</code> will be pre-selected. So the result of the above is:</p>
+<pre class="QualitativeProblem MultipleSelection"><code>1.2 How are you feeling today?
+| - Bad!
+| + OK!
+| * I contain multitudes.</code></pre>
+</section>
+<section id="numerical" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="numerical"><span class="header-section-number">12.4</span> Numerical</h2>
+<p>To create a numerical problem, use the class <code>.Numerical</code> and provide a question and answer, in the format <code>ANSWER : QUESTION</code>, optionally pre-filling with hint written below the question, like so:</p>
+<pre><code>```{.QualitativeProblem .Numerical}
+1.3 8 : How many bits in a byte?
+| 2^3
+```</code></pre>
+<p>The above produces:</p>
+<pre class="QualitativeProblem Numerical"><code>1.3 8 : How many bits in a byte?
+| 2^3</code></pre>
+<p>Answers must be given as decimal expressions or fractions (so, the above <span class="math inline">\(2^3\)</span> won’t be accepted without being evaluated). They’ll be saved as decimal expressions.</p>
+</section>
+<section id="advanced-usage" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="advanced-usage"><span class="header-section-number">12.5</span> Advanced Usage</h2>
+<section id="options-and-attributes" class="level4" data-number="12.5.0.1">
+<h4 data-number="12.5.0.1" class="anchored" data-anchor-id="options-and-attributes"><span class="header-section-number">12.5.0.1</span> Options and Attributes</h4>
+<p>In addition to allowing for turning off submission with <code>submission="none"</code>, qualitative problems also have the following options, which can be configured using the <code>options</code> field, for example setting <code>options="exam"</code> or <code>options="exam check"</code>. See the general <a href="pandoc.html">pandoc</a> documentation for more details.</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>exam</code></td>
+<td style="text-align: left;">Allows for submission of work which is incomplete or incorrect</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>check</code></td>
+<td style="text-align: left;">Adds a button which checks results without submitting</td>
+</tr>
+</tbody>
+</table>
 </div>
+<p>This won’t have any effect on a short-answer question, since there’s no notion of “correct” to apply. Qualitative questions also permit assigning custom point values with the <code>points=VALUE</code>, like most other graded problems.</p>
+<p>Short answer questions also accept a <code>give-credit</code> option, which has the following available settings</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>onSubmission</code></td>
+<td style="text-align: left;">Counts all submissions as correct</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>so, adding <code>give-credit="onSubmisson"</code> to a short answer question will award credit automatically for any submission.</p>
+<p>For more complicated formatting of multiple choice and multiple selection options, you can also use the <code>content-format</code> option, which has the following available settings</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>html</code></td>
+<td style="text-align: left;">Applies html tags that appear in the answer options</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>So, for example, one can write:</p>
+<pre><code>```{.QualitativeProblem .MultipleChoice options="check" content-format="html"}
+1. "Truth" is:
+| a &lt;b&gt;propery&lt;/b&gt; of propositions
+| a logical &lt;b&gt;object&lt;/b&gt;
+| *A five-letter word
+```</code></pre>
+<p>to generate</p>
+<pre class="QualitativeProblem MultipleChoice" data-options="check" data-content-format="html"><code>1. "Truth" is:
+| a &lt;b&gt;propery&lt;/b&gt; of propositions
+| a logical &lt;b&gt;object&lt;/b&gt;
+| *A five-letter word</code></pre>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -628,13 +751,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./server-configuration.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Configuring Carnap</span></span>
+      <a href="./sequent-calculus.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Sequent Calculus Deductions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./truth-tree.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Truth Trees (Semantic Tableaux)</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

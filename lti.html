@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Carnap Manual - References</title>
+<title>The Carnap Manual - 24&nbsp; LTI 1.3</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,7 +64,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./server-configuration.html" rel="prev">
+<link href="./lti-develop.html" rel="next">
+<link href="./administration.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -99,7 +115,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./administration.html">Advanced Usage</a></li><li class="breadcrumb-item"><a href="./lti.html"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">LTI 1.3</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -303,13 +319,13 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
  <span class="menu-text">Advanced Usage</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./administration.html" class="sidebar-item-text sidebar-link">
@@ -318,7 +334,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lti.html" class="sidebar-item-text sidebar-link">
+  <a href="./lti.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">LTI 1.3</span></span></a>
   </div>
 </li>
@@ -356,7 +372,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -366,14 +382,26 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#basic-setup-outline" id="toc-basic-setup-outline" class="nav-link active" data-scroll-target="#basic-setup-outline"><span class="header-section-number">24.1</span> Basic Setup Outline</a></li>
+  <li><a href="#step-1---configuring-your-lms-to-recognize-carnap" id="toc-step-1---configuring-your-lms-to-recognize-carnap" class="nav-link" data-scroll-target="#step-1---configuring-your-lms-to-recognize-carnap"><span class="header-section-number">24.2</span> Step 1 - Configuring your LMS to recognize Carnap</a></li>
+  <li><a href="#step-2---configuring-carnap-to-recognize-your-lms" id="toc-step-2---configuring-carnap-to-recognize-your-lms" class="nav-link" data-scroll-target="#step-2---configuring-carnap-to-recognize-your-lms"><span class="header-section-number">24.3</span> Step 2 - Configuring Carnap to recognize your LMS</a></li>
+  <li><a href="#step-3---configuring-your-carnap-class-for-auto-enrollment" id="toc-step-3---configuring-your-carnap-class-for-auto-enrollment" class="nav-link" data-scroll-target="#step-3---configuring-your-carnap-class-for-auto-enrollment"><span class="header-section-number">24.4</span> Step 3 - Configuring your Carnap class for auto-enrollment</a>
+  <ul class="collapse">
+  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes"><span class="header-section-number">24.4.1</span> Notes</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">LTI 1.3</span></h1>
 </div>
 
 
@@ -388,11 +416,150 @@ div.csl-indent {
 
 </header>
 
-<div id="refs" role="list" style="display: none">
-
+<p>Carnap supports <a href="http://www.imsglobal.org/spec/lti/v1p3/">LTI 1.3</a> for login.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> This allows Carnap to be launched directly from a Learning Management System, and to hand over management of user account data (like email, name, and student ID) as well as login, to the LMS.</p>
+<p>Various major LMS implementations including Moodle, Brightspace, and Canvas support LTI 1.3 natively.</p>
+<section id="basic-setup-outline" class="level2" data-number="24.1">
+<h2 data-number="24.1" class="anchored" data-anchor-id="basic-setup-outline"><span class="header-section-number">24.1</span> Basic Setup Outline</h2>
+<p>Connecting Carnap to your university’s LMS involves three steps.</p>
+<ol type="1">
+<li>Your LMS needs to be configured to recognize Carnap</li>
+<li>Your Carnap server needs to be configured to recognize your LMS</li>
+<li>Your Carnap class needs to be configured to auto-enroll students who are launching Carnap from within your LMS.</li>
+</ol>
+<p>Below, you’ll find sections on each of these steps.</p>
+</section>
+<section id="step-1---configuring-your-lms-to-recognize-carnap" class="level2" data-number="24.2">
+<h2 data-number="24.2" class="anchored" data-anchor-id="step-1---configuring-your-lms-to-recognize-carnap"><span class="header-section-number">24.2</span> Step 1 - Configuring your LMS to recognize Carnap</h2>
+<p>There are a few generic pieces of information your LMS will need in order to connect to Carnap. These are as follows:</p>
+<ul>
+<li><code>oidc_initiation_url</code>: https://carnap.io/auth/page/lti13/initiate</li>
+<li><code>target_link_uri</code>: https://carnap.io</li>
+<li>Public JWK URL: https://carnap.io/auth/page/lti13/jwks</li>
+<li>Redirect URLs: https://carnap.io/auth/page/lti13/authenticate</li>
+</ul>
+<p>If you are running your own instance of the Carnap server, you will use the same paths but with your custom domain name replacing “carnap.io”.</p>
+<p>However, different LMSes need this information to be entered in different places. This will generally be the responsibility of an LMS administrator, rather than the responsibility of an individual instructor, so you may need to work with your IT department to arrange the initial setup of the LMS integration.</p>
+<p>Now - here are instructions on configuring your LMS, for the LMSes we have experience with. If something is missing or incorrect, please consider opening an issue <a href="https://github.com/Carnap/Carnap-Documentation/issues">here</a> or sending an email to <a href="mailto:gleachkr@ksu.edu">gleachkr@ksu.edu</a>.</p>
+<details>
+<summary>
+Configuring Canvas to use Carnap
+</summary>
+<p>You’ll need to begin by configuring an LTI key. This requires administrator access to your Canvas instance, so if you’re an instructor, you may need to speak to IT. Instructions for configuring an LTI key for Canvas can be found here: <a href="https://community.canvaslms.com/t5/Admin-Guide/How-do-I-configure-an-LTI-key-for-an-account/ta-p/140">Configuring an LTI key</a>.</p>
+<p>Canvas allows configurations to be imported rather than set manually, via the “Paste JSON” option described in the documentation linked above. A JSON file for easy configuration of a Canvas instance using the “Paste JSON” option is reproduced below.</p>
+<p>Once the LTI key is configured in your Canvas instance, you’ll also need to add the “Client Id” number from the key to your course. (If an adminstrator configured the key for you, you may need to ask them for the Client ID.) Instructions on adding Carnap to your course using the Client ID can be found here: <a href="https://community.canvaslms.com/t5/Admin-Guide/How-do-I-configure-an-external-app-for-an-account-using-a-client/ta-p/202">Adding Carnap To Your Course</a>.</p>
+<p>For more details on Canvas setup with LTI 1.3, see:</p>
+<ul>
+<li><a href="https://canvas.instructure.com/doc/api/file.lti_dev_key_config.html">Technical documentation</a>. This is also a nice general overview of the protocol.</li>
+<li><a href="https://community.canvaslms.com/t5/Admin-Guide/How-do-I-configure-an-LTI-key-for-an-account/ta-p/140">Configuring an LTI key</a></li>
+<li><a href="https://community.canvaslms.com/t5/Admin-Guide/How-do-I-configure-an-external-app-for-an-account-using-a-client/ta-p/202">Adding Carnap To Your Course</a></li>
+</ul>
+<section id="json-configuration-with-canvas." class="level4" data-number="24.2.0.1">
+<h4 data-number="24.2.0.1" class="anchored" data-anchor-id="json-configuration-with-canvas."><span class="header-section-number">24.2.0.1</span> JSON Configuration with Canvas.</h4>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>   <span class="dt">"title"</span><span class="fu">:</span> <span class="st">"Carnap"</span><span class="fu">,</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>   <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"Carnap Logic Framework"</span><span class="fu">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>   <span class="dt">"oidc_initiation_url"</span><span class="fu">:</span> <span class="st">"https://carnap.io/auth/page/lti13/initiate"</span><span class="fu">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>   <span class="dt">"target_link_uri"</span><span class="fu">:</span> <span class="st">"https://carnap.io/"</span><span class="fu">,</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>   <span class="dt">"public_jwk_url"</span><span class="fu">:</span> <span class="st">"https://carnap.io/auth/page/lti13/jwks"</span><span class="fu">,</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>   <span class="dt">"scopes"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>      <span class="st">"https://purl.imsglobal.org/spec/lti-ags/scope/lineitem"</span><span class="ot">,</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>      <span class="st">"https://purl.imsglobal.org/spec/lti-ags/scope/result.readonly"</span><span class="ot">,</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>      <span class="st">"https://purl.imsglobal.org/spec/lti-ags/scope/score"</span><span class="ot">,</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">"https://purl.imsglobal.org/spec/lti-nrps/scope/contextmembership.readonly"</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>   <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>   <span class="dt">"extensions"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>         <span class="dt">"domain"</span><span class="fu">:</span> <span class="st">"carnap.io"</span><span class="fu">,</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>         <span class="dt">"tool_id"</span><span class="fu">:</span> <span class="st">"Carnap.io"</span><span class="fu">,</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>         <span class="dt">"platform"</span><span class="fu">:</span> <span class="st">"canvas.instructure.com"</span><span class="fu">,</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>         <span class="dt">"settings"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"text"</span><span class="fu">:</span> <span class="st">"Carnap"</span><span class="fu">,</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"selection_height"</span><span class="fu">:</span> <span class="dv">800</span><span class="fu">,</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"selection_width"</span><span class="fu">:</span> <span class="dv">800</span><span class="fu">,</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"privacy_level"</span><span class="fu">:</span> <span class="st">"public"</span><span class="fu">,</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"placements"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>               <span class="fu">{</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>                  <span class="dt">"text"</span><span class="fu">:</span> <span class="st">"Carnap"</span><span class="fu">,</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>                  <span class="dt">"enabled"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>                  <span class="dt">"placement"</span><span class="fu">:</span> <span class="st">"course_navigation"</span><span class="fu">,</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>                  <span class="dt">"message_type"</span><span class="fu">:</span> <span class="st">"LtiResourceLinkRequest"</span><span class="fu">,</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>                  <span class="dt">"target_link_uri"</span><span class="fu">:</span> <span class="st">"https://carnap.io/"</span><span class="fu">,</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>                  <span class="dt">"windowTarget"</span><span class="fu">:</span> <span class="st">"_blank"</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>               <span class="fu">}</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>            <span class="ot">]</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>         <span class="fu">}</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>   <span class="ot">]</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Note: It is possible to use Carnap in an <code>iframe</code> (so it appears in the Canvas page without opening a new tab), but there are caveats, especially around support for Safari and other WebKit browsers, since they are very aggressive about third-party cookie blocking. If you want to try this, remove the <code>"windowTarget": "_blank"</code> in the JSON.</p>
+</section></details>
+<details>
+<summary>
+Configuring Brightspace/D2L to use Carnap
+</summary>
+<p>Under <a href="https://community.brightspace.com/generic/s/article/LTI-Security-Settings-Consumer-Information">LTI Security Settings</a>, make sure that the following are checked to allow for automatic registration in your Carnap courses:</p>
+<ul>
+<li>Name</li>
+<li>Org Unit Information</li>
+</ul>
+<p>Carnap will also use the Email property to fill in user information if it is present, but it is not required.</p>
+<p>It appears that Brightspace doesn’t support sending student ID numbers in the <code>lis</code> claim as <code>person_sourcedid</code> like Canvas does. If this is something that you need for gradebook purposes, it is possible we can make Carnap accept the Brightspace specific “Org Defined ID” or “User ID” properties for the Carnap “University ID” field.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/lti-brightspace-security.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">screenshot from brightspace documentation of the “security settings” subsection with “name” and “org unit information” checked</figcaption>
+</figure>
 </div>
+<p>For more details on LTI configuration in Brightspace/D2L, see these pages:</p>
+<ul>
+<li><a href="https://community.brightspace.com/generic/s/article/LTI-Integration-Guide">LTI Integration Guide (links to other pages)</a></li>
+<li><a href="https://community.brightspace.com/generic/s/article/LTI-Security-Settings-Consumer-Information">LTI Security Settings and Platform information</a></li>
+<li><a href="https://community.brightspace.com/s/article/LTI-Advantage-Administrator-Guide">LTI Advantage (LTI 1.3) Administrator Guide</a></li>
+</ul>
+</details>
+</section>
+
+<section id="step-2---configuring-carnap-to-recognize-your-lms" class="level2" data-number="24.3">
+<h2 data-number="24.3" class="anchored" data-anchor-id="step-2---configuring-carnap-to-recognize-your-lms"><span class="header-section-number">24.3</span> Step 2 - Configuring Carnap to recognize your LMS</h2>
+<p>After your LMS is configured to talk to Carnap, it needs to be registered on the Carnap server. For setup with the public Carnap instance at Carnap.io, <a href="mailto:gleachkr@ksu.edu">contact Graham</a> with the following details from your LMS:</p>
+<ul>
+<li>Public JWKs URL</li>
+<li>Authorization Redirect URL</li>
+<li>Client ID</li>
+</ul>
+<p>For example, for a cloud Canvas (production environment), these would be:</p>
+<ul>
+<li>JWK URL: <code>https://canvas.instructure.com/api/lti/security/jwks</code></li>
+<li>Authorization redirect URL: <code>https://canvas.instructure.com/api/lti/authorize_redirect</code></li>
+<li>Client ID: from your LTI developer key</li>
+<li>Deployment ID: not required for Carnap</li>
+</ul>
+<p>If you are running a self-hosted instance of Carnap, you can configure LTI Platforms (Learning Management Systems) on the admin page at <code>https://carnap.example.com/master_admin</code>.</p>
+</section>
+<section id="step-3---configuring-your-carnap-class-for-auto-enrollment" class="level2" data-number="24.4">
+<h2 data-number="24.4" class="anchored" data-anchor-id="step-3---configuring-your-carnap-class-for-auto-enrollment"><span class="header-section-number">24.4</span> Step 3 - Configuring your Carnap class for auto-enrollment</h2>
+<p>Automatic registration links a class on the Carnap server to a class in an LMS, and automatically registers students in the Carnap class when they log in to Carnap from the associated course in the LMS LMS.</p>
+<p>Once you’ve completed steps 1 and 2 above, attempt to log in to Carnap from the LMS course that you want to connect to Carnap. A message will appear on the Carnap user registration page giving you an autoregistration ID. The ID will look something like this:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">"ltiDeploymentId"</span><span class="fu">:</span><span class="st">"…"</span><span class="fu">,</span> <span class="dt">"ltiContextId"</span><span class="fu">:</span><span class="st">"…"</span><span class="fu">,</span><span class="dt">"ltiIssuer"</span><span class="fu">:</span><span class="st">"…"</span><span class="fu">,</span><span class="dt">"label"</span><span class="fu">:</span><span class="st">"…"</span><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>but with concrete values replacing the ellipses.</p>
+<p>Copy this ID down (the whole thing, including the enclosing brackets) and go to your instructor page on Carnap. Select the course that you wish to associate with your LMS course, and edit the course information. In the course information, there will be a field where you can paste the autoregistration ID.</p>
+<p>Once that ID has been configured, all future launches from your LMS course will be registered in the associated Carnap course automatically.</p>
+<section id="notes" class="level3" data-number="24.4.1">
+<h3 data-number="24.4.1" class="anchored" data-anchor-id="notes"><span class="header-section-number">24.4.1</span> Notes</h3>
+<ul>
+<li><p>Automatic registrations are allowed even if your course is closed (even if you’ve unchecked the “course open” box on your instructor page). So, you can set registration to be LTI only simply by setting your course to be closed.</p></li>
+<li><p>Students will have their user information automatically synchronized with the LMS on every launch, so if they want to change their name or other details, that should be accomplished in the LMS or other upstream systems.</p></li>
+</ul>
 
 
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>No previous versions superseded by LTI 1.3 including LTI 1.0, 1.1, or 2.0 are supported.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -630,11 +797,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./server-configuration.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Configuring Carnap</span></span>
+      <a href="./administration.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Carnap deployment and administration</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./lti-develop.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">LTI Information for Carnap Developers</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

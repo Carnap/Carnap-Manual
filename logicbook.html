@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>The Carnap Manual - 20&nbsp; Natural Deduction in Logic Book Systems</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./montague.html" rel="next">
+<link href="./forallx.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans|Open+Sans&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" ,="" type="text/css" href="https://carnap.io/static/css/exercises.css">
+<link type="text/css" href="https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0"></script>
+<script src="https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.js"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./systems.html">Supported Systems</a></li><li class="breadcrumb-item"><a href="./logicbook.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Natural Deduction in Logic Book Systems</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="././images/carnap-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">The Carnap Manual</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/Carnap" rel="" title="" class="quarto-navigation-tool px-1" aria-label="github"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text">Getting Started</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./quickstart.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Quick Start Guide</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./faq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Frequently Asked Questions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dashboard.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Carnap’s Course Management Dashboard</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pandoc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Carnap’s Pandoc MarkDown</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./awesome-carnap.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Community resources for Carnap</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+ <span class="menu-text">Exercises</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./derivations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Derivations</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./truth-tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Truth Tables</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./translation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Translations</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modelchecker.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Countermodels</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./gentzen-ND.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Gentzen-Prawitz Natural Deduction</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sequent-calculus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Sequent Calculus Deductions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./qualitative.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Qualitative Problems</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./truth-tree.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Truth Trees (Semantic Tableaux)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./syntax-check.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Syntax Check Exercises</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./systems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Supported Systems</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./equivalences.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Chains of equivalences</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./forallx-msu.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Natural deduction in the <em>forall x: Mississippi State</em> systems</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./forallx-pitt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Natural Deduction in the <em>forall x: Pittsburgh</em> systems</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./forallx-yyc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Natural deduction in the <em>forall x: Calgary</em> systems</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./forallx.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Natural deduction in the original <em>forall x</em> systems</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./logicbook.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Natural Deduction in Logic Book Systems</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./montague.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Natural Deduction in the Carnap Book</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Set_Theory_Demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Set Theory Demo</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+ <span class="menu-text">Advanced Usage</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./administration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Carnap deployment and administration</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lti.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">LTI 1.3</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lti-develop.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">LTI Information for Carnap Developers</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./javascript.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">JavaScript Extensions for Carnap</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./installation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Installing Carnap</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./api.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Carnap API</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./server-configuration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Configuring Carnap</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#propositional-systems" id="toc-propositional-systems" class="nav-link active" data-scroll-target="#propositional-systems"><span class="header-section-number">20.1</span> Propositional Systems</a>
+  <ul class="collapse">
+  <li><a href="#notation" id="toc-notation" class="nav-link" data-scroll-target="#notation"><span class="header-section-number">20.1.1</span> Notation</a></li>
+  <li><a href="#basic-rules" id="toc-basic-rules" class="nav-link" data-scroll-target="#basic-rules"><span class="header-section-number">20.1.2</span> Basic Rules</a></li>
+  </ul></li>
+  <li><a href="#first-order-systems" id="toc-first-order-systems" class="nav-link" data-scroll-target="#first-order-systems"><span class="header-section-number">20.2</span> First-Order Systems</a>
+  <ul class="collapse">
+  <li><a href="#notation-1" id="toc-notation-1" class="nav-link" data-scroll-target="#notation-1"><span class="header-section-number">20.2.1</span> Notation</a></li>
+  <li><a href="#basic-rules-1" id="toc-basic-rules-1" class="nav-link" data-scroll-target="#basic-rules-1"><span class="header-section-number">20.2.2</span> Basic Rules</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Natural Deduction in Logic Book Systems</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>This document gives a short description of how Carnap presents the systems of natural deduction from Bergmann Moore and Nelson’s <em>Logic Book</em>.</p>
+<section id="propositional-systems" class="level2" data-number="20.1">
+<h2 data-number="20.1" class="anchored" data-anchor-id="propositional-systems"><span class="header-section-number">20.1</span> Propositional Systems</h2>
+<section id="notation" class="level3" data-number="20.1.1">
+<h3 data-number="20.1.1" class="anchored" data-anchor-id="notation"><span class="header-section-number">20.1.1</span> Notation</h3>
+<p>The different admissible keyboard abbreviations for the different connectives are as follows:</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th>Connective</th>
+<th style="text-align: left;">Keyboard</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>⊃</td>
+<td style="text-align: left;"><code>-&gt;</code>, <code>=&gt;</code>,<code>&gt;</code></td>
+</tr>
+<tr class="even">
+<td>&amp;</td>
+<td style="text-align: left;"><code>/\</code>, <code>&amp;</code>, <code>and</code></td>
+</tr>
+<tr class="odd">
+<td>∨</td>
+<td style="text-align: left;"><code>\/</code>, <code>|</code>, <code>or</code></td>
+</tr>
+<tr class="even">
+<td>↔︎</td>
+<td style="text-align: left;"><code>&lt;-&gt;</code>, <code>&lt;=&gt;</code></td>
+</tr>
+<tr class="odd">
+<td>~</td>
+<td style="text-align: left;"><code>-</code>, <code>~</code>, <code>not</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The available sentence letters are <span class="math inline">\(A\)</span> through <span class="math inline">\(Z\)</span>, together with the infinitely many subscripted letters <span class="math inline">\(P_1, P_2,\ldots\)</span> written <code>P_1, P_2</code> and so on.</p>
+<p>Proofs consist of a series of lines. A line is either an assertion line containing a formula followed by a <code>:</code> and then a justification for that formula, or a separator line containing two dashes, thus: <code>--</code>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> A justification consists of zero or more numbers (citations of particular lines) and pairs of numbers separated by a dash (citations of a subproof contained within the given line range), followed by the name of a rule being applied.</p>
+<p>A subproof is begun by increasing the indentation level. The first line of a subproof should be more indented than the containing proof, and the lines directly contained in this subproof should maintain this indentation level. (Lines indirectly contained, by being part of a sub-sub-proof, will need to be indented more deeply.) The subproof ends when the indentation level of the containing proof is resumed; hence, two contiguous sub-proofs of the same containing proof can be distinguished from one another by inserting a separator line between them at the same level of indentation as the containing proof. The final <em>unindented</em> line of a derivation will serve as the conclusion of the entire derivation.</p>
+<p>Here’s an example derivation, using system SD from the <em>Logic Book</em></p>
+<pre class="Playground LogicBookSD" data-options="resize render" data-guides="fitch" data-init="now"><code>   P        :AS
+      P     :AS
+      P     :2 R
+   P &gt; P    :2-3 CI
+P &gt; (P &gt; P) :1-4 CI</code></pre>
+<p>and here is one using system PD</p>
+<pre class="Playground LogicBookPD" data-options="resize render" data-guides="fitch" data-init="now"><code>(Ax)Fx        :PR
+(Ax)(Fx &gt; Gx) :PR
+Fa            :1 AE
+Fa &gt; Ga       :2 AE
+Ga            :3,4 &gt;E 
+(Ax)Gx        :5 AI </code></pre>
+</section>
+<section id="basic-rules" class="level3" data-number="20.1.2">
+<h3 data-number="20.1.2" class="anchored" data-anchor-id="basic-rules"><span class="header-section-number">20.1.2</span> Basic Rules</h3>
+<section id="logic-book-system-sd" class="level4" data-number="20.1.2.1">
+<h4 data-number="20.1.2.1" class="anchored" data-anchor-id="logic-book-system-sd"><span class="header-section-number">20.1.2.1</span> Logic Book System SD</h4>
+<p>The minimal system SD from the <em>Logic Book</em> (the system used in a proofchecker constructed with <code>.LogicBookSD</code> in Carnap’s <a href="pandoc.html">Pandoc Markup</a>) has the following set of rules for direct inferences:</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Rule</th>
+<th>Abbreviation</th>
+<th style="text-align: left;">Premises</th>
+<th style="text-align: left;">Conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">And-Elim.</td>
+<td><code>&amp;E</code></td>
+<td style="text-align: left;"><span class="math inline">\(φ\&amp;ψ\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(φ/ψ\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">And-Intro.</td>
+<td><code>&amp;I</code></td>
+<td style="text-align: left;"><span class="math inline">\(φ,ψ\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(φ\&amp;ψ\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Or-Intro</td>
+<td><code>\/I</code></td>
+<td style="text-align: left;"><span class="math inline">\(φ/ψ\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(φ∨ψ\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Conditional-Elim</td>
+<td><code>-&gt;E</code>.<code>CE</code></td>
+<td style="text-align: left;"><span class="math inline">\(φ,φ⊃ψ\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(ψ\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Biconditional-Elim</td>
+<td><code>&lt;-&gt;E</code>,<code>BE</code></td>
+<td style="text-align: left;"><span class="math inline">\(φ/ψ, φ↔ψ\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(ψ/φ\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Reiteration</td>
+<td><code>R</code></td>
+<td style="text-align: left;"><span class="math inline">\(φ\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(φ\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>We also have five rules for indirect inferences:</p>
+<ol type="1">
+<li><code>-&gt;I</code> (also denoted <code>CI</code>), which justifies an assertion of the form <span class="math inline">\(φ⊃ψ\)</span> by citing a subproof beginning with the assumption <span class="math inline">\(φ\)</span> and ending with the conclusion <span class="math inline">\(ψ\)</span>;</li>
+<li><code>&lt;-&gt;I</code>, (also denoted <code>BI</code>) which justifies an assertion of the form φ↔︎ψ by citing two subproofs, beginning with assuptions <span class="math inline">\(φ\)</span>, <span class="math inline">\(ψ\)</span>, respectively, and ending with conclusions <span class="math inline">\(ψ\)</span>, <span class="math inline">\(φ\)</span>, respectively;</li>
+<li><code>~I</code>, which justifies an assertion of the form <span class="math inline">\(~φ\)</span> by citing a subproof beginning with the assumption <span class="math inline">\(φ\)</span> and ending with a pair of lines <span class="math inline">\(ψ\)</span>,<span class="math inline">\(~ψ\)</span>.</li>
+<li><code>~E</code>, which justifies an assertion of the form φ by citing a subproof beginning with the assumption <span class="math inline">\(~φ\)</span> and ending with a pair of lines <span class="math inline">\(ψ\)</span>,<span class="math inline">\(~ψ\)</span>.</li>
+<li><code>∨E</code>, which justifies an assertion of the form χ by citing a line φ∨ψ, and two subproofs beginning the assumptions <span class="math inline">\(φ,ψ\)</span> respectively and both ending with a line χ.</li>
+</ol>
+<p>Finally, <code>PR</code> or <code>Assumption</code> (to keep with the <em>Logic Book</em> terminology) can be used to justify a line asserting a premise, and <code>AS</code> can be used to justify a line making an assumption. <code>A/SOMEADDITIONALTEXT</code> (where <code>SOMEADDITIONALTEXT</code> indicates some additional text to be included alongside the assumption in the rendered proof) can also be used to justify an assumption. Assumptions are only allowed on the first line of a subproof.</p>
+</section>
+<section id="logic-book-system-sd-plus" class="level4" data-number="20.1.2.2">
+<h4 data-number="20.1.2.2" class="anchored" data-anchor-id="logic-book-system-sd-plus"><span class="header-section-number">20.1.2.2</span> Logic Book System SD Plus</h4>
+<p>The extended system SD Plus (the system used in a proofchecker constructed with <code>.LogicBookSDPlus</code> in Carnap’s <a href="pandoc.html">Pandoc Markup</a>) also adds the following rules:</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Rule</th>
+<th>Abbreviation</th>
+<th style="text-align: left;">Premises</th>
+<th style="text-align: left;">Conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Modus Tollens</td>
+<td><code>MT</code></td>
+<td style="text-align: left;"><span class="math inline">\(φ⊃ψ,\sim ψ\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\sim φ\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hypothetical Syllogism</td>
+<td><code>HS</code></td>
+<td style="text-align: left;"><span class="math inline">\(φ⊃ψ, ψ⊃χ\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(φ⊃χ\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Disjunctive Syllogism</td>
+<td><code>DS</code></td>
+<td style="text-align: left;"><span class="math inline">\(\sim ψ, φ∨ψ\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(φ\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(\sim φ, φ∨ψ\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(ψ\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>As well as the following exchange rules, which can be used within a propositional context Φ:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Rule</th>
+<th>Abbreviation</th>
+<th style="text-align: left;">Premises</th>
+<th style="text-align: left;">Conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Commutation</td>
+<td><code>Comm</code></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ\&amp;ψ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(ψ\&amp;φ)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ∨ψ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(ψ∨φ)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Association</td>
+<td><code>Assoc</code></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ\&amp;(ψ\&amp;χ))\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ((φ\&amp;ψ)\&amp;χ)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ((φ\&amp;ψ)\&amp;χ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ\&amp;(ψ\&amp;χ))\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ∨(ψ∨χ))\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ((φ∨ψ)∨χ)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ((φ∨ψ)∨χ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ∨(ψ∨χ))\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Implication</td>
+<td><code>Impl</code></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ⊃ψ)/Φ(\sim φ∨ψ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ⊃ψ)/Φ(\sim φ∨ψ)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Double Negation</td>
+<td><code>DN</code></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ)/Φ(\sim \sim φ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(\sim \sim φ)/Φ(φ)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Idempotence</td>
+<td><code>Idem</code></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ\&amp;φ)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ\&amp;φ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ∨φ)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ∨φ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DeMorgan’s Laws</td>
+<td><code>DeM</code></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(\sim (φ\&amp;ψ))\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(\sim φ∨\sim ψ)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(\sim (φ∨ψ))\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(\sim φ\&amp;\sim ψ)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(\sim φ∨\sim ψ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(\sim (φ\&amp;ψ))\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(\sim φ\&amp;\sim ψ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(\sim (φ∨ψ))\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Transposition</td>
+<td><code>Trans</code></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ⊃ψ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(\sim ψ⊃\sim φ))\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(\sim ψ⊃\sim φ))\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ⊃ψ)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Exportation</td>
+<td><code>Exp</code></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ⊃(ψ⊃χ))\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ\&amp;ψ⊃χ)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ\&amp;ψ⊃χ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ⊃(ψ⊃χ))\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Distribution</td>
+<td><code>Dist</code></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ\&amp;(ψ∨χ))\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ((φ\&amp;ψ)∨(φ\&amp;χ))\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ((φ\&amp;ψ)∨(φ\&amp;χ))\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ\&amp;(ψ∨χ))\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ∨(ψ\&amp;χ))\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ((φ∨ψ)\&amp;(φ∨χ))\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ((φ∨ψ)\&amp;(φ∨χ))\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ∨(ψ\&amp;χ))\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Equivalence</td>
+<td><code>Equiv</code></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ↔ψ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ⊃ψ\&amp;ψ⊃φ)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ⊃ψ\&amp;ψ⊃φ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ↔ψ)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ↔ψ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ((φ\&amp;ψ)∨(\sim ψ\&amp;\sim φ))\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ((φ\&amp;ψ)∨(\sim ψ\&amp;\sim φ))\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ↔ψ)\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</section>
+<section id="first-order-systems" class="level2" data-number="20.2">
+<h2 data-number="20.2" class="anchored" data-anchor-id="first-order-systems"><span class="header-section-number">20.2</span> First-Order Systems</h2>
+<section id="notation-1" class="level3" data-number="20.2.1">
+<h3 data-number="20.2.1" class="anchored" data-anchor-id="notation-1"><span class="header-section-number">20.2.1</span> Notation</h3>
+<p>The different admissible keyboard abbreviations for quantifiers are as follows:</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th>Connective</th>
+<th style="text-align: left;">Keyboard</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>∀</td>
+<td style="text-align: left;"><code>A</code></td>
+</tr>
+<tr class="even">
+<td>∃</td>
+<td style="text-align: left;"><code>E</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The Logic Book first order systems contain sentence letters <span class="math inline">\(A\)</span> through <span class="math inline">\(Z\)</span>, together with the infinitely many subscripted letters <span class="math inline">\(P_1, P_2,\ldots\)</span> written <code>P_1, P_2</code> and so on.</p>
+<p>Application of a relation symbol is indicated by directly appending the arguments to the symbol.</p>
+<p>The available relation symbols are <span class="math inline">\(A\)</span> through <span class="math inline">\(Z\)</span>, together with the infinitely many subscripted letters <span class="math inline">\(F_1, F_2,\ldots\)</span> written <code>F_1, F_2,…</code>. The arity of a relation symbol is determined from context.</p>
+<p>The available constants are <span class="math inline">\(a\)</span> through <span class="math inline">\(v\)</span>, with the infinitely many subscripted letters <span class="math inline">\(c_1, c_2,\ldots\)</span> written <code>c_1, c_2,…</code>.</p>
+<p>The available variables are <span class="math inline">\(w\)</span> through <span class="math inline">\(z\)</span>, with the infinitely many subscripted letters <span class="math inline">\(x_1, x_2,\ldots\)</span> written <code>x_1, x_2,…</code>.</p>
+<p>Quantificational phrases are formed by appending a variable to a quantifier, and wrapping the result in parentheses.</p>
+</section>
+<section id="basic-rules-1" class="level3" data-number="20.2.2">
+<h3 data-number="20.2.2" class="anchored" data-anchor-id="basic-rules-1"><span class="header-section-number">20.2.2</span> Basic Rules</h3>
+<p>The first-order <em>Logic Book</em> systems PD and PD+ (the systems used in proofcheckers constructed with <code>.LogicBookPD</code>, and <code>LogicBookPDPlus</code> respectively) extend the rules of the system SD and SD+ respectively with the following set of new basic rules:</p>
+<div class="table">
+<table class="table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 17%">
+<col style="width: 25%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Rule</th>
+<th>Abbreviation</th>
+<th style="text-align: left;">Premises</th>
+<th style="text-align: left;">Conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Existential Introduction</td>
+<td><code>EI</code></td>
+<td style="text-align: left;"><span class="math inline">\(φ(σ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\((∃x)φ(x)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Universal Elimination</td>
+<td><code>AE</code></td>
+<td style="text-align: left;"><span class="math inline">\((∀x)φ(x)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(φ(σ)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Universal Introduction</td>
+<td><code>AI</code></td>
+<td style="text-align: left;"><span class="math inline">\(φ(σ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\((∀x)φ(x)\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Where Universal Introduction is subject to the restriction that <span class="math inline">\(σ\)</span> must not appear in <span class="math inline">\(φ(x)\)</span>, or any undischarged assumption or in any premise of the proof.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>It also adds one new rule for indirect derivations: <code>EE</code>, which justifies an assertion <span class="math inline">\(ψ\)</span> by citing an assertion of the form <span class="math inline">\((∃x)φ(x)\)</span> and a subproof beginning with the assumption <span class="math inline">\(φ(σ)\)</span> and ending with the conclusion <span class="math inline">\(ψ\)</span>, where <span class="math inline">\(σ\)</span> does not appear in <span class="math inline">\(ψ, (∃x)φ(x)\)</span>, or in any of the undischarged assumptions or premises of the proof.</p>
+<p>To these rules, PD+ also adds the exchange rule:</p>
+<table class="table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 17%">
+<col style="width: 25%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Rule</th>
+<th>Abbreviation</th>
+<th style="text-align: left;">Premises</th>
+<th style="text-align: left;">Conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Quantifier Negation</td>
+<td><code>QN</code></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(\sim (∀xφ)(x))\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ((∃x)\sim φ(x))\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ((∃x)\sim φ(x))\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(\sim (∀x)φ(x))\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(\sim (∃xφ)(x))\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ((∀x)\sim φ(x))\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ((∀x)\sim φ(x))\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(\sim (∃x)φ(x))\)</span></td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>These are intended for use when you have two contiguous subproofs and need to separate them - since they’re at the same level of indentation, you need some extra indication to show that they’re distinct subproofs.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Technically, Carnap checks only the assumptions and premises that are used in the derivation of <span class="math inline">\(φ(σ)\)</span>. This has the same effect in terms of what’s derivable, but is a little more lenient.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./forallx.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Natural deduction in the original <em>forall x</em> systems</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./montague.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Natural Deduction in the Carnap Book</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script defer="" src="https://carnap.io/static/ghcjs/rts.js"></script>
+<script defer="" src="https://carnap.io/static/ghcjs/allactions/lib.js"></script>
+<script defer="" src="https://carnap.io/static/ghcjs/allactions/out.js"></script>
+<script defer="" src="https://carnap.io/static/ghcjs/allactions/runmain.js"></script>
+
+
+
+</body></html>

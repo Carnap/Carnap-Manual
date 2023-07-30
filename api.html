@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>The Carnap Manual - 28&nbsp; Carnap API</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./server-configuration.html" rel="next">
+<link href="./installation.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans|Open+Sans&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" ,="" type="text/css" href="https://carnap.io/static/css/exercises.css">
+<link type="text/css" href="https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0"></script>
+<script src="https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.js"></script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./administration.html">Advanced Usage</a></li><li class="breadcrumb-item"><a href="./api.html"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Carnap API</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="././images/carnap-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">The Carnap Manual</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/Carnap" rel="" title="" class="quarto-navigation-tool px-1" aria-label="github"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text">Getting Started</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./quickstart.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Quick Start Guide</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./faq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Frequently Asked Questions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dashboard.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Carnap’s Course Management Dashboard</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pandoc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Carnap’s Pandoc MarkDown</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./awesome-carnap.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Community resources for Carnap</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+ <span class="menu-text">Exercises</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./derivations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Derivations</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./truth-tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Truth Tables</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./translation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Translations</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modelchecker.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Countermodels</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./gentzen-ND.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Gentzen-Prawitz Natural Deduction</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sequent-calculus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Sequent Calculus Deductions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./qualitative.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Qualitative Problems</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./truth-tree.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Truth Trees (Semantic Tableaux)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./syntax-check.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Syntax Check Exercises</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./systems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Supported Systems</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./equivalences.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Chains of equivalences</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./forallx-msu.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Natural deduction in the <em>forall x: Mississippi State</em> systems</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./forallx-pitt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Natural Deduction in the <em>forall x: Pittsburgh</em> systems</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./forallx-yyc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Natural deduction in the <em>forall x: Calgary</em> systems</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./forallx.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Natural deduction in the original <em>forall x</em> systems</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./logicbook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Natural Deduction in Logic Book Systems</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./montague.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Natural Deduction in the Carnap Book</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Set_Theory_Demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Set Theory Demo</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Advanced Usage</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./administration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Carnap deployment and administration</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lti.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">LTI 1.3</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lti-develop.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">LTI Information for Carnap Developers</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./javascript.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">JavaScript Extensions for Carnap</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./installation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Installing Carnap</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./api.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Carnap API</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./server-configuration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Configuring Carnap</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#tracking-issues" id="toc-tracking-issues" class="nav-link active" data-scroll-target="#tracking-issues"><span class="header-section-number">28.1</span> Tracking issues</a></li>
+  <li><a href="#instructor-setup" id="toc-instructor-setup" class="nav-link" data-scroll-target="#instructor-setup"><span class="header-section-number">28.2</span> Instructor setup</a></li>
+  <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage"><span class="header-section-number">28.3</span> Usage</a>
+  <ul class="collapse">
+  <li><a href="#example-scripts" id="toc-example-scripts" class="nav-link" data-scroll-target="#example-scripts"><span class="header-section-number">28.3.1</span> Example Scripts</a></li>
+  </ul></li>
+  <li><a href="#available-api-methods" id="toc-available-api-methods" class="nav-link" data-scroll-target="#available-api-methods"><span class="header-section-number">28.4</span> Available API Methods</a>
+  <ul class="collapse">
+  <li><a href="#document-api" id="toc-document-api" class="nav-link" data-scroll-target="#document-api"><span class="header-section-number">28.4.1</span> Document API</a></li>
+  <li><a href="#course-api" id="toc-course-api" class="nav-link" data-scroll-target="#course-api"><span class="header-section-number">28.4.2</span> Course API</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Carnap API</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<style> 
+
+h4, h5 { 
+    padding-top: 1em; 
+    padding-bottom: .3em; 
+    border-bottom: 1.5px solid #aaa; 
+}
+
+h2 {
+    margin-bottom: .5em;
+}
+
+pre.sourceCode {
+    background-color: #f8f8f8;
+}
+
+article img {
+    max-width: 100%;
+}
+</style>
+<p>Carnap has an experimental API, which is currently under development (see the tracking issues below).</p>
+<section id="tracking-issues" class="level2" data-number="28.1">
+<h2 data-number="28.1" class="anchored" data-anchor-id="tracking-issues"><span class="header-section-number">28.1</span> Tracking issues</h2>
+<ul>
+<li><a href="https://github.com/Carnap/Carnap/issues/226">Issue #226 “Perform instructor actions via an API”</a></li>
+<li><a href="https://github.com/Carnap/Carnap/issues/231">Issue #231 “Documents API”</a></li>
+<li><a href="https://github.com/Carnap/Carnap/issues/230">Issue #230 “Copy course”</a></li>
+</ul>
+</section>
+<section id="instructor-setup" class="level2" data-number="28.2">
+<h2 data-number="28.2" class="anchored" data-anchor-id="instructor-setup"><span class="header-section-number">28.2</span> Instructor setup</h2>
+<p>To use the API, you need an API key. Your API key should be kept a secret, since it allows anyone who has it to access and modify your courses.</p>
+<p>You can create an API key for yourself on the instructor page, beneath the “Manage Uploaded Documents” tab, here:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/apikey.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">image showing the API key field at the bottom of the screen</figcaption>
+</figure>
+</div>
+</section>
+<section id="usage" class="level2" data-number="28.3">
+<h2 data-number="28.3" class="anchored" data-anchor-id="usage"><span class="header-section-number">28.3</span> Usage</h2>
+<section id="example-scripts" class="level3" data-number="28.3.1">
+<h3 data-number="28.3.1" class="anchored" data-anchor-id="example-scripts"><span class="header-section-number">28.3.1</span> Example Scripts</h3>
+<p>Here are some examples to help you start using the API with different programming languages. We assume that you’re testing, so the URL begins with <code>http://localhost:3000</code>. This should instead be <code>https://YOURSERVERRDOMAIN</code> when you’re using this with a non-local server</p>
+<section id="python" class="level4" data-number="28.3.1.1">
+<h4 data-number="28.3.1.1" class="anchored" data-anchor-id="python"><span class="header-section-number">28.3.1.1</span> Python</h4>
+<p>Create the file <code>apitest.py</code>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>apikey <span class="op">=</span> <span class="st">'REDACTED'</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>base <span class="op">=</span> <span class="st">'http://localhost:3000/api/v1'</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rq(meth, p, <span class="op">*</span>args, key<span class="op">=</span>apikey, <span class="op">**</span>kwargs):</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    h <span class="op">=</span> {</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">'X-API-KEY'</span>: key,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> requests.request(meth, base <span class="op">+</span> p, <span class="op">*</span>args, <span class="op">**</span>kwargs, headers<span class="op">=</span>h)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>To issue the commands displayed below interactively <code>ipython -i apitest.py</code>, or <code>python -i apitest.py</code>.</p>
+</section>
+<section id="bash" class="level4" data-number="28.3.1.2">
+<h4 data-number="28.3.1.2" class="anchored" data-anchor-id="bash"><span class="header-section-number">28.3.1.2</span> Bash</h4>
+<p>Just use <code>curl</code> as indicated below.</p>
+</section>
+</section>
+</section>
+<section id="available-api-methods" class="level2" data-number="28.4">
+<h2 data-number="28.4" class="anchored" data-anchor-id="available-api-methods"><span class="header-section-number">28.4</span> Available API Methods</h2>
+<section id="document-api" class="level3" data-number="28.4.1">
+<h3 data-number="28.4.1" class="anchored" data-anchor-id="document-api"><span class="header-section-number">28.4.1</span> Document API</h3>
+<p>All of the methods in the documents API require that <code>:instructorIdent</code> is the same as the user who owns the API key (i.e.&nbsp;they do not work on other users’ documents yet).</p>
+<p><a href="https://github.com/Carnap/Carnap/issues/231">Tracking issue</a></p>
+<section id="get-instructorsinstructoridentdocuments" class="level5" data-number="28.4.1.0.1">
+<h5 data-number="28.4.1.0.1" class="anchored" data-anchor-id="get-instructorsinstructoridentdocuments"><span class="header-section-number">28.4.1.0.1</span> GET <code>/instructors/:instructorIdent/documents</code></h5>
+<details>
+<summary>
+Retrieves a list of documents owned by the given instructor and their metadata.
+</summary>
+<p>Here are some example commands:</p>
+<p><em>Python</em></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>rq(<span class="st">'GET'</span>, <span class="st">'/instructors/yourname@gmail.com/documents'</span>).json()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Bash</em></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-H</span> <span class="st">"X-API-KEY:YOURAPIKEYHERE"</span> localhost:3000/api/v1/instructors/yourname@youremail.com/documents</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Result</strong></p>
+<p>And here’s what your result will look like:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>[{<span class="st">'creator'</span>: <span class="dv">1</span>,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">'date'</span>: <span class="st">'2021-02-16T09:41:39.445672522Z'</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">'scope'</span>: <span class="st">'Public'</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">'id'</span>: <span class="dv">1</span>,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">'description'</span>: <span class="va">None</span>,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">'filename'</span>: <span class="st">'api.md'</span>}]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</section>
+<section id="post-instructorsinstructoridentdocuments" class="level5" data-number="28.4.1.0.2">
+<h5 data-number="28.4.1.0.2" class="anchored" data-anchor-id="post-instructorsinstructoridentdocuments"><span class="header-section-number">28.4.1.0.2</span> POST <code>/instructors/:instructorIdent/documents</code></h5>
+<details>
+<summary>
+Creates a new document with empty contents.
+</summary>
+<p>Should be followed by a <code>PUT</code> at <code>/instructors/:instructorIdent/documents/:documentId/data</code> in order to fill in the document contents.</p>
+<p><em>Python</em></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>rq(<span class="st">'POST'</span>, <span class="st">'/instructors/yourname@gmail.com/documents'</span>,</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    json<span class="op">=</span>{</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">"filename"</span>: <span class="st">"myfile.md"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">"scope"</span>: <span class="st">"Private"</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        <span class="st">"description"</span>: <span class="st">"My file"</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>).json()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Bash</em></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-H</span> <span class="st">"X-API-KEY:YOURAPIKEY"</span> <span class="dt">\</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">-H</span> <span class="st">"Content-Type: application/json"</span> <span class="dt">\</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">-d</span> <span class="st">'{"filename":"myfile.md","scope":"Private", "description":"My file"}'</span> <span class="dt">\</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>     localhost:3000/api/v1/instructors/yourname@gmail.com/documents</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Result</strong></p>
+<p>The ID of the new document:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="er">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>or an error is returned as an encoded JSON string.</p>
+<p>The response will also include a <code>Location</code> header pointed at the new resource. <code>scope</code> indicates the sharing scope of the document, and can be one of <code>Private</code>, <code>Public</code>, <code>LinkOnly</code> or <code>InstructorsOnly</code>. Both the scope and description fields can be omitted, with scope defaulting to <code>Private</code>.</p>
+</details>
+</section>
+<section id="get-instructorsinstructoridentdocumentsdocumentid" class="level5" data-number="28.4.1.0.3">
+<h5 data-number="28.4.1.0.3" class="anchored" data-anchor-id="get-instructorsinstructoridentdocumentsdocumentid"><span class="header-section-number">28.4.1.0.3</span> GET <code>/instructors/:instructorIdent/documents/:documentId</code></h5>
+<details>
+<summary>
+Like GET <code>/instructors/:instructorIdent/documents</code> but for a single document.
+</summary>
+<p><em>Python</em></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>rq(<span class="st">'GET'</span>, <span class="st">'/instructors/yourname@gmail.com/documents/1'</span>).json()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Bash</em></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-H</span> <span class="st">"X-API-KEY:YOURAPIKEYHERE"</span> localhost:3000/api/v1/instructors/yourname@youremail.com/documents/1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Result</strong></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">'creator'</span>: <span class="dv">1</span>,</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a> <span class="st">'date'</span>: <span class="st">'2021-02-16T09:41:39.445672522Z'</span>,</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a> <span class="st">'scope'</span>: <span class="st">'Public'</span>,</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a> <span class="st">'description'</span>: <span class="va">None</span>,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a> <span class="st">'filename'</span>: <span class="st">'api.md'</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</section>
+<section id="patch-instructorsinstructoridentdocumentsdocumentid" class="level5" data-number="28.4.1.0.4">
+<h5 data-number="28.4.1.0.4" class="anchored" data-anchor-id="patch-instructorsinstructoridentdocumentsdocumentid"><span class="header-section-number">28.4.1.0.4</span> PATCH <code>/instructors/:instructorIdent/documents/:documentId</code></h5>
+<details>
+<summary>
+Updates the metadata for a single document.
+</summary>
+<p><em>Python</em></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>rq(<span class="st">'PATCH'</span>, <span class="st">'/instructors/yourname@gmail.com/documents/1'</span>,</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    json<span class="op">=</span>{<span class="st">"scope"</span>: <span class="st">"Private"</span>}).json()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Bash</em></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-H</span> <span class="st">"X-API-KEY:YOURAPIKEY"</span> <span class="at">-X</span> <span class="st">"PATCH"</span> <span class="at">-d</span> <span class="st">'{"scope":"Public"}'</span> <span class="dt">\</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>     localhost:3000/api/v1/instructors/yourname@youremail.com/documents/1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Result</strong></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">'creator'</span>: <span class="dv">1</span>,</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a> <span class="st">'date'</span>: <span class="st">'2021-02-16T09:41:39.445672522Z'</span>,</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a> <span class="st">'scope'</span>: <span class="st">'Private'</span>,</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a> <span class="st">'description'</span>: <span class="va">None</span>,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a> <span class="st">'filename'</span>: <span class="st">'api.md'</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Currently <code>scope</code> and <code>description</code> fields can be updated. Passing in a null value for <code>description</code> will cause the document description to be cleared entirely.</p>
+</details>
+</section>
+<section id="get-instructorsinstructoridentdocumentsdocumentiddata" class="level5" data-number="28.4.1.0.5">
+<h5 data-number="28.4.1.0.5" class="anchored" data-anchor-id="get-instructorsinstructoridentdocumentsdocumentiddata"><span class="header-section-number">28.4.1.0.5</span> GET <code>/instructors/:instructorIdent/documents/:documentId/data</code></h5>
+<details>
+<summary>
+Gets the content of the given document by ID and returns it.
+</summary>
+<p><em>Python</em></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>rq(<span class="st">'GET'</span>, <span class="st">'instructors/yourname@youremail.com/documents/1/data'</span>).text</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Bash</em></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-H</span> <span class="st">"X-API-KEY:YOURAPIKEYHERE"</span> <span class="dt">\</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>     localhost:3000/api/v1/instructors/yourname@youremail.com/documents/1/data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Result</strong></p>
+<p>The contents of your document, as text</p>
+</details>
+</section>
+<section id="put-instructorsinstructoridentdocumentsdocumentiddata" class="level5" data-number="28.4.1.0.6">
+<h5 data-number="28.4.1.0.6" class="anchored" data-anchor-id="put-instructorsinstructoridentdocumentsdocumentiddata"><span class="header-section-number">28.4.1.0.6</span> PUT <code>/instructors/:instructorIdent/documents/:documentId/data</code></h5>
+<details>
+<summary>
+Overwrites the content of the given document by ID.
+</summary>
+<p>These examples use “aaaaaa” as a thing you might insert as the document contents.</p>
+<p><em>Python</em></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>rq(<span class="st">'PUT'</span>, <span class="st">'/instructors/yourname@gmail.com/documents/1/data'</span>, data<span class="op">=</span><span class="st">'aaaaaa'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Bash</em></p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> aaaaaa <span class="kw">|</span> <span class="ex">curl</span> <span class="at">-H</span> <span class="st">"X-API-KEY:YOURAPIKEYHERE"</span>  <span class="at">-T</span> <span class="st">"-"</span> <span class="dt">\</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    localhost:3000/api/v1/instructors/gleachkr@gmail.com/documents/1940/data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Result</strong></p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>Response [<span class="dv">200</span>]<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</section>
+</section>
+<section id="course-api" class="level3" data-number="28.4.2">
+<h3 data-number="28.4.2" class="anchored" data-anchor-id="course-api"><span class="header-section-number">28.4.2</span> Course API</h3>
+<p>Note: <code>:courseTitle</code> in the below needs to be properly URL-encoded for <code>curl</code>, which means in particular that each space needs to be replaced with <code>%20</code>. The python requests module does URL-encoding automatically, so spaces can be used verbatim. The examples below are for a course with the title “test course”.</p>
+<section id="get-httpscarnap.ioapiv1instructorsinstructoridentcourses" class="level5" data-number="28.4.2.0.1">
+<h5 data-number="28.4.2.0.1" class="anchored" data-anchor-id="get-httpscarnap.ioapiv1instructorsinstructoridentcourses"><span class="header-section-number">28.4.2.0.1</span> GET <code>https://carnap.io/api/v1/instructors/:instructorIdent/courses</code></h5>
+<details>
+<summary>
+Retrieves a list of courses.
+</summary>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>rq(<span class="st">'GET'</span>, <span class="st">'/instructors/gleachkr@gmail.com/courses/test course/students'</span>).json()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-H</span> <span class="st">"X-API-KEY:YOURAPIKEYHERE"</span> <span class="dt">\</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'localhost:3000/api/v1/instructors/gleachkr@gmail.com/courses'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Result</strong></p>
+<pre><code>[
+  {
+    "textBook": 12,
+    "instructor": 1123,
+    "enrollmentOpen": false,
+    "endDate": "2021-05-19T04:59:59Z",
+    "startDate": "2021-01-26T05:59:59Z",
+    "textbookProblems": {
+      "readAssignmentTable": [
+        [
+          1,
+          "2021-05-15T04:59:59Z"
+        ],
+        ...
+      ]
+    },
+    "totalPoints": 0,
+    "title": "PHILO680 - Independent Study",
+    "timeZone": "America/Chicago",
+    "description": null
+  }
+]</code></pre>
+<p>The <code>instructor</code> field gives the main instructor’s instructorId, which is distinct from their userId. The <code>textBook</code> field gives the <code>assignmentId</code> for an associated textbook, which is the same data as the <code>id</code> field for an assignment, retrieved via GET <code>https://carnap.io/api/v1/instructors/:instructorIdent/courses/:courseTitle/assignments</code></p>
+</details>
+</section>
+<section id="get-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitlestudents" class="level5" data-number="28.4.2.0.2">
+<h5 data-number="28.4.2.0.2" class="anchored" data-anchor-id="get-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitlestudents"><span class="header-section-number">28.4.2.0.2</span> GET <code>https://carnap.io/api/v1/instructors/:instructorIdent/courses/:courseTitle/students</code></h5>
+<details>
+<summary>
+Retrieves a list of student data for a given course, including unique <code>:studentId</code> identifiers for each student.
+</summary>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>rq(<span class="st">'GET'</span>, <span class="st">'/instructors/gleachkr@gmail.com/courses/test course/students'</span>).json()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-H</span> <span class="st">"X-API-KEY:YOURAPIKEYHERE"</span> <span class="dt">\</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'localhost:3000/api/v1/instructors/gleachkr@gmail.com/courses/test%20course/students'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Result</strong></p>
+<pre><code>[
+  {
+    "email": "groundworker@gmail.com",
+    "lastName": "Kant",
+    "universityId": null,
+    "userId": 1231,
+    "firstName": "Immanuel",
+    "isAdmin": false,
+    "id": 1313,
+    "enrolledIn": 141,
+    "instructorId": null,
+    "isLti": false
+  },
+  {
+    "email": "thinker@gmail.com",
+    "lastName": "Descartes",
+    "universityId": null,
+    "userId": 1232,
+    "firstName": "Rene",
+    "isAdmin": false,
+    "id": 1314,
+    "enrolledIn": 141,
+    "instructorId": null,
+    "isLti": false
+  },
+]</code></pre>
+<p>The <code>:studentId</code> for a student is the number in the <code>id</code> field, <em>not</em> the number in the <code>userId</code> field.</p>
+</details>
+</section>
+<section id="get-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitlestudentsstudentid" class="level5" data-number="28.4.2.0.3">
+<h5 data-number="28.4.2.0.3" class="anchored" data-anchor-id="get-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitlestudentsstudentid"><span class="header-section-number">28.4.2.0.3</span> GET <code>https://carnap.io/api/v1/instructors/:instructorIdent/courses/:courseTitle/students/:studentId</code></h5>
+<details>
+<summary>
+Retrieves student data for the student with id <code>:studentId</code>
+</summary>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>rq(<span class="st">'GET'</span>, <span class="st">'/instructors/gleachkr@gmail.com/courses/test course/students/1231'</span>).json()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-H</span> <span class="st">"X-API-KEY:YOURAPIKEYHERE"</span> <span class="dt">\</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'localhost:3000/api/v1/instructors/gleachkr@gmail.com/courses/test%20course/students/1231'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Result</strong></p>
+<pre><code>{
+    "email": "groundworker@gmail.com",
+    "lastName": "Kant",
+    "universityId": null,
+    "userId": 1231,
+    "firstName": "Immanuel",
+    "isAdmin": false,
+    "id": 1313,
+    "enrolledIn": 141,
+    "instructorId": null,
+    "isLti": false
+}</code></pre>
+<p>The <code>:studentId</code> for a student is the number in <code>id</code> field, <em>not</em> the number in the <code>studentId</code> field.</p>
+</details>
+</section>
+<section id="get-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitlestudentsstudentidsubmissions" class="level5" data-number="28.4.2.0.4">
+<h5 data-number="28.4.2.0.4" class="anchored" data-anchor-id="get-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitlestudentsstudentidsubmissions"><span class="header-section-number">28.4.2.0.4</span> GET <code>https://carnap.io/api/v1/instructors/:instructorIdent/courses/:courseTitle/students/:studentId/submissions</code></h5>
+<details>
+<summary>
+Retrieves a list of all submission data for the student with id <code>:studentId</code>
+</summary>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>rq(<span class="st">'GET'</span>, <span class="st">'/instructors/gleachkr@gmail.com/courses/test course/students/1231/submissions'</span>).json()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-H</span> <span class="st">"X-API-KEY:YOURAPIKEYHERE"</span> <span class="dt">\</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'localhost:3000/api/v1/instructors/gleachkr@gmail.com/courses/test%20course/students/1231/submissions'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Result</strong></p>
+<pre><code>[
+  {
+    'problemSubmissionAssignmentId': 3001, 
+    'problemSubmissionCorrect': False, 
+    'problemSubmissionData': {..depends on problem type..}, 
+    'problemSubmissionSource': {'tag': 'Assignment', 'contents': 'AssignmentMetadataKey {unAssignmentMetadataKey = SqlBackendKey {unSqlBackendKey = 3001}}'}, 'problemSubmissionCredit': 1, 
+    'problemSubmissionIdent': 'Exercise-24', 
+    'problemSubmissionUserId': 10385, 
+    'problemSubmissionLateCredit': None, 
+    'problemSubmissionType': 'Qualitative', 
+    'problemSubmissionTime': '2021-04-26T19:14:06.563900857Z', 
+    'problemSubmissionExtra': None
+  }
+]</code></pre>
+</details>
+</section>
+<section id="get-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitlestudentsstudentidextensions" class="level5" data-number="28.4.2.0.5">
+<h5 data-number="28.4.2.0.5" class="anchored" data-anchor-id="get-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitlestudentsstudentidextensions"><span class="header-section-number">28.4.2.0.5</span> GET <code>https://carnap.io/api/v1/instructors/:instructorIdent/courses/:courseTitle/students/:studentId/extensions</code></h5>
+<details>
+<summary>
+Retrieves a list of all assignment extensions granted to the student with id <code>:studentId</code>
+</summary>
+<p><strong>RESULT</strong></p>
+<pre><code>[
+  {
+    "onAssignment": 1238,
+    "until": "2022-06-02T04:59:59Z",
+    "forUser": 12313,
+    "id": 499
+  }
+]</code></pre>
+</details>
+</section>
+<section id="post-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitlestudentsstudentidextensions" class="level5" data-number="28.4.2.0.6">
+<h5 data-number="28.4.2.0.6" class="anchored" data-anchor-id="post-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitlestudentsstudentidextensions"><span class="header-section-number">28.4.2.0.6</span> POST <code>https://carnap.io/api/v1/instructors/:instructorIdent/courses/:courseTitle/students/:studentId/extensions</code></h5>
+<details>
+<summary>
+Grants an extension to the student with id <code>:studentId</code>
+</summary>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>rq(<span class="st">'POST'</span>, <span class="st">'/instructors/yourname@gmail.com/courses/test course/students/12313/extensions'</span>,</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>    json<span class="op">=</span>{</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">"onAssignment"</span>: <span class="dv">2756</span>,</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">"until"</span>: <span class="st">"2022-06-02"</span>,</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>        <span class="st">"forUser"</span>: <span class="dv">12313</span>,</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>).json()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Bash</em></p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-H</span> <span class="st">"X-API-KEY:YOURAPIKEY"</span> <span class="dt">\</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">-H</span> <span class="st">"Content-Type: application/json"</span> <span class="dt">\</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">-d</span> <span class="st">'{ "onAssignment": 2756, "until": "2022-06-02", "forUser": 12313 }'</span> <span class="dt">\</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>     localhost:3000/api/v1//instructors/yourname@gmail.com/courses/test%20course/students/12313/extensions</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Dates can be given in the format “2021-06-30T21:40:00Z”, for UTC time, or in the format “2022-01-01 10:10” or simply “2022-01-01”, in which case the date will assume the time zone associated with the course.</p>
+<p>The template for the POST JSON is:</p>
+<pre><code>{
+  "onAsssignment": ...,
+  "until": ...,
+  "forUser": ...,
+}</code></pre>
+<p>where the user field must the <em>userId</em> of the student, the contents of the <code>userId</code> field of the data returned by GET <code>https://carnap.io/api/v1/instructors/:instructorIdent/courses/:courseTitle/students/:studentId</code>, <em>not</em> the contents of the <code>id</code> field returned by that GET request.</p>
+<p><strong>Result</strong></p>
+<p>The ID of the new document:</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="er">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>or an error is returned as an encoded JSON string.</p>
+</details>
+</section>
+<section id="get-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitlestudentsstudentidaccomodations" class="level5" data-number="28.4.2.0.7">
+<h5 data-number="28.4.2.0.7" class="anchored" data-anchor-id="get-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitlestudentsstudentidaccomodations"><span class="header-section-number">28.4.2.0.7</span> GET <code>https://carnap.io/api/v1/instructors/:instructorIdent/courses/:courseTitle/students/:studentId/accomodations</code></h5>
+<details>
+<summary>
+Retrieves a list of accommodations active for the student with id <code>:studentId</code>
+</summary>
+<p>So if the student’s time allowed on exams is <code>(3 × STANDARD TIME) + 0 minutes</code>, and they have their due-dates extended by one hour, then the result will be:</p>
+<pre><code>{
+  "timeFactor": 3,
+  "timeExtraMinutes": 0,
+  "forUser": 1314,
+  "id": 62,
+  "dateExtraHours": 1,
+  "forCourse": 121
+}</code></pre>
+</details>
+</section>
+<section id="patch-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitlestudentsstudentidaccomodations" class="level5" data-number="28.4.2.0.8">
+<h5 data-number="28.4.2.0.8" class="anchored" data-anchor-id="patch-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitlestudentsstudentidaccomodations"><span class="header-section-number">28.4.2.0.8</span> PATCH <code>https://carnap.io/api/v1/instructors/:instructorIdent/courses/:courseTitle/students/:studentId/accomodations</code></h5>
+<details>
+<summary>
+Modifies the accommodations active for the student with id <code>:studentId</code>
+</summary>
+<p>For example:</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>rq(<span class="st">'PATCH'</span>, <span class="st">'/instructors/yourname@gmail.com/courses/test course/students/11231/accomodations'</span>,</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>    json<span class="op">=</span>{<span class="st">"timeFactor"</span>: <span class="st">"2"</span>}).json()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Bash</em></p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-H</span> <span class="st">"X-API-KEY:YOURAPIKEY"</span> <span class="at">-X</span> <span class="st">"PATCH"</span> <span class="dt">\</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">-H</span> <span class="st">"Content-Type: application/json"</span> <span class="dt">\</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">-d</span> <span class="st">'{"timeFactor":"2"}'</span> <span class="dt">\</span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>     /instructors/yourname@gmail.com/courses/test%20course/students/11231/accomodations</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The template for the PATCH JSON (with all fields optional) is:</p>
+<pre><code>{
+  "timeFactor": ...,
+  "timeExtraMinutes": ...,
+  "dateExtraHours": ...,
+}</code></pre>
+</details>
+</section>
+<section id="get-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitlestudentsstudentidassignmenttokens" class="level5" data-number="28.4.2.0.9">
+<h5 data-number="28.4.2.0.9" class="anchored" data-anchor-id="get-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitlestudentsstudentidassignmenttokens"><span class="header-section-number">28.4.2.0.9</span> GET <code>https://carnap.io/api/v1/instructors/:instructorIdent/courses/:courseTitle/students/:studentId/assignmentTokens</code></h5>
+<details>
+<summary>
+Retrieves a list of all access-restricted assignments that have been accessed by the student with id <code>:studentId</code>, along with access time for each.
+</summary>
+<p><strong>RESULT</strong></p>
+<pre><code>[
+  {
+    "createdAt": "2021-06-10T19:10:42.757612899Z",
+    "user": 1,
+    "id": 17927,
+    "assignment": 3188
+  }
+]</code></pre>
+</details>
+</section>
+<section id="delete-httpscarnap.ioapiv1instructorinstructoridentcoursescoursetitlestudentsstudentidassignmenttokenstokenid" class="level5" data-number="28.4.2.0.10">
+<h5 data-number="28.4.2.0.10" class="anchored" data-anchor-id="delete-httpscarnap.ioapiv1instructorinstructoridentcoursescoursetitlestudentsstudentidassignmenttokenstokenid"><span class="header-section-number">28.4.2.0.10</span> DELETE <code>https://carnap.io/api/v1/instructor/:instructorIdent/courses/:courseTitle/students/:studentId/assignmentTokens/:tokenId</code></h5>
+<details>
+<summary>
+Deletes the record of a student having accessed an access-restricted assignment, allowing them to e.g.&nbsp;retake an exam for which a certain amount of time was allotted.
+</summary>
+<p><strong>RESULT</strong></p>
+<pre><code>"deleted token" </code></pre>
+</details>
+</section>
+<section id="get-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitleassignments" class="level5" data-number="28.4.2.0.11">
+<h5 data-number="28.4.2.0.11" class="anchored" data-anchor-id="get-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitleassignments"><span class="header-section-number">28.4.2.0.11</span> GET <code>https://carnap.io/api/v1/instructors/:instructorIdent/courses/:courseTitle/assignments</code></h5>
+<details>
+<summary>
+Retrieves a list of assignments for a given course.
+</summary>
+<p><strong>RESULTS</strong></p>
+<pre><code>[
+  {
+    "gradeRelease": "2021-05-20T19:30:00Z",
+    "totalProblems": null,
+    "visibleFrom": "2021-05-19T17:58:00Z",
+    "availability": null,
+    "date": "2021-05-18T21:41:35.12705102Z",
+    "document": 4293,
+    "pointValue": null,
+    "course": 258,
+    "id": 3276,
+    "duedate": "2021-05-19T19:30:00Z",
+    "title": "The Hardest Logic Puzzle Ever",
+    "visibleTill": "2021-06-30T21:40:00Z",
+    "assigner": null,
+    "description": null
+  }
+]</code></pre>
+<p>Times are reported in UTC</p>
+</details>
+</section>
+<section id="post-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitleassignments" class="level5" data-number="28.4.2.0.12">
+<h5 data-number="28.4.2.0.12" class="anchored" data-anchor-id="post-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitleassignments"><span class="header-section-number">28.4.2.0.12</span> POST <code>https://carnap.io/api/v1/instructors/:instructorIdent/courses/:courseTitle/assignments</code></h5>
+<details>
+<summary>
+Creates a new assignment.
+</summary>
+<div class="sourceCode" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>rq(<span class="st">'POST'</span>, <span class="st">'/instructors/yourname@gmail.com/courses/test course/assignments'</span>,</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>    json<span class="op">=</span>{</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">"document"</span>: <span class="dv">2756</span>,</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">"title"</span>: <span class="st">"A new assignment"</span>,</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>        <span class="st">"due-date"</span>: <span class="st">"2022-01-01 10:10"</span>,</span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a>).json()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Bash</em></p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-H</span> <span class="st">"X-API-KEY:YOURAPIKEY"</span> <span class="dt">\</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">-H</span> <span class="st">"Content-Type: application/json"</span> <span class="dt">\</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">-d</span> <span class="st">'{"document": 2756, "title": "A new assignment", "due-date": "2022-01-01 10:10"}'</span> <span class="dt">\</span></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>     localhost:3000/api/v1/instructors/yourname@gmail.com/courses/test%20course/assignments</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The full template for the POST json is</p>
+<pre><code>  {
+    "gradeRelease": ...,
+    "totalProblems": ...,
+    "visibleFrom": ...,
+    "availability": ...,
+    "document": ...,
+    "pointValue": ...,
+    "duedate": ...,
+    "title": ...,
+    "visibleTill": ...,
+    "description": ...
+  }</code></pre>
+<p>The only mandatory fields are <code>document</code> and <code>title</code>. Dates can be given in the format “2021-06-30T21:40:00Z”, for UTC time, or in the format “2022-01-01 10:10” or simply “2022-01-01”, in which case the date will assume the time zone associated with the course.</p>
+<p><strong>RESULT</strong></p>
+<p>The ID of the new assignment:</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="er">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>or an error is returned as an encoded JSON string.</p>
+</details>
+</section>
+<section id="get-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitleassignmentsassignmentid" class="level5" data-number="28.4.2.0.13">
+<h5 data-number="28.4.2.0.13" class="anchored" data-anchor-id="get-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitleassignmentsassignmentid"><span class="header-section-number">28.4.2.0.13</span> GET <code>https://carnap.io/api/v1/instructors/:instructorIdent/courses/:courseTitle/assignments/:assignmentId</code></h5>
+<details>
+<summary>
+Retrieves the details of the assignment with id <code>:assignmentId</code> .
+</summary>
+<p><strong>RESULT</strong></p>
+<pre><code>{
+  "gradeRelease": "2021-05-20T19:30:00Z",
+  "totalProblems": null,
+  "visibleFrom": "2021-05-19T17:58:00Z",
+  "availability": null,
+  "date": "2021-05-18T21:41:35.12705102Z",
+  "document": 4293,
+  "pointValue": null,
+  "course": 258,
+  "id": 3276,
+  "duedate": "2021-05-19T19:30:00Z",
+  "title": "The Hardest Logic Puzzle Ever",
+  "visibleTill": "2021-06-30T21:40:00Z",
+  "assigner": null,
+  "description": null
+}</code></pre>
+</details>
+</section>
+<section id="patch-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitleassignmentsassignmentid" class="level5" data-number="28.4.2.0.14">
+<h5 data-number="28.4.2.0.14" class="anchored" data-anchor-id="patch-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitleassignmentsassignmentid"><span class="header-section-number">28.4.2.0.14</span> PATCH <code>https://carnap.io/api/v1/instructors/:instructorIdent/courses/:courseTitle/assignments/:assignmentId</code></h5>
+<details>
+<summary>
+Modifies the details of the assignment with id <code>:assignmentId</code> .
+</summary>
+<p>For example:</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>rq(<span class="st">'PATCH'</span>, <span class="st">'/instructors/yourname@gmail.com/courses/test course/assignments/1313'</span>,</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>    json<span class="op">=</span>{<span class="st">"gradeRelease"</span>: <span class="st">"2022-02-02"</span>}).json()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Bash</em></p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-H</span> <span class="st">"X-API-KEY:YOURAPIKEY"</span> <span class="at">-X</span> <span class="st">"PATCH"</span> <span class="dt">\</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">-H</span> <span class="st">"Content-Type: application/json"</span> <span class="dt">\</span></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">-d</span> <span class="st">'{"gradeRelease": "2022-02-02"}'</span> <span class="dt">\</span></span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>     /instructors/yourname@gmail.com/courses/test%20course/assignments/1313</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The template for the PATCH JSON (with all fields optional) is:</p>
+<pre><code>{
+  "gradeRelease": ...,
+  "totalProblems": ...,
+  "visibleFrom": ...,
+  "availability": ...,
+  "pointValue": ...,
+  "duedate": ...,
+  "title": ...,
+  "visibleTill": ...,
+  "description": ..., 
+}</code></pre>
+<p>To delete the contents of any field, except for <code>title</code>, you can send an explicit <code>null</code> value in the patch for that field.</p>
+</details>
+</section>
+<section id="get-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitleassignmentsassignmentidsubmissions" class="level5" data-number="28.4.2.0.15">
+<h5 data-number="28.4.2.0.15" class="anchored" data-anchor-id="get-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitleassignmentsassignmentidsubmissions"><span class="header-section-number">28.4.2.0.15</span> GET <code>https://carnap.io/api/v1/instructors/:instructorIdent/courses/:courseTitle/assignments/:assignmentId/submissions</code></h5>
+<details>
+<summary>
+Retrieves a list of all submitted problems for the assignment with id <code>:assignmentId</code> .
+</summary>
+<p><strong>RESULT</strong></p>
+<pre><code>[
+  {
+    'problemSubmissionAssignmentId': 3001, 
+    'problemSubmissionCorrect': False, 
+    'problemSubmissionData': {..depends on problem type..}, 
+    'problemSubmissionSource': {'tag': 'Assignment', 'contents': 'AssignmentMetadataKey {unAssignmentMetadataKey = SqlBackendKey {unSqlBackendKey = 3001}}'}, 'problemSubmissionCredit': 1, 
+    'problemSubmissionIdent': 'Exercise-24', 
+    'problemSubmissionUserId': 10385, 
+    'problemSubmissionLateCredit': None, 
+    'problemSubmissionType': 'Qualitative', 
+    'problemSubmissionTime': '2021-04-26T19:14:06.563900857Z', 
+    'problemSubmissionExtra': None
+  }
+]</code></pre>
+</details>
+</section>
+<section id="get-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitleassignmentsassignmentidsubmissionsstudentid" class="level5" data-number="28.4.2.0.16">
+<h5 data-number="28.4.2.0.16" class="anchored" data-anchor-id="get-httpscarnap.ioapiv1instructorsinstructoridentcoursescoursetitleassignmentsassignmentidsubmissionsstudentid"><span class="header-section-number">28.4.2.0.16</span> GET <code>https://carnap.io/api/v1/instructors/:instructorIdent/courses/:courseTitle/assignments/:assignmentId/submissions/:studentId</code></h5>
+<details>
+<summary>
+Retrieves a list of all submitted problems from the student with id <code>:studentId</code>, for the assignment with id <code>:assignmentId</code> .
+</summary>
+<p><strong>RESULT</strong></p>
+<pre><code>[
+  {
+    'problemSubmissionAssignmentId': 3001, 
+    'problemSubmissionCorrect': False, 
+    'problemSubmissionData': {..depends on problem type..}, 
+    'problemSubmissionSource': {'tag': 'Assignment', 'contents': 'AssignmentMetadataKey {unAssignmentMetadataKey = SqlBackendKey {unSqlBackendKey = 3001}}'}, 'problemSubmissionCredit': 1, 
+    'problemSubmissionIdent': 'Exercise-24', 
+    'problemSubmissionUserId': 10385, 
+    'problemSubmissionLateCredit': None, 
+    'problemSubmissionType': 'Qualitative', 
+    'problemSubmissionTime': '2021-04-26T19:14:06.563900857Z', 
+    'problemSubmissionExtra': None
+  }
+]</code></pre>
+</details>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./installation.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Installing Carnap</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./server-configuration.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Configuring Carnap</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script defer="" src="https://carnap.io/static/ghcjs/rts.js"></script>
+<script defer="" src="https://carnap.io/static/ghcjs/allactions/lib.js"></script>
+<script defer="" src="https://carnap.io/static/ghcjs/allactions/out.js"></script>
+<script defer="" src="https://carnap.io/static/ghcjs/allactions/runmain.js"></script>
+
+
+
+</body></html>

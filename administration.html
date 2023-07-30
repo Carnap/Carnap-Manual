@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Carnap Manual - References</title>
+<title>The Carnap Manual - 23&nbsp; Carnap deployment and administration</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,7 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./server-configuration.html" rel="prev">
+<link href="./lti.html" rel="next">
+<link href="./Set_Theory_Demo.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -99,7 +81,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./administration.html">Advanced Usage</a></li><li class="breadcrumb-item"><a href="./administration.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Carnap deployment and administration</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -303,16 +285,16 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
  <span class="menu-text">Advanced Usage</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./administration.html" class="sidebar-item-text sidebar-link">
+  <a href="./administration.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Carnap deployment and administration</span></span></a>
   </div>
 </li>
@@ -356,7 +338,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -366,14 +348,39 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#general-information" id="toc-general-information" class="nav-link active" data-scroll-target="#general-information"><span class="header-section-number">23.1</span> General information</a></li>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements"><span class="header-section-number">23.2</span> Requirements</a></li>
+  <li><a href="#server-setup" id="toc-server-setup" class="nav-link" data-scroll-target="#server-setup"><span class="header-section-number">23.3</span> Server setup</a>
+  <ul class="collapse">
+  <li><a href="#docker" id="toc-docker" class="nav-link" data-scroll-target="#docker"><span class="header-section-number">23.3.1</span> Docker</a></li>
+  <li><a href="#manual-setup-summary" id="toc-manual-setup-summary" class="nav-link" data-scroll-target="#manual-setup-summary"><span class="header-section-number">23.3.2</span> Manual setup summary</a></li>
+  <li><a href="#settings-file" id="toc-settings-file" class="nav-link" data-scroll-target="#settings-file"><span class="header-section-number">23.3.3</span> Settings file</a></li>
+  <li><a href="#dataroot" id="toc-dataroot" class="nav-link" data-scroll-target="#dataroot"><span class="header-section-number">23.3.4</span> <code>dataroot</code></a></li>
+  <li><a href="#database" id="toc-database" class="nav-link" data-scroll-target="#database"><span class="header-section-number">23.3.5</span> Database</a></li>
+  <li><a href="#nixops" id="toc-nixops" class="nav-link" data-scroll-target="#nixops"><span class="header-section-number">23.3.6</span> NixOps</a></li>
+  </ul></li>
+  <li><a href="#authentication" id="toc-authentication" class="nav-link" data-scroll-target="#authentication"><span class="header-section-number">23.4</span> Authentication</a>
+  <ul class="collapse">
+  <li><a href="#google-authentication" id="toc-google-authentication" class="nav-link" data-scroll-target="#google-authentication"><span class="header-section-number">23.4.1</span> Google authentication</a></li>
+  </ul></li>
+  <li><a href="#post-installation-first-time-setup" id="toc-post-installation-first-time-setup" class="nav-link" data-scroll-target="#post-installation-first-time-setup"><span class="header-section-number">23.5</span> Post installation first-time setup</a>
+  <ul class="collapse">
+  <li><a href="#becoming-administrator" id="toc-becoming-administrator" class="nav-link" data-scroll-target="#becoming-administrator"><span class="header-section-number">23.5.1</span> Becoming administrator</a></li>
+  <li><a href="#once-youre-an-administrator" id="toc-once-youre-an-administrator" class="nav-link" data-scroll-target="#once-youre-an-administrator"><span class="header-section-number">23.5.2</span> Once you’re an administrator</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Carnap deployment and administration</span></h1>
 </div>
 
 
@@ -388,11 +395,144 @@ div.csl-indent {
 
 </header>
 
-<div id="refs" role="list" style="display: none">
-
+<section id="general-information" class="level2" data-number="23.1">
+<h2 data-number="23.1" class="anchored" data-anchor-id="general-information"><span class="header-section-number">23.1</span> General information</h2>
+<p>The build infrastructure around Carnap supports two deployment modes: Stack builds for use with the Keter web server on traditional Linux servers and Nix builds for use on Docker or NixOS servers. Stack with Keter is used on Carnap.io. An experimental prebuilt <a href="#Docker">Docker image</a> is available.</p>
+<p>If you would like to build Carnap yourself using Nix directly, see the <a href="https://github.com/Carnap/Carnap">development README</a>.</p>
+<p>We provide Nix packaging as the <code>server</code> attribute returned by <code>default.nix</code> for use in NixOS and NixOps.</p>
+<p>If you wish to work with Carnap’s Nix infrastructure outside the Docker images, it is highly recommended to use Cachix to avoid having to build anything that our Continuous Integration has already built.</p>
+</section>
+<section id="requirements" class="level2" data-number="23.2">
+<h2 data-number="23.2" class="anchored" data-anchor-id="requirements"><span class="header-section-number">23.2</span> Requirements</h2>
+<ul>
+<li>PostgreSQL database with a user (TODO: which privileges do they need on their database?)</li>
+<li>Writable persistent directory to give as the <code>dataroot</code></li>
+<li>Google API key (see below for information on how to configure it)</li>
+</ul>
+</section>
+<section id="server-setup" class="level2" data-number="23.3">
+<h2 data-number="23.3" class="anchored" data-anchor-id="server-setup"><span class="header-section-number">23.3</span> Server setup</h2>
+<section id="docker" class="level3" data-number="23.3.1">
+<h3 data-number="23.3.1" class="anchored" data-anchor-id="docker"><span class="header-section-number">23.3.1</span> Docker</h3>
+<p>There is experimental Docker support for Carnap. Images are available via the GitHub container registry at <code>ghcr.io/carnap/carnap/carnap:latest</code>.</p>
+<p>There is a sample docker-compose environment with automatically-managed <a href="https://caddyserver.com">Caddy</a> based HTTPS termination, the recommended PostgreSQL database, and full setup instructions <a href="https://github.com/Carnap/Carnap-Documentation/tree/master/docker-compose-sample">available in the Carnap documentation repository here</a>.</p>
+<details>
+<summary>
+Docker configuration details
+</summary>
+<p>Carnap in Docker can most effectively be configured with environment variables. See the <a href="https://github.com/Carnap/Carnap/blob/master/Carnap-Server/config/settings-example.yml">example settings file</a> for a list. A volume should be provided at <code>/data</code> for persistent data such as documents.</p>
+<p>At minimum, the following environment variables must be configured:</p>
+<ul>
+<li><code>APPROOT</code></li>
+<li><code>GOOGLEKEY</code></li>
+<li><code>GOOGLESECRET</code></li>
+</ul>
+</details>
+</section>
+<section id="manual-setup-summary" class="level3" data-number="23.3.2">
+<h3 data-number="23.3.2" class="anchored" data-anchor-id="manual-setup-summary"><span class="header-section-number">23.3.2</span> Manual setup summary</h3>
+<p>If you want to set up Carnap manually (Docker is recommended instead):</p>
+<p><strong>Files</strong>:</p>
+<ul>
+<li><code>/var/lib/carnap</code> (or whatever you’re using as <code>DATAROOT</code>), writable by your <code>carnap</code> user you’re running the server as, with subdirectories:
+<ul>
+<li><code>static</code> from <code>Carnap-Server/static</code> (<em>copying</em> symlinks if you’re deploying it)</li>
+<li><code>config</code> from <code>Carnap-Server/config</code></li>
+<li><code>book</code> from <code>Carnap-Book</code></li>
+<li><code>book/cache</code> directory created</li>
+<li><code>data</code> directory created</li>
+</ul></li>
+</ul>
+<p><strong>Environment Variables</strong>:</p>
+<ul>
+<li><code>APPROOT=https://carnap.example.com</code></li>
+<li><code>DATAROOT=/var/lib/carnap</code></li>
+<li><code>BOOKROOT=/var/lib/carnap/book</code></li>
+</ul>
+<p>Assuming you’re using PostgreSQL (<code>...</code> values are replaced with their respective real values):</p>
+<ul>
+<li><code>SQLITE=false</code></li>
+<li><code>PGHOST=...</code></li>
+<li><code>PGPORT=...</code></li>
+<li><code>PGUSER=...</code></li>
+<li><code>PGPASS=...</code></li>
+<li><code>PGDATABASE=...</code></li>
+</ul>
+</section>
+<section id="settings-file" class="level3" data-number="23.3.3">
+<h3 data-number="23.3.3" class="anchored" data-anchor-id="settings-file"><span class="header-section-number">23.3.3</span> Settings file</h3>
+<p>Carnap uses a settings file, <code>settings.yml</code>, to store its configuration. You can find the example version at <a href="https://github.com/Carnap/Carnap/blob/master/Carnap-Server/config/settings-example.yml"><code>Carnap-Server/config/settings-example.yml</code></a></p>
+<p>The version in <code>Carnap-Server/config/settings.yml</code> is bundled within the executable. To utilize binary caching, Nix builds directly use the example configuration file, and users are expected to use environment variables or provide a different YAML file at runtime.</p>
+<p>You can provide a different settings file at runtime by passing it as the first argument to the <code>Carnap-Server</code> executable. Also, all settings are configurable by environment variables, which is useful for Docker deployments (see the example configuration for a list of these settings).</p>
+</section>
+<section id="dataroot" class="level3" data-number="23.3.4">
+<h3 data-number="23.3.4" class="anchored" data-anchor-id="dataroot"><span class="header-section-number">23.3.4</span> <code>dataroot</code></h3>
+<p>Carnap requires a writable <code>dataroot</code>, configured with the <code>DATAROOT</code> environment variable, to store documents and the cookie encryption key in.</p>
+<p>This directory can also contain a subdirectory <code>srv</code>, whose contents are directly available at <code>/srv/</code> on the Carnap instance. This is used for documentation on the production instance at <code>carnap.io</code>.</p>
+</section>
+<section id="database" class="level3" data-number="23.3.5">
+<h3 data-number="23.3.5" class="anchored" data-anchor-id="database"><span class="header-section-number">23.3.5</span> Database</h3>
+<p>Due to a <a href="https://github.com/yesodweb/persistent/issues/1125">bug that breaks migrations on SQLite</a> in our database library, production deployments of Carnap should use PostgreSQL databases. Set the environment variable <code>SQLITE=false</code> and supply <code>PGUSER</code>, <code>PGPASS</code>, <code>PGHOST</code>, and if required, <code>PGPORT</code> and <code>PGDATABASE</code> for your PostgreSQL database instance.</p>
+<p>If you wish to use peer authentication via Unix socket on a locally hosted PostgreSQL database, set all of <code>PGUSER</code>, <code>PGPASS</code>, <code>PGHOST</code> and <code>PGPORT</code> to empty strings.</p>
+</section>
+<section id="nixops" class="level3" data-number="23.3.6">
+<h3 data-number="23.3.6" class="anchored" data-anchor-id="nixops"><span class="header-section-number">23.3.6</span> NixOps</h3>
+<p>The Carnap team at UBC uses <a href="https://github.com/NixOS/nixops">NixOps</a> to automatically deploy Carnap on <a href="https://www.digitalocean.com/">DigitalOcean</a> servers running NixOS. It’s currently experimental and documentation is a work-in-progress, but <a href="https://github.com/ubc-carnap-team/carnap-nixops">the configuration files</a> are public.</p>
+</section>
+</section>
+<section id="authentication" class="level2" data-number="23.4">
+<h2 data-number="23.4" class="anchored" data-anchor-id="authentication"><span class="header-section-number">23.4</span> Authentication</h2>
+<p>Two authentication schemes are supported by Carnap, both of which require some configuration. Production Carnap deployments currently require Google authentication to be configured for administration purposes, even if it is not intended to be used by students.</p>
+<p>See the <a href="lti.html">LTI 1.3 documentation</a> for details on how to configure that system after <a href="#post-installation-first-time-setup">completing setup</a>.</p>
+<section id="google-authentication" class="level3" data-number="23.4.1">
+<h3 data-number="23.4.1" class="anchored" data-anchor-id="google-authentication"><span class="header-section-number">23.4.1</span> Google authentication</h3>
+<p>Setting up Google authentication requires setting up a Google APIs project.</p>
+<p>First, create the project: <a href="https://console.developers.google.com/cloud-resource-manager" class="uri">https://console.developers.google.com/cloud-resource-manager</a></p>
+<p>Then, create an OAuth2 client ID: <a href="https://console.developers.google.com/apis/credentials" class="uri">https://console.developers.google.com/apis/credentials</a></p>
+<p>It will show up like this:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/google-creds.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">image of the client ID page</figcaption>
+</figure>
 </div>
+<p>On the client ID page, set an Authorized Redirect URI for <code>https://YOURDOMAINHERE/auth/page/google/callback</code>:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/google-client-id.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">image of the authorized redirect URIs page</figcaption>
+</figure>
+</div>
+<p>On your OAuth2 Consent Screen tab, no scopes need to be added as Carnap just needs emails to log in.</p>
+<p>Once you’ve configured all the information on the Google side, fill it in the Carnap configuration file or environment variables:</p>
+<ul>
+<li><code>google-api-key</code>/<code>GOOGLEKEY</code>: your Google Client ID</li>
+<li><code>google-secret</code>/<code>GOOGLESECRET</code>: your Google Client secret</li>
+</ul>
+</section>
+</section>
+<section id="post-installation-first-time-setup" class="level2" data-number="23.5">
+<h2 data-number="23.5" class="anchored" data-anchor-id="post-installation-first-time-setup"><span class="header-section-number">23.5</span> Post installation first-time setup</h2>
+<section id="becoming-administrator" class="level3" data-number="23.5.1">
+<h3 data-number="23.5.1" class="anchored" data-anchor-id="becoming-administrator"><span class="header-section-number">23.5.1</span> Becoming administrator</h3>
+<p>Go to your newly minted Carnap instance and log in with Google. Enter your name and register. Then, go to <code>https://YOURDOMAINHERE/admin_promote</code> and click the button. You will now be the administrator of this instance. Multiple administrators are supported (with manual database editing), but there is not yet user interface to enable this.</p>
+<p>You can manage the site including promoting instructors, managing students, and configuring LTI platforms at <code>https://YOURDOMAINHERE/master_admin</code>.</p>
+</section>
+<section id="once-youre-an-administrator" class="level3" data-number="23.5.2">
+<h3 data-number="23.5.2" class="anchored" data-anchor-id="once-youre-an-administrator"><span class="header-section-number">23.5.2</span> Once you’re an administrator</h3>
+<p>After you have become administrator, check the following items on the <code>master_admin</code> page:</p>
+<ol type="1">
+<li><p>Ask anyone who needs to be instructor to log in and register, then promote them to instructor.</p></li>
+<li><p>If you don’t want to allow further Google registrations (if you intend to use LTI with your learning management system for student login, setting this option is recommended), enter <code>true</code> for “Disable Google Registration” under the “Site Configuration” heading:</p>
+<img src="./images/administration-disable-google.png" class="img-fluid" alt="Screenshot of the site configuration heading">
+<p>Anyone who has logged in already with Google can still log in, but new registrations will be prevented.</p>
+<p>This can be disabled temporarily at any time if more instructors need to be added.</p></li>
+<li><p>Configure login with LTI 1.3 compatible learning management systems <a href="./lti.html">using the LTI guide</a>.</p></li>
+</ol>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -630,11 +770,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./server-configuration.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Configuring Carnap</span></span>
+      <a href="./Set_Theory_Demo.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Set Theory Demo</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./lti.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">LTI 1.3</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

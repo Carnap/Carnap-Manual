@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Carnap Manual - References</title>
+<title>The Carnap Manual - 4&nbsp; Carnap’s Pandoc MarkDown</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,7 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./server-configuration.html" rel="prev">
+<link href="./awesome-carnap.html" rel="next">
+<link href="./dashboard.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -99,7 +81,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./quickstart.html">Getting Started</a></li><li class="breadcrumb-item"><a href="./pandoc.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Carnap's Pandoc MarkDown</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -138,13 +120,13 @@ div.csl-indent {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
  <span class="menu-text">Getting Started</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./quickstart.html" class="sidebar-item-text sidebar-link">
@@ -165,7 +147,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pandoc.html" class="sidebar-item-text sidebar-link">
+  <a href="./pandoc.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Carnap’s Pandoc MarkDown</span></span></a>
   </div>
 </li>
@@ -356,7 +338,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -366,14 +348,35 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#pandoc-extensions" id="toc-pandoc-extensions" class="nav-link active" data-scroll-target="#pandoc-extensions"><span class="header-section-number">4.1</span> Pandoc Extensions</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">4.2</span> Exercises</a>
+  <ul class="collapse">
+  <li><a href="#general-pattern" id="toc-general-pattern" class="nav-link" data-scroll-target="#general-pattern"><span class="header-section-number">4.2.1</span> General Pattern</a></li>
+  <li><a href="#some-common-attributes" id="toc-some-common-attributes" class="nav-link" data-scroll-target="#some-common-attributes"><span class="header-section-number">4.2.2</span> Some common attributes</a></li>
+  <li><a href="#random-problems" id="toc-random-problems" class="nav-link" data-scroll-target="#random-problems"><span class="header-section-number">4.2.3</span> Random problems</a></li>
+  <li><a href="#choose-one-problems" id="toc-choose-one-problems" class="nav-link" data-scroll-target="#choose-one-problems"><span class="header-section-number">4.2.4</span> Choose-One problems</a></li>
+  <li><a href="#exercise-types" id="toc-exercise-types" class="nav-link" data-scroll-target="#exercise-types"><span class="header-section-number">4.2.5</span> Exercise Types</a></li>
+  </ul></li>
+  <li><a href="#other-features" id="toc-other-features" class="nav-link" data-scroll-target="#other-features"><span class="header-section-number">4.3</span> Other Features</a>
+  <ul class="collapse">
+  <li><a href="#formula-parsing" id="toc-formula-parsing" class="nav-link" data-scroll-target="#formula-parsing"><span class="header-section-number">4.3.1</span> Formula Parsing</a></li>
+  <li><a href="#custom-css" id="toc-custom-css" class="nav-link" data-scroll-target="#custom-css"><span class="header-section-number">4.3.2</span> Custom CSS</a></li>
+  <li><a href="#custom-javascript" id="toc-custom-javascript" class="nav-link" data-scroll-target="#custom-javascript"><span class="header-section-number">4.3.3</span> Custom JavaScript</a></li>
+  <li><a href="#templates" id="toc-templates" class="nav-link" data-scroll-target="#templates"><span class="header-section-number">4.3.4</span> Templates</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Carnap’s Pandoc MarkDown</span></h1>
 </div>
 
 
@@ -388,11 +391,187 @@ div.csl-indent {
 
 </header>
 
-<div id="refs" role="list" style="display: none">
-
+<p>Within Carnap, shared documents and problem sets are created using <em>pandoc</em> markdown, a simple formatting language (akin to LaTeX) developed by John McFarlane as part of the <a href="https://pandoc.org">Pandoc</a> project. Pandoc markdown extends John Gruber’s original markdown syntax with some additional niceties.</p>
+<p>It would be a little redundant to give the full specifications for pandoc markdown here, since there are many excellent resources already available. See, instead,</p>
+<ol type="1">
+<li>John Gruber’s original <a href="https://daringfireball.net/projects/markdown/">markdown specification</a>.</li>
+<li>The <a href="http://pandoc.org/MANUAL.html#pandocs-markdown">Pandoc user’s guide</a></li>
+</ol>
+<p>If you learn best from example, it’s also possible to download the source code for documents shared on Carnap.io from the shared document list, available at <a href="https://carnap.io/shared" class="uri">https://carnap.io/shared</a>. The pandoc source for this document, should you wish to inspect it, is available <a href="https://github.com/Carnap/Carnap-Documentation/blob/master/doc/pandoc.md">here</a>.</p>
+<p>You can create pandoc documents in any text editing program. Pandoc is nothing but plain text that is written with some special notation to indicate how text is to be formatted. For example, you can write <code>*italic*</code> to generate the text “<em>italic</em>”. However, there are some very good text-editor plugins and dedicated applications available for working with Pandoc. These provide extra features like live previews of the formatted text. A list of these can be found <a href="https://github.com/jgm/pandoc/wiki/Pandoc-Extras#editors">here</a>. An online pandoc editor, with live previews of what the rendered document will look like, can be found at <a href="http://markup.rocks" class="uri">http://markup.rocks</a>.</p>
+<section id="pandoc-extensions" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="pandoc-extensions"><span class="header-section-number">4.1</span> Pandoc Extensions</h2>
+<p>Carnap’s pandoc parser incorporates the following pandoc extensions:</p>
+<ul>
+<li><a href="https://pandoc.org/MANUAL.html#raw-html">raw_html</a></li>
+<li><a href="https://pandoc.org/MANUAL.html#raw-html">markdown_in_html_blocks</a></li>
+<li><a href="https://pandoc.org/MANUAL.html#headings-and-sections">auto_identifiers</a></li>
+<li><a href="https://pandoc.org/MANUAL.html#math">tex_math_dollars</a></li>
+<li><a href="https://pandoc.org/MANUAL.html#extension-fenced_divs">fenced_divs</a></li>
+<li><a href="https://pandoc.org/MANUAL.html#extension-bracketed_spans">bracketed_spans</a></li>
+<li><a href="https://pandoc.org/MANUAL.html#fenced-code-blocks">fenced_code_blocks</a></li>
+<li><a href="https://pandoc.org/MANUAL.html#fenced-code-blocks">backtick_code_blocks</a></li>
+<li><a href="https://pandoc.org/MANUAL.html#line-blocks">line_blocks</a></li>
+<li><a href="https://pandoc.org/MANUAL.html#ordered-lists">fancy_lists</a></li>
+<li><a href="https://pandoc.org/MANUAL.html#extension-startnum">startnum</a></li>
+<li><a href="https://pandoc.org/MANUAL.html#definition-lists">definition_lists</a></li>
+<li><a href="https://pandoc.org/MANUAL.html#numbered-example-lists">example_lists</a></li>
+<li><a href="https://pandoc.org/MANUAL.html#tables">simple_tables</a></li>
+<li><a href="https://pandoc.org/MANUAL.html#tables">multiline_tables</a></li>
+<li><a href="https://pandoc.org/MANUAL.html#footnotes">footnotes</a></li>
+<li><a href="https://pandoc.org/MANUAL.html#fenced-code-blocks">fenced_code_attributes</a></li>
+<li><a href="https://pandoc.org/MANUAL.html#extension-inline_code_attributes">inline_code_attributes</a></li>
+<li><a href="https://pandoc.org/MANUAL.html#reference-links">shortcut_reference_links</a></li>
+<li><a href="https://pandoc.org/MANUAL.html#extension-link_attributes">link_attributes</a></li>
+<li><a href="https://pandoc.org/MANUAL.html#metadata-blocks">yaml_metadata_block</a></li>
+<li><a href="https://pandoc.org/MANUAL.html#ordered-lists">task_lists</a></li>
+</ul>
+<p>For more details, about each of these extensions, please see the <a href="https://pandoc.org/MANUAL.html#extensions">Pandoc Users Guide</a>.</p>
+</section>
+<section id="exercises" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="exercises"><span class="header-section-number">4.2</span> Exercises</h2>
+<section id="general-pattern" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="general-pattern"><span class="header-section-number">4.2.1</span> General Pattern</h3>
+<p>Carnap’s exercises are created by including special <em>code blocks</em> within a pandoc document. A code block looks something like this:</p>
+<pre><code>~~~ 
+CONTENT GOES HERE
+~~~</code></pre>
+<p>To indicate which type of exercise you want to create, you apply <em>classes</em> and <em>data attributes</em> to the code block. That would look something like this:</p>
+<pre><code>~~~{.SOMECLASS .ANOTHER attribute="value"}
+label CONTENT GOES HERE
+~~~</code></pre>
+<p>with classes indicated by a leading <code>.</code>, and attributes assigned with the <code>=</code> sign, and surrounded by quotes.</p>
+<p>The leading <code>label</code> within the body of the code block will be used to generate an anchor tag to your exercise, so that you can link directly to the exercise at the URL <code>ASSIGNMENTURL#exercise-label</code> where <code>ASSIGNMENTURL</code> is the URL for the assignment, and <code>label</code> is the label you gave to that particular exercise.</p>
+</section>
+<section id="some-common-attributes" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="some-common-attributes"><span class="header-section-number">4.2.2</span> Some common attributes</h3>
+<p>Here are some common attributes that can be applied to to any exercise</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>points</code></td>
+<td style="text-align: left;">Sets a custom point value</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>late-credit</code></td>
+<td style="text-align: left;">Sets a custom point value for a late submission</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>submission</code></td>
+<td style="text-align: left;">Controls how work is submitted. Set to “none” to disable submission</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>options</code></td>
+<td style="text-align: left;">Exercise-specific options</td>
+</tr>
+</tbody>
+</table>
 </div>
+<p>the <code>options</code> attribute might require some extra explanation. This attribute is set to a string of space separated words, indicating what special options are set for the exercise-block it is attached to. Different types of exercises allow for different options.</p>
+</section>
+<section id="random-problems" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="random-problems"><span class="header-section-number">4.2.3</span> Random problems</h3>
+<p>When you create a problem set, the different problems within a code block will generally be assigned numbers or some other identifier. So you might write</p>
+<pre><code>~~~ 
+1.1 SOME PROBLEM
+~~~</code></pre>
+<p>If the same identifier is used for a contiguous series of problems (all part of the same code block and next to one another), then when the problem set is assigned and viewed by a student, one of the problems in the series will be chosen randomly and displayed. So, for example given</p>
+<pre><code>~~~ 
+1.1 PROBLEM A
+1.1 PROBLEM B
+~~~</code></pre>
+<p>Students will see PROBLEM A or PROBLEM B, but not both. A student reloading the page will continue to see the same problem, so if they see PROBLEM A on the first viewing, they’ll continue to see PROBLEM A.</p>
+<p>The selection of a random problem only takes place when the document is viewed as an assignment, so when the document is viewed through the instructor’s “manage documents” tab, all the variant problems will be displayed.</p>
+</section>
+<section id="choose-one-problems" class="level3" data-number="4.2.4">
+<h3 data-number="4.2.4" class="anchored" data-anchor-id="choose-one-problems"><span class="header-section-number">4.2.4</span> Choose-One problems</h3>
+<p>If more than one problem is given the same label but the problems are <em>not</em> part of the same code block or are not next to one another, then both problems will be displayed. However, within each assignment, a student can submit at most one problem with a given label. So if you want to give your students the option to choose just one of several problems to complete, you can set those problems to all share a single label.</p>
+</section>
+<section id="exercise-types" class="level3" data-number="4.2.5">
+<h3 data-number="4.2.5" class="anchored" data-anchor-id="exercise-types"><span class="header-section-number">4.2.5</span> Exercise Types</h3>
+<p>There are currently eight types of exercises:</p>
+<ol type="1">
+<li><a href="./syntax-check.html">Syntax Checking</a></li>
+<li><a href="./translation.html">Translation</a></li>
+<li><a href="./truth-tables.html">Truth Tables</a></li>
+<li><a href="./derivations.html">Derivations</a></li>
+<li><a href="./modelchecker.html">Model Checking</a></li>
+<li><a href="./qualitative.html">Qualitative Problems</a></li>
+<li><a href="./sequent-calculus.html">Sequent Calculus Problems</a></li>
+<li><a href="./gentzen-ND.html">Gentzen-Prawitz Natural Deduction Problems</a></li>
+</ol>
+<p>To learn more about each one, follow the links above.</p>
+</section>
+</section>
+<section id="other-features" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="other-features"><span class="header-section-number">4.3</span> Other Features</h2>
+<section id="formula-parsing" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="formula-parsing"><span class="header-section-number">4.3.1</span> Formula Parsing</h3>
+<p>Carnap’s formula parser can be used to render and display formulas and sequents inline within a pandoc document. So for example, writing something like</p>
+<pre><code>`AxF(x)\/Ex-F(x)`{system="firstOrder"}</code></pre>
+<p>Will produce the output <code data-system="firstOrder">AxF(x)\/Ex-F(x)</code>.</p>
+<p>Any system that’s available for <a href="./derivations.html">derivations</a> can be used in the formula parser. The available propositional systems are: <code>prop</code> <code>montagueSC</code> <code>LogicBookSD</code> <code>LogicBookSDPlus</code> <code>hausmanSL</code> <code>howardSnyderSL</code> <code>ichikawaJenkinsSL</code> <code>hausmanSL</code> <code>magnusSL</code> <code>magnusSLPlus</code> <code>thomasBolducAndZachTFL</code> <code>thomasBolducAndZachTFL2019</code> <code>gamutMPND</code>, <code>gamutIPND</code> <code>gamutPND</code> <code>gamutPNDPlus</code> <code>tomassiPL</code> and <code>hardegreeSL</code>. The available first-order systems are: <code>firstOrder</code> <code>montagueQC</code> <code>magnusQL</code> <code>thomasBolducAndZachFOL</code> <code>thomasBolducAndZachFOL2019</code> <code>thomasBolducAndZachFOLPlus2019</code> <code>LogicBookPD</code> <code>LogicBookPDPlus</code> <code>gamutND</code> <code>hausmanPL</code> <code>howardSnyderPL</code> <code>ichikawaJenkinsQL</code> <code>hardegreePL</code> <code>goldfarbAltND</code> <code>goldfarbNDPlus</code> and <code>goldfarbAltNDPlus</code>. The available set theory systems are: <code>elementarySetTheory</code> and <code>separativeSetTheory</code>. The available second-order systems are: <code>secondOrder</code> and <code>PolySecondOrder</code>. The available propositional modal logic systems are: <code>hardegreeL</code> <code>hardegreeK</code> <code>hardegreeT</code> <code>hardegreeB</code> <code>hardegreeD</code> <code>hardegree4</code> and <code>hardegree5</code>. The available predicate modal logic system is <code>hardegreeMPL</code>, and the available “world theory” system is <code>hardegreeWTL</code>.</p>
+</section>
+<section id="custom-css" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="custom-css"><span class="header-section-number">4.3.2</span> Custom CSS</h3>
+<p>The standard <a href="https://getboostrap.com">bootstrap</a> CSS that is used for styling the appearance of an assignment can be overriden by including a <code>css</code> entry as part of a <a href="https://pandoc.org/MANUAL.html#metadata-blocks">yaml metadata block</a> within a carnap pandoc document.</p>
+<p>The CSS entry can include either a url for a single CSS stylesheet, like so:</p>
+<pre><code>---
+css: https://ghcdn.rawgit.org/Carnap/Carnap-Contrib/main/css/hide-points.css 
+--- </code></pre>
+<p>or for several stylesheets, like so:</p>
+<pre><code>---
+css:
+- https://ghcdn.rawgit.org/Carnap/Carnap-Contrib/main/css/hide-points.css
+- https://ghcdn.rawgit.org/Carnap/Carnap-Contrib/main/css/another-stylesheet.css
+--- </code></pre>
+<p>The stylesheets can be hosted anywhere, including on the Carnap server. In order to host a stylesheet, just upload it as if it were a pandoc document, but be sure to give it the filetype extension “css”, so name it something like “mystylesheet.css”. You’ll then able able to access it with a metadata block of the form:</p>
+<pre><code>--- 
+css:
+- https://carnap.io/shared/youremail@gmail.com/custom.css
+--- </code></pre>
+<p>If you wish to not just partly override the bootstrap css, but to completely disable it, adding your new css to a blank slate (other than the css used to style Carnap’s exercises), then you can instead use a <code>base-css</code> entry to set the new base css style. For example,</p>
+<pre><code>--- 
+base-css: 
+- https://static.carnap.io/css/tufte.css
+- https://static.carnap.io/css/tuftextra.css
+--- </code></pre>
+<p>will configure your document to have a <a href="https://edwardtufte.github.io/tufte-css/">tufte-like</a> style, with no traces of bootstrap.</p>
+<p>For more details about hosting your own stylesheets, please take a look at the documentation for the <a href="dashboard.html">instructor dashboard</a>.</p>
+</section>
+<section id="custom-javascript" class="level3" data-number="4.3.3">
+<h3 data-number="4.3.3" class="anchored" data-anchor-id="custom-javascript"><span class="header-section-number">4.3.3</span> Custom JavaScript</h3>
+<p>Documents can also include links to custom JavaScript. This can be done using the <code>raw_html</code> pandoc extension to include a <code>&lt;script&gt;</code> tag, or by including the JS in a metadata block. Like a CSS entry, a JS entry entry can include either a url for a single CSS stylesheet, like so:</p>
+<pre><code>---
+js: https://carnap.io/shared/myemail@university.edu/myjs.js
+--- </code></pre>
+<p>or for several stylesheets, like so:</p>
+<pre><code>---
+js:
+- https://carnap.io/shared/myemail@university.edu/myjs1.js
+- https://carnap.io/shared/myemail@university.edu/myjs2.js
+--- </code></pre>
+<p>The scripts can be hosted anywhere, including on the Carnap server. As with stylesheets, scripts can be uploaded as normal documents so long as they’re given the proper filetype extension (in this case, “.js” rather than “.css”)</p>
+</section>
+<section id="templates" class="level3" data-number="4.3.4">
+<h3 data-number="4.3.4" class="anchored" data-anchor-id="templates"><span class="header-section-number">4.3.4</span> Templates</h3>
+<p>Carnap can make use of pandoc’s advanced templating capabilities, documented <a href="https://pandoc.org/MANUAL.html#templates">here</a>. To create a template, upload a file with the extension <code>.template</code>. Your template file should contain HTML, enriched with template variables of the kind described in pandoc’s documentation. To apply the template to a given document, include a <code>template</code> field in your document’s YAML metadata, followed by the name of the template file. So for example, you might have metadata of the form:</p>
+<pre><code>---
+js: https://carnap.io/shared/myemail@university.edu/myjs.js
+template: test.template
+---</code></pre>
+<p>Applied to an uploaded document <code>test.md</code>. Then, when <code>test.md</code> is accessed as a document or an assignment, its contents will be interpolated into <code>test.template</code> as the value of the <code>$body$</code> variable.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -630,11 +809,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./server-configuration.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Configuring Carnap</span></span>
+      <a href="./dashboard.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Carnap’s Course Management Dashboard</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./awesome-carnap.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Community resources for Carnap</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

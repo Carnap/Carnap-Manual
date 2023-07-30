@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Carnap Manual - References</title>
+<title>The Carnap Manual - 19&nbsp; Natural deduction in the original forall x systems</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,7 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./server-configuration.html" rel="prev">
+<link href="./logicbook.html" rel="next">
+<link href="./forallx-yyc.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -86,6 +68,8 @@ div.csl-indent {
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0"></script>
 <script src="https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.js"></script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -99,7 +83,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./systems.html">Supported Systems</a></li><li class="breadcrumb-item"><a href="./forallx.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Natural deduction in the original *forall x* systems</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -246,11 +230,11 @@ div.csl-indent {
       <div class="sidebar-item-container"> 
             <a href="./systems.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Supported Systems</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./equivalences.html" class="sidebar-item-text sidebar-link">
@@ -277,7 +261,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./forallx.html" class="sidebar-item-text sidebar-link">
+  <a href="./forallx.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Natural deduction in the original <em>forall x</em> systems</span></span></a>
   </div>
 </li>
@@ -356,7 +340,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -366,14 +350,31 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#notation" id="toc-notation" class="nav-link active" data-scroll-target="#notation"><span class="header-section-number">19.1</span> Notation</a></li>
+  <li><a href="#sentential-logic" id="toc-sentential-logic" class="nav-link" data-scroll-target="#sentential-logic"><span class="header-section-number">19.2</span> Sentential logic</a>
+  <ul class="collapse">
+  <li><a href="#forall-x-system-sl" id="toc-forall-x-system-sl" class="nav-link" data-scroll-target="#forall-x-system-sl"><span class="header-section-number">19.2.1</span> <em>forall x</em> System SL</a></li>
+  <li><a href="#forall-x-system-sl-plus" id="toc-forall-x-system-sl-plus" class="nav-link" data-scroll-target="#forall-x-system-sl-plus"><span class="header-section-number">19.2.2</span> <em>forall x</em> System SL Plus</a></li>
+  </ul></li>
+  <li><a href="#quantificational-logic" id="toc-quantificational-logic" class="nav-link" data-scroll-target="#quantificational-logic"><span class="header-section-number">19.3</span> Quantificational logic</a>
+  <ul class="collapse">
+  <li><a href="#notation-1" id="toc-notation-1" class="nav-link" data-scroll-target="#notation-1"><span class="header-section-number">19.3.1</span> Notation</a></li>
+  <li><a href="#basic-rules" id="toc-basic-rules" class="nav-link" data-scroll-target="#basic-rules"><span class="header-section-number">19.3.2</span> Basic Rules</a></li>
+  <li><a href="#forall-x-ql-plus" id="toc-forall-x-ql-plus" class="nav-link" data-scroll-target="#forall-x-ql-plus"><span class="header-section-number">19.3.3</span> forall x QL Plus</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Natural deduction in the original <em>forall x</em> systems</span></h1>
 </div>
 
 
@@ -388,11 +389,438 @@ div.csl-indent {
 
 </header>
 
-<div id="refs" role="list" style="display: none">
-
+<p>This document gives a short description of how Carnap presents the systems of natural deduction from P.D. Magnus’ <a href="https://www.fecundity.com/logic/"><em>forall x</em></a>. At least some prior familiarity with Fitch-style proof systems is assumed.</p>
+<p>There are several alternate versions (remixes) of <em>forall x</em>, which use slightly different syntax and/or rules. The versions supported by Carnap are:</p>
+<ul>
+<li>The original version of <em>forall x</em> by P.D. Magnus, described on this page.</li>
+<li><a href="forallx-yyc.html"><em>forall x: Calgary</em></a></li>
+<li><a href="forallx-msu.html"><em>forall x: Mississippi State</em></a></li>
+<li><a href="forallx-pitt.html"><em>forall x: Pittsbugh</em></a></li>
+<li><em>forall x: UBC</em></li>
+</ul>
+<section id="notation" class="level2" data-number="19.1">
+<h2 data-number="19.1" class="anchored" data-anchor-id="notation"><span class="header-section-number">19.1</span> Notation</h2>
+<p>The different admissible keyboard abbreviations for the different connectives are as follows:</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th>Connective</th>
+<th style="text-align: left;">Keyboard</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>→</td>
+<td style="text-align: left;"><code>-&gt;</code>, <code>=&gt;</code>,<code>&gt;</code></td>
+</tr>
+<tr class="even">
+<td>&amp;</td>
+<td style="text-align: left;"><code>/\</code>, <code>&amp;</code>, <code>and</code></td>
+</tr>
+<tr class="odd">
+<td>∨</td>
+<td style="text-align: left;"><code>\/</code>, <code>|</code>, <code>or</code></td>
+</tr>
+<tr class="even">
+<td>↔︎</td>
+<td style="text-align: left;"><code>&lt;-&gt;</code>, <code>&lt;=&gt;</code></td>
+</tr>
+<tr class="odd">
+<td>¬</td>
+<td style="text-align: left;"><code>-</code>, <code>~</code>, <code>not</code></td>
+</tr>
+</tbody>
+</table>
 </div>
+<p>The available sentence letters are <span class="math inline">\(A\)</span> through <span class="math inline">\(Z\)</span>, together with the infinitely many subscripted letters <span class="math inline">\(P_1, P_2,\ldots\)</span> written <code>P_1, P_2</code> and so on.</p>
+<p>Proofs consist of a series of lines. A line is either an assertion line containing a formula followed by a <code>:</code> and then a justification for that formula, or a separator line containing two dashes, thus: <code>--</code>. A justification consists of a rule abbreviation followed by zero or more numbers (citations of particular lines) and pairs of numbers separated by a dash (citations of a subproof contained within the given line range).</p>
+<p>A subproof is begun by increasing the indentation level. The first line of a subproof should be more indented than the containing proof, and the lines directly contained in this subproof should maintain this indentation level. (Lines indirectly contained, by being part of a sub-sub-proof, will need to be indented more deeply.) The subproof ends when the indentation level of the containing proof is resumed; hence, two contiguous sub-proofs of the same containing proof can be distinguished from one another by inserting a separator line between them at the same level of indentation as the containing proof. The final <em>unindented</em> line of a derivation will serve as the conclusion of the entire derivation.</p>
+<p>Here’s an example derivation, using system SL of P.D. Magnus <em>forall x</em>, activated in Carnap by <code>.ForallxSL</code>:</p>
+<pre class="ProofChecker ForallxSL" data-options="render resize fonts" data-init="now"><code>Ex :|-: (A \/ B) -&gt; (B \/ A)
+|   A \/ B:AS
+|      A:AS
+|      B \/ A:\/I 2
+|   --
+|      B:AS
+|      B \/ A:\/I 5
+|   B \/ A:\/E 1,2-3,5-6
+|(A \/ B) -&gt; (B \/ A):-&gt;I 1-7</code></pre>
+<p>Or, with a Fitch-style guides overlay (activated with <code>guides="fitch"</code>):</p>
+<pre class="Playground ForallxSL" data-options="render resize fonts" data-guides="fitch" data-init="now"><code>|   A \/ B:AS
+|      A:AS
+|      B \/ A:\/I 2
+|   --
+|      B:AS
+|      B \/ A:\/I 5
+|   B \/ A:\/E 1,2-3,5-6
+|(A \/ B) -&gt; (B \/ A):-&gt;I 1-7</code></pre>
+<p>There is also a playground mode:</p>
+<pre class="Playground ForallxSL" data-options="render resize fonts" data-init="now"><code></code></pre>
+</section>
+<section id="sentential-logic" class="level2" data-number="19.2">
+<h2 data-number="19.2" class="anchored" data-anchor-id="sentential-logic"><span class="header-section-number">19.2</span> Sentential logic</h2>
+<section id="forall-x-system-sl" class="level3" data-number="19.2.1">
+<h3 data-number="19.2.1" class="anchored" data-anchor-id="forall-x-system-sl"><span class="header-section-number">19.2.1</span> <em>forall x</em> System SL</h3>
+<p>The minimal system SL for P.D. Magnus’ <em>forall x</em> (the system used in a proofchecker constructed with <code>.ForallxSL</code> in Carnap’s <a href="pandoc.html">Pandoc Markup</a>) has the following set of rules for direct inferences:</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Rule</th>
+<th>Abbreviation</th>
+<th style="text-align: left;">Premises</th>
+<th style="text-align: left;">Conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">And-Elim</td>
+<td><code>∧E</code></td>
+<td style="text-align: left;"><span class="math inline">\(φ∧ψ\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(φ/ψ\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">And-Intro</td>
+<td><code>∧I</code></td>
+<td style="text-align: left;"><span class="math inline">\(φ,ψ\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(φ∧ψ\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Or-Elim</td>
+<td><code>∨E</code></td>
+<td style="text-align: left;"><span class="math inline">\(¬ψ, φ∨ψ\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(φ\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(¬φ, φ∨ψ\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(ψ\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Or-Intro</td>
+<td><code>∨I</code></td>
+<td style="text-align: left;"><span class="math inline">\(φ\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(φ∨ψ\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(ψ\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(φ∨ψ\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Conditional-Elim</td>
+<td><code>→E</code></td>
+<td style="text-align: left;"><span class="math inline">\(φ,φ→ψ\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(ψ\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Biconditional-Elim</td>
+<td><code>↔︎E</code></td>
+<td style="text-align: left;"><span class="math inline">\(φ, φ↔ψ\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(ψ\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(ψ, φ↔ψ\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(φ\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Reiteration</td>
+<td><code>R</code></td>
+<td style="text-align: left;"><span class="math inline">\(φ\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(φ\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>We also have four rules for indirect inferences:</p>
+<ol type="1">
+<li><code>→I</code>, which justifies an assertion of the form <span class="math inline">\(φ→ψ\)</span> by citing a subproof beginning with the assumption <span class="math inline">\(φ\)</span> and ending with the conclusion <span class="math inline">\(ψ\)</span>;</li>
+<li><code>↔︎I</code>, which justifies an assertion of the form φ↔︎ψ by citing two subproofs, beginning with assuptions <span class="math inline">\(φ\)</span>, <span class="math inline">\(ψ\)</span>, respectively, and ending with conclusions <span class="math inline">\(ψ\)</span>, <span class="math inline">\(φ\)</span>, respectively;</li>
+<li><code>¬I</code>, which justifies an assertion of the form <span class="math inline">\(¬φ\)</span> by citing a subproof beginning with the assumption <span class="math inline">\(φ\)</span> and ending with a pair of lines <span class="math inline">\(ψ\)</span>,<span class="math inline">\(¬ψ\)</span>.</li>
+<li><code>¬E</code>, which justifies an assertion of the form φ by citing a subproof beginning with the assumption <span class="math inline">\(¬φ\)</span> and ending with a pair of lines <span class="math inline">\(ψ\)</span>,<span class="math inline">\(¬ψ\)</span>.</li>
+</ol>
+<p>Finally, <code>PR</code> can be used to justify a line asserting a premise, and <code>AS</code> can be used to justify a line making an assumption. A note about the reason for an assumption can be included in the rendered proof by writing <code>A/NOTETEXTHERE</code> rather than <code>AS</code> for an assumption. Assumptions are only allowed on the first line of a subproof.</p>
+</section>
+<section id="forall-x-system-sl-plus" class="level3" data-number="19.2.2">
+<h3 data-number="19.2.2" class="anchored" data-anchor-id="forall-x-system-sl-plus"><span class="header-section-number">19.2.2</span> <em>forall x</em> System SL Plus</h3>
+<p>The extended system SL Plus for P.D. Magnus’ <em>forall x</em> (the system used in a proofchecker constructed with <code>.ForallxSLPlus</code> in Carnap’s <a href="pandoc.html">Pandoc Markup</a>) also adds the following rules:</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Rule</th>
+<th>Abbreviation</th>
+<th style="text-align: left;">Premises</th>
+<th style="text-align: left;">Conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Dilemma</td>
+<td><code>DIL</code></td>
+<td style="text-align: left;"><span class="math inline">\(φ∨ψ,φ→χ,ψ→χ\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(χ\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hypothetical Syllogism</td>
+<td><code>HS</code></td>
+<td style="text-align: left;"><span class="math inline">\(φ→ψ, ψ→χ\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(φ→χ\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Modus Tollens</td>
+<td><code>MT</code></td>
+<td style="text-align: left;"><span class="math inline">\(φ→ψ,¬ψ\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(¬φ\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>As well as the following exchange rules, which can be used within a propositional context Φ:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Rule</th>
+<th>Abbreviation</th>
+<th style="text-align: left;">Premises</th>
+<th style="text-align: left;">Conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Commutativity</td>
+<td><code>Comm</code></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ∧ψ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(ψ∧φ)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ∨ψ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(ψ∨φ)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ↔ψ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(ψ↔φ)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Double Negation</td>
+<td><code>DN</code></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ)/Φ(¬¬φ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(¬¬φ)/Φ(φ)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Material Conditional</td>
+<td><code>MC</code></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ→ψ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(¬φ∨ψ)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(¬φ∨ψ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ→ψ)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ∨ψ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(¬φ→ψ)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(¬φ→ψ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ∨ψ)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BiConditional Exchange</td>
+<td><code>↔︎ex</code></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ↔ψ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ→ψ∧ψ→φ)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ→ψ∧ψ→φ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(φ↔ψ)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DeMorgan’s Laws</td>
+<td><code>DeM</code></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(¬(φ∧ψ))\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(¬φ∨¬ψ)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(¬(φ∨ψ))\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(¬φ∧¬ψ)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(¬φ∨¬ψ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(¬(φ∧ψ))\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(¬φ∧¬ψ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(¬(φ∨ψ))\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="quantificational-logic" class="level2" data-number="19.3">
+<h2 data-number="19.3" class="anchored" data-anchor-id="quantificational-logic"><span class="header-section-number">19.3</span> Quantificational logic</h2>
+<p>The proof system for Magnus’s <em>forall x</em>, QL, is activated using <code>.ForallxQL</code>.</p>
+<section id="notation-1" class="level3" data-number="19.3.1">
+<h3 data-number="19.3.1" class="anchored" data-anchor-id="notation-1"><span class="header-section-number">19.3.1</span> Notation</h3>
+<p>The different admissible keyboard abbreviations for quantifiers and equality is as follows:</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th>Connective</th>
+<th style="text-align: left;">Keyboard</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>∀</td>
+<td style="text-align: left;"><code>A</code></td>
+</tr>
+<tr class="even">
+<td>∃</td>
+<td style="text-align: left;"><code>E</code></td>
+</tr>
+<tr class="odd">
+<td>=</td>
+<td style="text-align: left;"><code>=</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The <em>forall x</em> first-order systems do not contain sentence letters.</p>
+<p>Application of a relation symbol is indicated by directly appending the arguments to the symbol.</p>
+<p>The available relation symbols are <span class="math inline">\(A\)</span> through <span class="math inline">\(Z\)</span>, together with the infinitely many subscripted letters <span class="math inline">\(F_1, F_2, \ldots\)</span> written `F_1, F_2. The arity of a relation symbol is determined from context.</p>
+<p>The available constants are a through w, with the infinitely many subscripted letters <span class="math inline">\(c_1, c_2, \ldots\)</span> written <code>c_1, c_2,…</code>.</p>
+<p>The available variables are <span class="math inline">\(x\)</span> through <span class="math inline">\(z\)</span>, with the infinitely many subscripted letters <span class="math inline">\(x_1, x_2,\dots\)</span> written <code>x_1, x_2,…</code>.</p>
+</section>
+<section id="basic-rules" class="level3" data-number="19.3.2">
+<h3 data-number="19.3.2" class="anchored" data-anchor-id="basic-rules"><span class="header-section-number">19.3.2</span> Basic Rules</h3>
+<p>The first-order <em>forall x</em> systems QL (the systems used in proofcheckers constructed with <code>.ForallxQL</code>) extend the rules of the system SL with the following set of new basic rules:</p>
+<div class="table">
+<table class="table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 17%">
+<col style="width: 25%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Rule</th>
+<th>Abbreviation</th>
+<th style="text-align: left;">Premises</th>
+<th style="text-align: left;">Conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Existential Introduction</td>
+<td><code>∃I</code></td>
+<td style="text-align: left;"><span class="math inline">\(φ(σ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(∃xφ(x)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Universal Elimination</td>
+<td><code>∀E</code></td>
+<td style="text-align: left;"><span class="math inline">\(∀xφ(x)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(φ(σ)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Universal Introduction</td>
+<td><code>∀E</code></td>
+<td style="text-align: left;"><span class="math inline">\(φ(σ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(∀xφ(x)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Equality Introduction</td>
+<td><code>=I</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="math inline">\(σ=σ\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Equality Elimination</td>
+<td><code>=E</code></td>
+<td style="text-align: left;"><span class="math inline">\(σ=τ,φ(σ)/φ(τ)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(φ(τ)/φ(σ)\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Where Universal Introduction is subject to the restriction that <span class="math inline">\(σ\)</span> must not appear in <span class="math inline">\(φ(x)\)</span>, or any undischarged assumption or in any premise of the proof.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>It also adds one new rule for indirect derivations: <code>∃E</code>, which justifies an assertion <span class="math inline">\(ψ\)</span> by citing an assertion of the form <span class="math inline">\(∃xφ(x)\)</span> and a subproof beginning with the assumption <span class="math inline">\(φ(σ)\)</span> and ending with the conclusion <span class="math inline">\(ψ\)</span>, where <span class="math inline">\(σ\)</span> does not appear in <span class="math inline">\(ψ, ∃xφ(x)\)</span>, or in any of the undischarged assumptions or premises of the proof.</p>
+</section>
+<section id="forall-x-ql-plus" class="level3" data-number="19.3.3">
+<h3 data-number="19.3.3" class="anchored" data-anchor-id="forall-x-ql-plus"><span class="header-section-number">19.3.3</span> forall x QL Plus</h3>
+<p>The system QL Plus, activated with <code>.ForallxQLPlus</code>, includes all the rules of SL Plus, as well as the following exchange rules, which can be used within a context Φ:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Rule</th>
+<th>Abbreviation</th>
+<th style="text-align: left;">Premises</th>
+<th style="text-align: left;">Conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Quantifier Negation</td>
+<td><code>QN</code></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(∀x¬φ(x)))\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(¬∃xφ(x)))\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(¬∀xφ(x)))\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(∃x¬φ(x)))\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(∃x¬φ(x)))\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(¬∀xφ(x)))\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(¬∃xφ(x)))\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Φ(∀x¬φ(x)))\)</span></td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Technically, Carnap checks only the assumptions and premises that are used in the derivation of <span class="math inline">\(φ(σ)\)</span>. This has the same effect in terms of what’s derivable, but is a little more lenient.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -630,11 +1058,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./server-configuration.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Configuring Carnap</span></span>
+      <a href="./forallx-yyc.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Natural deduction in the <em>forall x: Calgary</em> systems</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./logicbook.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Natural Deduction in Logic Book Systems</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

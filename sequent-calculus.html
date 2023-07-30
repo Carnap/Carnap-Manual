@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Carnap Manual - References</title>
+<title>The Carnap Manual - 11&nbsp; Sequent Calculus Deductions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,7 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./server-configuration.html" rel="prev">
+<link href="./qualitative.html" rel="next">
+<link href="./gentzen-ND.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -99,7 +81,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./derivations.html">Exercises</a></li><li class="breadcrumb-item"><a href="./sequent-calculus.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Sequent Calculus Deductions</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -179,13 +161,13 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
  <span class="menu-text">Exercises</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./derivations.html" class="sidebar-item-text sidebar-link">
@@ -218,7 +200,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sequent-calculus.html" class="sidebar-item-text sidebar-link">
+  <a href="./sequent-calculus.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Sequent Calculus Deductions</span></span></a>
   </div>
 </li>
@@ -356,7 +338,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -366,14 +348,28 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#available-systems" id="toc-available-systems" class="nav-link active" data-scroll-target="#available-systems"><span class="header-section-number">11.1</span> Available Systems</a></li>
+  <li><a href="#rules-for-lk-and-lj" id="toc-rules-for-lk-and-lj" class="nav-link" data-scroll-target="#rules-for-lk-and-lj"><span class="header-section-number">11.2</span> Rules for LK and LJ</a></li>
+  <li><a href="#syntax-for-lk-and-lj" id="toc-syntax-for-lk-and-lj" class="nav-link" data-scroll-target="#syntax-for-lk-and-lj"><span class="header-section-number">11.3</span> Syntax for LK and LJ</a></li>
+  <li><a href="#advanced-usage" id="toc-advanced-usage" class="nav-link" data-scroll-target="#advanced-usage"><span class="header-section-number">11.4</span> Advanced Usage</a>
+  <ul class="collapse">
+  <li><a href="#options" id="toc-options" class="nav-link" data-scroll-target="#options"><span class="header-section-number">11.4.1</span> Options</a></li>
+  <li><a href="#json-serialization" id="toc-json-serialization" class="nav-link" data-scroll-target="#json-serialization"><span class="header-section-number">11.4.2</span> JSON Serialization</a></li>
+  <li><a href="#playgrounds" id="toc-playgrounds" class="nav-link" data-scroll-target="#playgrounds"><span class="header-section-number">11.4.3</span> Playgrounds</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Sequent Calculus Deductions</span></h1>
 </div>
 
 
@@ -388,11 +384,269 @@ div.csl-indent {
 
 </header>
 
-<div id="refs" role="list" style="display: none">
-
+<p>The <code>Sequent</code> class indicates that a code block will contain sequent-calculus deduction exercises, which require the production of a sequent calculus deduction.</p>
+<p>These problems use <a href="https://github.com/gleachkr/proofjs">ProofJS</a> for their user interface. An initial click may be required to select a node. Once a node is selected, <code>Enter</code> will create a sibling node (on any node but the root), <code>Ctrl-Enter</code> will create a new child node, and <code>Ctrl-Shift-Enter</code> will create a new parent node (on any node but the root node). Nodes can be selected by either pressing <code>Tab</code> and <code>Shift-Tab</code> to cycle, or by using the mouse. Changes can be undone and redone with <code>Ctrl-Z</code> and <code>Shift-Ctrl-Z</code> respectively. The subtree above a selected node can be deleted with <code>Ctrl-Backspace</code>, and subtrees can be cut-copy-pasted with <code>Shift-Ctrl-X</code>, <code>Shift-Ctrl-C</code> and <code>Shift-Ctrl-V</code> respectively.</p>
+<section id="available-systems" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="available-systems"><span class="header-section-number">11.1</span> Available Systems</h2>
+<p>At the moment, four systems are available:</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">System</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">propLK</td>
+<td style="text-align: left;">A system based on the propositional fragment of Gentzen’s LK</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">propLJ</td>
+<td style="text-align: left;">A system based on the propositional fragment of Gentzen’s LJ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">foLK</td>
+<td style="text-align: left;">A system based on the full first order system of LK</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">foLJ</td>
+<td style="text-align: left;">A system based on the full first order system of LJ</td>
+</tr>
+</tbody>
+</table>
 </div>
+<p>Exercises are given by specifying the desired endsequent. So an exercise can be constructed like so:</p>
+<pre><code>```{.Sequent .propLK}
+1.1 P-&gt;Q, Q-&gt;R :|-: P-&gt;R
+```</code></pre>
+<p>which produces:</p>
+<pre class="Sequent propLK"><code>1.1 P-&gt;Q, Q-&gt;R :|-: P-&gt;R</code></pre>
+<p>(Remember to click on a node in order to interact, and to press <code>Ctrl-Enter</code> to create the first child node)</p>
+<p>A completed proof will look like this:</p>
+<pre class="Sequent propLK" data-init="now" data-options="displayJSON"><code>1.2 P, P-&gt;Q :|-: Q
+| {"ident":11,"label":"P-&gt;Q,P:|-:Q","rule":"-&gt;L","forest":[{"ident":12,"label":"Q,P:|-:Q","rule":"Cut","forest":[{"ident":13,"label":"R,P,Q:|-:Q","rule":"XL","forest":[{"ident":58,"label":"Q,P,R:|-:Q","rule":"WL","forest":[{"ident":59,"label":"Q:|-:Q","rule":"Ax","forest":[{"ident":14,"label":"","rule":"","forest":[]}]}]}]},{"ident":14,"label":"Q,P:|-:Q,R","rule":"XR","forest":[{"ident":57,"label":"Q,P:|-:R,Q","rule":"WR","forest":[{"ident":10,"label":"Q,P:|-:Q","rule":"WL","forest":[{"ident":12,"label":"Q:|-:Q","rule":"Ax","forest":[{"ident":13,"label":"","rule":"","forest":[]}]}]}]}]}]},{"ident":15,"label":"P:|-:Q,P","rule":"WR","forest":[{"ident":16,"label":"P:|-:P","rule":"Ax","forest":[{"ident":11,"label":"","rule":"","forest":[]}]}]}]}</code></pre>
+<p>With <code>:|-:</code> indicating a turnstile, and rule names to the right of inference lines.</p>
+</section>
+<section id="rules-for-lk-and-lj" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="rules-for-lk-and-lj"><span class="header-section-number">11.2</span> Rules for LK and LJ</h2>
+<p>Here’s a brief summary of LK’s propositional “operational” rules:</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Rule</th>
+<th style="text-align: left;">Premise Sequents</th>
+<th style="text-align: left;">Conclusion Sequent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>&amp;R</code></td>
+<td style="text-align: left;">Γ ⊢ Δ,φ ; Γ ⊢ Δ,ψ</td>
+<td style="text-align: left;">Γ ⊢ Δ, φ &amp; ψ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>&amp;L</code></td>
+<td style="text-align: left;">φ, Γ ⊢ Δ</td>
+<td style="text-align: left;">φ &amp; ψ, Γ ⊢ Δ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>&amp;L</code></td>
+<td style="text-align: left;">ψ, Γ ⊢ Δ</td>
+<td style="text-align: left;">φ &amp; ψ, Γ ⊢ Δ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>∨L</code></td>
+<td style="text-align: left;">φ, Γ ⊢ Δ ; ψ, Γ ⊢ Δ</td>
+<td style="text-align: left;">φ ∨ ψ, Γ ⊢ Δ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>∨R</code></td>
+<td style="text-align: left;">Γ ⊢ Δ, φ</td>
+<td style="text-align: left;">Γ ⊢ Δ, φ ∨ ψ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>∨R</code></td>
+<td style="text-align: left;">Γ ⊢ Δ, ψ</td>
+<td style="text-align: left;">Γ ⊢ Δ, φ ∨ ψ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>→L</code></td>
+<td style="text-align: left;">Γ ⊢ Δ, φ; ψ, Γ ⊢ Δ</td>
+<td style="text-align: left;">φ → ψ, Γ ⊢ Δ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>→R</code></td>
+<td style="text-align: left;">φ, Γ ⊢ Δ, ψ</td>
+<td style="text-align: left;">Γ ⊢ Δ, φ → ψ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>¬L</code></td>
+<td style="text-align: left;">Γ ⊢ Δ, φ</td>
+<td style="text-align: left;">¬φ, Γ ⊢ Δ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>¬R</code></td>
+<td style="text-align: left;">φ, Γ ⊢ Δ</td>
+<td style="text-align: left;">Γ ⊢ Δ, ¬φ</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Some structural rules (interchange, and contraction) are applied automatically to the parts of the sequent that match the Γ and Δ, so there is some room for a little bit of laxness there.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>The following explicit structural inferences are allowed:</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Rule</th>
+<th style="text-align: left;">Premise Sequents</th>
+<th style="text-align: left;">Conclusion Sequent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>CR</code></td>
+<td style="text-align: left;">Γ ⊢ Δ</td>
+<td style="text-align: left;">Γ ⊢ Δ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>CL</code></td>
+<td style="text-align: left;">Γ ⊢ Δ</td>
+<td style="text-align: left;">Γ ⊢ Δ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>XR</code></td>
+<td style="text-align: left;">Γ ⊢ Δ</td>
+<td style="text-align: left;">Γ ⊢ Δ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>XL</code></td>
+<td style="text-align: left;">Γ ⊢ Δ</td>
+<td style="text-align: left;">Γ ⊢ Δ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>WR</code></td>
+<td style="text-align: left;">Γ ⊢ Δ</td>
+<td style="text-align: left;">Γ ⊢ Δ,Δ’</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>WL</code></td>
+<td style="text-align: left;">Γ ⊢ Δ</td>
+<td style="text-align: left;">Γ,Γ’ ⊢ Δ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>Cut</code></td>
+<td style="text-align: left;">φ, Γ ⊢ Δ ; Γ’ ⊢ Δ’,φ</td>
+<td style="text-align: left;">Γ,Γ’ ⊢ Δ,Δ’</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>Ax</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">φ ⊢ φ</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The contraction and exchange rules are actually redundant here, because of the fact that structural rules are applied automatically to the formulas substituted in for Γ,Δ. They’re included here for presentation. Weakening is modified to allow for an arbitrary number of new formulas to be added.</p>
+<p>The first order system for LK adds the following rules to the above:</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Rule</th>
+<th style="text-align: left;">Premise Sequents</th>
+<th style="text-align: left;">Conclusion Sequent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>∀L</code></td>
+<td style="text-align: left;">φ(τ), Γ ⊢ Δ</td>
+<td style="text-align: left;">∀υφ(υ), Γ ⊢ Δ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>∃L</code></td>
+<td style="text-align: left;">φ(τ), Γ ⊢ Δ</td>
+<td style="text-align: left;">∃υφ(υ), Γ ⊢ Δ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>∀R</code></td>
+<td style="text-align: left;">Γ ⊢ Δ, φ(τ)</td>
+<td style="text-align: left;">Γ ⊢ Δ, ∀υφ(υ)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>∃R</code></td>
+<td style="text-align: left;">Γ ⊢ Δ, φ(τ)</td>
+<td style="text-align: left;">Γ ⊢ Δ, ∃υφ(υ)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The usual eigenvariable restrictions apply to <code>∀L</code> and <code>∃R</code>: the term <code>τ</code> must be a constant or variable that does not occur anywhere in the conclusion of the inference (i.e.&nbsp;not in Γ,Δ, or φ(υ)).</p>
+<p>The propositional and first-order systems for LJ are just like those for LK with the additional restriction that at most one formula can occur on the right hand side of a sequent.</p>
+</section>
+<section id="syntax-for-lk-and-lj" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="syntax-for-lk-and-lj"><span class="header-section-number">11.3</span> Syntax for LK and LJ</h2>
+<p>As usual, in writing formulas and inference rules, any of <code>&amp;</code>,<code>∧</code> or <code>/\</code> can be used for conjunction, and any of <code>∨</code>, <code>v</code>, and <code>\/</code> can be used for disjunction. Any of <code>-&gt;</code> or <code>→</code> can be used for the conditional, and any of <code>¬</code>, <code>-</code>, or <code>~</code> for negation. Sentence letters are <code>P</code> through <code>W</code> or <code>P</code> with subscripts like so: <code>P_1</code>. Predicates are <code>F</code> through <code>L</code>, or <code>F</code> with a subscript. Variables are <code>v</code> through <code>z</code> or <code>x</code> with a subscript and constants are <code>a</code> through <code>e</code> or <code>c</code> with a subscript.</p>
+</section>
+<section id="advanced-usage" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="advanced-usage"><span class="header-section-number">11.4</span> Advanced Usage</h2>
+<section id="options" class="level3" data-number="11.4.1">
+<h3 data-number="11.4.1" class="anchored" data-anchor-id="options"><span class="header-section-number">11.4.1</span> Options</h3>
+<p>In addition to the standard <code>points=VALUE</code> and <code>submission="none"</code> options, sequent calculus exercises allow for you to set <code>init="now"</code> to have proofchecking begin as soon as the proof is loaded (rather than waiting for input) as well as the following options:</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>displayJSON</code></td>
+<td style="text-align: left;"><code>Ctrl-?</code> will toggle display of an editable JSON representation of the proof</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="json-serialization" class="level3" data-number="11.4.2">
+<h3 data-number="11.4.2" class="anchored" data-anchor-id="json-serialization"><span class="header-section-number">11.4.2</span> JSON Serialization</h3>
+<p>Proof 1.2 above was generated using the displayJSON option, with the following invocation:</p>
+<pre><code>```{.Sequent .propLK init="now" options="displayJSON"}
+1.2 P, P-&gt;Q :|-: Q
+| {"ident":11,"label":"P-&gt;Q,P:|-:Q","rule":"-&gt;L","forest":[{"ident":12,"label":"Q,P:|-:Q","rule":"Cut","forest":[{"ident":13,"label":"R,P,Q:|-:Q","rule":"XL","forest":[{"ident":58,"label":"Q,P,R:|-:Q","rule":"WL","forest":[{"ident":59,"label":"Q:|-:Q","rule":"Ax","forest":[{"ident":14,"label":"","rule":"","forest":[]}]}]}]},{"ident":14,"label":"Q,P:|-:Q,R","rule":"XR","forest":[{"ident":57,"label":"Q,P:|-:R,Q","rule":"WR","forest":[{"ident":10,"label":"Q,P:|-:Q","rule":"WL","forest":[{"ident":12,"label":"Q:|-:Q","rule":"Ax","forest":[{"ident":13,"label":"","rule":"","forest":[]}]}]}]}]}]},{"ident":15,"label":"P:|-:Q,P","rule":"WR","forest":[{"ident":16,"label":"P:|-:P","rule":"Ax","forest":[{"ident":11,"label":"","rule":"","forest":[]}]}]}]}
+```</code></pre>
+<p>The <code>displayJSON</code> option is useful for saving and communicating proofs, since one can reproduce a proof by pasting its JSON representation into the panel where the JSON representation is displayed. It’s also useful for creating exercises in which the problems are partially completed, since, as in the example above, one can prefill an exercise by supplying a JSON representation below the statement of the problem (beginning each line of the JSON with a bar character <code>|</code>).</p>
+</section>
+<section id="playgrounds" class="level3" data-number="11.4.3">
+<h3 data-number="11.4.3" class="anchored" data-anchor-id="playgrounds"><span class="header-section-number">11.4.3</span> Playgrounds</h3>
+<p>You can generate a sequent calculus playground (where there is no goal, but where what you’ve proved is displayed) using something like the following:</p>
+<pre><code>```{.SequentPlayground .propLK init="now" options="displayJSON"}
+{"ident":11,"label":"P-&gt;Q,P:|-:Q","rule":"-&gt;L","forest":[{"ident":12,"label":"Q,P:|-:Q","rule":"Cut","forest":[{"ident":13,"label":"R,P,Q:|-:Q","rule":"XL","forest":[{"ident":58,"label":"Q,P,R:|-:Q","rule":"WL","forest":[{"ident":59,"label":"Q:|-:Q","rule":"Ax","forest":[{"ident":14,"label":"","rule":"","forest":[]}]}]}]},{"ident":14,"label":"Q,P:|-:Q,R","rule":"XR","forest":[{"ident":57,"label":"Q,P:|-:R,Q","rule":"WR","forest":[{"ident":10,"label":"Q,P:|-:Q","rule":"WL","forest":[{"ident":12,"label":"Q:|-:Q","rule":"Ax","forest":[{"ident":13,"label":"","rule":"","forest":[]}]}]}]}]}]},{"ident":15,"label":"P:|-:Q,P","rule":"WR","forest":[{"ident":16,"label":"P:|-:P","rule":"Ax","forest":[{"ident":11,"label":"","rule":"","forest":[]}]}]}]}
+```</code></pre>
+<p>Or like:</p>
+<pre><code>```{.SequentPlayground .propLK init="now" options="displayJSON"}
+```</code></pre>
+<p>The result, in the first case, will be:</p>
+<pre class="SequentPlayground propLK" data-init="now" data-options="displayJSON"><code>{"ident":11,"label":"P-&gt;Q,P:|-:Q","rule":"-&gt;L","forest":[{"ident":12,"label":"Q,P:|-:Q","rule":"Cut","forest":[{"ident":13,"label":"R,P,Q:|-:Q","rule":"XL","forest":[{"ident":58,"label":"Q,P,R:|-:Q","rule":"WL","forest":[{"ident":59,"label":"Q:|-:Q","rule":"Ax","forest":[{"ident":14,"label":"","rule":"","forest":[]}]}]}]},{"ident":14,"label":"Q,P:|-:Q,R","rule":"XR","forest":[{"ident":57,"label":"Q,P:|-:R,Q","rule":"WR","forest":[{"ident":10,"label":"Q,P:|-:Q","rule":"WL","forest":[{"ident":12,"label":"Q:|-:Q","rule":"Ax","forest":[{"ident":13,"label":"","rule":"","forest":[]}]}]}]}]}]},{"ident":15,"label":"P:|-:Q,P","rule":"WR","forest":[{"ident":16,"label":"P:|-:P","rule":"Ax","forest":[{"ident":11,"label":"","rule":"","forest":[]}]}]}]}</code></pre>
+<p>and in the second will be:</p>
+<pre class="SequentPlayground propLK" data-init="now" data-options="displayJSON"><code></code></pre>
+<p>Try editing each proof, and see how the displayed sequent changes!</p>
 
 
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Variations on the sequent calculus without this simplification will be supported in the future.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -630,11 +884,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./server-configuration.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Configuring Carnap</span></span>
+      <a href="./gentzen-ND.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Gentzen-Prawitz Natural Deduction</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./qualitative.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Qualitative Problems</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

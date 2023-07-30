@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Carnap Manual - References</title>
+<title>The Carnap Manual - 10&nbsp; Gentzen-Prawitz Natural Deduction</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,7 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./server-configuration.html" rel="prev">
+<link href="./sequent-calculus.html" rel="next">
+<link href="./modelchecker.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -99,7 +81,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./derivations.html">Exercises</a></li><li class="breadcrumb-item"><a href="./gentzen-ND.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Gentzen-Prawitz Natural Deduction</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -179,13 +161,13 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
  <span class="menu-text">Exercises</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./derivations.html" class="sidebar-item-text sidebar-link">
@@ -212,7 +194,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./gentzen-ND.html" class="sidebar-item-text sidebar-link">
+  <a href="./gentzen-ND.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Gentzen-Prawitz Natural Deduction</span></span></a>
   </div>
 </li>
@@ -356,7 +338,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -366,14 +348,29 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#available-systems" id="toc-available-systems" class="nav-link active" data-scroll-target="#available-systems"><span class="header-section-number">10.1</span> Available Systems</a></li>
+  <li><a href="#rules-for-.propnj-and-.propnk" id="toc-rules-for-.propnj-and-.propnk" class="nav-link" data-scroll-target="#rules-for-.propnj-and-.propnk"><span class="header-section-number">10.2</span> Rules for <code>.propNJ</code> and <code>.propNK</code></a></li>
+  <li><a href="#rules-for-open-logic-systems" id="toc-rules-for-open-logic-systems" class="nav-link" data-scroll-target="#rules-for-open-logic-systems"><span class="header-section-number">10.3</span> Rules for Open Logic Systems</a></li>
+  <li><a href="#advanced-usage" id="toc-advanced-usage" class="nav-link" data-scroll-target="#advanced-usage"><span class="header-section-number">10.4</span> Advanced Usage</a>
+  <ul class="collapse">
+  <li><a href="#options" id="toc-options" class="nav-link" data-scroll-target="#options"><span class="header-section-number">10.4.1</span> Options</a></li>
+  <li><a href="#runtime-axioms-and-rules" id="toc-runtime-axioms-and-rules" class="nav-link" data-scroll-target="#runtime-axioms-and-rules"><span class="header-section-number">10.4.2</span> Runtime Axioms and Rules</a></li>
+  <li><a href="#json-serialization" id="toc-json-serialization" class="nav-link" data-scroll-target="#json-serialization"><span class="header-section-number">10.4.3</span> JSON Serialization</a></li>
+  <li><a href="#playgrounds" id="toc-playgrounds" class="nav-link" data-scroll-target="#playgrounds"><span class="header-section-number">10.4.4</span> Playgrounds</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Gentzen-Prawitz Natural Deduction</span></h1>
 </div>
 
 
@@ -388,11 +385,476 @@ div.csl-indent {
 
 </header>
 
-<div id="refs" role="list" style="display: none">
-
+<p>The <code>TreeDeduction</code> class indicates that a code block will contain Gentzen-Prawitz natural deduction exercises, which require the production of a Gentzen-Prawitz deduction tree.</p>
+<p>These problems use <a href="https://github.com/gleachkr/proofjs">ProofJS</a> for their user interface. An initial click may be required to select a node. Once a node is selected, <code>Enter</code> will create a sibling premise (on any node but the root), <code>Ctrl-Enter</code> will create a new premise above the focused node, and <code>Ctrl-Shift-Enter</code> will create a new conclusion node below the focused node (on any node but the root node). Nodes can be selected by either pressing <code>Tab</code> and <code>Shift-Tab</code> to cycle, or by using the mouse. Changes can be undone and redone with <code>Ctrl-Z</code> and <code>Shift-Ctrl-Z</code> respectively. The subtree above a selected node can be deleted with <code>Ctrl-Backspace</code>, and subtrees can be cut-copy-pasted with <code>Shift-Ctrl-X</code>, <code>Shift-Ctrl-C</code> and <code>Shift-Ctrl-V</code> respectively.</p>
+<section id="available-systems" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="available-systems"><span class="header-section-number">10.1</span> Available Systems</h2>
+<p>At the moment, four systems are available:</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">System</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">propNK</td>
+<td style="text-align: left;">A system based on the propositional fragment of Gentzen’s NK</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">propNJ</td>
+<td style="text-align: left;">A system based on the propositional fragment of Gentzen’s NJ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">openLogicNK</td>
+<td style="text-align: left;">The propositional fragement of the Open Logic project’s natural deduction</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">openLogicFOLNK</td>
+<td style="text-align: left;">The full (first-order with equality) Open Logic project natural deduction</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">openLogicArithNK</td>
+<td style="text-align: left;">openLogicFOLNK for the language of arithmetic</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">openLogicExArithNK</td>
+<td style="text-align: left;">openLogicFOLNK for the language of arithmetic with arbitrary predicates and functions</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">openLogicSTNK</td>
+<td style="text-align: left;">openLogicFOLNK for the basic language of set theory with arbitrary predicates and functions</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">openLogicExSTNK</td>
+<td style="text-align: left;">openLogicFOLNK for the basic language of set theory</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">openLogicESTNK</td>
+<td style="text-align: left;">openLogicFOLNK for an extended language of set theory</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">openLogicExESTNK</td>
+<td style="text-align: left;">openLogicFOLNK for an extended language of set theory with arbitrary predicates and functions</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">openLogicSSTNK</td>
+<td style="text-align: left;">openLogicFOLNK for an extended language of set theory with separation abstracts</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">openLogicExSSTNK</td>
+<td style="text-align: left;">openLogicFOLNK for an extended language of set theory with separation abstracts and arbitrary predicates and functions</td>
+</tr>
+</tbody>
+</table>
 </div>
+<p>Exercises are given by specifying the system, and the sequent to be proved. So an exercise can be constructed like so:</p>
+<pre><code>```{.TreeDeduction .propNK}
+1.1 P\/Q, ~P :|-: Q 
+```</code></pre>
+<p>which produces:</p>
+<pre class="TreeDeduction propNK"><code>1.1 P\/Q, ~P :|-: Q </code></pre>
+<p>Instead of <code>.propNK</code> etc, you can also use <code>system="propNK"</code>.</p>
+<p>(Remember to click on a node in order to interact, and to press <code>Ctrl-Enter</code> to create the first child node)</p>
+<p>A completed proof will look like this:</p>
+<pre class="TreeDeduction propNK" data-init="now"><code>1.2 :|-: (P-&gt;Q)-&gt;((R-&gt;P)-&gt;(R-&gt;Q))
+| {
+|   "label": "(P-&gt;Q)-&gt;((R-&gt;P)-&gt;(R-&gt;Q))",
+|   "rule": "-&gt;I(1)",
+|   "ident": 0,
+|   "forest": [
+|     {
+|       "label": "(R-&gt;P)-&gt;(R-&gt;Q)",
+|       "rule": "-&gt;I(2)",
+|       "ident": 1,
+|       "forest": [
+|         {
+|           "label": "R-&gt;Q",
+|           "rule": "-&gt;I(3)",
+|           "ident": 2,
+|           "forest": [
+|             {
+|               "label": "Q",
+|               "rule": "-&gt;E",
+|               "ident": 3,
+|               "forest": [
+|                 {
+|                   "label": "P-&gt;Q",
+|                   "rule": "(1)",
+|                   "ident": 4,
+|                   "forest": [
+|                     {
+|                       "label": "",
+|                       "rule": "",
+|                       "ident": 5,
+|                       "forest": []
+|                     }
+|                   ]
+|                 },
+|                 {
+|                   "label": "P",
+|                   "rule": "-&gt;E",
+|                   "ident": 6,
+|                   "forest": [
+|                     {
+|                       "label": "R-&gt;P",
+|                       "rule": "(2)",
+|                       "ident": 7,
+|                       "forest": [
+|                         {
+|                           "label": "",
+|                           "rule": "",
+|                           "ident": 8,
+|                           "forest": []
+|                         }
+|                       ]
+|                     },
+|                     {
+|                       "label": "R",
+|                       "rule": "(3)",
+|                       "ident": 9,
+|                       "forest": [
+|                         {
+|                           "label": "",
+|                           "rule": "",
+|                           "ident": 10,
+|                           "forest": []
+|                         }
+|                       ]
+|                     }
+|                   ]
+|                 }
+|               ]
+|             }
+|           ]
+|         }
+|       ]
+|     }
+|   ]
+| }</code></pre>
+<p>With rule names to the right of inference lines, and assumptions labeled to the right of the rule citation (with or without parentheses). Discharged assumptions are marked using an inference with empty premise, and the assumption label on its own to the right of the inference line.</p>
+</section>
+<section id="rules-for-.propnj-and-.propnk" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="rules-for-.propnj-and-.propnk"><span class="header-section-number">10.2</span> Rules for <code>.propNJ</code> and <code>.propNK</code></h2>
+<p>Here’s a brief summary of NJ’s propositional rules. The notation [ψ]/φ indicates that an assumption ψ can be discharged from the subproof establishing φ</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Rule</th>
+<th style="text-align: left;">Premises</th>
+<th style="text-align: left;">Conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>∧I</code></td>
+<td style="text-align: left;">φ, ψ</td>
+<td style="text-align: left;">φ∧ψ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>∧E</code></td>
+<td style="text-align: left;">φ∧ψ</td>
+<td style="text-align: left;">φ OR ψ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>∨I</code></td>
+<td style="text-align: left;">φ</td>
+<td style="text-align: left;">φ∨ψ OR ψ∨φ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>∨E</code></td>
+<td style="text-align: left;">φ∨ψ, [φ]/χ, [ψ]/χ</td>
+<td style="text-align: left;">χ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>→I</code></td>
+<td style="text-align: left;">[φ]/ψ</td>
+<td style="text-align: left;">φ→ψ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>→E</code></td>
+<td style="text-align: left;">φ,φ→ψ</td>
+<td style="text-align: left;">ψ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>¬I</code></td>
+<td style="text-align: left;">[φ]/⊥</td>
+<td style="text-align: left;">¬φ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>¬E</code></td>
+<td style="text-align: left;">φ, ¬φ</td>
+<td style="text-align: left;">⊥</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>¬E</code></td>
+<td style="text-align: left;">⊥</td>
+<td style="text-align: left;">φ</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>NK results from the addition of one more rule:</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Rule</th>
+<th style="text-align: left;">Premises</th>
+<th style="text-align: left;">Conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>LEM</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">φ∨¬φ</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The syntax of formulas accepted for is that for the propositional systems for Kalish &amp; Montague/The Carnap Book in the <a href="systems.md#leach-krouse-the-carnap-book">Systems Reference</a>.</p>
+</section>
+<section id="rules-for-open-logic-systems" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="rules-for-open-logic-systems"><span class="header-section-number">10.3</span> Rules for Open Logic Systems</h2>
+<p>For the systems <code>.openLogicNK</code>, etc., the rules are:</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Rule</th>
+<th style="text-align: left;">Premises</th>
+<th style="text-align: left;">Conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>∧I</code></td>
+<td style="text-align: left;">φ, ψ</td>
+<td style="text-align: left;">φ∧ψ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>∧E</code></td>
+<td style="text-align: left;">φ ∧ ψ</td>
+<td style="text-align: left;">φ OR ψ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>∨I</code></td>
+<td style="text-align: left;">φ</td>
+<td style="text-align: left;">φ∨ψ OR ψ∨φ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>∨E</code></td>
+<td style="text-align: left;">φ∨ψ, [φ]/χ, [ψ]/χ</td>
+<td style="text-align: left;">χ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>→I</code></td>
+<td style="text-align: left;">[φ]/ψ</td>
+<td style="text-align: left;">φ→ψ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>→E</code></td>
+<td style="text-align: left;">φ,φ→ψ</td>
+<td style="text-align: left;">ψ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>↔︎I</code></td>
+<td style="text-align: left;">[φ]/ψ, [ψ]/φ</td>
+<td style="text-align: left;">φ↔︎ψ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>↔︎E</code></td>
+<td style="text-align: left;">φ↔︎ψ, φ</td>
+<td style="text-align: left;">ψ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">φ↔︎ψ, ψ</td>
+<td style="text-align: left;">φ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>¬I</code></td>
+<td style="text-align: left;">[φ]/⊥</td>
+<td style="text-align: left;">¬φ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>¬E</code></td>
+<td style="text-align: left;">φ, ¬φ</td>
+<td style="text-align: left;">⊥</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>X</code></td>
+<td style="text-align: left;">⊥</td>
+<td style="text-align: left;">φ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>IP</code></td>
+<td style="text-align: left;">[¬φ]/⊥</td>
+<td style="text-align: left;">φ</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>For the first order systems, we also have the rules:</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Rule</th>
+<th style="text-align: left;">Premises</th>
+<th style="text-align: left;">Conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>∀I</code></td>
+<td style="text-align: left;">φ(a)</td>
+<td style="text-align: left;">∀x φ(x)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>VE</code></td>
+<td style="text-align: left;">∀x φ(x)</td>
+<td style="text-align: left;">φ(t)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>∃I</code></td>
+<td style="text-align: left;">φ(t)</td>
+<td style="text-align: left;">∃x φ(x)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>∃E</code></td>
+<td style="text-align: left;">∃x φ(x), [φ(a)]/ψ</td>
+<td style="text-align: left;">ψ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>=I</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">t=t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>=E</code></td>
+<td style="text-align: left;">φ(t),t=s</td>
+<td style="text-align: left;">φ(s)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The syntax of accepted for the Open Logic systems is described in the <a href="systems.md#open-logic-project">Systems Reference</a>. The natural deduction systems for arithmetic and set theory only differ in the syntax; there are no axioms.</p>
+<p>Here is an example of a derivation in the language of arithmetic:</p>
+<pre class="TreePlayground openLogicArithNK" data-init="now" data-options="displayJSON"><code>|{"ident":7,"label":"Ax ~ x &lt; 0","rule":"AI","forest":[{"ident":11,"label":"~ a &lt; 0","rule":"~I 1","forest":[{"ident":11,"label":"_|_","rule":"~E","forest":[{"ident":12,"label":"Ez z' + a = 0","rule":"-&gt;E","forest":[{"ident":14,"label":"a &lt; 0","rule":"1","forest":[{"ident":51,"label":"","rule":"","forest":[]}]},{"ident":15,"label":"a &lt; 0 -&gt; Ez z'+a = 0","rule":"-&gt;I 2","forest":[{"ident":52,"label":"Ez z'+a = 0","rule":"&lt;-&gt;E","forest":[{"ident":52,"label":"a &lt; 0 &lt;-&gt; Ez z'+a = 0","rule":"AE","forest":[{"ident":53,"label":"Ay(a &lt; y &lt;-&gt; Ez z'+a = y)","rule":"AE","forest":[{"ident":54,"label":"AxAy(x &lt; y &lt;-&gt; Ez z'+x = y)","rule":"","forest":[]}]}]},{"ident":62,"label":"a &lt; 0","rule":"2","forest":[{"ident":63,"label":"","rule":"","forest":[]}]}]}]}]},{"ident":13,"label":"~Ez z' + a = 0","rule":"AE","forest":[{"ident":64,"label":"Ax~Ez z' + x = 0","rule":"","forest":[]}]}]}]}]}</code></pre>
+</section>
+<section id="advanced-usage" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="advanced-usage"><span class="header-section-number">10.4</span> Advanced Usage</h2>
+<section id="options" class="level3" data-number="10.4.1">
+<h3 data-number="10.4.1" class="anchored" data-anchor-id="options"><span class="header-section-number">10.4.1</span> Options</h3>
+<p>In addition to the standard <code>points=VALUE</code> and <code>submission="none"</code> options, Gentzen-Prawitz natural deduction exercises allow for you to set <code>init="now"</code> to have proofchecking begin as soon as the proof is loaded (rather than waiting for input) as well as the following allowed arguments to <code>options="…"</code>:</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Option name</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>prepopulate</code></td>
+<td style="text-align: left;">Prepopulates the endformula of an exercises with the conclusion to be shown</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>displayJSON</code></td>
+<td style="text-align: left;"><code>Ctrl-?</code> will toggle display of an editable JSON representation of the proof</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="runtime-axioms-and-rules" class="level3" data-number="10.4.2">
+<h3 data-number="10.4.2" class="anchored" data-anchor-id="runtime-axioms-and-rules"><span class="header-section-number">10.4.2</span> Runtime Axioms and Rules</h3>
+<p>The “extended” mathematical systems, <code>openLogicExArithNK</code> <code>openLogicExSTNK</code> <code>openLogicExESTNK</code> and <code>openLogicExSSTNK</code> can be equipped with extra axioms and rules. To set an axiom or a rule for a system, include an option of the form <code>axiom-NAME="RULEVARIANTS"</code> where <code>NAME</code> is the name that you want your axiom or rule to have, and <code>RULEVARIANTS</code> is a semicolon-separated list of sequents representing the variant schematic forms of the rule. The rule should be cited as <code>Ax-NAME</code>. Axiom names are case-insensitive, so don’t rely on upper or lower-case variants of names to distinguish rules.</p>
+<p>When entering the schematic sequents representing the forms of a rule, you should indicate which sentence letters, constants, and function symbols are to be read as schematic by preceding each such symbol with a prime, like so: <code>'P</code>. So, for example:</p>
+<pre><code>~~~{.TreePlayground .openLogicExArithNK init="now" axiom-flip="'P('a*'b) :|-: 'P('b*'a); 'P('a+'b) :|-: 'P('b+'a)"}
+{ "ident": 13, "label": "a+b=c", "rule": "Ax-flip", "forest": [
+    { "ident": 15, "label": "b+a=c", "rule": "", "forest": [] }
+]}
+~~~</code></pre>
+<p>will produce:</p>
+<pre class="TreePlayground openLogicExArithNK" data-init="now" data-axiom-flip="'P('a*'b) :|-: 'P('b*'a); 'P('a+'b) :|-: 'P('b+'a)"><code>{ "ident": 13, "label": "a+b=c", "rule": "Ax-flip", "forest": [
+    { "ident": 15, "label": "b+a=c", "rule": "", "forest": [] }
+]}</code></pre>
+</section>
+<section id="json-serialization" class="level3" data-number="10.4.3">
+<h3 data-number="10.4.3" class="anchored" data-anchor-id="json-serialization"><span class="header-section-number">10.4.3</span> JSON Serialization</h3>
+<p>Here’s an incomplete proof, showing how to use the <code>displayJSON</code> option:</p>
+<pre class="TreeDeduction propNK" data-init="now" data-options="displayJSON"><code>1.1 P\/Q, ~P :|-: Q
+| {"ident":12,"label":"Q","rule":"\\/E", "forest":[
+|   {"ident":13,"label":"P\\/Q","rule":"", "forest":[]},
+|   {"ident":14,"label":"Q","rule":"(1)",  "forest":[
+|       {"ident":17,"label":"","rule":"","forest":[]}
+|   ]},
+|   {"ident":15,"label":"Q","rule":"?","forest":[
+|       {"ident":18,"label":"?","rule":"","forest":[]}
+|   ]}
+| ]}</code></pre>
+<p>To show the JSON representation, click to focus one of the input areas in the proof and press <code>Ctrl-?</code>. To edit the deduction by editing the JSON, try replacing one of the <code>Q</code>s in the JSON panel with a <code>P</code>. The deduction will update to reflect the JSON, so long as the JSON is a well-formed representation of a deduction.</p>
+<p>The above was generated with</p>
+<pre><code>```{.TreeDeduction .propNK init="now" options="displayJSON"}
+1.1 P\/Q, ~P :|-: Q 
+| {"ident":12,"label":"Q","rule":"\\/E", "forest":[
+|   {"ident":13,"label":"P\\/Q","rule":"", "forest":[]},
+|   {"ident":14,"label":"Q","rule":"(1)",  "forest":[
+|       {"ident":17,"label":"","rule":"","forest":[]}
+|   ]},
+|   {"ident":15,"label":"Q","rule":"?","forest":[
+|       {"ident":18,"label":"?","rule":"","forest":[]}
+|   ]}
+| ]}
+```</code></pre>
+<p>The <code>displayJSON</code> option is useful for saving and communicating proofs, since one can reproduce a proof by pasting its JSON representation into the panel where the JSON representation is displayed. It’s also useful for creating exercises in which the problems are partially completed, since, as in the example above, one can prefill an exercise by supplying a JSON representation below the statement of the problem.</p>
+</section>
+<section id="playgrounds" class="level3" data-number="10.4.4">
+<h3 data-number="10.4.4" class="anchored" data-anchor-id="playgrounds"><span class="header-section-number">10.4.4</span> Playgrounds</h3>
+<p>One can generate a Gentzen-Prawitz playground (where there is no goal, but where what you’ve proved is displayed) using something like the following:</p>
+<pre><code>```{.TreePlayground .propNK init="now" options="displayJSON"}
+| {"ident":12,"label":"Q","rule":"\\/E (1) (2)","forest":[
+|   {"ident":13,"label":"P\\/Q","rule":"","forest":[]},
+|   {"ident":14,"label":"Q","rule":"(1)","forest":[
+|       {"ident":17,"label":"","rule":"","forest":[]}
+|   ]},
+|   {"ident":15,"label":"Q","rule":"-E","forest":[
+|       {"ident":18,"label":"!?","rule":"-E","forest":[
+|           {"ident":24,"label":"P","rule":"(2)","forest":[
+|               {"ident":27,"label":"","rule":"","forest":[]}
+|           ]},
+|           {"ident":25,"label":"-P","rule":"","forest":[]}
+|       ]}
+|   ]}
+| ]}
+```</code></pre>
+<p>The result, in this case, will be:</p>
+<pre class="TreePlayground propNK" data-init="now" data-options="displayJSON"><code>| {"ident":12,"label":"Q","rule":"\\/E (1) (2)","forest":[
+|   {"ident":13,"label":"P\\/Q","rule":"","forest":[]},
+|   {"ident":14,"label":"Q","rule":"(1)","forest":[
+|       {"ident":17,"label":"","rule":"","forest":[]}
+|   ]},
+|   {"ident":15,"label":"Q","rule":"-E","forest":[
+|       {"ident":18,"label":"!?","rule":"-E","forest":[
+|           {"ident":24,"label":"P","rule":"(2)","forest":[
+|               {"ident":27,"label":"","rule":"","forest":[]}
+|           ]},
+|           {"ident":25,"label":"-P","rule":"","forest":[]}
+|       ]}
+|   ]}
+| ]}</code></pre>
+<p>Try editing the proof to see how the displayed sequent changes!</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -630,11 +1092,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./server-configuration.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Configuring Carnap</span></span>
+      <a href="./modelchecker.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Countermodels</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./sequent-calculus.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Sequent Calculus Deductions</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

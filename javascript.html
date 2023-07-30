@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Carnap Manual - References</title>
+<title>The Carnap Manual - 26&nbsp; JavaScript Extensions for Carnap</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,7 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./server-configuration.html" rel="prev">
+<link href="./installation.html" rel="next">
+<link href="./lti-develop.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -99,7 +81,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./administration.html">Advanced Usage</a></li><li class="breadcrumb-item"><a href="./javascript.html"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">JavaScript Extensions for Carnap</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -303,13 +285,13 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
  <span class="menu-text">Advanced Usage</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./administration.html" class="sidebar-item-text sidebar-link">
@@ -330,7 +312,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./javascript.html" class="sidebar-item-text sidebar-link">
+  <a href="./javascript.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">JavaScript Extensions for Carnap</span></span></a>
   </div>
 </li>
@@ -356,7 +338,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -366,14 +348,25 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#including-javascript" id="toc-including-javascript" class="nav-link active" data-scroll-target="#including-javascript"><span class="header-section-number">26.1</span> Including JavaScript</a></li>
+  <li><a href="#advanced-usage" id="toc-advanced-usage" class="nav-link" data-scroll-target="#advanced-usage"><span class="header-section-number">26.2</span> Advanced Usage</a>
+  <ul class="collapse">
+  <li><a href="#interacting-with-the-server" id="toc-interacting-with-the-server" class="nav-link" data-scroll-target="#interacting-with-the-server"><span class="header-section-number">26.2.1</span> Interacting with the Server</a></li>
+  </ul></li>
+  <li><a href="#events" id="toc-events" class="nav-link" data-scroll-target="#events"><span class="header-section-number">26.3</span> Events</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">JavaScript Extensions for Carnap</span></h1>
 </div>
 
 
@@ -388,11 +381,87 @@ div.csl-indent {
 
 </header>
 
-<div id="refs" role="list" style="display: none">
-
+<section id="including-javascript" class="level2" data-number="26.1">
+<h2 data-number="26.1" class="anchored" data-anchor-id="including-javascript"><span class="header-section-number">26.1</span> Including JavaScript</h2>
+<p>Carnap allows you to incorporate external JavaScript to an assignment, in order to add extra interactive behavior to your problem sets. This can be done using the <code>raw_html</code> pandoc extension to include a <code>&lt;script&gt;</code> tag, or by including the JS in a metadata block. Like a CSS entry, a JS entry entry can include either a url for a single script, like so:</p>
+<pre><code>---
+js: https://carnap.io/shared/myemail@university.edu/myjs.js
+--- </code></pre>
+<p>or for several scripts, like so:</p>
+<pre><code>---
+js:
+- https://carnap.io/shared/myemail@university.edu/myjs1.js
+- https://carnap.io/shared/myemail@university.edu/myjs2.js
+--- </code></pre>
+<p>The scripts can be hosted anywhere, including on the Carnap server. As with stylesheets, scripts can be uploaded as normal documents so long as they’re given the proper filetype extension (in this case, “.js” rather than “.css”)</p>
+</section>
+<section id="advanced-usage" class="level2" data-number="26.2">
+<h2 data-number="26.2" class="anchored" data-anchor-id="advanced-usage"><span class="header-section-number">26.2</span> Advanced Usage</h2>
+<section id="interacting-with-the-server" class="level3" data-number="26.2.1">
+<h3 data-number="26.2.1" class="anchored" data-anchor-id="interacting-with-the-server"><span class="header-section-number">26.2.1</span> Interacting with the Server</h3>
+<p>JavaScript running as part of an assignment will have access to an object called <code>CarnapServerAPI</code>, which lets your JavaScript interact with the server, to retrieve information about the current student and assignment, and to save information on the server for later retrieval.</p>
+<p>Currently, the useful properties of <code>CarnapServerAPI</code> are as follows:</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Property</th>
+<th style="text-align: left;">Data</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>CarnapServerAPI.user.firstName</code></td>
+<td style="text-align: left;">Student’s first name</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>CarnapServerAPI.user.lastName</code></td>
+<td style="text-align: left;">Student’s first name</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>CarnapServerAPI.assignment.dueDate</code></td>
+<td style="text-align: left;">Assignment due date ECMAScript epoch time (milliseconds since midnight 1/1/1970 UTC, for use with the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a> constructor).</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>CarnapServerAPI.assignment.description</code></td>
+<td style="text-align: left;">Assignment description</td>
+</tr>
+</tbody>
+</table>
 </div>
+<p>There are two methods for dealing with saving data, one for saving and one for retrieving. Data is always saved under a “namespace”, so that different JavaScript extensions can avoid overwriting one another’s saved information. Each student has their own saved state for each assignment - state is not shared between students or between assignments.</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Method</th>
+<th style="text-align: left;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>CarnapServerAPI.putAssignmentState(ns,state)</code></td>
+<td style="text-align: left;">Serializes <code>state</code> and inserts it under namespace <code>ns</code> on the server.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>CarnapServerAPI.getAssignmentState()</code></td>
+<td style="text-align: left;">Retrieves the assignment state asynchronously, as a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The first call to <code>CarnapServerAPI.getAssignmentState</code> retrieves the state from the server, and subsequent calls return a locally cached state that’s updated by <code>CarnapServerAPI.putAssignmentState</code>. So, while the first call to <code>CarnapServerAPI.getAssignmentState</code> might take a moment, subsequent calls should be quite fast.</p>
+</section>
+</section>
+<section id="events" class="level2" data-number="26.3">
+<h2 data-number="26.3" class="anchored" data-anchor-id="events"><span class="header-section-number">26.3</span> Events</h2>
+<p>In order to make it possible for interactive JS behavior to be triggered by successful or unsuccessful completion of exercises, Carnap provides a few events that you can listen for.</p>
+<p>When Carnap finishes its initial loading, and exercise elements are properly formatted and loaded, it will fire a global <code>carnap-loaded</code> event, which can be observed with <code>document.addEventListener("carnap-loaded", ...)</code>.</p>
+<p>Whenever an exercise is successfully checked or submitted, an <code>exercise-success</code> event will fire on the main exercise element (the one carries the <code>data-carnap-*</code> attributes). An <code>exercise-failure</code> event fires when an exercise is checked and detected as incorrect, or a submission is rejected. Both <code>exercise-success</code> and <code>exercise-failure</code> are disabled if an exercise has the <code>exam</code> option set.</p>
+<p>Finally, a <code>problem-submision</code> event fires on the submission button when a problem is submitted.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -630,11 +699,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./server-configuration.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Configuring Carnap</span></span>
+      <a href="./lti-develop.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">LTI Information for Carnap Developers</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./installation.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Installing Carnap</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

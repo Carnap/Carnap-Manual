@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Carnap Manual - References</title>
+<title>The Carnap Manual - 8&nbsp; Translations</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,7 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./server-configuration.html" rel="prev">
+<link href="./modelchecker.html" rel="next">
+<link href="./truth-tables.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -86,6 +68,8 @@ div.csl-indent {
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0"></script>
 <script src="https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.js"></script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -99,7 +83,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./derivations.html">Exercises</a></li><li class="breadcrumb-item"><a href="./translation.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Translations</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -179,13 +163,13 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
  <span class="menu-text">Exercises</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./derivations.html" class="sidebar-item-text sidebar-link">
@@ -200,7 +184,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./translation.html" class="sidebar-item-text sidebar-link">
+  <a href="./translation.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Translations</span></span></a>
   </div>
 </li>
@@ -356,7 +340,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -366,14 +350,24 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#propositional-logic" id="toc-propositional-logic" class="nav-link active" data-scroll-target="#propositional-logic"><span class="header-section-number">8.1</span> Propositional Logic</a></li>
+  <li><a href="#first-order-translation" id="toc-first-order-translation" class="nav-link" data-scroll-target="#first-order-translation"><span class="header-section-number">8.2</span> First-Order Translation</a></li>
+  <li><a href="#exact-translations" id="toc-exact-translations" class="nav-link" data-scroll-target="#exact-translations"><span class="header-section-number">8.3</span> Exact Translations</a></li>
+  <li><a href="#systems" id="toc-systems" class="nav-link" data-scroll-target="#systems"><span class="header-section-number">8.4</span> Systems</a></li>
+  <li><a href="#advanced-usage" id="toc-advanced-usage" class="nav-link" data-scroll-target="#advanced-usage"><span class="header-section-number">8.5</span> Advanced usage</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Translations</span></h1>
 </div>
 
 
@@ -388,11 +382,194 @@ div.csl-indent {
 
 </header>
 
-<div id="refs" role="list" style="display: none">
-
+<p>the <code>Translate</code> class indicates that a code block will contain translation exercises that require symbolizing natural language sentences.</p>
+<section id="propositional-logic" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="propositional-logic"><span class="header-section-number">8.1</span> Propositional Logic</h2>
+<p>You can create propositional logic translation problems by also adding the class <code>Prop</code>, like so:</p>
+<pre><code>~~~{.Translate .Prop}
+3.1 P/\Q : People want to know what's going on and questions are unavoidable
+~~~</code></pre>
+<p>The number 3.1 indicates the exercise number, and the colon separates the solution from the text that will be presented for translation. The result of the above is:</p>
+<pre class="Translate Prop"><code>3.1 P/\Q : People want to know what's going on and questions are unavoidable</code></pre>
+<p>To complete it, replace the text to the left of the submit solution button with your translation, press return to check, and then press “Submit Solution”. Propositional translations are considered correct if they are logically equivalent to the original answer. So for example, <code>Q/\P</code> will be accepted above.</p>
+</section>
+<section id="first-order-translation" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="first-order-translation"><span class="header-section-number">8.2</span> First-Order Translation</h2>
+<p>It is also possible to create first-order translation problems using the class <code>FOL</code>, thus:</p>
+<pre><code>~~~{.Translate .FOL}
+3.2 AxF(x) : Everything is fine
+~~~</code></pre>
+<p>with the result:</p>
+<pre class="Translate FOL"><code>3.2 AxF(x) : Everything is fine</code></pre>
+<p>These are completed as above. Equivalence of first-order sentences is undecidable, so we can’t check it, but we can catch most cases of “equivalent” translations by using some rewriting rules.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> So, for example <code>~Ex~F(x)</code> will be accepted above.</p>
+</section>
+<section id="exact-translations" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="exact-translations"><span class="header-section-number">8.3</span> Exact Translations</h2>
+<p>Using the class <code>Exact</code>, you can also create “translations” that don’t accept logically equivalent answers. These may be useful if you wish to, for example, ask a student what the missing premise in some inference is. So, for example you might write</p>
+<pre><code>~~~{.Translate .Exact}
+3.3 P : To make a modus ponens inference with P→Q, you need...
+~~~</code></pre>
+<p>to generate:</p>
+<pre class="Translate Exact"><code>3.3 P : To make a modus ponens inference with P→Q, you need...</code></pre>
+<p>Exact translations use the same syntax as <code>Prop</code> by default, but can be configured to use a large number of alternative syntaxes (see below)</p>
+</section>
+<section id="systems" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="systems"><span class="header-section-number">8.4</span> Systems</h2>
+<p>The way that formulas are parsed can also be customized. This is done by setting the <code>system</code> attribute to indicate which formal system you are drawing your syntax from. So for example,</p>
+<pre><code>~~~{.Translate .FOL system="magnusQL"}
+3.5 AxBx : Everything is bananas
+~~~</code></pre>
+<p>will generate:</p>
+<pre class="Translate FOL" data-system="magnusQL"><code>3.5 AxBx : Everything is bananas</code></pre>
+<p>For first-order translations, the available systems are: <code>firstOrder</code> <code>montagueQC</code> <code>magnusQL</code> <code>thomasBolducAndZachFOL</code> <code>thomasBolducAndZachFOL2019</code> <code>LogicBookPD</code> <code>LogicBookPDPlus</code> <code>hausmanPL</code> <code>howardSnyderPL</code> <code>ichikawaJenkinsQL</code> <code>hardegreePL</code> <code>goldfarbAltND</code> <code>goldfarbNDPlus</code> and <code>goldfarbAltNDPlus</code>.</p>
+<p>For propositional translations, the available systems are: <code>prop</code> <code>montagueSC</code> <code>LogicBookSD</code> <code>LogicBookSDPlus</code> <code>hausmanSL</code> <code>howardSnyderSL</code> <code>ichikawaJenkinsSL</code> <code>hausmanSL</code> <code>magnusSL</code> <code>magnusSLPlus</code> <code>thomasBolducAndZachTFL</code> <code>thomasBolducAndZachTFL2019</code> <code>tomassiPL</code> and <code>hardegreeSL</code>.</p>
+<p>For exact translations, the available systems are all of the above, together with modal logic systems <code>.HardegreeSL</code> <code>.HardegreePL</code> <code>.HardegreeWTL</code>, <code>.HardegreeL</code> <code>.HardegreeK</code> <code>.HardegreeT</code> <code>.HardegreeB</code> <code>.HardegreeD</code> <code>.Hardegree4</code> <code>.Hardegree5</code>, second order systems <code>.SecondOrder</code> <code>.PolySecondOrder</code>, and set theory systems <code>ElementaryST</code> and <code>SeparativeST</code></p>
+</section>
+<section id="advanced-usage" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="advanced-usage"><span class="header-section-number">8.5</span> Advanced usage</h2>
+<section id="multiple-solutions" class="level4" data-number="8.5.0.1">
+<h4 data-number="8.5.0.1" class="anchored" data-anchor-id="multiple-solutions"><span class="header-section-number">8.5.0.1</span> Multiple Solutions</h4>
+<p>If you wish to allow students to find one translation of a sentence that admits several formalizations, you can use a comma-separated list of admissible solutions. So,</p>
+<pre><code>~~~{.Translate .FOL}
+3.4 (P /\ Q) \/ R, P/\(Q\/R) : Jack jumped the fence and was caught by the watchman or got away.
+~~~</code></pre>
+<p>generates</p>
+<pre class="Translate FOL"><code>3.4 (P /\ Q) \/ R, P/\(Q\/R) : Jack jumped the fence and was caught by the watchman or got away.</code></pre>
+</section>
+<section id="options-and-attributes" class="level4" data-number="8.5.0.2">
+<h4 data-number="8.5.0.2" class="anchored" data-anchor-id="options-and-attributes"><span class="header-section-number">8.5.0.2</span> Options and Attributes</h4>
+<p>In addition to allowing for custom point values with <code>points=VALUE</code>, and turning off submission with <code>submission="none"</code>, translations also have the following options</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>nocheck</code></td>
+<td style="text-align: left;">Disables checking solutions</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>exam</code></td>
+<td style="text-align: left;">Allows for submission of work which is incomplete or incorrect</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>checksyntax</code></td>
+<td style="text-align: left;">When <code>exam</code> is active, blocks submission of syntactically incorrect work</td>
+</tr>
+</tbody>
+</table>
 </div>
+<p>These can be included in the space separated list supplied to the <code>options</code> attribute.</p>
+</section>
+<section id="translation-tests" class="level4" data-number="8.5.0.3">
+<h4 data-number="8.5.0.3" class="anchored" data-anchor-id="translation-tests"><span class="header-section-number">8.5.0.3</span> Translation tests</h4>
+<p>Finally, you can impose one or more extra tests on a translation. This is done by setting the <code>tests</code> attribute to indicate which tests you wish to require the translation to pass. The available tests for propositional translations are</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>CNF</code></td>
+<td style="text-align: left;">Requires conjunctive normal form</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>DNF</code></td>
+<td style="text-align: left;">Requires disjunctive normal form</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>maxCon:N</code></td>
+<td style="text-align: left;">Requires that the translation contain N or fewer connectives</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>maxNot:N</code></td>
+<td style="text-align: left;">Requires that the translation contain N or fewer negations</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>maxAnd:N</code></td>
+<td style="text-align: left;">Requires that the translation contain N or fewer conjunctions</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>maxIff:N</code></td>
+<td style="text-align: left;">Requires that the translation contain N or fewer biconditionals</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>maxIf:N</code></td>
+<td style="text-align: left;">Requires that the translation contain N or fewer conditionals</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>maxOr:N</code></td>
+<td style="text-align: left;">Requires that the translation contain N or fewer disjunctions</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>maxFalse:N</code></td>
+<td style="text-align: left;">Requires that the translation contain N or fewer falsity constants</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>maxAtom:N</code></td>
+<td style="text-align: left;">Requires that the translation contain N or fewer atomic sentences</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The available tests for first-order translations are all the propositional tests, plus:</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>PNF</code></td>
+<td style="text-align: left;">Requires prenex normal form</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>When using multiple tests, their names must be separated by spaces, so for example,</p>
+<pre><code>~~~{.Translate .FOL tests="PNF maxNeg:0"}
+3.6 ~Ex~F(x) : Nothing is not bananas.
+~~~</code></pre>
+<p>will generate:</p>
+<pre class="Translate FOL" data-tests="PNF maxNeg:0"><code>3.6 ~Ex~F(x) : Nothing is not bananas.</code></pre>
+</section>
+<section id="partial-solutions" class="level4" data-number="8.5.0.4">
+<h4 data-number="8.5.0.4" class="anchored" data-anchor-id="partial-solutions"><span class="header-section-number">8.5.0.4</span> Partial Solutions</h4>
+<p>It’s possible to include a partial solution to a translation problem, by including the partial solution after a <code>|</code> following the problem. So for example,</p>
+<pre><code>~~~{.Translate .FOL options="nocheck"}
+3.7 AxF(x) : Everything is fine
+| For all x, x is fine
+~~~</code></pre>
+<p>Generates</p>
+<pre class="Translate FOL" data-options="nocheck"><code>3.7 AxF(x) : Everything is fine
+| For all x, x is fine</code></pre>
 
 
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>the procedure is roughly as follows:</p>
+<ol type="a">
+<li>using the standard rules of passage, drive quantifiers in as far as possible in both the submitted solution <span class="math inline">\(S_0\)</span>, and in the target sentence <span class="math inline">\(T_0\)</span>, generating two result sentences <span class="math inline">\(S_1\)</span>,<span class="math inline">\(T_1\)</span></li>
+<li>using the standard rules of passage, pull out quantifiers as far as possible, in every possible way, generating a set <span class="math inline">\(S_2\)</span> of sentences from <span class="math inline">\(S_1\)</span>, and a set of sentences <span class="math inline">\(T_2\)</span> from <span class="math inline">\(T_1\)</span></li>
+<li>allowing permutation of quantifiers within blocks, look for pairs of sentences <span class="math inline">\((S_3,T_3)\)</span> with matching quantifier prefixes. Canonically rename the variables. Check the matricies of the resulting formulas for propositional equivalence.</li>
+</ol>
+<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -628,13 +805,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./server-configuration.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Configuring Carnap</span></span>
+      <a href="./truth-tables.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Truth Tables</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./modelchecker.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Countermodels</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

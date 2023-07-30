@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Carnap Manual - References</title>
+<title>The Carnap Manual - 7&nbsp; Truth Tables</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,7 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./server-configuration.html" rel="prev">
+<link href="./translation.html" rel="next">
+<link href="./derivations.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -99,7 +81,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./derivations.html">Exercises</a></li><li class="breadcrumb-item"><a href="./truth-tables.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Truth Tables</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -179,13 +161,13 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
  <span class="menu-text">Exercises</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./derivations.html" class="sidebar-item-text sidebar-link">
@@ -194,7 +176,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./truth-tables.html" class="sidebar-item-text sidebar-link">
+  <a href="./truth-tables.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Truth Tables</span></span></a>
   </div>
 </li>
@@ -356,7 +338,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -366,14 +348,23 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#simple-truth-tables" id="toc-simple-truth-tables" class="nav-link active" data-scroll-target="#simple-truth-tables"><span class="header-section-number">7.1</span> Simple Truth Tables</a></li>
+  <li><a href="#validity-truth-tables" id="toc-validity-truth-tables" class="nav-link" data-scroll-target="#validity-truth-tables"><span class="header-section-number">7.2</span> Validity Truth Tables</a></li>
+  <li><a href="#partial-truth-tables" id="toc-partial-truth-tables" class="nav-link" data-scroll-target="#partial-truth-tables"><span class="header-section-number">7.3</span> Partial Truth Tables</a></li>
+  <li><a href="#advanced-usage" id="toc-advanced-usage" class="nav-link" data-scroll-target="#advanced-usage"><span class="header-section-number">7.4</span> Advanced Usage</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Truth Tables</span></h1>
 </div>
 
 
@@ -388,11 +379,244 @@ div.csl-indent {
 
 </header>
 
-<div id="refs" role="list" style="display: none">
-
+<p>The <code>TruthTable</code> class indicates that a code block will contain truth table exercises.</p>
+<section id="simple-truth-tables" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="simple-truth-tables"><span class="header-section-number">7.1</span> Simple Truth Tables</h2>
+<p>You can create simple truth table problems, checking to see if a formula is a tautology, by also adding the class <code>Simple</code>, like so:</p>
+<pre><code>~~~{.TruthTable .Simple}
+2.1 ((P/\Q)\/R)&lt;-&gt;((P\/R)/\(Q\/R))
+~~~</code></pre>
+<p>the number 2.1 indicates the exercise number, and the formula is the one for which you will be constructing a truth table. This produces:</p>
+<pre class="TruthTable Simple"><code>2.1 ((P/\Q)\/R)&lt;-&gt;((P\/R)/\(Q\/R))</code></pre>
+<p>You can also use a comma-separated list of formulas, like so:</p>
+<pre><code>~~~{.TruthTable .Simple}
+2.2 (P/\Q)\/R, (P\/R)/\(Q\/R)
+~~~</code></pre>
+<p>This example produces:</p>
+<pre class="TruthTable Simple"><code>2.2 (P/\Q)\/R, (P\/R)/\(Q\/R)</code></pre>
+<p>Simple truth tables can be (by default) checked for correctness, and will be considered correct when every row is filled in correctly. A problem can also be solved by indicating a counterexample to tautology. A row is considered a counterexample if <em>all</em> the formulas in the problem are false on that row.</p>
+</section>
+<section id="validity-truth-tables" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="validity-truth-tables"><span class="header-section-number">7.2</span> Validity Truth Tables</h2>
+<p>If, instead of <code>Simple</code>, you add the class <code>Validity</code>, like so:</p>
+<pre><code>~~~{.TruthTable .Validity}
+2.3 P :|-: ((P/\Q)\/R)&lt;-&gt;((P\/R)/\(Q\/R))
+~~~</code></pre>
+<p>the result is a truth-table for checking the validity of an argument (in this case, <code>P :|-: ((P/\Q)\/R)&lt;-&gt;((P\/R)/\(Q\/R))</code>, where <code>:|-:</code> is just a stylized way of typing out the turnstile). The above produces:</p>
+<pre class="TruthTable Validity"><code>2.3 P :|-: ((P/\Q)\/R)&lt;-&gt;((P\/R)/\(Q\/R))</code></pre>
+<p>Validity truth-table problems can include comma-separated lists of formulas to both the left and <em>right</em> of the turnstile. For example,</p>
+<pre class="TruthTable Validity"><code>2.4 P,Q :|-: (P/\Q), (P\/R)/\(Q\/R)</code></pre>
+<p>produces:</p>
+<pre><code>~~~{.TruthTable .Validity}
+2.4 P,Q :|-: (P/\Q), (P\/R)/\(Q\/R)
+~~~</code></pre>
+<p>Validity truth tables can be (by default) checked for correctness. A table is correct when every row has been filled in, with rows that are counterexamples to validity marked <code>F</code>, and rows that are not counterexamples to validity marked <code>T</code>. A counterexample to validity can also be provided directly by pressing the counterexample button and entering the truth values of the relevant row. A row is considered a counterexample to validity only if all the formulas to the left of the sequent are true, and <em>all</em> the formulas to the right of the sequent are false.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</section>
+<section id="partial-truth-tables" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="partial-truth-tables"><span class="header-section-number">7.3</span> Partial Truth Tables</h2>
+<p>You can also create truth table problems that involve filling in a single row. To do this, add the class <code>Partial</code>, like so:</p>
+<pre><code>~~~{.TruthTable .Partial}
+2.5 (P/\Q), (P\/R)/\(Q\/R)
+~~~</code></pre>
+<p>creating something like this:</p>
+<pre class="TruthTable Partial"><code>2.5 (P/\Q), (P\/R)/\(Q\/R)</code></pre>
+<p>By default, the row is considered correct if it is filled in correctly, with any assignment of truth values to the atoms. However by using givens (see below), partial truth tables can be used to ask students to test for variety of different properties.</p>
+</section>
+<section id="advanced-usage" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="advanced-usage"><span class="header-section-number">7.4</span> Advanced Usage</h2>
+<section id="options" class="level4" data-number="7.4.0.1">
+<h4 data-number="7.4.0.1" class="anchored" data-anchor-id="options"><span class="header-section-number">7.4.0.1</span> Options</h4>
+<p>In addition to setting a custom point value or turning off submission by adding <code>points=VALUE</code> and <code>submission="none"</code>, several other options are available for truth tables:</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>nocheck</code></td>
+<td style="text-align: left;">Disables the “check” button</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>nocounterexample</code></td>
+<td style="text-align: left;">Disables the “counterexample” button</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>exam</code></td>
+<td style="text-align: left;">Allows for submission of work which is incomplete or incorrect</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>autoAtoms</code></td>
+<td style="text-align: left;">Prepopulates atomic sentence columns with truth values</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>turnstilemark</code></td>
+<td style="text-align: left;">Uses <code>✓</code> and <code>✗</code> rather than <code>T</code> and <code>F</code> under the turnstile</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>double-turnstile</code></td>
+<td style="text-align: left;">Displays a double turnstile (like so ⊨) rather than the single turnstile</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>negated-double-turnstile</code></td>
+<td style="text-align: left;">Displays a negated double turnstile (like so ⊭) rather than the single turnstile</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>immutable</code></td>
+<td style="text-align: left;">Makes the truth table immutable (useful for displaying truth tables)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>nodash</code></td>
+<td style="text-align: left;">Uses <code></code> rather than <code>-</code> in empty cells (useful for printing worksheets)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>strictGivens</code></td>
+<td style="text-align: left;">Makes givens (see below) immutable</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>hiddenGivens</code></td>
+<td style="text-align: left;">Hides givens (see below)</td>
+</tr>
+</tbody>
+</table>
 </div>
+<p>So for example,</p>
+<pre><code>~~~{.TruthTable .Validity options="nocheck nocounterexample"}
+2.6 P :|-: Q
+~~~</code></pre>
+<p>Generates:</p>
+<pre class="TruthTable Validity" data-options="nocheck nocounterexample"><code>2.6 P :|-: Q</code></pre>
+</section>
+<section id="counterexamples" class="level4" data-number="7.4.0.2">
+<h4 data-number="7.4.0.2" class="anchored" data-anchor-id="counterexamples"><span class="header-section-number">7.4.0.2</span> Counterexamples</h4>
+<p>There are also a number of options that affect what counts as a counterexample. these are set using the <code>counterexample-to</code> attribute. The options are:</p>
+<div class="table">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Counterexample is</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>validity</code></td>
+<td style="text-align: left;">a situation in which all formulas are false</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>tautology</code></td>
+<td style="text-align: left;">same as <code>validity</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>equivalence</code></td>
+<td style="text-align: left;">a situation in which two formulas have different truth values</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>inconsistency</code></td>
+<td style="text-align: left;">a situation in which all formulas are true</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>contradiction</code></td>
+<td style="text-align: left;">same as <code>inconsistency</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>In the case of simple truth tables, these apply to all formulas. In the case of validity truth tables, a counterexample is a situation in which the formulas to the left of the turnstile are all true, and the ones to the right of the turnstile have the counterexample property. Hence, a validity problem in which the counterexample is <code>equivalence</code> is basically using a truth table to test whether the formulas to the right of the turnstile are equivalent “under the assumption” that the formulas to the left of the turnstile are true.</p>
+<p>Here’s an example of a truth table looking for a counterexample to the equivalence of two formulas</p>
+<pre><code>```{.TruthTable .Simple counterexample-to="equivalence"}
+2.7 P&lt;-&gt;Q,  P-&gt;Q
+```</code></pre>
+<p>which produces:</p>
+<pre class="TruthTable Simple" data-counterexample-to="equivalence"><code>2.7 P&lt;-&gt;Q,  P-&gt;Q</code></pre>
+</section>
+<section id="systems" class="level4" data-number="7.4.0.3">
+<h4 data-number="7.4.0.3" class="anchored" data-anchor-id="systems"><span class="header-section-number">7.4.0.3</span> Systems</h4>
+<p>The way that formulas are parsed and displayed can also be customized. This is done by setting the <code>system</code> attribute to indicate which formal system you are drawing your syntax from. So for example,</p>
+<pre><code>~~~{.TruthTable .Simple system="LogicBookSD"}
+2.8 A &gt; B &amp; C
+~~~</code></pre>
+<p>will generate:</p>
+<pre class="TruthTable Simple" data-system="LogicBookSD"><code>2.8 A &gt; B &amp; C</code></pre>
+<p>The available systems are: <code>prop</code> <code>montagueSC</code> <code>LogicBookSD</code> <code>LogicBookSDPlus</code> <code>hausmanSL</code> <code>howardSnyderSL</code> <code>ichikawaJenkinsSL</code> <code>hausmanSL</code> <code>magnusSL</code> <code>magnusSLPlus</code> <code>thomasBolducAndZachTFL</code> <code>thomasBolducAndZachTFL2019</code> <code>tomassiPL</code> and <code>hardegreeSL</code>.</p>
+</section>
+<section id="givens" class="level4" data-number="7.4.0.4">
+<h4 data-number="7.4.0.4" class="anchored" data-anchor-id="givens"><span class="header-section-number">7.4.0.4</span> Givens</h4>
+<p>It is also possible to give a “partial solution” to a truth table problem, in which the truth table is partly filled in, and the student needs either to complete it or correct it. To pre-populate simple and validity tables with “givens” in this way, write the truth table you want, preceded by the bar character <code>|</code>, after the problem. So,</p>
+<pre><code>~~~{.TruthTable .Simple}
+2.9 P \/~P
+|   T - FT
+|   F - TF
+~~~</code></pre>
+<p>Generates</p>
+<pre class="TruthTable Simple"><code>2.9 P \/~P
+|   T - FT
+|   F - TF</code></pre>
+<p>You do need to fill in every row entirely. If a row is the wrong length, or if there are the wrong number of rows, the table will not be pre-populated. If you wish to make the givens you assign immutable (to clarify that they are a hint, rather than something that needs to be corrected), you can use the <code>strictGivens</code> option.</p>
+<p>Givens behave similarly for partial truth tables. For example,</p>
+<pre><code>~~~{.TruthTable .Partial}
+2.10 P \/~P
+|   F - TF
+~~~</code></pre>
+<p>will produce:</p>
+<pre class="TruthTable Partial"><code>2.10 P \/~P
+|   F - TF</code></pre>
+<p>However: if a partial truth table is constructed with givens, then a solution will only be accepted if it is “consistent” with the givens. So in the above case, the only acceptable solution will be one that assigns <code>T</code> to <code>P</code>. The givens can be hidden, using <code>hiddenGivens</code> if you want to, for example, ask students to make a sentence truth and you want them to figure out the relation between the truth of a sentence and the truth value of the main connective.</p>
+<p>if you wish to hide some givens, but not others, you can use a colon to separate the sentences that will have visible truth values from those that will not. For example, you can write</p>
+<pre><code>~~~{.TruthTable .Partial options="hiddenGivens"}
+2.11 Q : Q-&gt;P
+|    T   TT -
+~~~</code></pre>
+<p>to create a problem in which the student must make <code>Q-&gt;P</code> true under the assumption that <code>Q</code> is true. The result is like this:</p>
+<pre class="TruthTable Partial" data-options="hiddenGivens"><code>2.11 Q : Q-&gt;P
+|    T   TT -</code></pre>
+<p>so this can also be used to create problems in which students are responsible for filling in a certain row of the truth table.</p>
+<p>Finally, if more than one row of givens is provided to a partial truth table, then any solution which is compatible with <em>any one</em> of the rows will be accepted. So for example, you can write:</p>
+<pre><code>~~~{.TruthTable .Partial options="hiddenGivens"}
+2.12 P/\Q, P\/Q
+|    -T -  -F - 
+|    -F -  -T - 
+~~~</code></pre>
+<p>In order to ask students to provide a row that witnesses the inequivalence of these two sentences. The result will be:</p>
+<pre class="TruthTable Partial" data-options="hiddenGivens"><code>2.12 P/\Q, P\/Q
+|    -T -  -F - 
+|    -F -  -T - </code></pre>
+</section>
+<section id="custom-marks" class="level4" data-number="7.4.0.5">
+<h4 data-number="7.4.0.5" class="anchored" data-anchor-id="custom-marks"><span class="header-section-number">7.4.0.5</span> Custom Marks</h4>
+<p>The marks for truth and falsity can be configured to something other than the usual <code>T</code> and <code>F</code> by setting the <code>falseMark</code> and <code>trueMark</code> attributes. So for example</p>
+<pre><code>```{.TruthTable .Validity trueMark="1" falseMark="0"}
+2.13 P,Q:|-:P/\Q
+```</code></pre>
+<p>will produce</p>
+<pre class="TruthTable Validity" data-truemark="1" data-falsemark="0"><code>2.13 P,Q:|-:P/\Q</code></pre>
+<p>The handling of givens remains the same in the presence of a configured <code>falseMark</code> or <code>trueMark</code> attribute. So,for example</p>
+<pre><code>```{.TruthTable .Validity trueMark="1" falseMark="0"}
+2.14 P,Q:|-:P/\Q
+| TT----
+| FT----
+| TF----
+| FF----
+```</code></pre>
+<p>will produce</p>
+<pre class="TruthTable Validity" data-truemark="1" data-falsemark="0"><code>2.14 P,Q:|-:P/\Q
+| TT----
+| FT----
+| TF----
+| FF----</code></pre>
 
 
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>There’s some arbitrariness in how we choose to think about the validity of multi-conclusion arguments. This approach is the most natural from the point of view of the sequent calculus.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -630,11 +854,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./server-configuration.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Configuring Carnap</span></span>
+      <a href="./derivations.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Derivations</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./translation.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Translations</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
