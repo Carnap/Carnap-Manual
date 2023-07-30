@@ -1,0 +1,48 @@
+project:
+  type: book
+  resources: images
+
+# this ensures that diagram code (e.g. R/Python/Julia) doesn't run on github.
+# That simplifies CI, since we don't need to ensure that the relevant code
+# environments are available. Best practice, but probably unnecessary.
+execute:
+  freeze: auto
+
+book:
+  title: "Getting Started With Carnap"
+  author: "Graham Leach-Krouse"
+  date: "7/28/2023"
+  chapters:
+    - index.qmd
+    - quickstart.qmd
+    - references.qmd
+  sidebar:
+    logo: ./images/carnap-logo.png
+    tools:
+      - icon: github
+        href: https://github.com/Carnap
+        aria-label: github
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+    include-in-header:
+      text: |
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Open+Sans&display=swap" rel="stylesheet">
+        <link rel='stylesheet', type='text/css', href='https://carnap.io/static/css/exercises.css'>
+        <link type='text/css' href='https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.css' rel='stylesheet'>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+        <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0'></script>
+        <script src='https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.js'></script>
+
+    include-after-body:
+      text: |
+        <script defer src='https://carnap.io/static/ghcjs/rts.js'></script>
+        <script defer src='https://carnap.io/static/ghcjs/allactions/lib.js'></script>
+        <script defer src='https://carnap.io/static/ghcjs/allactions/out.js'></script>
+        <script defer src='https://carnap.io/static/ghcjs/allactions/runmain.js'></script>
+  pdf:
+    documentclass: scrreprt
+
