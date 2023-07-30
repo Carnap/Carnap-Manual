@@ -21,12 +21,12 @@ your textbook, etc.) but mainly will include *Carnap code blocks*.
 Each Carnap code block corresponds to one problem.  They can be of any
 of the types listed on [the main page](index.html). They are:
 
-1. [Syntax Checking](syntax-check.md)
-2. [Translations](translation.md)
-3. [Truth Tables](truth-tables.md)
-4. [Derivations](derivations.md)
-5. [Model Checking](modelchecker.md)
-6. [Qualitative Problems](qualitative.md), e.g., multiple-choice
+1. [Syntax Checking](syntax-check.html)
+2. [Translations](translation.html)
+3. [Truth Tables](truth-tables.html)
+4. [Derivations](derivations.html)
+5. [Model Checking](modelchecker.html)
+6. [Qualitative Problems](qualitative.html), e.g., multiple-choice
 
 Each assignment document is a plain text file formatted in Markdown, a
 simple markup language.  (Typically, the extension of Markdown text
@@ -111,10 +111,10 @@ will generate:
 The attributes `LogicBookSD` and `thomasBolducAndZachTFL`
 correspond to the syntax and conventions of *The Logic Book*, and
 *forall x: Calgary*, respectively. The available `system` attributes
-are described on the [Systems](systems.md) page.
+are described on the [Systems](systems.html) page.
 
 Options common to all exercise types, such as how many points a
-problem is worth, are described on the [Carnap Pandoc](pandoc.md)
+problem is worth, are described on the [Carnap Pandoc](pandoc.html)
 page. There you will also find a more in-depth description of the
 format of Carnap's documents.
 
@@ -145,7 +145,7 @@ You will provide your students with an enrolment link which you can
 find at the bottom of your class card. This
 [video](https://youtu.be/lmkWcxqxEZk) describes what this process
 looks like for a student.  See the documentation of the [Carnap
-Dashboard](dashboard.md) for more detail.
+Dashboard](dashboard.html) for more detail.
 
 When you (and your students) are ready, you can assign any of your
 uploaded documents to your students. Carnap will allow them to

@@ -9,15 +9,52 @@ execute:
   freeze: auto
 
 book:
-  title: "Getting Started With Carnap"
+  title: "The Carnap Manual"
   author: "Graham Leach-Krouse"
   date: "7/28/2023"
   chapters:
     - index.qmd
-    - quickstart.qmd
+    - part: Getting Started
+      chapters:
+      - quickstart.qmd
+      - faq.qmd
+      - dashboard.qmd
+      - pandoc.qmd
+      - awesome-carnap.qmd
+    - part: Exercises
+      chapters:
+      - derivations.qmd
+      - truth-tables.qmd
+      - translation.qmd
+      - modelchecker.qmd
+      - gentzen-ND.qmd
+      - sequent-calculus.qmd
+      - qualitative.qmd
+      - truth-tree.qmd
+      - syntax-check.qmd
+    - part: systems.qmd
+      chapters:
+        - equivalences.qmd
+        - forallx-msu.qmd
+        - forallx-pitt.qmd
+        - forallx-yyc.qmd
+        - forallx.qmd
+        - logicbook.qmd
+        - montague.qmd
+        - Set_Theory_Demo.qmd
+    - part: Advanced Usage
+      chapters:
+      - administration.qmd
+      - lti.qmd
+      - lti-develop.qmd
+      - javascript.qmd
+      - installation.qmd
+      - api.qmd
+      - server-configuration.qmd
     - references.qmd
   sidebar:
     logo: ./images/carnap-logo.png
+    collapse-level: 1
     tools:
       - icon: github
         href: https://github.com/Carnap
