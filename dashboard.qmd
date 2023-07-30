@@ -88,7 +88,7 @@ By default, submitted problems received on time receive 5 points each,
 and late submissions receive 2 points each. Both the point amount
 awarded for a given problem and the treatment of late problems can be
 customized—details in the documentation for [pandoc
-markup](pandoc.md).
+markup](pandoc.html).
 
 I find that leaving open the option to submit even *very* late work
 helps students who have fallen behind remain motivated, and gives them
@@ -98,7 +98,7 @@ easier for them to understand.
 ### Assign Uploaded Documents
 
 Within this tab, you can assign documents created using Carnap's
-[pandoc markup](pandoc.md). In order to assign a document, you need to
+[pandoc markup](pandoc.html). In order to assign a document, you need to
 first upload it in the [Manage Uploaded
 Documents](#manage-uploaded-documents) tab. 
 
@@ -153,7 +153,7 @@ for five points on time or two points if late. Problems assigned a
 custom point value count for that value if received on time, and
 otherwise for half that value rounding down. Late point values can be
 customized by setting the `late-credit` attribute—for details, see
-the documentation for [pandoc markup](pandoc.md).
+the documentation for [pandoc markup](pandoc.html).
 
 ### Manage Uploaded Documents
 
@@ -164,7 +164,7 @@ document](images/upload-doc-thumb.png)](images/upload-doc.png)
 
 Documents can be of three kinds:
 
-- Problem sets and other materials created using [pandoc markup](pandoc.md).
+- Problem sets and other materials created using [pandoc markup](pandoc.html).
 - CSS stylesheets for custom styling of your course materials.
 - JS scripts for more sophisticated customization of your course materials.
 
@@ -173,7 +173,7 @@ extension that indicates they are something else, so unless they are called
 something like `custom-stylesheet.css` or `my-script.js` (because of the
 extensions `.css` and `.js`). For more information on how to apply custom
 styling and behavior, see the "other features" section in the documentation of
-[Carnap's pandoc markup](pandoc.md).
+[Carnap's pandoc markup](pandoc.html).
 
 Once documents are uploaded, they can also be assigned to students as problem
 sets, using the [Assign Uploaded Documents](#assign-uploaded-documents) tab.

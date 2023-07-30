@@ -103,7 +103,7 @@ and server that are downstream from your changes, and will then reactivate the
 server. Some behavior of the development server (like whether the server
 appears at http://localhost:3000, or somewhere else) can be controlled by
 changing environment variables. For details, see the 
-[server configuration documentation](./server-config.md)
+[server configuration documentation](./server-config.html)
 
 ## Server Setup
 

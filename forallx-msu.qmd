@@ -84,7 +84,7 @@ There is also a playground mode:
 
 The system for Johnson's *forall x: Mississippi State* (the system used in
 a proofchecker constructed with `.JohnsonSL` in Carnap's [Pandoc
-Markup](pandoc.md)) has the following set of rules for direct
+Markup](pandoc.html)) has the following set of rules for direct
 inferences:
 
 <div class="table">

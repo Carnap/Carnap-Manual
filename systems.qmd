@@ -45,7 +45,7 @@ The systems supported are:
 
 ### Sentential logic
 
-For the corresponding proof systems, [see here](logic-book.md).
+For the corresponding proof systems, [see here](logic-book.html).
 
   + Selected with `system="..."`: `LogicBookSD` `LogicBookSDPlus`
   + Sentence letters:`A`...`Z`
@@ -166,7 +166,7 @@ produces `Ax(Gabx -> Ey(Hxy & Pa & ~x=v))`{system="bonevacQL"}
 
 ## Gallow, *forall x: Pittsburgh*
 
-For the corresponding proof systems, [see here](forallx-pitt.md).
+For the corresponding proof systems, [see here](forallx-pitt.html).
 
 #### Sentential logic
 
@@ -587,7 +587,7 @@ produces `Ax(Gabx -> Ey(Hxy /\ (Pa /\ ~x=y)))`{system="ichikawaJenkinsQL"}
 
 ## Johnson, *forall x: Mississippi State*
 
-For the corresponding proof systems, [see here](forallx-msu.md).
+For the corresponding proof systems, [see here](forallx-msu.html).
 
   + Selected with `system="..."`: `johnsonSL`
   + Sentence letters: `A`...`Z`
@@ -615,7 +615,7 @@ produces `A & B & (C_1 -> (~R_2 \/ [S <-> T]))`{system="johnsonSL"}.
 ## Leach-Krouse, *The Carnap Book*
 ## Kalish & Montague, *Logic*
 
-For the corresponding proof systems, [see here](montague.md).
+For the corresponding proof systems, [see here](montague.html).
 
 ### Propositional logic
 
@@ -761,7 +761,7 @@ The parser for `openLogicNK` and `openLogicLK` is synonymous with
 `openLogicFOLLK` with `thomasBolducAndZachFOL2019`.
 
 Two OLP proof systems are supported: [sequent
-calculus](sequent-calculus.md) and [natural deduction](gentzen-ND.md).
+calculus](sequent-calculus.html) and [natural deduction](gentzen-ND.html).
 
 In addition, there are special systems supporting the language of
 arithmetic and the language of set theory.
@@ -875,7 +875,7 @@ produces `Ex(Ay ~y<<x /\ Az(z!={} -> Eu u <( P(z)))`{system="openLogicESTNK"}
 
 ## Thomas-Bolduc & Zach, *forall x: Calgary*
 
-For the corresponding proof systems, [see here](forallx-yyc.md).
+For the corresponding proof systems, [see here](forallx-yyc.html).
 
 ### Fall 2019 and after
 

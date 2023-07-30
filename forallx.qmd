@@ -11,9 +11,9 @@ Carnap are:
 
 - The original version of *forall x* by P.D. Magnus, described on this
   page.
-- [*forall x: Calgary*](forallx-yyc.md)
-- [*forall x: Mississippi State*](forallx-msu.md)
-- [*forall x: Pittsbugh*](forallx-pitt.md)
+- [*forall x: Calgary*](forallx-yyc.html)
+- [*forall x: Mississippi State*](forallx-msu.html)
+- [*forall x: Pittsbugh*](forallx-pitt.html)
 - *forall x: UBC*
 
 ## Notation
@@ -97,7 +97,7 @@ There is also a playground mode:
 
 The minimal system SL for P.D. Magnus' *forall x* (the system used in
 a proofchecker constructed with `.ForallxSL` in Carnap's [Pandoc
-Markup](pandoc.md)) has the following set of rules for direct
+Markup](pandoc.html)) has the following set of rules for direct
 inferences:
 
 <div class="table">
@@ -142,7 +142,7 @@ Assumptions are only allowed on the first line of a subproof.
 
 The extended system SL Plus for P.D. Magnus' *forall x* (the system used in a
 proofchecker constructed with `.ForallxSLPlus` in Carnap's [Pandoc
-Markup](pandoc.md)) also adds the
+Markup](pandoc.html)) also adds the
 following rules:
 
 <div class="table">

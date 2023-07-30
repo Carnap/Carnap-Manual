@@ -146,14 +146,14 @@ problems to all share a single label.
 
 There are currently eight types of exercises:
 
-1. [Syntax Checking](./syntax-check.md)
-2. [Translation](./translation.md)
-3. [Truth Tables](./truth-tables.md)
-4. [Derivations](./derivations.md)
-5. [Model Checking](./modelchecker.md)
-6. [Qualitative Problems](./qualitative.md)
-7. [Sequent Calculus Problems](./sequent-calculus.md)
-8. [Gentzen-Prawitz Natural Deduction Problems](./gentzen-ND.md)
+1. [Syntax Checking](./syntax-check.html)
+2. [Translation](./translation.html)
+3. [Truth Tables](./truth-tables.html)
+4. [Derivations](./derivations.html)
+5. [Model Checking](./modelchecker.html)
+6. [Qualitative Problems](./qualitative.html)
+7. [Sequent Calculus Problems](./sequent-calculus.html)
+8. [Gentzen-Prawitz Natural Deduction Problems](./gentzen-ND.html)
 
 To learn more about each one, follow the links above.
 
@@ -168,7 +168,7 @@ inline within a pandoc document. So for example, writing something like
 
 Will produce the output `AxF(x)\/Ex-F(x)`{system="firstOrder"}.
 
-Any system that's available for [derivations](./derivations.md) can
+Any system that's available for [derivations](./derivations.html) can
 be used in the formula parser. The available propositional systems are: `prop`
 `montagueSC` `LogicBookSD` `LogicBookSDPlus` `hausmanSL` `howardSnyderSL`
 `ichikawaJenkinsSL` `hausmanSL` `magnusSL` `magnusSLPlus`
@@ -234,7 +234,7 @@ will configure your document to have a
 bootstrap.
 
 For more details about hosting your own stylesheets, please take a look at the
-documentation for the [instructor dashboard](dashboard.md).
+documentation for the [instructor dashboard](dashboard.html).
 
 ### Custom JavaScript
 
