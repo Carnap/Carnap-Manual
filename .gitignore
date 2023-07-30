@@ -1,4 +1,4 @@
-.quarto/
-_site/
-_book/
+/.quarto/
+/_site/
+/_book/
 *.fdb_latexmk
