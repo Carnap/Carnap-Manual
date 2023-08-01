@@ -9,9 +9,11 @@ execute:
   freeze: auto
 
 book:
-  title: "The Carnap Manual"
-  author: "Graham Leach-Krouse"
-  date: "7/28/2023"
+  repo-url: https://github.com/Carnap/Carnap-Manual
+  repo-actions: [edit, issue]
+  title: The Carnap Manual
+  author: Graham Leach-Krouse
+  date: 7/28/2023
   chapters:
     - index.qmd
     - part: Getting Started
@@ -55,10 +57,6 @@ book:
   sidebar:
     logo: ./images/carnap-logo.png
     collapse-level: 1
-    tools:
-      - icon: github
-        href: https://github.com/Carnap
-        aria-label: github
 
 bibliography: references.bib
 
