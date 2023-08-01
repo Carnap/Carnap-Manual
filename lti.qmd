@@ -44,7 +44,7 @@ integration.
 Now - here are instructions on configuring your LMS, for the LMSes we have
 experience with. If something is missing or incorrect, please consider opening
 an issue [here](https://github.com/Carnap/Carnap-Documentation/issues) or
-sending an email to [gleachkr@ksu.edu](mailto:gleachkr@ksu.edu).
+sending an email to [gleachkr@gmail.com](mailto:gleachkr@gmail.com).
 
 <details> 
 <summary> Configuring Canvas to use Carnap </summary>
@@ -156,7 +156,7 @@ For more details on LTI configuration in Brightspace/D2L, see these pages:
 
 After your LMS is configured to talk to Carnap, it needs to be registered on
 the Carnap server. For setup with the public Carnap instance at Carnap.io,
-[contact Graham](mailto:gleachkr@ksu.edu) with the following details from your
+[contact Graham](mailto:gleachkr@gmail.com) with the following details from your
 LMS:
 
 * Public JWKs URL
