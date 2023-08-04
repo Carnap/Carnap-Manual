@@ -516,7 +516,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`A /\ B /\ (C_1 -&gt; (~R_2 \/ (S &lt;-&gt; T)))`{system="LogicBookSD"}</code></pre>
-<p>produces <code data-system="LogicBookSD">A /\ B /\ (C_1 -&gt; (~R_2 \/ (S &lt;-&gt; T)))</code>.</p>
+<p>produces <code data-carnap-render-system="LogicBookSD">A /\ B /\ (C_1 -&gt; (~R_2 \/ (S &lt;-&gt; T)))</code>.</p>
 </section>
 <section id="predicate-logic" class="level3">
 <h3 class="anchored" data-anchor-id="predicate-logic">Predicate logic</h3>
@@ -552,7 +552,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`(Ax)(Gabx -&gt; (Ew)(Hxw /\ P))`{system="LogicBookPD"}</code></pre>
-<p>produces <code data-system="LogicBookPD">(Ax)(Gabx -&gt; (Ew)(Hx /\ P))</code></p>
+<p>produces <code data-carnap-render-system="LogicBookPD">(Ax)(Gabx -&gt; (Ew)(Hx /\ P))</code></p>
 </section>
 <section id="predicate-logic-with-equality" class="level3">
 <h3 class="anchored" data-anchor-id="predicate-logic-with-equality">Predicate logic with equality</h3>
@@ -577,7 +577,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`(Ax)(Gabx -&gt; (Ew)(Hxw /\ P /\ ~f(x)=w))`{system="LogicBookPDE"}</code></pre>
-<p>produces <code data-system="LogicBookPDE">(Ax)(Gabx -&gt; (Ew)(Hxw /\ P /\ ~f(x)=w))</code></p>
+<p>produces <code data-carnap-render-system="LogicBookPDE">(Ax)(Gabx -&gt; (Ew)(Hxw /\ P /\ ~f(x)=w))</code></p>
 </section>
 </section>
 <section id="bonevac-deduction" class="level2">
@@ -623,7 +623,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`(a &amp; b) &amp; (c_1 -&gt; (~r_2 \/ (s &lt;-&gt; t)))`{system="bonevacSL"}</code></pre>
-<p>produces <code data-system="bonevacSL">(a /\ b) /\ (c_1 -&gt; (~r_2 \/ (s &lt;-&gt; t)))</code>.</p>
+<p>produces <code data-carnap-render-system="bonevacSL">(a /\ b) /\ (c_1 -&gt; (~r_2 \/ (s &lt;-&gt; t)))</code>.</p>
 </section>
 <section id="quantificational-logic" class="level3">
 <h3 class="anchored" data-anchor-id="quantificational-logic">Quantificational logic</h3>
@@ -663,7 +663,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`Ax(Gabx -&gt; Ey(Hxy &amp; Pa &amp; ~x=v))`{system="bonevacQL"}</code></pre>
-<p>produces <code data-system="bonevacQL">Ax(Gabx -&gt; Ey(Hxy &amp; Pa &amp; ~x=v))</code></p>
+<p>produces <code data-carnap-render-system="bonevacQL">Ax(Gabx -&gt; Ey(Hxy &amp; Pa &amp; ~x=v))</code></p>
 </section>
 </section>
 <section id="gallow-forall-x-pittsburgh" class="level2">
@@ -713,7 +713,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`A /\ B /\ (C_1 -&gt; (~R_2 \/ [S &lt;-&gt; T]))`{system="gallowSL"}</code></pre>
-<p>produces <code data-system="gallowSL">A /\ B /\ (C_1 -&gt; (~R_2 \/ [_|_ &lt;-&gt; T]))</code>.</p>
+<p>produces <code data-carnap-render-system="gallowSL">A /\ B /\ (C_1 -&gt; (~R_2 \/ [_|_ &lt;-&gt; T]))</code>.</p>
 </section>
 <section id="first-order-logic" class="level4">
 <h4 class="anchored" data-anchor-id="first-order-logic">First-order logic</h4>
@@ -749,7 +749,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`Ax(Gabx -&gt; Ew((Hxw /\ P) /\ Qs))`{system="gallowPL"}</code></pre>
-<p>produces <code data-system="gallowPL">Ax(Gabx -&gt; Ew((Hxw /\ P) /\ Qs))</code></p>
+<p>produces <code data-carnap-render-system="gallowPL">Ax(Gabx -&gt; Ew((Hxw /\ P) /\ Qs))</code></p>
 </section>
 </section>
 <section id="gamut-logic-language-and-meaning" class="level2">
@@ -799,7 +799,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`(a /\ b) /\ (c_1 -&gt; (~r_2 \/ (_|_ &lt;-&gt; t)))`{system="gamutIPND"}</code></pre>
-<p>produces <code data-system="gamutIPND">(a /\ b) /\ (c_1 -&gt; (~r_2 \/ (_|_ &lt;-&gt; t)))</code>.</p>
+<p>produces <code data-carnap-render-system="gamutIPND">(a /\ b) /\ (c_1 -&gt; (~r_2 \/ (_|_ &lt;-&gt; t)))</code>.</p>
 </section>
 <section id="predicate-logic-1" class="level3">
 <h3 class="anchored" data-anchor-id="predicate-logic-1">Predicate logic</h3>
@@ -839,7 +839,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`Ax(Gabx -&gt; Ew(Hxw /\ (_|_ \/ ~x=w)))`{system="gamutND"}</code></pre>
-<p>produces <code data-system="gamutND">Ax(Gabx -&gt; Ew(Hxw /\ (_|_ \/ ~x=w)))</code></p>
+<p>produces <code data-carnap-render-system="gamutND">Ax(Gabx -&gt; Ew(Hxw /\ (_|_ \/ ~x=w)))</code></p>
 </section>
 </section>
 <section id="goldfarb-deductive-logic" class="level2">
@@ -889,7 +889,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`(a /\ b) /\ (c_1 -&gt; (~r_2 \/ (_|_ &lt;-&gt; t)))`{system="goldfarbPropND"}</code></pre>
-<p>produces <code data-system="goldfarbPropND">(a /\ b) /\ (c_1 -&gt; (~r_2 \/ (_|_ &lt;-&gt; t)))</code>.</p>
+<p>produces <code data-carnap-render-system="goldfarbPropND">(a /\ b) /\ (c_1 -&gt; (~r_2 \/ (_|_ &lt;-&gt; t)))</code>.</p>
 </section>
 <section id="predicate-logic-2" class="level3">
 <h3 class="anchored" data-anchor-id="predicate-logic-2">Predicate logic</h3>
@@ -925,7 +925,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`(Ax)(Gabx -&gt; (Ew)(Hxw /\ P))`{system="goldfarbND"}</code></pre>
-<p>produces <code data-system="goldfarbND">Ax(Gax -&gt; Ew(Hxw /\ Pw))</code></p>
+<p>produces <code data-carnap-render-system="goldfarbND">Ax(Gax -&gt; Ew(Hxw /\ Pw))</code></p>
 </section>
 </section>
 <section id="hardegree-symbolic-logic" class="level2">
@@ -975,7 +975,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`A &amp; G &amp; (R_1 -&gt; (~R_2 \/ (_|_ &lt;-&gt; T)))`{system="hardegreeSL"}</code></pre>
-<p>produces <code data-system="hardegreeSL">A &amp; G &amp; (R_1 -&gt; (~R_2 \/ (_|_ &lt;-&gt; T)))</code>.</p>
+<p>produces <code data-carnap-render-system="hardegreeSL">A &amp; G &amp; (R_1 -&gt; (~R_2 \/ (_|_ &lt;-&gt; T)))</code>.</p>
 </section>
 <section id="predicate-logic-3" class="level3">
 <h3 class="anchored" data-anchor-id="predicate-logic-3">Predicate logic</h3>
@@ -1011,7 +1011,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`Ax(Gabx -&gt; Ev(Hxe &amp; Ov &amp; _|_))`{system="hardegreePL"}</code></pre>
-<p>produces <code data-system="hardegreePL">Ax(Gabx -&gt; Ev(Hxe &amp; Ov &amp; _|_))</code></p>
+<p>produces <code data-carnap-render-system="hardegreePL">Ax(Gabx -&gt; Ev(Hxe &amp; Ov &amp; _|_))</code></p>
 </section>
 </section>
 <section id="hausman-kahane-tidman-logic-and-philosophy" class="level2">
@@ -1057,7 +1057,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`[A . B] . [C_1 &gt; (~R_2 \/ {S &lt;&gt; T})]`{system="hausmanSL"}</code></pre>
-<p>produces <code data-system="hausmanSL">[A . B] . [C_1 &gt; (~R_2 \/ {S &lt;&gt; T})]</code>.</p>
+<p>produces <code data-carnap-render-system="hausmanSL">[A . B] . [C_1 &gt; (~R_2 \/ {S &lt;&gt; T})]</code>.</p>
 </section>
 <section id="predicate-logic-4" class="level3">
 <h3 class="anchored" data-anchor-id="predicate-logic-4">Predicate logic</h3>
@@ -1093,7 +1093,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`(x)[Gabx &gt; (Eu)(Hxu . {P \/ ~x=u})]`{system="hausmanPL"}</code></pre>
-<p>produces <code data-system="hausmanPL">(x)[Gabx &gt; (Eu)(Hxu . {P \/ ~x=u})]</code></p>
+<p>produces <code data-carnap-render-system="hausmanPL">(x)[Gabx &gt; (Eu)(Hxu . {P \/ ~x=u})]</code></p>
 </section>
 </section>
 <section id="howard-snyder-howard-snyder-wasserman-the-power-of-logic" class="level2">
@@ -1140,7 +1140,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`(A . B) . [C_1 -&gt; (~R_2 \/ {S &lt;-&gt; T})]`{system="howardSnyderSL"}</code></pre>
-<p>produces <code data-system="howardSnyderSL">(A . B) . [C_1 -&gt; (~R_2 \/ {S &lt;-&gt; T})]</code>.</p>
+<p>produces <code data-carnap-render-system="howardSnyderSL">(A . B) . [C_1 -&gt; (~R_2 \/ {S &lt;-&gt; T})]</code>.</p>
 </section>
 <section id="predicate-logic-5" class="level3">
 <h3 class="anchored" data-anchor-id="predicate-logic-5">Predicate logic</h3>
@@ -1176,7 +1176,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`(x)[Gabx -&gt; (Ev)(Hxv . (P \/ ~x=v))]`{system="howardSnyderPL"}</code></pre>
-<p>produces <code data-system="howardSnyderPL">(x)[Gabx -&gt; (Ev)(Hxv . (P \/ ~x=v))]</code></p>
+<p>produces <code data-carnap-render-system="howardSnyderPL">(x)[Gabx -&gt; (Ev)(Hxv . (P \/ ~x=v))]</code></p>
 </section>
 </section>
 <section id="hurley-concise-introduction-to-logic" class="level2">
@@ -1223,7 +1223,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`(A . B) . [C_1 &gt; (~R_2 \/ {S &lt;-&gt; T})]`{system="hurleySL"}</code></pre>
-<p>produces <code data-system="hurleySL">(A . B) . [C_1 &gt; (~R_2 \/ {S &lt;-&gt; T})]</code>.</p>
+<p>produces <code data-carnap-render-system="hurleySL">(A . B) . [C_1 &gt; (~R_2 \/ {S &lt;-&gt; T})]</code>.</p>
 </section>
 <section id="predicate-logic-6" class="level3">
 <h3 class="anchored" data-anchor-id="predicate-logic-6">Predicate logic</h3>
@@ -1259,7 +1259,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`(x)[Gabx &gt; (Ey)(Hxy . {P \/ ~x=y})]`{system="hurleyPL"}</code></pre>
-<p>produces <code data-system="hurleyPL">(x)[Gabx &gt; (Ey)(Hxy . {P \/ ~x=y})]</code></p>
+<p>produces <code data-carnap-render-system="hurleyPL">(x)[Gabx &gt; (Ey)(Hxy . {P \/ ~x=y})]</code></p>
 </section>
 </section>
 <section id="ichikawa-jenkins-forall-x-ubc" class="level2">
@@ -1305,7 +1305,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`A /\ B /\ (C_1 -&gt; (~R_2 \/ [S &lt;-&gt; T]))`{system="ichikawaJenkinsSL"}</code></pre>
-<p>produces <code data-system="ichikawaJenkinsSL">A /\ B /\ (C_1 -&gt; (~R_2 \/ [S &lt;-&gt; T]))</code>.</p>
+<p>produces <code data-carnap-render-system="ichikawaJenkinsSL">A /\ B /\ (C_1 -&gt; (~R_2 \/ [S &lt;-&gt; T]))</code>.</p>
 </section>
 <section id="quantificational-logic-1" class="level3">
 <h3 class="anchored" data-anchor-id="quantificational-logic-1">Quantificational logic</h3>
@@ -1345,7 +1345,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`Ax(Gabx -&gt; Ey(Hxy /\ Pa /\ ~x=y))`{system="ichikawaJenkinsQL"}</code></pre>
-<p>produces <code data-system="ichikawaJenkinsQL">Ax(Gabx -&gt; Ey(Hxy /\ (Pa /\ ~x=y)))</code></p>
+<p>produces <code data-carnap-render-system="ichikawaJenkinsQL">Ax(Gabx -&gt; Ey(Hxy /\ (Pa /\ ~x=y)))</code></p>
 </section>
 </section>
 <section id="johnson-forall-x-mississippi-state" class="level2">
@@ -1390,7 +1390,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`A &amp; B &amp; (C_1 -&gt; (~R_2 \/ [S &lt;-&gt; T]))`{system="johnsonSL"}</code></pre>
-<p>produces <code data-system="johnsonSL">A &amp; B &amp; (C_1 -&gt; (~R_2 \/ [S &lt;-&gt; T]))</code>.</p>
+<p>produces <code data-carnap-render-system="johnsonSL">A &amp; B &amp; (C_1 -&gt; (~R_2 \/ [S &lt;-&gt; T]))</code>.</p>
 </section>
 <section id="leach-krouse-the-carnap-book" class="level2">
 <h2 class="anchored" data-anchor-id="leach-krouse-the-carnap-book">Leach-Krouse, <em>The Carnap Book</em></h2>
@@ -1439,7 +1439,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`P /\ Q /\ (R_1 -&gt; (~R_2 \/ (S &lt;-&gt; T)))`{system="prop"}</code></pre>
-<p>produces <code data-system="prop">P /\ Q /\ (R_1 -&gt; (~R_2 \/ (S &lt;-&gt; T)))</code>.</p>
+<p>produces <code data-carnap-render-system="prop">P /\ Q /\ (R_1 -&gt; (~R_2 \/ (S &lt;-&gt; T)))</code>.</p>
 </section>
 <section id="first-order-logic-1" class="level3">
 <h3 class="anchored" data-anchor-id="first-order-logic-1">First-order logic</h3>
@@ -1479,7 +1479,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`Ax(G(a,f(b),x) -&gt; Ev(H(x,v) /\ P /\ ~(x=v)))`{system="firstOrder"}</code></pre>
-<p>produces <code data-system="firstOrder">Ax(G(a,f(b),x) -&gt; Ev(H(x,v) /\ P /\ ~(x=v)))</code></p>
+<p>produces <code data-carnap-render-system="firstOrder">Ax(G(a,f(b),x) -&gt; Ev(H(x,v) /\ P /\ ~(x=v)))</code></p>
 </section>
 <section id="monadic-second-order-logic" class="level3">
 <h3 class="anchored" data-anchor-id="monadic-second-order-logic">Monadic second-order logic</h3>
@@ -1505,7 +1505,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Example:</p>
 <p>Example:</p>
 <pre><code>`AX(\x[Ey(F(y) /\ X(x))](a))`{system="secondOrder"}</code></pre>
-<p>produces <code data-system="secondOrder">AX(\x[Ey(F(y) /\ X(x))](a))</code></p>
+<p>produces <code data-carnap-render-system="secondOrder">AX(\x[Ey(F(y) /\ X(x))](a))</code></p>
 </section>
 <section id="polyadic-second-order-logic" class="level3">
 <h3 class="anchored" data-anchor-id="polyadic-second-order-logic">Polyadic second-order logic</h3>
@@ -1516,7 +1516,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>Example:</p>
 <pre><code>`AX2(\x[Ay(F(y) -&gt; X2(x,y))](a))`{system="polyadicSecondOrder"}</code></pre>
-<p>produces <code data-system="polyadicSecondOrder">AX2(\x[Ay(F(y) -&gt; X2(x,y))](a))</code></p>
+<p>produces <code data-carnap-render-system="polyadicSecondOrder">AX2(\x[Ay(F(y) -&gt; X2(x,y))](a))</code></p>
 </section>
 </section>
 <section id="magnus-forall-x" class="level2">
@@ -1562,7 +1562,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`A &amp; B &amp; (C_1 -&gt; (~R_2 \/ [S &lt;-&gt; T]))`{system="magnusSL"}</code></pre>
-<p>produces <code data-system="magnusSL">A &amp; B &amp; (C_1 -&gt; (~R_2 \/ [S &lt;-&gt; T]))</code>.</p>
+<p>produces <code data-carnap-render-system="magnusSL">A &amp; B &amp; (C_1 -&gt; (~R_2 \/ [S &lt;-&gt; T]))</code>.</p>
 </section>
 <section id="quantificational-logic-2" class="level3">
 <h3 class="anchored" data-anchor-id="quantificational-logic-2">Quantificational logic</h3>
@@ -1602,7 +1602,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`Ax(Gabx -&gt; Ey(Hxy &amp; Pa &amp; ~x=v))`{system="magnusQL"}</code></pre>
-<p>produces <code data-system="magnusQL">Ax(Gabx -&gt; Ey(Hxy &amp; Pa &amp; ~x=v))</code></p>
+<p>produces <code data-carnap-render-system="magnusQL">Ax(Gabx -&gt; Ey(Hxy &amp; Pa &amp; ~x=v))</code></p>
 </section>
 </section>
 <section id="open-logic-project" class="level2">
@@ -1640,7 +1640,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`AxAy x * y' = (x * y) + y /\ Ax(0!=x -&gt; 0&lt;x)`{system="openLogicArithNK"}</code></pre>
-<p>produces <code data-system="openLogicArithNK">AxAy x * y' = (x * y) + y /\ Ax(0!=x -&gt; 0&lt;x)</code></p>
+<p>produces <code data-carnap-render-system="openLogicArithNK">AxAy x * y' = (x * y) + y /\ Ax(0!=x -&gt; 0&lt;x)</code></p>
 </section>
 <section id="extended-arithmetic" class="level4">
 <h4 class="anchored" data-anchor-id="extended-arithmetic">Extended Arithmetic</h4>
@@ -1672,7 +1672,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`Q_1(0,0') /\ Ax(0&lt;x -&gt; Sq_a(0,x))`{system="openLogicExArithNK"}</code></pre>
-<p>produces <code data-system="openLogicExArithNK">Q_1(0,0') /\ Ax(0&lt;x -&gt; Sq_a(0,x))</code></p>
+<p>produces <code data-carnap-render-system="openLogicExArithNK">Q_1(0,0') /\ Ax(0&lt;x -&gt; Sq_a(0,x))</code></p>
 </section>
 <section id="set-theory" class="level4">
 <h4 class="anchored" data-anchor-id="set-theory">Set theory</h4>
@@ -1710,7 +1710,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`Ex(Ay ~y&lt;&lt;x /\ Az(z!=x -&gt; Eu u&lt;&lt;z))`{system="openLogicSTNK"}</code></pre>
-<p>produces <code data-system="openLogicSTNK">Ex(Ay ~y&lt;&lt;x /\ Az(z!=x -&gt; Eu u&lt;&lt;z))</code></p>
+<p>produces <code data-carnap-render-system="openLogicSTNK">Ex(Ay ~y&lt;&lt;x /\ Az(z!=x -&gt; Eu u&lt;&lt;z))</code></p>
 </section>
 <section id="extended-set-theory" class="level4">
 <h4 class="anchored" data-anchor-id="extended-set-theory">Extended set theory</h4>
@@ -1773,7 +1773,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`Ex(Ay ~y&lt;&lt;x /\ Az(z!={} -&gt; Eu u &lt;( P(z)))`{system="openLogicESTNK"}</code></pre>
-<p>produces <code data-system="openLogicESTNK">Ex(Ay ~y&lt;&lt;x /\ Az(z!={} -&gt; Eu u &lt;( P(z)))</code></p>
+<p>produces <code data-carnap-render-system="openLogicESTNK">Ex(Ay ~y&lt;&lt;x /\ Az(z!={} -&gt; Eu u &lt;( P(z)))</code></p>
 </section>
 </section>
 <section id="thomas-bolduc-zach-forall-x-calgary" class="level2">
@@ -1827,7 +1827,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`A /\ B /\ (C_1 -&gt; (~R_2 \/ [S &lt;-&gt; T]))`{system="thomasBolducAndZachTFL2019"}</code></pre>
-<p>produces <code data-system="thomasBolducAndZachTFL2019">A /\ B /\ (C_1 -&gt; (~R_2 \/ [_|_ &lt;-&gt; T]))</code>.</p>
+<p>produces <code data-carnap-render-system="thomasBolducAndZachTFL2019">A /\ B /\ (C_1 -&gt; (~R_2 \/ [_|_ &lt;-&gt; T]))</code>.</p>
 </section>
 <section id="first-order-logic-2" class="level4">
 <h4 class="anchored" data-anchor-id="first-order-logic-2">First-order logic</h4>
@@ -1871,7 +1871,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`Ax(G(a,f(b),x) -&gt; Es(H(x,s) /\ P /\ x!=s))`{system="thomasBolducAndZachFOL2019"}</code></pre>
-<p>produces <code data-system="thomasBolducAndZachFOL2019">Ax(G(a,f(b),x) -&gt; Es(H(x,s) /\ P /\ x!=s))</code></p>
+<p>produces <code data-carnap-render-system="thomasBolducAndZachFOL2019">Ax(G(a,f(b),x) -&gt; Es(H(x,s) /\ P /\ x!=s))</code></p>
 </section>
 </section>
 <section id="pre-fall-2019" class="level3">
@@ -1922,10 +1922,10 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`(A /\ B) /\ (C_1 -&gt; (~R_2 \/ [_|_ &lt;-&gt; T]))`{system="thomasBolducAndZachTFL"}</code></pre>
-<p>produces <code data-system="thomasBolducAndZachTFL">(A /\ B) /\ (C_1 -&gt; (~R_2 \/ [_|_ &lt;-&gt; T]))</code>.</p>
+<p>produces <code data-carnap-render-system="thomasBolducAndZachTFL">(A /\ B) /\ (C_1 -&gt; (~R_2 \/ [_|_ &lt;-&gt; T]))</code>.</p>
 <p>Example:</p>
 <pre><code>`(A /\ B) /\ (C_1 -&gt; (~R_2 \/ [_|_ &lt;-&gt; T]))`{system="ebelsDugganTFL"}</code></pre>
-<p>produces <code data-system="ebelsDugganTFL">(A /\ B) /\ (C_1 -&gt; (~R_2 \/ [_|_ &lt;-&gt; T]))</code>.</p>
+<p>produces <code data-carnap-render-system="ebelsDugganTFL">(A /\ B) /\ (C_1 -&gt; (~R_2 \/ [_|_ &lt;-&gt; T]))</code>.</p>
 </section>
 <section id="first-order-logic-3" class="level4">
 <h4 class="anchored" data-anchor-id="first-order-logic-3">First-order logic</h4>
@@ -1965,7 +1965,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`Ax(Gabx -&gt; Es(Hxs /\ P /\ ~x=s))`{system="thomasBolducAndZachFOL"}</code></pre>
-<p>produces <code data-system="thomasBolducAndZachFOL">Ax(Gabx -&gt; Es(Hxs /\ (P \/ ~x=s)))</code></p>
+<p>produces <code data-carnap-render-system="thomasBolducAndZachFOL">Ax(Gabx -&gt; Es(Hxs /\ (P \/ ~x=s)))</code></p>
 </section>
 </section>
 </section>
@@ -2012,7 +2012,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`P /\ Q /\ (R_1 -&gt; (~R_2 \/ (S &lt;-&gt; T)))`{system="tomassiPL"}</code></pre>
-<p>produces <code data-system="tomassiPL">P /\ Q /\ (R_1 -&gt; (~R_2 \/ (S &lt;-&gt; T)))</code>.</p>
+<p>produces <code data-carnap-render-system="tomassiPL">P /\ Q /\ (R_1 -&gt; (~R_2 \/ (S &lt;-&gt; T)))</code>.</p>
 </section>
 <section id="predicate-logic-7" class="level3">
 <h3 class="anchored" data-anchor-id="predicate-logic-7">Predicate logic</h3>
@@ -2052,7 +2052,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Example:</p>
 <pre><code>`Ax[Gabx -&gt; Ev(Hxv /\ Pr /\ ~(x=v))]`{system="tomassiQL"}</code></pre>
-<p>produces <code data-system="tomassiQL">Ax[Gabx -&gt; Ev(Hxv /\ Pr /\ ~(x=v))]</code></p>
+<p>produces <code data-carnap-render-system="tomassiQL">Ax[Gabx -&gt; Ev(Hxv /\ Pr /\ ~(x=v))]</code></p>
 </section>
 </section>
 <section id="todo" class="level1">
