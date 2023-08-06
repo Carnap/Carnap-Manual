@@ -387,13 +387,27 @@ ul.task-list li input[type="checkbox"] {
 2.1 ((P/\Q)\/R)&lt;-&gt;((P\/R)/\(Q\/R))
 ~~~</code></pre>
 <p>the number 2.1 indicates the exercise number, and the formula is the one for which you will be constructing a truth table. This produces:</p>
-<pre class="TruthTable Simple"><code>2.1 ((P/\Q)\/R)&lt;-&gt;((P\/R)/\(Q\/R))</code></pre>
+<div>
+<div id="exercise-2.1" class="exercise">
+<span>2.1</span>
+<div data-carnap-goal="((P/\Q)\/R)<->((P\/R)/\(Q\/R))" data-carnap-tabletype="simple" data-carnap-submission="saveAs:2.1" data-carnap-type="truthtable">
+
+</div>
+</div>
+</div>
 <p>You can also use a comma-separated list of formulas, like so:</p>
 <pre><code>~~~{.TruthTable .Simple}
 2.2 (P/\Q)\/R, (P\/R)/\(Q\/R)
 ~~~</code></pre>
 <p>This example produces:</p>
-<pre class="TruthTable Simple"><code>2.2 (P/\Q)\/R, (P\/R)/\(Q\/R)</code></pre>
+<div>
+<div id="exercise-2.2" class="exercise">
+<span>2.2</span>
+<div data-carnap-goal="(P/\Q)\/R, (P\/R)/\(Q\/R)" data-carnap-tabletype="simple" data-carnap-submission="saveAs:2.2" data-carnap-type="truthtable">
+
+</div>
+</div>
+</div>
 <p>Simple truth tables can be (by default) checked for correctness, and will be considered correct when every row is filled in correctly. A problem can also be solved by indicating a counterexample to tautology. A row is considered a counterexample if <em>all</em> the formulas in the problem are false on that row.</p>
 </section>
 <section id="validity-truth-tables" class="level2" data-number="7.2">
@@ -403,9 +417,23 @@ ul.task-list li input[type="checkbox"] {
 2.3 P :|-: ((P/\Q)\/R)&lt;-&gt;((P\/R)/\(Q\/R))
 ~~~</code></pre>
 <p>the result is a truth-table for checking the validity of an argument (in this case, <code>P :|-: ((P/\Q)\/R)&lt;-&gt;((P\/R)/\(Q\/R))</code>, where <code>:|-:</code> is just a stylized way of typing out the turnstile). The above produces:</p>
-<pre class="TruthTable Validity"><code>2.3 P :|-: ((P/\Q)\/R)&lt;-&gt;((P\/R)/\(Q\/R))</code></pre>
+<div>
+<div id="exercise-2.3" class="exercise">
+<span>2.3</span>
+<div data-carnap-goal="P :|-: ((P/\Q)\/R)<->((P\/R)/\(Q\/R))" data-carnap-tabletype="validity" data-carnap-submission="saveAs:2.3" data-carnap-type="truthtable">
+
+</div>
+</div>
+</div>
 <p>Validity truth-table problems can include comma-separated lists of formulas to both the left and <em>right</em> of the turnstile. For example,</p>
-<pre class="TruthTable Validity"><code>2.4 P,Q :|-: (P/\Q), (P\/R)/\(Q\/R)</code></pre>
+<div>
+<div id="exercise-2.4" class="exercise">
+<span>2.4</span>
+<div data-carnap-goal="P,Q :|-: (P/\Q), (P\/R)/\(Q\/R)" data-carnap-tabletype="validity" data-carnap-submission="saveAs:2.4" data-carnap-type="truthtable">
+
+</div>
+</div>
+</div>
 <p>produces:</p>
 <pre><code>~~~{.TruthTable .Validity}
 2.4 P,Q :|-: (P/\Q), (P\/R)/\(Q\/R)
@@ -419,7 +447,14 @@ ul.task-list li input[type="checkbox"] {
 2.5 (P/\Q), (P\/R)/\(Q\/R)
 ~~~</code></pre>
 <p>creating something like this:</p>
-<pre class="TruthTable Partial"><code>2.5 (P/\Q), (P\/R)/\(Q\/R)</code></pre>
+<div>
+<div id="exercise-2.5" class="exercise">
+<span>2.5</span>
+<div data-carnap-goal="(P/\Q), (P\/R)/\(Q\/R)" data-carnap-tabletype="partial" data-carnap-submission="saveAs:2.5" data-carnap-type="truthtable">
+
+</div>
+</div>
+</div>
 <p>By default, the row is considered correct if it is filled in correctly, with any assignment of truth values to the atoms. However by using givens (see below), partial truth tables can be used to ask students to test for variety of different properties.</p>
 </section>
 <section id="advanced-usage" class="level2" data-number="7.4">
@@ -488,7 +523,14 @@ ul.task-list li input[type="checkbox"] {
 2.6 P :|-: Q
 ~~~</code></pre>
 <p>Generates:</p>
-<pre class="TruthTable Validity" data-options="nocheck nocounterexample"><code>2.6 P :|-: Q</code></pre>
+<div>
+<div id="exercise-2.6" class="exercise">
+<span>2.6</span>
+<div data-carnap-tabletype="validity" data-carnap-goal="P :|-: Q" data-carnap-options="nocheck nocounterexample" data-carnap-type="truthtable" data-carnap-submission="saveAs:2.6">
+
+</div>
+</div>
+</div>
 </section>
 <section id="counterexamples" class="level4" data-number="7.4.0.2">
 <h4 data-number="7.4.0.2" class="anchored" data-anchor-id="counterexamples"><span class="header-section-number">7.4.0.2</span> Counterexamples</h4>
@@ -531,7 +573,14 @@ ul.task-list li input[type="checkbox"] {
 2.7 P&lt;-&gt;Q,  P-&gt;Q
 ```</code></pre>
 <p>which produces:</p>
-<pre class="TruthTable Simple" data-counterexample-to="equivalence"><code>2.7 P&lt;-&gt;Q,  P-&gt;Q</code></pre>
+<div>
+<div id="exercise-2.7" class="exercise">
+<span>2.7</span>
+<div data-carnap-tabletype="simple" data-carnap-goal="P<->Q,  P->Q" data-carnap-counterexample-to="equivalence" data-carnap-type="truthtable" data-carnap-submission="saveAs:2.7">
+
+</div>
+</div>
+</div>
 </section>
 <section id="systems" class="level4" data-number="7.4.0.3">
 <h4 data-number="7.4.0.3" class="anchored" data-anchor-id="systems"><span class="header-section-number">7.4.0.3</span> Systems</h4>
@@ -540,7 +589,14 @@ ul.task-list li input[type="checkbox"] {
 2.8 A &gt; B &amp; C
 ~~~</code></pre>
 <p>will generate:</p>
-<pre class="TruthTable Simple" data-system="LogicBookSD"><code>2.8 A &gt; B &amp; C</code></pre>
+<div>
+<div id="exercise-2.8" class="exercise">
+<span>2.8</span>
+<div data-carnap-tabletype="simple" data-carnap-goal="A > B &amp; C" data-carnap-system="LogicBookSD" data-carnap-type="truthtable" data-carnap-submission="saveAs:2.8">
+
+</div>
+</div>
+</div>
 <p>The available systems are: <code>prop</code> <code>montagueSC</code> <code>LogicBookSD</code> <code>LogicBookSDPlus</code> <code>hausmanSL</code> <code>howardSnyderSL</code> <code>ichikawaJenkinsSL</code> <code>hausmanSL</code> <code>magnusSL</code> <code>magnusSLPlus</code> <code>thomasBolducAndZachTFL</code> <code>thomasBolducAndZachTFL2019</code> <code>tomassiPL</code> and <code>hardegreeSL</code>.</p>
 </section>
 <section id="givens" class="level4" data-number="7.4.0.4">
@@ -552,9 +608,15 @@ ul.task-list li input[type="checkbox"] {
 |   F - TF
 ~~~</code></pre>
 <p>Generates</p>
-<pre class="TruthTable Simple"><code>2.9 P \/~P
-|   T - FT
-|   F - TF</code></pre>
+<div>
+<div id="exercise-2.9" class="exercise">
+<span>2.9</span>
+<div data-carnap-goal="P \/~P" data-carnap-tabletype="simple" data-carnap-submission="saveAs:2.9" data-carnap-type="truthtable">
+   T - FT
+   F - TF
+</div>
+</div>
+</div>
 <p>You do need to fill in every row entirely. If a row is the wrong length, or if there are the wrong number of rows, the table will not be pre-populated. If you wish to make the givens you assign immutable (to clarify that they are a hint, rather than something that needs to be corrected), you can use the <code>strictGivens</code> option.</p>
 <p>Givens behave similarly for partial truth tables. For example,</p>
 <pre><code>~~~{.TruthTable .Partial}
@@ -562,8 +624,14 @@ ul.task-list li input[type="checkbox"] {
 |   F - TF
 ~~~</code></pre>
 <p>will produce:</p>
-<pre class="TruthTable Partial"><code>2.10 P \/~P
-|   F - TF</code></pre>
+<div>
+<div id="exercise-2.10" class="exercise">
+<span>2.10</span>
+<div data-carnap-goal="P \/~P" data-carnap-tabletype="partial" data-carnap-submission="saveAs:2.10" data-carnap-type="truthtable">
+   F - TF
+</div>
+</div>
+</div>
 <p>However: if a partial truth table is constructed with givens, then a solution will only be accepted if it is “consistent” with the givens. So in the above case, the only acceptable solution will be one that assigns <code>T</code> to <code>P</code>. The givens can be hidden, using <code>hiddenGivens</code> if you want to, for example, ask students to make a sentence truth and you want them to figure out the relation between the truth of a sentence and the truth value of the main connective.</p>
 <p>if you wish to hide some givens, but not others, you can use a colon to separate the sentences that will have visible truth values from those that will not. For example, you can write</p>
 <pre><code>~~~{.TruthTable .Partial options="hiddenGivens"}
@@ -571,8 +639,14 @@ ul.task-list li input[type="checkbox"] {
 |    T   TT -
 ~~~</code></pre>
 <p>to create a problem in which the student must make <code>Q-&gt;P</code> true under the assumption that <code>Q</code> is true. The result is like this:</p>
-<pre class="TruthTable Partial" data-options="hiddenGivens"><code>2.11 Q : Q-&gt;P
-|    T   TT -</code></pre>
+<div>
+<div id="exercise-2.11" class="exercise">
+<span>2.11</span>
+<div data-carnap-tabletype="partial" data-carnap-goal="Q : Q->P" data-carnap-options="hiddenGivens" data-carnap-type="truthtable" data-carnap-submission="saveAs:2.11">
+    T   TT -
+</div>
+</div>
+</div>
 <p>so this can also be used to create problems in which students are responsible for filling in a certain row of the truth table.</p>
 <p>Finally, if more than one row of givens is provided to a partial truth table, then any solution which is compatible with <em>any one</em> of the rows will be accepted. So for example, you can write:</p>
 <pre><code>~~~{.TruthTable .Partial options="hiddenGivens"}
@@ -581,9 +655,15 @@ ul.task-list li input[type="checkbox"] {
 |    -F -  -T - 
 ~~~</code></pre>
 <p>In order to ask students to provide a row that witnesses the inequivalence of these two sentences. The result will be:</p>
-<pre class="TruthTable Partial" data-options="hiddenGivens"><code>2.12 P/\Q, P\/Q
-|    -T -  -F - 
-|    -F -  -T - </code></pre>
+<div>
+<div id="exercise-2.12" class="exercise">
+<span>2.12</span>
+<div data-carnap-tabletype="partial" data-carnap-goal="P/\Q, P\/Q" data-carnap-options="hiddenGivens" data-carnap-type="truthtable" data-carnap-submission="saveAs:2.12">
+    -T -  -F -
+    -F -  -T -
+</div>
+</div>
+</div>
 </section>
 <section id="custom-marks" class="level4" data-number="7.4.0.5">
 <h4 data-number="7.4.0.5" class="anchored" data-anchor-id="custom-marks"><span class="header-section-number">7.4.0.5</span> Custom Marks</h4>
@@ -592,7 +672,14 @@ ul.task-list li input[type="checkbox"] {
 2.13 P,Q:|-:P/\Q
 ```</code></pre>
 <p>will produce</p>
-<pre class="TruthTable Validity" data-truemark="1" data-falsemark="0"><code>2.13 P,Q:|-:P/\Q</code></pre>
+<div>
+<div id="exercise-2.13" class="exercise">
+<span>2.13</span>
+<div data-carnap-truemark="1" data-carnap-tabletype="validity" data-carnap-goal="P,Q:|-:P/\Q" data-carnap-falsemark="0" data-carnap-type="truthtable" data-carnap-submission="saveAs:2.13">
+
+</div>
+</div>
+</div>
 <p>The handling of givens remains the same in the presence of a configured <code>falseMark</code> or <code>trueMark</code> attribute. So,for example</p>
 <pre><code>```{.TruthTable .Validity trueMark="1" falseMark="0"}
 2.14 P,Q:|-:P/\Q
@@ -602,11 +689,17 @@ ul.task-list li input[type="checkbox"] {
 | FF----
 ```</code></pre>
 <p>will produce</p>
-<pre class="TruthTable Validity" data-truemark="1" data-falsemark="0"><code>2.14 P,Q:|-:P/\Q
-| TT----
-| FT----
-| TF----
-| FF----</code></pre>
+<div>
+<div id="exercise-2.14" class="exercise">
+<span>2.14</span>
+<div data-carnap-truemark="1" data-carnap-tabletype="validity" data-carnap-goal="P,Q:|-:P/\Q" data-carnap-falsemark="0" data-carnap-type="truthtable" data-carnap-submission="saveAs:2.14">
+TT----
+FT----
+TF----
+FF----
+</div>
+</div>
+</div>
 
 
 </section>
