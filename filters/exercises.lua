@@ -1,17 +1,16 @@
 local function wrapper(opts, label, content)
     local spans = pandoc.Plain({
-        pandoc.Span(label,{})
+        pandoc.Span(label,{}),
     })
     if opts.points then
-    local spans = pandoc.Plain({
-        pandoc.Span(label,{}),
-        pandoc.Span(opts.points .. " pts")
-    })
+        spans = pandoc.Plain({
+            pandoc.Span(label,{}),
+            pandoc.Span(opts.points .. " pts"),
+        })
     end
-    return pandoc.Div(spans,{
+    return pandoc.Div({spans, content},{
         id = "exercise-" .. label,
         class = "exercise",
-        ["data-carnap-label"] = label,
     })
 end
 
@@ -36,16 +35,21 @@ local function chunks(s)
     local currentChunk = nil
     local result = {}
     for line in lines(s) do
-        if not string.match(s,"^|") then
+        if not line:match("^|") then
             if currentChunk then
                 table.insert(result,currentChunk)
             end
             currentChunk = {
-                label = string.gmatch(line,"%S*")(),
-                problem = string.gmatch(line,"%S*%s*(.*)")()
+                label = line:match("%S*"),
+                problem = line:match("%S*%s*(.*)"),
+                body = nil
             }
         else
-            table.insert(currentChunk,line)
+            if currentChunk.body == nil then
+                currentChunk.body = line:match("^|(.*)")
+            else
+                currentChunk.body = currentChunk.body .. '\n' .. line:match("^|(.*)")
+            end
         end
     end
     table.insert(result,currentChunk)
