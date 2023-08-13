@@ -63,7 +63,10 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Open+Sans&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" ,="" type="text/css" href="https://carnap.io/static/css/exercises.css">
+<link rel="stylesheet" ,="" type="text/css" href="https://carnap.io/static/css/tree.css">
 <link type="text/css" href="https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.css" rel="stylesheet">
+<!-- ↓ override bootstrap to prevent visual glitches -->
+<style type="text/css"> svg { vertical-align: unset } </style>
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0"></script>
 <script src="https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.js"></script>
@@ -390,7 +393,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-2.1" class="exercise">
 <span>2.1</span>
-<div data-carnap-goal="((P/\Q)\/R)<->((P\/R)/\(Q\/R))" data-carnap-tabletype="simple" data-carnap-submission="saveAs:2.1" data-carnap-type="truthtable">
+<div data-carnap-type="truthtable" data-carnap-goal="((P/\Q)\/R)<->((P\/R)/\(Q\/R))" data-carnap-tabletype="simple" data-carnap-submission="saveAs:2.1">
 
 </div>
 </div>
@@ -403,7 +406,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-2.2" class="exercise">
 <span>2.2</span>
-<div data-carnap-goal="(P/\Q)\/R, (P\/R)/\(Q\/R)" data-carnap-tabletype="simple" data-carnap-submission="saveAs:2.2" data-carnap-type="truthtable">
+<div data-carnap-type="truthtable" data-carnap-goal="(P/\Q)\/R, (P\/R)/\(Q\/R)" data-carnap-tabletype="simple" data-carnap-submission="saveAs:2.2">
 
 </div>
 </div>
@@ -420,7 +423,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-2.3" class="exercise">
 <span>2.3</span>
-<div data-carnap-goal="P :|-: ((P/\Q)\/R)<->((P\/R)/\(Q\/R))" data-carnap-tabletype="validity" data-carnap-submission="saveAs:2.3" data-carnap-type="truthtable">
+<div data-carnap-type="truthtable" data-carnap-goal="P :|-: ((P/\Q)\/R)<->((P\/R)/\(Q\/R))" data-carnap-tabletype="validity" data-carnap-submission="saveAs:2.3">
 
 </div>
 </div>
@@ -429,7 +432,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-2.4" class="exercise">
 <span>2.4</span>
-<div data-carnap-goal="P,Q :|-: (P/\Q), (P\/R)/\(Q\/R)" data-carnap-tabletype="validity" data-carnap-submission="saveAs:2.4" data-carnap-type="truthtable">
+<div data-carnap-type="truthtable" data-carnap-goal="P,Q :|-: (P/\Q), (P\/R)/\(Q\/R)" data-carnap-tabletype="validity" data-carnap-submission="saveAs:2.4">
 
 </div>
 </div>
@@ -450,7 +453,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-2.5" class="exercise">
 <span>2.5</span>
-<div data-carnap-goal="(P/\Q), (P\/R)/\(Q\/R)" data-carnap-tabletype="partial" data-carnap-submission="saveAs:2.5" data-carnap-type="truthtable">
+<div data-carnap-type="truthtable" data-carnap-goal="(P/\Q), (P\/R)/\(Q\/R)" data-carnap-tabletype="partial" data-carnap-submission="saveAs:2.5">
 
 </div>
 </div>
@@ -526,7 +529,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-2.6" class="exercise">
 <span>2.6</span>
-<div data-carnap-tabletype="validity" data-carnap-goal="P :|-: Q" data-carnap-options="nocheck nocounterexample" data-carnap-type="truthtable" data-carnap-submission="saveAs:2.6">
+<div data-carnap-type="truthtable" data-carnap-goal="P :|-: Q" data-carnap-options="nocheck nocounterexample" data-carnap-tabletype="validity" data-carnap-submission="saveAs:2.6">
 
 </div>
 </div>
@@ -576,7 +579,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-2.7" class="exercise">
 <span>2.7</span>
-<div data-carnap-tabletype="simple" data-carnap-goal="P<->Q,  P->Q" data-carnap-counterexample-to="equivalence" data-carnap-type="truthtable" data-carnap-submission="saveAs:2.7">
+<div data-carnap-type="truthtable" data-carnap-goal="P<->Q,  P->Q" data-carnap-counterexample-to="equivalence" data-carnap-tabletype="simple" data-carnap-submission="saveAs:2.7">
 
 </div>
 </div>
@@ -592,7 +595,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-2.8" class="exercise">
 <span>2.8</span>
-<div data-carnap-tabletype="simple" data-carnap-goal="A > B &amp; C" data-carnap-system="LogicBookSD" data-carnap-type="truthtable" data-carnap-submission="saveAs:2.8">
+<div data-carnap-type="truthtable" data-carnap-goal="A > B &amp; C" data-carnap-system="LogicBookSD" data-carnap-tabletype="simple" data-carnap-submission="saveAs:2.8">
 
 </div>
 </div>
@@ -611,7 +614,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-2.9" class="exercise">
 <span>2.9</span>
-<div data-carnap-goal="P \/~P" data-carnap-tabletype="simple" data-carnap-submission="saveAs:2.9" data-carnap-type="truthtable">
+<div data-carnap-type="truthtable" data-carnap-goal="P \/~P" data-carnap-tabletype="simple" data-carnap-submission="saveAs:2.9">
    T - FT
    F - TF
 </div>
@@ -627,7 +630,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-2.10" class="exercise">
 <span>2.10</span>
-<div data-carnap-goal="P \/~P" data-carnap-tabletype="partial" data-carnap-submission="saveAs:2.10" data-carnap-type="truthtable">
+<div data-carnap-type="truthtable" data-carnap-goal="P \/~P" data-carnap-tabletype="partial" data-carnap-submission="saveAs:2.10">
    F - TF
 </div>
 </div>
@@ -642,7 +645,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-2.11" class="exercise">
 <span>2.11</span>
-<div data-carnap-tabletype="partial" data-carnap-goal="Q : Q->P" data-carnap-options="hiddenGivens" data-carnap-type="truthtable" data-carnap-submission="saveAs:2.11">
+<div data-carnap-type="truthtable" data-carnap-goal="Q : Q->P" data-carnap-options="hiddenGivens" data-carnap-tabletype="partial" data-carnap-submission="saveAs:2.11">
     T   TT -
 </div>
 </div>
@@ -658,7 +661,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-2.12" class="exercise">
 <span>2.12</span>
-<div data-carnap-tabletype="partial" data-carnap-goal="P/\Q, P\/Q" data-carnap-options="hiddenGivens" data-carnap-type="truthtable" data-carnap-submission="saveAs:2.12">
+<div data-carnap-type="truthtable" data-carnap-goal="P/\Q, P\/Q" data-carnap-options="hiddenGivens" data-carnap-tabletype="partial" data-carnap-submission="saveAs:2.12">
     -T -  -F -
     -F -  -T -
 </div>
@@ -675,7 +678,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-2.13" class="exercise">
 <span>2.13</span>
-<div data-carnap-truemark="1" data-carnap-tabletype="validity" data-carnap-goal="P,Q:|-:P/\Q" data-carnap-falsemark="0" data-carnap-type="truthtable" data-carnap-submission="saveAs:2.13">
+<div data-carnap-type="truthtable" data-carnap-goal="P,Q:|-:P/\Q" data-carnap-truemark="1" data-carnap-falsemark="0" data-carnap-tabletype="validity" data-carnap-submission="saveAs:2.13">
 
 </div>
 </div>
@@ -692,7 +695,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-2.14" class="exercise">
 <span>2.14</span>
-<div data-carnap-truemark="1" data-carnap-tabletype="validity" data-carnap-goal="P,Q:|-:P/\Q" data-carnap-falsemark="0" data-carnap-type="truthtable" data-carnap-submission="saveAs:2.14">
+<div data-carnap-type="truthtable" data-carnap-goal="P,Q:|-:P/\Q" data-carnap-truemark="1" data-carnap-falsemark="0" data-carnap-tabletype="validity" data-carnap-submission="saveAs:2.14">
 TT----
 FT----
 TF----
