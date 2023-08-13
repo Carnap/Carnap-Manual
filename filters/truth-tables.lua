@@ -29,7 +29,7 @@ return {
                             newOpts["data-carnap-" .. k] = v
                         end
                         local body = {}
-                        if chunk.body then 
+                        if chunk.body then
                             print("body:" .. chunk.body)
                             body = pandoc.Str(chunk.body)
                         end
