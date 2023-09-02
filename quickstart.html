@@ -424,7 +424,14 @@ ul.task-list li input[type="checkbox"] {
 3.1 P/\Q : People want to know what's going on and questions are unavoidable
 ~~~</code></pre>
 <p><code>.Translate</code> tells Carnap that you want a translation exercise. <code>.Prop</code> tells Carnap it should use its propositional equivalence checker to test if the solution provided by the student is equivalent to the solution you provide. The number 3.1 indicates the exercise number. It is followed by a model solution. The colon separates the solution from the text that will be presented for translation. The result of the above is:</p>
-<pre class="Translate Prop"><code>3.1 P/\Q : People want to know what's going on and questions are unavoidable</code></pre>
+<div>
+<div id="exercise-3.1" class="exercise">
+<span>3.1</span>
+<div data-carnap-transtype="prop" data-carnap-problem=" People want to know what's going on and questions are unavoidable" data-carnap-submission="saveAs:3.1" data-carnap-type="translate" data-carnap-goal="[39,78,48,61,73]">
+
+</div>
+</div>
+</div>
 <p>Each Carnap code block takes a number of options as well, which are described in the linked pages above. The most important one is perhaps the <code>system</code> attribute, which determines the syntax and symbols used for sentences entered as solutions which Carnap will accept, and how Carnap formats formulas it displays to the student.</p>
 <p>For instance,</p>
 <pre><code>~~~{.SynChecker .Match system="LogicBookSD"} 
@@ -437,7 +444,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-1.1" class="exercise">
 <span>1.1</span>
-<div data-carnap-submission="saveAs:1.1" data-carnap-matchtype="match" data-carnap-type="synchecker" data-carnap-goal="(P /\ Q) -> R ">
+<div data-carnap-matchtype="match" data-carnap-submission="saveAs:1.1" data-carnap-type="synchecker" data-carnap-goal="(P /\ Q) -> R ">
 
 </div>
 </div>
@@ -445,7 +452,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-1.1" class="exercise">
 <span>1.1</span>
-<div data-carnap-submission="saveAs:1.1" data-carnap-matchtype="match" data-carnap-type="synchecker" data-carnap-goal="(P /\ Q) -> R ">
+<div data-carnap-matchtype="match" data-carnap-submission="saveAs:1.1" data-carnap-type="synchecker" data-carnap-goal="(P /\ Q) -> R ">
 
 </div>
 </div>
