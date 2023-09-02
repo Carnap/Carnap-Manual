@@ -66,6 +66,7 @@ format:
       - ./filters/renderFormulas.lua
       - ./filters/truth-tables.lua
       - ./filters/syntax-checkers.lua
+      - ./filters/translate.lua
     theme: cosmo
     include-in-header:
       text: |

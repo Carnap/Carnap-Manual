@@ -45,7 +45,8 @@ local function chunks(s)
                 body = nil
             }
         else
-            if currentChunk.body == nil then
+            if currentChunk == nil then --do nothing
+            elseif currentChunk.body == nil then
                 currentChunk.body = line:match("^|(.*)")
             else
                 currentChunk.body = currentChunk.body .. '\n' .. line:match("^|(.*)")
@@ -56,8 +57,25 @@ local function chunks(s)
     return result
 end
 
+local function simpleCipher(s)
+    local ints = { utf8.codepoint(s, 1, string.len(s)) }
+    local i = 1
+    local key = "wallis"
+    local data = {}
+    for _,v in ipairs(ints) do
+        local char = string.sub(key,i,i)
+        table.insert(data, utf8.codepoint(char) ~ v)
+        i = (i % 6) + 1
+    end
+    local result = {}
+    for k,v in ipairs(data) do
+        result[k] = utf8.char(v)
+    end
+    return data, result, '[' .. table.concat(data,',') .. ']'
+end
 
 return {
     wrapper = wrapper,
-    chunks = chunks
+    chunks = chunks,
+    simpleCipher = simpleCipher,
 }

@@ -30,7 +30,6 @@ return {
                         end
                         local body = {}
                         if chunk.body then
-                            print("body:" .. chunk.body)
                             body = pandoc.Str(chunk.body)
                         end
                         table.insert(problems, exercises.wrapper({}, chunks[1].label, pandoc.Div(body,newOpts)))
