@@ -7,7 +7,7 @@ The course management dashboard will be available once you have
 
 1.  *Created a user account*. 
 
-    To do this, just click the [login link](/auth/login) located in the upper
+    To do this, just click the [login link](https://carnap.io/auth/login) located in the upper
     right hand corner of most Carnap pages.
 
 2.  *Upgraded your account status to "instructor"*. 
@@ -27,7 +27,7 @@ dashboard by first,
 You should then see the course management dashboard. The dashboard has
 two main parts: The *course card*, where information for your
 different courses is listed, and the *assignment card*, where you can
-assign problem sets from the [Carnap Book](/book).[^1] If this is your
+assign problem sets from the [Carnap Book](https://carnap.io/book).[^1] If this is your
 first time on the instructor page, your course card is probably empty.
 So we'll describe the assignment card first.
 
@@ -182,7 +182,7 @@ When you create a document, you'll be able to select a "Sharing
 Scope". There are four options: Public, Private, Instructors-Only, and
 Link-Only. The sharing scope affects whether your document can be
 accessed via the list of shared document that be found at
-[carnap.io/shared](/shared). Public documents are listed and available
+[carnap.io/shared](https://carnap.io/shared). Public documents are listed and available
 to anyone, Instructor-Only documents are only listed and available to
 instructors, and Private documents are unlisted and only available to
 you, Link-Only documents are unlisted but available (via link) to

@@ -79,7 +79,7 @@ Details on the review area, and assignment settings, can be found here:
 
 You may also want to know how reset the exam timer for certain students, or how
 to offer accessibility accommodations for certain students. Information on how
-to do that can be found [here](,/dashboard.md#actions-on-students)
+to do that can be found [here](./dashboard.md#actions-on-students)
 
 </details>
 
@@ -185,7 +185,7 @@ And should result in something like this
 ---
 
 Want to offer a documentation suggestion or report a typo? Use the issue
-tracker [here](https://github.com/Carnap/Carnap-Documentation/issues)!
+tracker [here](https://github.com/Carnap/Carnap-Manual/issues)!
 
 Or, if you just have a quick question that's not addressed above, feel free to
 send an email to [gleachkr@gmail.com](mailto:gleachkr@gmail.com)—if your question
