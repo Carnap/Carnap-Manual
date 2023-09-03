@@ -101,10 +101,25 @@ Name                     Effect
 
 </div>
 
-the `options` attribute might require some extra explanation. This attribute is
+The `points` and `late-credit` options determine how many points to award a student 
+who has submitted a correct solution (before and after the due date, respectively). 
+*Only integer values are allowed.* The default for `points` is 5. The default for 
+`late-credit` is 2, unless you've set a custom value for `points`, in which case 
+the default is half that, rounded down to the nearest integer. Points automatically 
+update if you change the due date (by assigning the same problem again with a 
+different due date, or if you give the student a per-assignment alternate due date).
+
+The `submission` attribute only takes `none` as an allowed value, i.e., 
+`submission="none"` turns off the "Submit" button on an exercise.
+
+The `options` attribute might require some extra explanation. This attribute is
 set to a string of space separated words, indicating what special options are
 set for the exercise-block it is attached to. Different types of exercises
-allow for different options.
+allow for different options. Most of them support the options `exam` and `nocheck`. 
+The `exam` option allows submission of incorrect exercises, and the `nocheck`
+option disables the "Check" button on an exercise. 
+
+Some exercise types allow additional attributes.
 
 ### Random problems
 
