@@ -31,6 +31,19 @@ local function lines(str)
     end
 end
 
+local function formatChunk(c)
+    local result = nil
+    for line in lines(c) do
+        if result == nil then
+            result = line:match("^|?(.*)")
+        else
+            result = result .. '\n' .. line:match("^|?(.*)")
+        end
+        print(result)
+    end
+    return result
+end
+
 local function chunks(s)
     local currentChunk = nil
     local result = {}
@@ -78,4 +91,5 @@ return {
     wrapper = wrapper,
     chunks = chunks,
     simpleCipher = simpleCipher,
+    formatChunk = formatChunk,
 }
