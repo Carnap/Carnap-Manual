@@ -458,85 +458,98 @@ ul.task-list li input[type="checkbox"] {
 1.1 P\/Q, ~P :|-: Q 
 ```</code></pre>
 <p>which produces:</p>
-<pre class="TreeDeduction propNK"><code>1.1 P\/Q, ~P :|-: Q </code></pre>
+<div>
+<div id="exercise-1.1" class="exercise">
+<span>1.1</span>
+<div data-carnap-system="propNK" data-carnap-type="treedeductionchecker" data-carnap-submission="saveAs:1.1" data-carnap-goal="P\/Q, ~P :|-: Q ">
+
+</div>
+</div>
+</div>
 <p>Instead of <code>.propNK</code> etc, you can also use <code>system="propNK"</code>.</p>
 <p>(Remember to click on a node in order to interact, and to press <code>Ctrl-Enter</code> to create the first child node)</p>
 <p>A completed proof will look like this:</p>
-<pre class="TreeDeduction propNK" data-init="now"><code>1.2 :|-: (P-&gt;Q)-&gt;((R-&gt;P)-&gt;(R-&gt;Q))
-| {
-|   "label": "(P-&gt;Q)-&gt;((R-&gt;P)-&gt;(R-&gt;Q))",
-|   "rule": "-&gt;I(1)",
-|   "ident": 0,
-|   "forest": [
-|     {
-|       "label": "(R-&gt;P)-&gt;(R-&gt;Q)",
-|       "rule": "-&gt;I(2)",
-|       "ident": 1,
-|       "forest": [
-|         {
-|           "label": "R-&gt;Q",
-|           "rule": "-&gt;I(3)",
-|           "ident": 2,
-|           "forest": [
-|             {
-|               "label": "Q",
-|               "rule": "-&gt;E",
-|               "ident": 3,
-|               "forest": [
-|                 {
-|                   "label": "P-&gt;Q",
-|                   "rule": "(1)",
-|                   "ident": 4,
-|                   "forest": [
-|                     {
-|                       "label": "",
-|                       "rule": "",
-|                       "ident": 5,
-|                       "forest": []
-|                     }
-|                   ]
-|                 },
-|                 {
-|                   "label": "P",
-|                   "rule": "-&gt;E",
-|                   "ident": 6,
-|                   "forest": [
-|                     {
-|                       "label": "R-&gt;P",
-|                       "rule": "(2)",
-|                       "ident": 7,
-|                       "forest": [
-|                         {
-|                           "label": "",
-|                           "rule": "",
-|                           "ident": 8,
-|                           "forest": []
-|                         }
-|                       ]
-|                     },
-|                     {
-|                       "label": "R",
-|                       "rule": "(3)",
-|                       "ident": 9,
-|                       "forest": [
-|                         {
-|                           "label": "",
-|                           "rule": "",
-|                           "ident": 10,
-|                           "forest": []
-|                         }
-|                       ]
-|                     }
-|                   ]
-|                 }
-|               ]
-|             }
-|           ]
-|         }
-|       ]
-|     }
-|   ]
-| }</code></pre>
+<div>
+<div id="exercise-1.2" class="exercise">
+<span>1.2</span>
+<div data-carnap-type="treedeductionchecker" data-carnap-submission="saveAs:1.2" data-carnap-init="now" data-carnap-goal=":|-: (P->Q)->((R->P)->(R->Q))" data-carnap-system="propNK">
+{
+   "label": "(P-&gt;Q)-&gt;((R-&gt;P)-&gt;(R-&gt;Q))",
+   "rule": "-&gt;I(1)",
+   "ident": 0,
+   "forest": [
+     {
+       "label": "(R-&gt;P)-&gt;(R-&gt;Q)",
+       "rule": "-&gt;I(2)",
+       "ident": 1,
+       "forest": [
+         {
+           "label": "R-&gt;Q",
+           "rule": "-&gt;I(3)",
+           "ident": 2,
+           "forest": [
+             {
+               "label": "Q",
+               "rule": "-&gt;E",
+               "ident": 3,
+               "forest": [
+                 {
+                   "label": "P-&gt;Q",
+                   "rule": "(1)",
+                   "ident": 4,
+                   "forest": [
+                     {
+                       "label": "",
+                       "rule": "",
+                       "ident": 5,
+                       "forest": []
+                     }
+                   ]
+                 },
+                 {
+                   "label": "P",
+                   "rule": "-&gt;E",
+                   "ident": 6,
+                   "forest": [
+                     {
+                       "label": "R-&gt;P",
+                       "rule": "(2)",
+                       "ident": 7,
+                       "forest": [
+                         {
+                           "label": "",
+                           "rule": "",
+                           "ident": 8,
+                           "forest": []
+                         }
+                       ]
+                     },
+                     {
+                       "label": "R",
+                       "rule": "(3)",
+                       "ident": 9,
+                       "forest": [
+                         {
+                           "label": "",
+                           "rule": "",
+                           "ident": 10,
+                           "forest": []
+                         }
+                       ]
+                     }
+                   ]
+                 }
+               ]
+             }
+           ]
+         }
+       ]
+     }
+   ]
+}
+</div>
+</div>
+</div>
 <p>With rule names to the right of inference lines, and assumptions labeled to the right of the rule citation (with or without parentheses). Discharged assumptions are marked using an inference with empty premise, and the assumption label on its own to the right of the inference line.</p>
 </section>
 <section id="rules-for-.propnj-and-.propnk" class="level2" data-number="10.2">
@@ -748,7 +761,14 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>The syntax of accepted for the Open Logic systems is described in the <a href="systems.md#open-logic-project">Systems Reference</a>. The natural deduction systems for arithmetic and set theory only differ in the syntax; there are no axioms.</p>
 <p>Here is an example of a derivation in the language of arithmetic:</p>
-<pre class="TreePlayground openLogicArithNK" data-init="now" data-options="displayJSON"><code>|{"ident":7,"label":"Ax ~ x &lt; 0","rule":"AI","forest":[{"ident":11,"label":"~ a &lt; 0","rule":"~I 1","forest":[{"ident":11,"label":"_|_","rule":"~E","forest":[{"ident":12,"label":"Ez z' + a = 0","rule":"-&gt;E","forest":[{"ident":14,"label":"a &lt; 0","rule":"1","forest":[{"ident":51,"label":"","rule":"","forest":[]}]},{"ident":15,"label":"a &lt; 0 -&gt; Ez z'+a = 0","rule":"-&gt;I 2","forest":[{"ident":52,"label":"Ez z'+a = 0","rule":"&lt;-&gt;E","forest":[{"ident":52,"label":"a &lt; 0 &lt;-&gt; Ez z'+a = 0","rule":"AE","forest":[{"ident":53,"label":"Ay(a &lt; y &lt;-&gt; Ez z'+a = y)","rule":"AE","forest":[{"ident":54,"label":"AxAy(x &lt; y &lt;-&gt; Ez z'+x = y)","rule":"","forest":[]}]}]},{"ident":62,"label":"a &lt; 0","rule":"2","forest":[{"ident":63,"label":"","rule":"","forest":[]}]}]}]}]},{"ident":13,"label":"~Ez z' + a = 0","rule":"AE","forest":[{"ident":64,"label":"Ax~Ez z' + x = 0","rule":"","forest":[]}]}]}]}]}</code></pre>
+<div>
+<div id="exercise-Playground" class="exercise">
+<span>Playground</span>
+<div data-carnap-options="displayJSON" data-carnap-type="treedeductionchecker" data-carnap-system="openLogicArithNK" data-carnap-init="now">
+{"ident":7,"label":"Ax ~ x &lt; 0","rule":"AI","forest":[{"ident":11,"label":"~ a &lt; 0","rule":"~I 1","forest":[{"ident":11,"label":"_|_","rule":"~E","forest":[{"ident":12,"label":"Ez z' + a = 0","rule":"-&gt;E","forest":[{"ident":14,"label":"a &lt; 0","rule":"1","forest":[{"ident":51,"label":"","rule":"","forest":[]}]},{"ident":15,"label":"a &lt; 0 -&gt; Ez z'+a = 0","rule":"-&gt;I 2","forest":[{"ident":52,"label":"Ez z'+a = 0","rule":"&lt;-&gt;E","forest":[{"ident":52,"label":"a &lt; 0 &lt;-&gt; Ez z'+a = 0","rule":"AE","forest":[{"ident":53,"label":"Ay(a &lt; y &lt;-&gt; Ez z'+a = y)","rule":"AE","forest":[{"ident":54,"label":"AxAy(x &lt; y &lt;-&gt; Ez z'+x = y)","rule":"","forest":[]}]}]},{"ident":62,"label":"a &lt; 0","rule":"2","forest":[{"ident":63,"label":"","rule":"","forest":[]}]}]}]}]},{"ident":13,"label":"~Ez z' + a = 0","rule":"AE","forest":[{"ident":64,"label":"Ax~Ez z' + x = 0","rule":"","forest":[]}]}]}]}]}
+</div>
+</div>
+</div>
 </section>
 <section id="advanced-usage" class="level2" data-number="10.4">
 <h2 data-number="10.4" class="anchored" data-anchor-id="advanced-usage"><span class="header-section-number">10.4</span> Advanced Usage</h2>
@@ -786,23 +806,36 @@ ul.task-list li input[type="checkbox"] {
 ]}
 ~~~</code></pre>
 <p>will produce:</p>
-<pre class="TreePlayground openLogicExArithNK" data-init="now" data-axiom-flip="'P('a*'b) :|-: 'P('b*'a); 'P('a+'b) :|-: 'P('b+'a)"><code>{ "ident": 13, "label": "a+b=c", "rule": "Ax-flip", "forest": [
+<div>
+<div id="exercise-Playground" class="exercise">
+<span>Playground</span>
+<div data-carnap-axiom-flip="'P('a*'b) :|-: 'P('b*'a); 'P('a+'b) :|-: 'P('b+'a)" data-carnap-type="treedeductionchecker" data-carnap-system="openLogicExArithNK" data-carnap-init="now">
+{ "ident": 13, "label": "a+b=c", "rule": "Ax-flip", "forest": [
     { "ident": 15, "label": "b+a=c", "rule": "", "forest": [] }
-]}</code></pre>
+]}
+</div>
+</div>
+</div>
 </section>
 <section id="json-serialization" class="level3" data-number="10.4.3">
 <h3 data-number="10.4.3" class="anchored" data-anchor-id="json-serialization"><span class="header-section-number">10.4.3</span> JSON Serialization</h3>
 <p>Here’s an incomplete proof, showing how to use the <code>displayJSON</code> option:</p>
-<pre class="TreeDeduction propNK" data-init="now" data-options="displayJSON"><code>1.1 P\/Q, ~P :|-: Q
-| {"ident":12,"label":"Q","rule":"\\/E", "forest":[
-|   {"ident":13,"label":"P\\/Q","rule":"", "forest":[]},
-|   {"ident":14,"label":"Q","rule":"(1)",  "forest":[
-|       {"ident":17,"label":"","rule":"","forest":[]}
-|   ]},
-|   {"ident":15,"label":"Q","rule":"?","forest":[
-|       {"ident":18,"label":"?","rule":"","forest":[]}
-|   ]}
-| ]}</code></pre>
+<div>
+<div id="exercise-1.1" class="exercise">
+<span>1.1</span>
+<div data-carnap-type="treedeductionchecker" data-carnap-submission="saveAs:1.1" data-carnap-init="now" data-carnap-goal="P\/Q, ~P :|-: Q" data-carnap-system="propNK" data-carnap-options="displayJSON">
+{"ident":12,"label":"Q","rule":"\\/E", "forest":[
+   {"ident":13,"label":"P\\/Q","rule":"", "forest":[]},
+   {"ident":14,"label":"Q","rule":"(1)",  "forest":[
+       {"ident":17,"label":"","rule":"","forest":[]}
+   ]},
+   {"ident":15,"label":"Q","rule":"?","forest":[
+       {"ident":18,"label":"?","rule":"","forest":[]}
+   ]}
+]}
+</div>
+</div>
+</div>
 <p>To show the JSON representation, click to focus one of the input areas in the proof and press <code>Ctrl-?</code>. To edit the deduction by editing the JSON, try replacing one of the <code>Q</code>s in the JSON panel with a <code>P</code>. The deduction will update to reflect the JSON, so long as the JSON is a well-formed representation of a deduction.</p>
 <p>The above was generated with</p>
 <pre><code>```{.TreeDeduction .propNK init="now" options="displayJSON"}
@@ -839,20 +872,27 @@ ul.task-list li input[type="checkbox"] {
 | ]}
 ```</code></pre>
 <p>The result, in this case, will be:</p>
-<pre class="TreePlayground propNK" data-init="now" data-options="displayJSON"><code>| {"ident":12,"label":"Q","rule":"\\/E (1) (2)","forest":[
-|   {"ident":13,"label":"P\\/Q","rule":"","forest":[]},
-|   {"ident":14,"label":"Q","rule":"(1)","forest":[
-|       {"ident":17,"label":"","rule":"","forest":[]}
-|   ]},
-|   {"ident":15,"label":"Q","rule":"-E","forest":[
-|       {"ident":18,"label":"!?","rule":"-E","forest":[
-|           {"ident":24,"label":"P","rule":"(2)","forest":[
-|               {"ident":27,"label":"","rule":"","forest":[]}
-|           ]},
-|           {"ident":25,"label":"-P","rule":"","forest":[]}
-|       ]}
-|   ]}
-| ]}</code></pre>
+<div>
+<div id="exercise-Playground" class="exercise">
+<span>Playground</span>
+<div data-carnap-options="displayJSON" data-carnap-type="treedeductionchecker" data-carnap-system="propNK" data-carnap-init="now">
+{"ident":12,"label":"Q","rule":"\\/E (1) (2)","forest":[
+   {"ident":13,"label":"P\\/Q","rule":"","forest":[]},
+   {"ident":14,"label":"Q","rule":"(1)","forest":[
+       {"ident":17,"label":"","rule":"","forest":[]}
+   ]},
+   {"ident":15,"label":"Q","rule":"-E","forest":[
+       {"ident":18,"label":"!?","rule":"-E","forest":[
+           {"ident":24,"label":"P","rule":"(2)","forest":[
+               {"ident":27,"label":"","rule":"","forest":[]}
+           ]},
+           {"ident":25,"label":"-P","rule":"","forest":[]}
+       ]}
+   ]}
+]}
+</div>
+</div>
+</div>
 <p>Try editing the proof to see how the displayed sequent changes!</p>
 
 
