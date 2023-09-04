@@ -65,6 +65,7 @@ format:
     filters:
       - ./filters/renderFormulas.lua
       - ./filters/truth-tables.lua
+      - ./filters/countermodeler.lua
       - ./filters/syntax-checkers.lua
       - ./filters/tree-deductions.lua
       - ./filters/sequent-deductions.lua
