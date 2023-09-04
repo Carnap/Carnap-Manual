@@ -25,7 +25,7 @@ return {
                             ["data-carnap-submission"] = "saveAs:"..chunk.label
                         }
 
-                        table.insert(problems, exercises.wrapper({}, chunks[1].label, pandoc.Div({},newOpts)))
+                        table.insert(problems, exercises.wrapper({}, chunk.label, pandoc.Div({},newOpts)))
                     end
                     return pandoc.Div(problems)
                 else return elem
