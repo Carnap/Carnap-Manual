@@ -390,7 +390,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="get-an-account" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="get-an-account"><span class="header-section-number">1.1</span> Get an account</h2>
-<p>Click the <a href="./auth/login">login link</a> located in the upper right hand corner of most Carnap pages, and log in with a Google account (a Gmail account works, but you can also make a Google account with a different email).</p>
+<p>Click the <a href="https://carnap.io/auth/login">login link</a> located in the upper right hand corner of most Carnap pages, and log in with a Google account (a Gmail account works, but you can also make a Google account with a different email).</p>
 <p>Email Graham Leach-Krouse at <a href="mailto:gleachkr@gmail.com">gleachkr@gmail.com</a> using your institutional email address to request instructor status.</p>
 </section>
 <section id="make-your-first-assignment" class="level2" data-number="1.2">
@@ -399,18 +399,21 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="1.2.1" class="anchored" data-anchor-id="carnaps-assignment-format"><span class="header-section-number">1.2.1</span> Carnap’s assignment format</h3>
 <p>An assignment in Carnap is a document which may include text (e.g., instructions for your students, where to find the relevant material in your textbook, etc.) but mainly will include <em>Carnap code blocks</em>. Each Carnap code block corresponds to one problem. They can be of any of the types listed on <a href="index.html">the main page</a>. They are:</p>
 <ol type="1">
-<li><a href="syntax-check.html">Syntax Checking</a></li>
-<li><a href="translation.html">Translations</a></li>
-<li><a href="truth-tables.html">Truth Tables</a></li>
 <li><a href="derivations.html">Derivations</a></li>
+<li><a href="truth-tables.html">Truth Tables</a></li>
+<li><a href="translation.html">Translations</a></li>
 <li><a href="modelchecker.html">Model Checking</a></li>
+<li><a href="gentzen-ND.html">Gentzen-Prawitz Natural Deduction</a></li>
+<li><a href="sequent-calculus.html">Sequent Calculus Deductions</a></li>
 <li><a href="qualitative.html">Qualitative Problems</a>, e.g., multiple-choice</li>
+<li><a href="truth-tree.html">Truth Trees (Semantic Tableaux)</a></li>
+<li><a href="syntax-check.html">Syntax Checking</a></li>
 </ol>
 <p>Each assignment document is a plain text file formatted in Markdown, a simple markup language. (Typically, the extension of Markdown text files is <code>.md</code>.) You can find a comprehensive introduction in the <a href="https://www.markdownguide.org/">Markdown Guide</a> including a list of editors that support Markdown. For a quick reference, try <a href="https://commonmark.org/help/">Learn Markdown in 60 seconds</a>. Any plain text editor is fine, but Markdown (and Carnap) are sticklers about spaces and newlines in Markdown documents. So make sure your editor does not automatically wrap text.</p>
 </section>
 <section id="downloading-shared-documents" class="level3" data-number="1.2.2">
 <h3 data-number="1.2.2" class="anchored" data-anchor-id="downloading-shared-documents"><span class="header-section-number">1.2.2</span> Downloading shared documents</h3>
-<p>You can start with an existing document another instructor has shared. A list of shared documents can be found at <a href="./shared">carnap.io/shared</a>. Each shared document has a download icon at the bottom (<span style="font-family:FontAwesome"></span>). If you click on that, you can save the source Markdown document of the shared page to your own computer. You can then edit it.</p>
+<p>You can start with an existing document another instructor has shared. A list of shared documents can be found at <a href="https://carnap.io/shared">carnap.io/shared</a>. Each shared document has a download icon at the bottom (<span style="font-family:FontAwesome"></span>). If you click on that, you can save the source Markdown document of the shared page to your own computer. You can then edit it.</p>
 <p>For instance, here is a <a href="https://carnap.io/shared/rudolf.carnap.1@gmail.com/Problem%20Set%201.md">sample assignment</a> which you can download by adding <code>/download</code> to the end of the URL in your browser (or just <a href="https://carnap.io/shared/rudolf.carnap.1@gmail.com/Problem%20Set%201.md/download">click here</a>).</p>
 </section>
 <section id="converting-existing-problem-sets" class="level3" data-number="1.2.3">
@@ -427,7 +430,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-3.1" class="exercise">
 <span>3.1</span>
-<div data-carnap-type="translate" data-carnap-transtype="prop" data-carnap-goal="[39,78,48,61,73]" data-carnap-submission="saveAs:3.1" data-carnap-problem=" People want to know what's going on and questions are unavoidable">
+<div data-carnap-transtype="prop" data-carnap-goal="[39,78,48,61,73]" data-carnap-submission="saveAs:3.1" data-carnap-problem=" People want to know what's going on and questions are unavoidable" data-carnap-type="translate">
 
 </div>
 </div>
@@ -444,7 +447,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-1.1" class="exercise">
 <span>1.1</span>
-<div data-carnap-goal="(P /\ Q) -> R " data-carnap-type="synchecker" data-carnap-submission="saveAs:1.1" data-carnap-matchtype="match">
+<div data-carnap-matchtype="match" data-carnap-submission="saveAs:1.1" data-carnap-goal="(P /\ Q) -> R " data-carnap-type="synchecker">
 
 </div>
 </div>
@@ -452,7 +455,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-1.1" class="exercise">
 <span>1.1</span>
-<div data-carnap-goal="(P /\ Q) -> R " data-carnap-type="synchecker" data-carnap-submission="saveAs:1.1" data-carnap-matchtype="match">
+<div data-carnap-matchtype="match" data-carnap-submission="saveAs:1.1" data-carnap-goal="(P /\ Q) -> R " data-carnap-type="synchecker">
 
 </div>
 </div>
