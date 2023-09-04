@@ -390,13 +390,27 @@ ul.task-list li input[type="checkbox"] {
 1.1 AxF(x), ExG(x)
 ```</code></pre>
 <p>The result will be:</p>
-<pre class="CounterModeler Simple"><code>1.1 AxF(x), ExG(x)</code></pre>
+<div>
+<div id="exercise-1.1" class="exercise">
+<span>1.1</span>
+<div data-carnap-goal="AxF(x), ExG(x)" data-carnap-type="countermodeler" data-carnap-countermodelertype="simple" data-carnap-submission="saveAs:1.1">
+
+</div>
+</div>
+</div>
 <p>Here is an example with some more interesting vocabulary:</p>
 <pre><code>```{.CounterModeler .Simple}
 1.2 AxAy(f(x,y) = f(y,x))
 ```</code></pre>
 <p>Producing:</p>
-<pre class="CounterModeler Simple"><code>1.2 AxAy(f(x,y) = f(y,x))</code></pre>
+<div>
+<div id="exercise-1.2" class="exercise">
+<span>1.2</span>
+<div data-carnap-goal="AxAy(f(x,y) = f(y,x))" data-carnap-type="countermodeler" data-carnap-countermodelertype="simple" data-carnap-submission="saveAs:1.2">
+
+</div>
+</div>
+</div>
 <p>The domain of the model must consist of one or more natural numbers. The tuples making up the extensions of predicate and relation symbols are comma-separated and enclosed in brackets, parentheses, or <code>&lt;&gt;</code> pairs, like this: <code>[0,0]</code> or this <code>&lt;1,1&gt;</code>. The tuples themselves should be separated by commas, like this: <code>[0,0],[1,0]</code>.</p>
 <p>The extension of each constant must be a natural number. The extension of a given function symbol will be a comma-separated list of tuples as above but with the arguments separated from the value by a semicolon, thus: <code>[0,0;1]</code>.</p>
 <p>Formulas containing free variables are treated as equivalent to their universal closures.</p>
@@ -408,7 +422,14 @@ ul.task-list li input[type="checkbox"] {
 1.3 AxEyF(x,y) :|-: ExAyF(y,x)
 ```</code></pre>
 <p>Creating:</p>
-<pre class="CounterModeler Validity"><code>1.3 AxEyF(x,y) :|-: ExAyF(y,x)</code></pre>
+<div>
+<div id="exercise-1.3" class="exercise">
+<span>1.3</span>
+<div data-carnap-goal="AxEyF(x,y) :|-: ExAyF(y,x)" data-carnap-type="countermodeler" data-carnap-countermodelertype="validity" data-carnap-submission="saveAs:1.3">
+
+</div>
+</div>
+</div>
 <p>Validity countermodel problems can include comma-separated lists of formulas to both the left and <em>right</em> of the turnstile. A countermodel is successful if it makes all the formulas to the left of the turnstile true and all the formulas to the right of the turnstile false.</p>
 </section>
 <section id="constraint-countermodels" class="level2" data-number="9.3">
@@ -418,7 +439,14 @@ ul.task-list li input[type="checkbox"] {
 1.4 ExEy(not x = y) : AxAyF(x,y)
 ```</code></pre>
 <p>Resulting in:</p>
-<pre class="CounterModeler Constraint"><code>1.4 ExEy(not x = y) : AxAyF(x,y)</code></pre>
+<div>
+<div id="exercise-1.4" class="exercise">
+<span>1.4</span>
+<div data-carnap-goal="ExEy(not x = y) : AxAyF(x,y)" data-carnap-type="countermodeler" data-carnap-countermodelertype="constraint" data-carnap-submission="saveAs:1.4">
+
+</div>
+</div>
+</div>
 <p>A countermodel with implicit constraints is successful if it makes all the formulas to the right and the left of the <code>:</code> true.</p>
 </section>
 <section id="advanced-usage" class="level2" data-number="9.4">
@@ -500,7 +528,14 @@ ul.task-list li input[type="checkbox"] {
 1.5 (Ax)(Ax-&gt;Bx)
 ~~~</code></pre>
 <p>will generate:</p>
-<pre class="CounterModeler Simple" data-options="exam" data-system="LogicBookPD"><code>1.5 (Ax)(Ax-&gt;Bx)</code></pre>
+<div>
+<div id="exercise-1.5" class="exercise">
+<span>1.5</span>
+<div data-carnap-goal="(Ax)(Ax->Bx)" data-carnap-type="countermodeler" data-carnap-countermodelertype="simple" data-carnap-submission="saveAs:1.5">
+
+</div>
+</div>
+</div>
 <p>The available systems are <code>firstOrder</code> <code>montagueQC</code> <code>magnusQL</code> <code>thomasBolducAndZachFOL</code> <code>thomasBolducAndZachFOL2019</code> <code>thomasBolducAndZachFOLPlus</code> <code>LogicBookPD</code> <code>LogicBookPDPlus</code> <code>hausmanPL</code> <code>howardSnyderPL</code> <code>ichikawaJenkinsQL</code> <code>hardegreePL</code> <code>goldfarbAltND</code> <code>goldfarbNDPlus</code> and <code>goldfarbAltNDPlus</code>.</p>
 </section>
 <section id="givens" class="level4" data-number="9.4.0.4">
@@ -513,10 +548,14 @@ ul.task-list li input[type="checkbox"] {
 | a : 1
 ```</code></pre>
 <p>Which will produce:</p>
-<pre class="CounterModeler Simple"><code>1.1 AxF(x), ExG(x), H(a)
-| Domain : 0,1,2
-| F(_) : 1,2
-| a : 1</code></pre>
+<div>
+<div id="exercise-1.1" class="exercise">
+<span>1.1</span>
+<div data-carnap-goal="AxF(x), ExG(x), H(a)" data-carnap-type="countermodeler" data-carnap-countermodelertype="simple" data-carnap-submission="saveAs:1.1">
+
+</div>
+</div>
+</div>
 <p>The field-names for the givens should match how the field-names would be displayed in the exercise.</p>
 <p>Ordinarily, givens function as hints. However, you can make it impossible for students to change them (thereby turning them into requirements) by adding the <code>strictGivens</code> option to your problem. Use this, for instance, to require students to use a specific domain, or to prevent them from making universal sentences vacuously true.</p>
 
