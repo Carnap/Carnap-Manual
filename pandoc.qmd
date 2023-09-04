@@ -17,7 +17,7 @@ If you learn best from example, it's also possible to download the source code
 for documents shared on Carnap.io from the shared document list, available at
 <https://carnap.io/shared>. The pandoc source for this document, should you
 wish to inspect it, is available
-[here](https://github.com/Carnap/Carnap-Documentation/blob/master/doc/pandoc.md).
+[here](https://github.com/Carnap/Carnap-Manual/blob/main/pandoc.qmd).
 
 You can create pandoc documents in any text editing program. Pandoc is nothing
 but plain text that is written with some special notation to indicate how text
@@ -144,18 +144,20 @@ problems to all share a single label.
 
 ### Exercise Types
 
-There are currently eight types of exercises:
+The available types of exercises are:
 
-1. [Syntax Checking](./syntax-check.html)
-2. [Translation](./translation.html)
-3. [Truth Tables](./truth-tables.html)
-4. [Derivations](./derivations.html)
-5. [Model Checking](./modelchecker.html)
-6. [Qualitative Problems](./qualitative.html)
-7. [Sequent Calculus Problems](./sequent-calculus.html)
-8. [Gentzen-Prawitz Natural Deduction Problems](./gentzen-ND.html)
+1. [Derivations](derivations.html)
+2. [Truth Tables](truth-tables.html)
+3. [Translations](translation.html)
+4. [Model Checking](modelchecker.html)
+5. [Gentzen-Prawitz Natural Deduction](gentzen-ND.html)
+6. [Sequent Calculus Deductions](sequent-calculus.html)
+7. [Qualitative Problems](qualitative.html)
+8. [Truth Trees (Semantic Tableaux)](truth-tree.html)
+9. [Syntax Checking](syntax-check.html)
 
-To learn more about each one, follow the links above.
+To learn more about each one, including the available options and
+additional attributes, follow the links above.
 
 ## Other Features
 

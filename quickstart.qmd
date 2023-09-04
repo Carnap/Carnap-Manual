@@ -2,7 +2,7 @@
 
 ## Get an account
 
-Click the [login link](/auth/login) located in the upper right hand
+Click the [login link](https://carnap.io/auth/login) located in the upper right hand
 corner of most Carnap pages, and log in with a Google account (a Gmail
 account works, but you can also make a Google account with a different
 email).
@@ -21,12 +21,15 @@ your textbook, etc.) but mainly will include *Carnap code blocks*.
 Each Carnap code block corresponds to one problem.  They can be of any
 of the types listed on [the main page](index.html). They are:
 
-1. [Syntax Checking](syntax-check.html)
-2. [Translations](translation.html)
-3. [Truth Tables](truth-tables.html)
-4. [Derivations](derivations.html)
-5. [Model Checking](modelchecker.html)
-6. [Qualitative Problems](qualitative.html), e.g., multiple-choice
+1. [Derivations](derivations.html)
+2. [Truth Tables](truth-tables.html)
+3. [Translations](translation.html)
+4. [Model Checking](modelchecker.html)
+5. [Gentzen-Prawitz Natural Deduction](gentzen-ND.html)
+6. [Sequent Calculus Deductions](sequent-calculus.html)
+7. [Qualitative Problems](qualitative.html), e.g., multiple-choice
+8. [Truth Trees (Semantic Tableaux)](truth-tree.html)
+9. [Syntax Checking](syntax-check.html)
 
 Each assignment document is a plain text file formatted in Markdown, a
 simple markup language.  (Typically, the extension of Markdown text
@@ -41,7 +44,7 @@ documents.  So make sure your editor does not automatically wrap text.
 
 You can start with an existing document another instructor has shared.
 A list of shared documents can be found at
-[carnap.io/shared](/shared). Each shared document has a download icon
+[carnap.io/shared](https://carnap.io/shared). Each shared document has a download icon
 at the bottom (<span style="font-family:FontAwesome">&#xf0ed;</span>). If you
 click on that, you can save the source Markdown document of the shared
 page to your own computer. You can then edit it.
