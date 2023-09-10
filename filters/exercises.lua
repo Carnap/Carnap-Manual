@@ -35,11 +35,10 @@ local function formatChunk(c)
     local result = nil
     for line in lines(c) do
         if result == nil then
-            result = line:match("^|?(.*)")
+            result = line:match("^|?%d*%.?(.*)")
         else
-            result = result .. '\n' .. line:match("^|?(.*)")
+            result = result .. '\n' .. line:match("^|?%d*%.?(.*)")
         end
-        print(result)
     end
     return result
 end
@@ -60,9 +59,9 @@ local function chunks(s)
         else
             if currentChunk == nil then --do nothing
             elseif currentChunk.body == nil then
-                currentChunk.body = line:match("^|(.*)")
+                currentChunk.body = line:match("^|?%d*%.?(.*)")
             else
-                currentChunk.body = currentChunk.body .. '\n' .. line:match("^|(.*)")
+                currentChunk.body = currentChunk.body .. '\n' .. line:match("^|?%d*%.?(.*)")
             end
         end
     end

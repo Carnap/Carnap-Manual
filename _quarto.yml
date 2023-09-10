@@ -69,6 +69,7 @@ format:
       - ./filters/syntax-checkers.lua
       - ./filters/tree-deductions.lua
       - ./filters/sequent-deductions.lua
+      - ./filters/derivations.lua
       - ./filters/translate.lua
     theme: cosmo
     include-in-header:

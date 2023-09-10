@@ -1,4 +1,3 @@
-
 local exercises = require("exercises")
 
 return {
@@ -32,7 +31,7 @@ return {
 
                 local newOpts = {
                     ["data-carnap-type"] = "sequentchecker",
-                    ["data-carnap-system"] = system
+                    ["data-carnap-system"] = system --unnecessary actually, because of next line
                 }
                 for k,v in pairs(elem.attributes) do
                     newOpts["data-carnap-" .. k] = v
