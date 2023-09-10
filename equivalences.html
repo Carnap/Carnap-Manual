@@ -437,11 +437,15 @@ ul.task-list li input[type="checkbox"] {
 <section id="equivalences-for-tfl-propositional-logic" class="level2" data-number="15.2">
 <h2 data-number="15.2" class="anchored" data-anchor-id="equivalences-for-tfl-propositional-logic"><span class="header-section-number">15.2</span> Equivalences for TFL (propositional logic)</h2>
 <p>The equivalence proof checker is selected using <code>.ZachPropEq</code>.</p>
-<pre class="ProofChecker ZachPropEq"><code>Ex1 A \/ ~(B \/ C) :|-: (A \/ ~C) /\ (A \/ ~B)
-|A \/ ~(B \/ C) :PR
-|A \/ ~(C \/ B) :Comm
-|A \/ (~C /\ ~B) :DeM
-|(A \/ ~C) /\ (A \/ ~B) :Dist</code></pre>
+<div>
+<div id="exercise-Ex1" class="exercise">
+<span>Ex1</span>
+<div data-carnap-goal="A \/ ~(B \/ C) :|-: (A \/ ~C) /\ (A \/ ~B)" data-carnap-type="proofchecker" data-carnap-system="zachPropEq" data-carnap-submission="saveAs:Ex1">A \/ ~(B \/ C) :PR
+A \/ ~(C \/ B) :Comm
+A \/ (~C /\ ~B) :DeM
+(A \/ ~C) /\ (A \/ ~B) :Dist</div>
+</div>
+</div>
 <p>The following exchange rules are allowed. They can be used within a propositional context Φ, and in both directions. In other words, any formula occurrence on the left of the table below can be replaced by the corresponding formula on the right, and vice versa.</p>
 <div class="table">
 <table class="table">
@@ -589,12 +593,21 @@ ul.task-list li input[type="checkbox"] {
 Ex1 A \/ ~(B \/ C) :|-: 
 |A \/ ~(B \/ C) :PR
 ```</code></pre>
-<pre class="ProofChecker ZachPropEq" data-tests="CNF"><code>Ex1 A \/ ~(B \/ C) :|-: 
-|A \/ ~(B \/ C) :PR</code></pre>
+<div>
+<div id="exercise-Ex1" class="exercise">
+<span>Ex1</span>
+<div data-carnap-goal="A \/ ~(B \/ C) :|-: " data-carnap-type="proofchecker" data-carnap-system="zachPropEq" data-carnap-tests="CNF" data-carnap-submission="saveAs:Ex1">A \/ ~(B \/ C) :PR</div>
+</div>
+</div>
 <p>A proof playground is also supported.</p>
 <pre><code>```{.Playground .ZachPropEq}
 ```</code></pre>
-<pre class="Playground ZachPropEq"><code></code></pre>
+<div>
+<div id="exercise-Playground" class="exercise">
+<span>Playground</span>
+<div data-carnap-system="zachPropEq" data-carnap-type="proofchecker"></div>
+</div>
+</div>
 <p>The available tests are the same as for <a href="translations.md#translation-tests">translation exercises</a>, and can be combined. If combined, multiple tests have to be separated by spaces. Tests also work on playgrounds.</p>
 <div class="table">
 <table class="table">
@@ -769,20 +782,24 @@ Ex1 A \/ ~(B \/ C) :|-:
 Ex2 ~(Ax P(x) &lt;-&gt; Ey Q(y)) :|-: 
 |~(Ax P(x) &lt;-&gt; Ey Q(y)) :PR
 ```</code></pre>
-<pre class="ProofChecker ZachFOLEq" data-options="resize" data-feedback="manual" data-tests="PNF"><code>Ex2 ~(Ax P(x) &lt;-&gt; Ey Q(y)) :|-: 
-|~(Ax P(x) &lt;-&gt; Ey Q(y)) :PR
-|~((Ax P(x) -&gt; Ey Q(y)) /\ (Ey Q(y) -&gt; Ax P(x))) :Bicond
-|~(Ax P(x) -&gt; Ey Q(y)) \/ ~(Ey Q(y) -&gt; Ax P(x)) :DeM
-|~(Ax P(x) -&gt; Ey Q(y)) \/ ~Ay( Q(y) -&gt; Ax P(x)) :QSA
-|~(Ax P(x) -&gt; Ey Q(y)) \/ ~AyAx( Q(y) -&gt;  P(x)) :QSA
-|~(Ax P(x) -&gt; Ey Q(y)) \/ Ey~Ax( Q(y) -&gt;  P(x)) :QN
-|~(Ax P(x) -&gt; Ey Q(y)) \/ EyEx~( Q(y) -&gt;  P(x)) :QN
-|(Ax P(x) /\ ~Ey Q(y)) \/ EyEx~( Q(y) -&gt;  P(x)) :Cond
-|(Ax P(x) /\ Ay~ Q(y)) \/ EyEx~( Q(y) -&gt;  P(x)) :QN
-|(Ax P(x) /\ Ax~ Q(x)) \/ EyEx~( Q(y) -&gt;  P(x)) :VR
-|Ax(P(x) /\ ~Q(x)) \/ EyEx~( Q(y) -&gt;  P(x)) :QD
-|Ey[Ax(P(x) /\ ~Q(x)) \/ Ex~( Q(y) -&gt;  P(x))] :QSE
-|EyEx[Ax(P(x) /\ ~Q(x)) \/ ~( Q(y) -&gt;  P(x))] :QSE</code></pre>
+<div>
+<div id="exercise-Ex2" class="exercise">
+<span>Ex2</span>
+<div data-carnap-goal="~(Ax P(x) <-> Ey Q(y)) :|-: " data-carnap-type="proofchecker" data-carnap-tests="PNF" data-carnap-feedback="manual" data-carnap-system="zachFOLEq" data-carnap-options="resize" data-carnap-submission="saveAs:Ex2">~(Ax P(x) &lt;-&gt; Ey Q(y)) :PR
+~((Ax P(x) -&gt; Ey Q(y)) /\ (Ey Q(y) -&gt; Ax P(x))) :Bicond
+~(Ax P(x) -&gt; Ey Q(y)) \/ ~(Ey Q(y) -&gt; Ax P(x)) :DeM
+~(Ax P(x) -&gt; Ey Q(y)) \/ ~Ay( Q(y) -&gt; Ax P(x)) :QSA
+~(Ax P(x) -&gt; Ey Q(y)) \/ ~AyAx( Q(y) -&gt;  P(x)) :QSA
+~(Ax P(x) -&gt; Ey Q(y)) \/ Ey~Ax( Q(y) -&gt;  P(x)) :QN
+~(Ax P(x) -&gt; Ey Q(y)) \/ EyEx~( Q(y) -&gt;  P(x)) :QN
+(Ax P(x) /\ ~Ey Q(y)) \/ EyEx~( Q(y) -&gt;  P(x)) :Cond
+(Ax P(x) /\ Ay~ Q(y)) \/ EyEx~( Q(y) -&gt;  P(x)) :QN
+(Ax P(x) /\ Ax~ Q(x)) \/ EyEx~( Q(y) -&gt;  P(x)) :VR
+Ax(P(x) /\ ~Q(x)) \/ EyEx~( Q(y) -&gt;  P(x)) :QD
+Ey[Ax(P(x) /\ ~Q(x)) \/ Ex~( Q(y) -&gt;  P(x))] :QSE
+EyEx[Ax(P(x) /\ ~Q(x)) \/ ~( Q(y) -&gt;  P(x))] :QSE</div>
+</div>
+</div>
 
 
 </section>

@@ -433,33 +433,47 @@ ul.task-list li input[type="checkbox"] {
 <p>Proofs consist of a series of lines. A line is either an assertion line containing a formula followed by a <code>:</code> and then a justification for that formula, or a separator line containing two dashes, thus: <code>--</code>. A justification consists of a rule abbreviation followed by zero or more numbers (citations of particular lines) and pairs of numbers separated by a dash (citations of a subproof contained within the given line range).</p>
 <p>A subproof is begun by increasing the indentation level. The first line of a subproof should be more indented than the containing proof, and the lines directly contained in this subproof should maintain this indentation level. (Lines indirectly contained, by being part of a sub-sub-proof, will need to be indented more deeply.) The subproof ends when the indentation level of the containing proof is resumed; hence, two contiguous sub-proofs of the same containing proof can be distinguished from one another by inserting a separator line between them at the same level of indentation as the containing proof. The final <em>unindented</em> line of a derivation will serve as the conclusion of the entire derivation.</p>
 <p>Here’s an example derivation, using the system <code>.GallowSL</code>:</p>
-<pre class="ProofChecker GallowSL" data-options="render resize fonts" data-init="now"><code>Ex :|-: (A \/ B) -&gt; (B \/ A)
-|   A \/ B:AS
-|      A:AS
-|      B \/ A:\/I 2
-|   --
-|      B:AS
-|      B \/ A:\/I 5
-|   B \/ A:\/E 1,2-3,5-6
-|(A \/ B) -&gt; (B \/ A):-&gt;I 1-7</code></pre>
+<div>
+<div id="exercise-Ex" class="exercise">
+<span>Ex</span>
+<div data-carnap-options="render resize fonts" data-carnap-type="proofchecker" data-carnap-goal=":|-: (A \/ B) -> (B \/ A)" data-carnap-system="gallowSL" data-carnap-init="now" data-carnap-submission="saveAs:Ex">   A \/ B:AS
+      A:AS
+      B \/ A:\/I 2
+   --
+      B:AS
+      B \/ A:\/I 5
+   B \/ A:\/E 1,2-3,5-6
+(A \/ B) -&gt; (B \/ A):-&gt;I 1-7</div>
+</div>
+</div>
 <p>Or, <code>.GallowSLPlus</code> with a Fitch-style guides overlay (activated with <code>guides="fitch"</code>):</p>
-<pre class="Playground GallowSLPlus" data-options="resize fonts" data-guides="fitch" data-init="now"><code>|   A \/ B:AS
-|      A:AS
-|      B \/ A:\/I 2
-|   --
-|      B:AS
-|      B \/ A:\/I 5
-|   B \/ A:\/E 1,2-3,5-6
-|(A \/ B) -&gt; (B \/ A):-&gt;I 1-7</code></pre>
+<div>
+<div id="exercise-Playground" class="exercise">
+<span>Playground</span>
+<div data-carnap-guides="fitch" data-carnap-options="resize fonts" data-carnap-type="proofchecker" data-carnap-init="now" data-carnap-system="gallowSLPlus">   A \/ B:AS
+      A:AS
+      B \/ A:\/I 2
+   --
+      B:AS
+      B \/ A:\/I 5
+   B \/ A:\/E 1,2-3,5-6
+(A \/ B) -&gt; (B \/ A):-&gt;I 1-7</div>
+</div>
+</div>
 <p>Simple indent guides overlay (activated with <code>guides="indent"</code>) with system <code>.GallowPL</code>:</p>
-<pre class="Playground GallowPL" data-options="resize fonts" data-guides="indent" data-init="now"><code>|   A \/ B:AS
-|      A:AS
-|      B \/ A:\/I 2
-|   --
-|      B:AS
-|      B \/ A:\/I 5
-|   B \/ A:\/E 1,2-3,5-6
-|(A \/ B) -&gt; (B \/ A):-&gt;I 1-7</code></pre>
+<div>
+<div id="exercise-Playground" class="exercise">
+<span>Playground</span>
+<div data-carnap-guides="indent" data-carnap-options="resize fonts" data-carnap-type="proofchecker" data-carnap-init="now" data-carnap-system="gallowPL">   A \/ B:AS
+      A:AS
+      B \/ A:\/I 2
+   --
+      B:AS
+      B \/ A:\/I 5
+   B \/ A:\/E 1,2-3,5-6
+(A \/ B) -&gt; (B \/ A):-&gt;I 1-7</div>
+</div>
+</div>
 </section>
 <section id="the-sl-systems" class="level3" data-number="17.1.2">
 <h3 data-number="17.1.2" class="anchored" data-anchor-id="the-sl-systems"><span class="header-section-number">17.1.2</span> The SL systems</h3>

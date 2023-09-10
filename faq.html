@@ -379,15 +379,25 @@ How can I help my students recognize subproof boundaries better?
 </summary>
 <p>Carnap has a few options for indicating subproof boundaries. The two main methods are to either render the proof separately from the input, or to overlay indentation indicators that correspond to subproof boundaries.</p>
 <p>The rendering option looks like this (details depending on the system):</p>
-<pre class="Playground Prop" data-options="fonts resize render" data-init="now"><code>|1.Show Q-&gt;P
-|2.   Q         :AS
-|3.   P         :PR
-|4.:CD 3</code></pre>
+<div>
+<div id="exercise-Playground" class="exercise">
+<span>Playground</span>
+<div data-carnap-type="proofchecker" data-carnap-init="now" data-carnap-guides="montague" data-carnap-system="prop" data-carnap-options="fonts resize render">Show Q-&gt;P
+   Q         :AS
+   P         :PR
+:CD 3</div>
+</div>
+</div>
 <p>and the overlay option looks like this (details depending on the system):</p>
-<pre class="Playground" data-system="magnusSL" data-guides="fitch" data-init="now"><code> P       :AS
+<div>
+<div id="exercise-Playground" class="exercise">
+<span>Playground</span>
+<div data-carnap-type="proofchecker" data-carnap-init="now" data-carnap-system="magnusSL" data-carnap-guides="fitch"> P       :AS
  P/\P    :&amp;I 1 1
  P       :&amp;E 2
-P-&gt;P     :-&gt;I 1-3</code></pre>
+P-&gt;P     :-&gt;I 1-3</div>
+</div>
+</div>
 <p>You can find details about overlaying indentation guides <a href="./derivations.md#indentation-guides">here</a>, and details about the rendering option <a href="./derivations.md#options">here</a>.</p>
 </details>
 <details>

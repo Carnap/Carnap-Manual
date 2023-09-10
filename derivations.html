@@ -388,12 +388,22 @@ ul.task-list li input[type="checkbox"] {
 1.1 P :|-: Q-&gt;P
 ~~~</code></pre>
 <p>Where the <code>:|-:</code> again indicates a turnstile. The result is then:</p>
-<pre class="ProofChecker Prop"><code>1.7 P:|-: Q-&gt;P</code></pre>
+<div>
+<div id="exercise-1.7" class="exercise">
+<span>1.7</span>
+<div data-carnap-system="prop" data-carnap-options="resize" data-carnap-type="proofchecker" data-carnap-submission="saveAs:1.7" data-carnap-goal="P:|-: Q->P" data-carnap-guides="montague"></div>
+</div>
+</div>
 <p>Similarly,</p>
 <pre><code>~~~{.Playground .Prop} 
 ~~~</code></pre>
 <p>generates</p>
-<pre class="Playground Prop"><code></code></pre>
+<div>
+<div id="exercise-Playground" class="exercise">
+<span>Playground</span>
+<div data-carnap-system="prop" data-carnap-options="resize" data-carnap-type="proofchecker" data-carnap-guides="montague"></div>
+</div>
+</div>
 <p>The class <code>Prop</code> specifies that we wish to use the propositional formal system of the Carnap book, and specifies a couple of UI-defaults for displaying proofs in that system. The currently available predefined classes are:</p>
 <div class="table">
 <table class="table">
@@ -515,17 +525,26 @@ ul.task-list li input[type="checkbox"] {
 |4.:CD 3
 ~~~</code></pre>
 <p>The result of the above is:</p>
-<pre class="ProofChecker Prop" data-options="indent fonts popout resize render indent"><code>1.8 P :|-: Q-&gt;P
-|1.Show Q-&gt;P
-|2.   Q:AS
-|3.   P:PR
-|4.:CD 3</code></pre>
+<div>
+<div id="exercise-1.8" class="exercise">
+<span>1.8</span>
+<div data-carnap-system="prop" data-carnap-options="indent fonts popout resize render indent" data-carnap-type="proofchecker" data-carnap-submission="saveAs:1.8" data-carnap-goal="P :|-: Q->P" data-carnap-guides="montague">Show Q-&gt;P
+   Q:AS
+   P:PR
+:CD 3</div>
+</div>
+</div>
 <p>An options string will override any options that are included by default in a given predefined class. For example, <code>.Prop</code> automatically turns on the <code>resize</code> option. However if we have just</p>
 <pre><code>~~~{.ProofChecker .Prop options="indent"} 
 1.9 P :|-: Q-&gt;P 
 ~~~</code></pre>
 <p>We get a proofbox that resizes manually:</p>
-<pre class="ProofChecker Prop" data-options="indent"><code>1.9 P :|-: Q-&gt;P </code></pre>
+<div>
+<div id="exercise-1.9" class="exercise">
+<span>1.9</span>
+<div data-carnap-system="prop" data-carnap-options="indent" data-carnap-type="proofchecker" data-carnap-submission="saveAs:1.9" data-carnap-goal="P :|-: Q->P " data-carnap-guides="montague"></div>
+</div>
+</div>
 </section>
 <section id="partial-solutions" class="level4" data-number="6.2.0.2">
 <h4 data-number="6.2.0.2" class="anchored" data-anchor-id="partial-solutions"><span class="header-section-number">6.2.0.2</span> Partial Solutions</h4>
@@ -538,11 +557,15 @@ ul.task-list li input[type="checkbox"] {
 |4.:CD 3
 ~~~</code></pre>
 <p>This gives us:</p>
-<pre class="ProofChecker Prop"><code>1.7 P :|-: Q-&gt;P
-|1.Show Q-&gt;P
-|2.   Q:AS
-|3.   P:PR
-|4.:CD 3</code></pre>
+<div>
+<div id="exercise-1.7" class="exercise">
+<span>1.7</span>
+<div data-carnap-system="prop" data-carnap-options="resize" data-carnap-type="proofchecker" data-carnap-submission="saveAs:1.7" data-carnap-goal="P :|-: Q->P" data-carnap-guides="montague">Show Q-&gt;P
+   Q:AS
+   P:PR
+:CD 3</div>
+</div>
+</div>
 <p>Everything after the line number (or the <code>|</code> if you don’t use numbers) is included in the proof, so be careful about spaces!</p>
 <p>You can also include a partial derivation without specific solution, by replacing <code>.ProofChecker</code> with <code>.Playground</code>, writing for example:</p>
 <pre><code>~~~{.Playground .Prop} 
@@ -552,10 +575,15 @@ ul.task-list li input[type="checkbox"] {
 |4.:CD 3
 ~~~</code></pre>
 <p>which gives you a proof box that calculates what has been derived and displays it at the top, rather than calculating whether the derivation proves a given sequent, thus:</p>
-<pre class="Playground Prop"><code>|1.Show Q-&gt;P
-|2.   Q:AS
-|3.   ?:PR
-|4.:CD 3</code></pre>
+<div>
+<div id="exercise-Playground" class="exercise">
+<span>Playground</span>
+<div data-carnap-system="prop" data-carnap-options="resize" data-carnap-type="proofchecker" data-carnap-guides="montague">Show Q-&gt;P
+   Q:AS
+   ?:PR
+:CD 3</div>
+</div>
+</div>
 </section>
 <section id="feedback" class="level4" data-number="6.2.0.3">
 <h4 data-number="6.2.0.3" class="anchored" data-anchor-id="feedback"><span class="header-section-number">6.2.0.3</span> Feedback</h4>
@@ -589,7 +617,12 @@ ul.task-list li input[type="checkbox"] {
 1.10 P :|-: Q-&gt;P
 ~~~</code></pre>
 <p>produces</p>
-<pre class="ProofChecker Prop" data-submission="none" data-feedback="manual"><code>1.10 P :|-: Q-&gt;P</code></pre>
+<div>
+<div id="exercise-1.10" class="exercise">
+<span>1.10</span>
+<div data-carnap-system="prop" data-carnap-options="resize" data-carnap-type="proofchecker" data-carnap-submission="none" data-carnap-guides="montague" data-carnap-goal="P :|-: Q->P" data-carnap-feedback="manual"></div>
+</div>
+</div>
 </section>
 <section id="systems" class="level4" data-number="6.2.0.4">
 <h4 data-number="6.2.0.4" class="anchored" data-anchor-id="systems"><span class="header-section-number">6.2.0.4</span> Systems</h4>
@@ -598,7 +631,12 @@ ul.task-list li input[type="checkbox"] {
 1.11 -Q :|-: Q-&gt;P
 ~~~</code></pre>
 <p>to produce</p>
-<pre class="ProofChecker" data-system="prop" data-submission="none" data-feedback="manual"><code>1.11 -Q :|-: Q-&gt;P</code></pre>
+<div>
+<div id="exercise-1.11" class="exercise">
+<span>1.11</span>
+<div data-carnap-system="prop" data-carnap-type="proofchecker" data-carnap-submission="none" data-carnap-goal="-Q :|-: Q->P" data-carnap-feedback="manual"></div>
+</div>
+</div>
 <p>The available propositional systems are: <code>prop</code> <code>montagueSC</code> <code>LogicBookSD</code> <code>LogicBookSDPlus</code> <code>hausmanSL</code> <code>howardSnyderSL</code> <code>ichikawaJenkinsSL</code> <code>hausmanSL</code> <code>magnusSL</code> <code>magnusSLPlus</code> <code>thomasBolducAndZachTFL</code> <code>thomasBolducAndZachTFL2019</code> <code>gamutMPND</code> <code>gamutIPND</code>, <code>gamutPND</code> <code>gamutPNDPlus</code> <code>tomassiPL</code> and <code>hardegreeSL</code>. The available first-order systems are: <code>firstOrder</code> <code>montagueQC</code> <code>magnusQL</code> <code>thomasBolducAndZachFOL</code> <code>thomasBolducAndZachFOL2019</code> <code>thomasBolducAndZachFOLPlus2019</code> <code>LogicBookPD</code> <code>LogicBookPDPlus</code> <code>gamutND</code> <code>hausmanPL</code> <code>howardSnyderPL</code> <code>ichikawaJenkinsQL</code> <code>hardegreePL</code> <code>goldfarbAltND</code> <code>goldfarbNDPlus</code> and <code>goldfarbAltNDPlus</code>. The available set theory systems are: <code>elementarySetTheory</code> and <code>separativeSetTheory</code>. The available second-order systems are: <code>secondOrder</code> and <code>PolySecondOrder</code>. The available propositional modal logic systems are: <code>hardegreeL</code> <code>hardegreeK</code> <code>hardegreeT</code> <code>hardegreeB</code> <code>hardegreeD</code> <code>hardegree4</code> and <code>hardegree5</code>. The available predicate modal logic system is <code>hardegreeMPL</code>, and the available “world theory” system is <code>hardegreeWTL</code>.</p>
 </section>
 <section id="initialization" class="level4" data-number="6.2.0.5">
@@ -648,10 +686,15 @@ ul.task-list li input[type="checkbox"] {
 P-&gt;P        :-&gt;I 1-3
 ~~~</code></pre>
 <p>Produces:</p>
-<pre class="Playground ForallxSL" data-guides="fitch" data-init="now" data-options="fonts resize"><code> P       :AS
+<div>
+<div id="exercise-Playground" class="exercise">
+<span>Playground</span>
+<div data-carnap-system="magnusSL" data-carnap-options="fonts resize" data-carnap-type="proofchecker" data-carnap-guides="fitch" data-carnap-init="now"> P       :AS
  P/\P    :&amp;I 1 1
  P       :&amp;E 2
-P-&gt;P     :-&gt;I 1-3</code></pre>
+P-&gt;P     :-&gt;I 1-3</div>
+</div>
+</div>
 
 
 </section>

@@ -444,12 +444,17 @@ ul.task-list li input[type="checkbox"] {
 <p>Proofs consist of a series of lines. A line is either an assertion line containing a formula followed by a <code>:</code> and then a justification for that formula, a show line consisting of the word <code>show</code> followed by a formula, or a QED line containing a <code>:</code> followed by a rule for an indirect inference.</p>
 <p>A subproof begins a new show line. The next line should be more indented than the containing proof, and the lines directly contained in this subproof should maintain this indentation level. (Lines indirectly contained, by being part of a sub-sub-proof, will need to be indented more deeply.) The subproof ends with a QED line at the same level of indentation as the containing proof.</p>
 <p>For example:</p>
-<pre class="Playground Prop" data-options="render resize fonts"><code>Show P -&gt; (P -&gt; P)
+<div>
+<div id="exercise-Playground" class="exercise">
+<span>Playground</span>
+<div data-carnap-options="render resize fonts" data-carnap-system="prop" data-carnap-type="proofchecker" data-carnap-guides="montague">Show P -&gt; (P -&gt; P)
    P:AS
    Show: P-&gt;P
       P:AS
    :CD 4
-:CD 3</code></pre>
+:CD 3</div>
+</div>
+</div>
 </section>
 <section id="basic-rules" class="level3" data-number="21.1.2">
 <h3 data-number="21.1.2" class="anchored" data-anchor-id="basic-rules"><span class="header-section-number">21.1.2</span> Basic Rules</h3>

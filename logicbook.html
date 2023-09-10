@@ -432,18 +432,28 @@ ul.task-list li input[type="checkbox"] {
 <p>Proofs consist of a series of lines. A line is either an assertion line containing a formula followed by a <code>:</code> and then a justification for that formula, or a separator line containing two dashes, thus: <code>--</code>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> A justification consists of zero or more numbers (citations of particular lines) and pairs of numbers separated by a dash (citations of a subproof contained within the given line range), followed by the name of a rule being applied.</p>
 <p>A subproof is begun by increasing the indentation level. The first line of a subproof should be more indented than the containing proof, and the lines directly contained in this subproof should maintain this indentation level. (Lines indirectly contained, by being part of a sub-sub-proof, will need to be indented more deeply.) The subproof ends when the indentation level of the containing proof is resumed; hence, two contiguous sub-proofs of the same containing proof can be distinguished from one another by inserting a separator line between them at the same level of indentation as the containing proof. The final <em>unindented</em> line of a derivation will serve as the conclusion of the entire derivation.</p>
 <p>Here’s an example derivation, using system SD from the <em>Logic Book</em></p>
-<pre class="Playground LogicBookSD" data-options="resize render" data-guides="fitch" data-init="now"><code>   P        :AS
+<div>
+<div id="exercise-Playground" class="exercise">
+<span>Playground</span>
+<div data-carnap-guides="fitch" data-carnap-system="LogicBookSD" data-carnap-type="proofchecker" data-carnap-options="resize render" data-carnap-init="now">   P        :AS
       P     :AS
       P     :2 R
    P &gt; P    :2-3 CI
-P &gt; (P &gt; P) :1-4 CI</code></pre>
+P &gt; (P &gt; P) :1-4 CI</div>
+</div>
+</div>
 <p>and here is one using system PD</p>
-<pre class="Playground LogicBookPD" data-options="resize render" data-guides="fitch" data-init="now"><code>(Ax)Fx        :PR
+<div>
+<div id="exercise-Playground" class="exercise">
+<span>Playground</span>
+<div data-carnap-guides="fitch" data-carnap-system="LogicBookPD" data-carnap-type="proofchecker" data-carnap-options="resize render" data-carnap-init="now">(Ax)Fx        :PR
 (Ax)(Fx &gt; Gx) :PR
 Fa            :1 AE
 Fa &gt; Ga       :2 AE
 Ga            :3,4 &gt;E 
-(Ax)Gx        :5 AI </code></pre>
+(Ax)Gx        :5 AI </div>
+</div>
+</div>
 </section>
 <section id="basic-rules" class="level3" data-number="20.1.2">
 <h3 data-number="20.1.2" class="anchored" data-anchor-id="basic-rules"><span class="header-section-number">20.1.2</span> Basic Rules</h3>

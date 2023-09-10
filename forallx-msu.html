@@ -422,23 +422,36 @@ ul.task-list li input[type="checkbox"] {
 <p>Proofs consist of a series of lines. A line is either an assertion line containing a formula followed by a <code>:</code> and then a justification for that formula, or a separator line containing two dashes, thus: <code>--</code>. A justification consists of a rule abbreviation followed by zero or more numbers (citations of particular lines) and pairs of numbers separated by a dash (citations of a subproof contained within the given line range).</p>
 <p>A subproof is begun by increasing the indentation level. The first line of a subproof should be more indented than the containing proof, and the lines directly contained in this subproof should maintain this indentation level. (Lines indirectly contained, by being part of a sub-sub-proof, will need to be indented more deeply.) The subproof ends when the indentation level of the containing proof is resumed; hence, two contiguous sub-proofs of the same containing proof can be distinguished from one another by inserting a separator line between them at the same level of indentation as the containing proof. The final <em>unindented</em> line of a derivation will serve as the conclusion of the entire derivation.</p>
 <p>Here’s an example derivation, using the TFL system <code>.JohnsonSL</code>:</p>
-<pre class="ProofChecker JohnsonSL" data-options="render resize fonts" data-init="now"><code>Ex ~P \/ (R &amp; Q) :|-: P -&gt; Q
-|~P \/ (R &amp; Q) :PR
-|    P :AS
-|    ~~P :DN 2
-|    R &amp; Q :\/E 1,3
-|    Q :&amp;E 4
-|P -&gt; Q :-&gt;I 2-5</code></pre>
+<div>
+<div id="exercise-Ex" class="exercise">
+<span>Ex</span>
+<div data-carnap-type="proofchecker" data-carnap-submission="saveAs:Ex" data-carnap-init="now" data-carnap-options="render resize fonts" data-carnap-goal="~P \/ (R &amp; Q) :|-: P -> Q" data-carnap-system="johnsonSL">~P \/ (R &amp; Q) :PR
+    P :AS
+    ~~P :DN 2
+    R &amp; Q :\/E 1,3
+    Q :&amp;E 4
+P -&gt; Q :-&gt;I 2-5</div>
+</div>
+</div>
 <p>Or, with a Fitch-style guides overlay (activated with <code>guides="fitch"</code>):</p>
-<pre class="ProofChecker JohnsonSL" data-options="render resize fonts" data-guides="fitch" data-init="now"><code>Ex ~P \/ (R &amp; Q) :|-: P -&gt; Q
-|~P \/ (R &amp; Q) :PR
-|    P :AS
-|    ~~P :DN 2
-|    R &amp; Q :\/E 1,3
-|    Q :&amp;E 4
-|P -&gt; Q :-&gt;I 2-5</code></pre>
+<div>
+<div id="exercise-Ex" class="exercise">
+<span>Ex</span>
+<div data-carnap-type="proofchecker" data-carnap-submission="saveAs:Ex" data-carnap-init="now" data-carnap-guides="fitch" data-carnap-options="render resize fonts" data-carnap-goal="~P \/ (R &amp; Q) :|-: P -> Q" data-carnap-system="johnsonSL">~P \/ (R &amp; Q) :PR
+    P :AS
+    ~~P :DN 2
+    R &amp; Q :\/E 1,3
+    Q :&amp;E 4
+P -&gt; Q :-&gt;I 2-5</div>
+</div>
+</div>
 <p>There is also a playground mode:</p>
-<pre class="Playground JohnsonSL" data-options="render resize fonts" data-init="now"><code></code></pre>
+<div>
+<div id="exercise-Playground" class="exercise">
+<span>Playground</span>
+<div data-carnap-init="now" data-carnap-type="proofchecker" data-carnap-options="render resize fonts" data-carnap-system="johnsonSL"></div>
+</div>
+</div>
 <p>The system for Johnson’s <em>forall x: Mississippi State</em> (the system used in a proofchecker constructed with <code>.JohnsonSL</code> in Carnap’s <a href="pandoc.html">Pandoc Markup</a>) has the following set of rules for direct inferences:</p>
 <div class="table">
 <table class="table">

@@ -440,26 +440,40 @@ ul.task-list li input[type="checkbox"] {
 <p>Proofs consist of a series of lines. A line is either an assertion line containing a formula followed by a <code>:</code> and then a justification for that formula, or a separator line containing two dashes, thus: <code>--</code>. A justification consists of a rule abbreviation followed by zero or more numbers (citations of particular lines) and pairs of numbers separated by a dash (citations of a subproof contained within the given line range).</p>
 <p>A subproof is begun by increasing the indentation level. The first line of a subproof should be more indented than the containing proof, and the lines directly contained in this subproof should maintain this indentation level. (Lines indirectly contained, by being part of a sub-sub-proof, will need to be indented more deeply.) The subproof ends when the indentation level of the containing proof is resumed; hence, two contiguous sub-proofs of the same containing proof can be distinguished from one another by inserting a separator line between them at the same level of indentation as the containing proof. The final <em>unindented</em> line of a derivation will serve as the conclusion of the entire derivation.</p>
 <p>Here’s an example derivation, using system SL of P.D. Magnus <em>forall x</em>, activated in Carnap by <code>.ForallxSL</code>:</p>
-<pre class="ProofChecker ForallxSL" data-options="render resize fonts" data-init="now"><code>Ex :|-: (A \/ B) -&gt; (B \/ A)
-|   A \/ B:AS
-|      A:AS
-|      B \/ A:\/I 2
-|   --
-|      B:AS
-|      B \/ A:\/I 5
-|   B \/ A:\/E 1,2-3,5-6
-|(A \/ B) -&gt; (B \/ A):-&gt;I 1-7</code></pre>
+<div>
+<div id="exercise-Ex" class="exercise">
+<span>Ex</span>
+<div data-carnap-init="now" data-carnap-goal=":|-: (A \/ B) -> (B \/ A)" data-carnap-type="proofchecker" data-carnap-system="magnusSL" data-carnap-options="render resize fonts" data-carnap-submission="saveAs:Ex">   A \/ B:AS
+      A:AS
+      B \/ A:\/I 2
+   --
+      B:AS
+      B \/ A:\/I 5
+   B \/ A:\/E 1,2-3,5-6
+(A \/ B) -&gt; (B \/ A):-&gt;I 1-7</div>
+</div>
+</div>
 <p>Or, with a Fitch-style guides overlay (activated with <code>guides="fitch"</code>):</p>
-<pre class="Playground ForallxSL" data-options="render resize fonts" data-guides="fitch" data-init="now"><code>|   A \/ B:AS
-|      A:AS
-|      B \/ A:\/I 2
-|   --
-|      B:AS
-|      B \/ A:\/I 5
-|   B \/ A:\/E 1,2-3,5-6
-|(A \/ B) -&gt; (B \/ A):-&gt;I 1-7</code></pre>
+<div>
+<div id="exercise-Playground" class="exercise">
+<span>Playground</span>
+<div data-carnap-guides="fitch" data-carnap-type="proofchecker" data-carnap-system="magnusSL" data-carnap-options="render resize fonts" data-carnap-init="now">   A \/ B:AS
+      A:AS
+      B \/ A:\/I 2
+   --
+      B:AS
+      B \/ A:\/I 5
+   B \/ A:\/E 1,2-3,5-6
+(A \/ B) -&gt; (B \/ A):-&gt;I 1-7</div>
+</div>
+</div>
 <p>There is also a playground mode:</p>
-<pre class="Playground ForallxSL" data-options="render resize fonts" data-init="now"><code></code></pre>
+<div>
+<div id="exercise-Playground" class="exercise">
+<span>Playground</span>
+<div data-carnap-type="proofchecker" data-carnap-system="magnusSL" data-carnap-options="render resize fonts" data-carnap-init="now"></div>
+</div>
+</div>
 </section>
 <section id="sentential-logic" class="level2" data-number="19.2">
 <h2 data-number="19.2" class="anchored" data-anchor-id="sentential-logic"><span class="header-section-number">19.2</span> Sentential logic</h2>

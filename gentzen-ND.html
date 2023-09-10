@@ -461,7 +461,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-1.1" class="exercise">
 <span>1.1</span>
-<div data-carnap-submission="saveAs:1.1" data-carnap-system="propNK" data-carnap-type="treedeductionchecker" data-carnap-goal="P\/Q, ~P :|-: Q ">
+<div data-carnap-submission="saveAs:1.1" data-carnap-system="propNK" data-carnap-goal="P\/Q, ~P :|-: Q " data-carnap-type="treedeductionchecker">
 
 </div>
 </div>
@@ -472,7 +472,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-1.2" class="exercise">
 <span>1.2</span>
-<div data-carnap-init="now" data-carnap-submission="saveAs:1.2" data-carnap-system="propNK" data-carnap-goal=":|-: (P->Q)->((R->P)->(R->Q))" data-carnap-type="treedeductionchecker">
+<div data-carnap-init="now" data-carnap-submission="saveAs:1.2" data-carnap-system="propNK" data-carnap-type="treedeductionchecker" data-carnap-goal=":|-: (P->Q)->((R->P)->(R->Q))">
 {
    "label": "(P-&gt;Q)-&gt;((R-&gt;P)-&gt;(R-&gt;Q))",
    "rule": "-&gt;I(1)",
@@ -764,7 +764,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-Playground" class="exercise">
 <span>Playground</span>
-<div data-carnap-init="now" data-carnap-system="openLogicArithNK" data-carnap-type="treedeductionchecker" data-carnap-options="displayJSON">
+<div data-carnap-options="displayJSON" data-carnap-system="openLogicArithNK" data-carnap-init="now" data-carnap-type="treedeductionchecker">
 {"ident":7,"label":"Ax ~ x &lt; 0","rule":"AI","forest":[{"ident":11,"label":"~ a &lt; 0","rule":"~I 1","forest":[{"ident":11,"label":"_|_","rule":"~E","forest":[{"ident":12,"label":"Ez z' + a = 0","rule":"-&gt;E","forest":[{"ident":14,"label":"a &lt; 0","rule":"1","forest":[{"ident":51,"label":"","rule":"","forest":[]}]},{"ident":15,"label":"a &lt; 0 -&gt; Ez z'+a = 0","rule":"-&gt;I 2","forest":[{"ident":52,"label":"Ez z'+a = 0","rule":"&lt;-&gt;E","forest":[{"ident":52,"label":"a &lt; 0 &lt;-&gt; Ez z'+a = 0","rule":"AE","forest":[{"ident":53,"label":"Ay(a &lt; y &lt;-&gt; Ez z'+a = y)","rule":"AE","forest":[{"ident":54,"label":"AxAy(x &lt; y &lt;-&gt; Ez z'+x = y)","rule":"","forest":[]}]}]},{"ident":62,"label":"a &lt; 0","rule":"2","forest":[{"ident":63,"label":"","rule":"","forest":[]}]}]}]}]},{"ident":13,"label":"~Ez z' + a = 0","rule":"AE","forest":[{"ident":64,"label":"Ax~Ez z' + x = 0","rule":"","forest":[]}]}]}]}]}
 </div>
 </div>
@@ -809,7 +809,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-Playground" class="exercise">
 <span>Playground</span>
-<div data-carnap-init="now" data-carnap-system="openLogicExArithNK" data-carnap-type="treedeductionchecker" data-carnap-axiom-flip="'P('a*'b) :|-: 'P('b*'a); 'P('a+'b) :|-: 'P('b+'a)">
+<div data-carnap-axiom-flip="'P('a*'b) :|-: 'P('b*'a); 'P('a+'b) :|-: 'P('b+'a)" data-carnap-system="openLogicExArithNK" data-carnap-init="now" data-carnap-type="treedeductionchecker">
 { "ident": 13, "label": "a+b=c", "rule": "Ax-flip", "forest": [
     { "ident": 15, "label": "b+a=c", "rule": "", "forest": [] }
 ]}
@@ -823,7 +823,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-1.1" class="exercise">
 <span>1.1</span>
-<div data-carnap-init="now" data-carnap-submission="saveAs:1.1" data-carnap-type="treedeductionchecker" data-carnap-system="propNK" data-carnap-goal="P\/Q, ~P :|-: Q" data-carnap-options="displayJSON">
+<div data-carnap-init="now" data-carnap-submission="saveAs:1.1" data-carnap-options="displayJSON" data-carnap-system="propNK" data-carnap-type="treedeductionchecker" data-carnap-goal="P\/Q, ~P :|-: Q">
 {"ident":12,"label":"Q","rule":"\\/E", "forest":[
    {"ident":13,"label":"P\\/Q","rule":"", "forest":[]},
    {"ident":14,"label":"Q","rule":"(1)",  "forest":[
@@ -875,7 +875,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-Playground" class="exercise">
 <span>Playground</span>
-<div data-carnap-init="now" data-carnap-system="propNK" data-carnap-type="treedeductionchecker" data-carnap-options="displayJSON">
+<div data-carnap-options="displayJSON" data-carnap-system="propNK" data-carnap-init="now" data-carnap-type="treedeductionchecker">
 {"ident":12,"label":"Q","rule":"\\/E (1) (2)","forest":[
    {"ident":13,"label":"P\\/Q","rule":"","forest":[]},
    {"ident":14,"label":"Q","rule":"(1)","forest":[
