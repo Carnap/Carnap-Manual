@@ -86,9 +86,32 @@ local function simpleCipher(s)
     return data, result, '[' .. table.concat(data,',') .. ']'
 end
 
+local function simpleHash(s)
+    local ints = { utf8.codepoint(s, 1, string.len(s)) }
+    local seed = 21938
+    for _,v in ipairs(ints) do
+        seed = seed*19 ~ v
+    end
+    return seed
+end
+
+local function sanitizeHTML(s)
+    s=s:gsub("%&","&amp;")
+    s=s:gsub("%<","&lt;")
+    s=s:gsub("%>","&gt;")
+    s=s:gsub("\n","<br/>")
+    s=s:gsub("\"","&quot;")
+    s=s:gsub("(% +)", function(c) return " "..("&nbsp;"):rep(#c-1) end)
+    return s
+end
+
 return {
     wrapper = wrapper,
     chunks = chunks,
     simpleCipher = simpleCipher,
+    simpleHash = simpleHash,
     formatChunk = formatChunk,
+    contentOf = contentOf,
+    sanitizeHTML = sanitizeHTML,
+    lines = lines
 }

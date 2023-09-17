@@ -71,6 +71,7 @@ format:
       - ./filters/sequent-deductions.lua
       - ./filters/derivations.lua
       - ./filters/translate.lua
+      - ./filters/qualitative.lua
     theme: cosmo
     include-in-header:
       text: |

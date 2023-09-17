@@ -34,7 +34,7 @@ return {
                             newOpts["data-carnap-" .. k] = v
                         end
 
-                        table.insert(problems, exercises.wrapper({}, chunks[1].label, pandoc.Div({},newOpts)))
+                        table.insert(problems, exercises.wrapper({}, chunk.label, pandoc.Div({},newOpts)))
                     end
                     return pandoc.Div(problems)
                 else return elem
