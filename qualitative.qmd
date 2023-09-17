@@ -160,7 +160,7 @@ So, for example, one can write:
 
     ```{.QualitativeProblem .MultipleChoice options="check" content-format="html"}
     1. "Truth" is:
-    | a <b>propery</b> of propositions
+    | a <b>property</b> of propositions
     | a logical <b>object</b>
     | *A five-letter word
     ```
@@ -169,7 +169,7 @@ to generate
 
 ```{.QualitativeProblem .MultipleChoice options="check" content-format="html"}
 1. "Truth" is:
-| a <b>propery</b> of propositions
+| a <b>property</b> of propositions
 | a logical <b>object</b>
 | *A five-letter word
 ```
