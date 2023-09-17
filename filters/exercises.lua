@@ -101,6 +101,7 @@ local function sanitizeHTML(s)
     s=s:gsub("%>","&gt;")
     s=s:gsub("\n","<br/>")
     s=s:gsub("\"","&quot;")
+    s=s:gsub("\'","&apos;")
     s=s:gsub("(% +)", function(c) return " "..("&nbsp;"):rep(#c-1) end)
     return s
 end
