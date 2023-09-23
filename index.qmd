@@ -2,15 +2,4 @@
 
 This is a guide to using Carnap for teaching and learning logic. 
 
-Here's an example of what Carnap can do:
-
-<carnap-elt data-carnap-type="proofchecker"
-data-carnap-goal=":|-:((P->Q)->P)->P"
-data-carnap-submission="none"
-data-carnap-system="prop"
-data-carnap-guides="montague"
-data-carnap-options="font">
-    Show ((P -> Q)-> P) -> P
-</carnap-elt>
-
 It's still very much a work in progress. Please consider contributing!
