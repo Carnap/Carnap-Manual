@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" ,="" type="text/css" href="https://carnap.io/static/css/tree.css">
 <link type="text/css" href="https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.css" rel="stylesheet">
 <!-- ↓ override bootstrap to prevent visual glitches -->
-<style type="text/css"> svg { vertical-align: unset } </style>
+<style type="text/css"> svg { vertical-align: unset } .exercise { margin-bottom: 10pt }</style>
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0"></script>
 <script src="https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.js"></script>
@@ -440,7 +440,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-Ex1" class="exercise">
 <span>Ex1</span>
-<div data-carnap-type="proofchecker" data-carnap-goal="A \/ ~(B \/ C) :|-: (A \/ ~C) /\ (A \/ ~B)" data-carnap-system="zachPropEq" data-carnap-submission="saveAs:Ex1">A \/ ~(B \/ C) :PR
+<div data-carnap-system="zachPropEq" data-carnap-type="proofchecker" data-carnap-goal="A \/ ~(B \/ C) :|-: (A \/ ~C) /\ (A \/ ~B)" data-carnap-submission="saveAs:Ex1">A \/ ~(B \/ C) :PR
 A \/ ~(C \/ B) :Comm
 A \/ (~C /\ ~B) :DeM
 (A \/ ~C) /\ (A \/ ~B) :Dist</div>
@@ -605,7 +605,7 @@ Ex1 A \/ ~(B \/ C) :|-:
 <div>
 <div id="exercise-Playground" class="exercise">
 <span>Playground</span>
-<div data-carnap-type="proofchecker" data-carnap-system="zachPropEq"></div>
+<div data-carnap-system="zachPropEq" data-carnap-type="proofchecker"></div>
 </div>
 </div>
 <p>The available tests are the same as for <a href="translations.md#translation-tests">translation exercises</a>, and can be combined. If combined, multiple tests have to be separated by spaces. Tests also work on playgrounds.</p>
@@ -785,7 +785,7 @@ Ex2 ~(Ax P(x) &lt;-&gt; Ey Q(y)) :|-:
 <div>
 <div id="exercise-Ex2" class="exercise">
 <span>Ex2</span>
-<div data-carnap-type="proofchecker" data-carnap-system="zachFOLEq" data-carnap-submission="saveAs:Ex2" data-carnap-feedback="manual" data-carnap-goal="~(Ax P(x) <-> Ey Q(y)) :|-: " data-carnap-tests="PNF" data-carnap-options="resize">~(Ax P(x) &lt;-&gt; Ey Q(y)) :PR
+<div data-carnap-type="proofchecker" data-carnap-system="zachFOLEq" data-carnap-submission="saveAs:Ex2" data-carnap-options="resize" data-carnap-feedback="manual" data-carnap-goal="~(Ax P(x) <-> Ey Q(y)) :|-: " data-carnap-tests="PNF">~(Ax P(x) &lt;-&gt; Ey Q(y)) :PR
 ~((Ax P(x) -&gt; Ey Q(y)) /\ (Ey Q(y) -&gt; Ax P(x))) :Bicond
 ~(Ax P(x) -&gt; Ey Q(y)) \/ ~(Ey Q(y) -&gt; Ax P(x)) :DeM
 ~(Ax P(x) -&gt; Ey Q(y)) \/ ~Ay( Q(y) -&gt; Ax P(x)) :QSA

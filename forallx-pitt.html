@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" ,="" type="text/css" href="https://carnap.io/static/css/tree.css">
 <link type="text/css" href="https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.css" rel="stylesheet">
 <!-- ↓ override bootstrap to prevent visual glitches -->
-<style type="text/css"> svg { vertical-align: unset } </style>
+<style type="text/css"> svg { vertical-align: unset } .exercise { margin-bottom: 10pt }</style>
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0"></script>
 <script src="https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.js"></script>
@@ -436,7 +436,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-Ex" class="exercise">
 <span>Ex</span>
-<div data-carnap-goal=":|-: (A \/ B) -> (B \/ A)" data-carnap-init="now" data-carnap-submission="saveAs:Ex" data-carnap-options="render resize fonts" data-carnap-type="proofchecker" data-carnap-system="gallowSL">   A \/ B:AS
+<div data-carnap-type="proofchecker" data-carnap-goal=":|-: (A \/ B) -> (B \/ A)" data-carnap-options="render resize fonts" data-carnap-init="now" data-carnap-system="gallowSL" data-carnap-submission="saveAs:Ex">   A \/ B:AS
       A:AS
       B \/ A:\/I 2
    --
@@ -450,7 +450,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-Playground" class="exercise">
 <span>Playground</span>
-<div data-carnap-init="now" data-carnap-system="gallowSLPlus" data-carnap-type="proofchecker" data-carnap-options="resize fonts" data-carnap-guides="fitch">   A \/ B:AS
+<div data-carnap-type="proofchecker" data-carnap-options="resize fonts" data-carnap-init="now" data-carnap-guides="fitch" data-carnap-system="gallowSLPlus">   A \/ B:AS
       A:AS
       B \/ A:\/I 2
    --
@@ -464,7 +464,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-Playground" class="exercise">
 <span>Playground</span>
-<div data-carnap-init="now" data-carnap-system="gallowPL" data-carnap-type="proofchecker" data-carnap-options="resize fonts" data-carnap-guides="indent">   A \/ B:AS
+<div data-carnap-type="proofchecker" data-carnap-options="resize fonts" data-carnap-init="now" data-carnap-guides="indent" data-carnap-system="gallowPL">   A \/ B:AS
       A:AS
       B \/ A:\/I 2
    --

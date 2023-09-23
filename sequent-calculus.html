@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" ,="" type="text/css" href="https://carnap.io/static/css/tree.css">
 <link type="text/css" href="https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.css" rel="stylesheet">
 <!-- ↓ override bootstrap to prevent visual glitches -->
-<style type="text/css"> svg { vertical-align: unset } </style>
+<style type="text/css"> svg { vertical-align: unset } .exercise { margin-bottom: 10pt }</style>
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0"></script>
 <script src="https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.js"></script>
@@ -428,7 +428,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-1.1" class="exercise">
 <span>1.1</span>
-<div data-carnap-type="sequentchecker" data-carnap-system="propLK" data-carnap-submission="saveAs:1.1" data-carnap-goal="P->Q, Q->R :|-: P->R">
+<div data-carnap-submission="saveAs:1.1" data-carnap-system="propLK" data-carnap-type="sequentchecker" data-carnap-goal="P->Q, Q->R :|-: P->R">
 
 </div>
 </div>
@@ -438,7 +438,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-1.2" class="exercise">
 <span>1.2</span>
-<div data-carnap-type="sequentchecker" data-carnap-init="now" data-carnap-options="displayJSON" data-carnap-system="propLK" data-carnap-submission="saveAs:1.2" data-carnap-goal="P, P->Q :|-: Q">
+<div data-carnap-system="propLK" data-carnap-type="sequentchecker" data-carnap-options="displayJSON" data-carnap-goal="P, P->Q :|-: Q" data-carnap-init="now" data-carnap-submission="saveAs:1.2">
 {"ident":11,"label":"P-&gt;Q,P:|-:Q","rule":"-&gt;L","forest":[{"ident":12,"label":"Q,P:|-:Q","rule":"Cut","forest":[{"ident":13,"label":"R,P,Q:|-:Q","rule":"XL","forest":[{"ident":58,"label":"Q,P,R:|-:Q","rule":"WL","forest":[{"ident":59,"label":"Q:|-:Q","rule":"Ax","forest":[{"ident":14,"label":"","rule":"","forest":[]}]}]}]},{"ident":14,"label":"Q,P:|-:Q,R","rule":"XR","forest":[{"ident":57,"label":"Q,P:|-:R,Q","rule":"WR","forest":[{"ident":10,"label":"Q,P:|-:Q","rule":"WL","forest":[{"ident":12,"label":"Q:|-:Q","rule":"Ax","forest":[{"ident":13,"label":"","rule":"","forest":[]}]}]}]}]}]},{"ident":15,"label":"P:|-:Q,P","rule":"WR","forest":[{"ident":16,"label":"P:|-:P","rule":"Ax","forest":[{"ident":11,"label":"","rule":"","forest":[]}]}]}]}
 </div>
 </div>
@@ -652,7 +652,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-Playground" class="exercise">
 <span>Playground</span>
-<div data-carnap-type="sequentchecker" data-carnap-init="now" data-carnap-system="propLK" data-carnap-options="displayJSON">
+<div data-carnap-options="displayJSON" data-carnap-system="propLK" data-carnap-type="sequentchecker" data-carnap-init="now">
 {"ident":11,"label":"P-&gt;Q,P:|-:Q","rule":"-&gt;L","forest":[{"ident":12,"label":"Q,P:|-:Q","rule":"Cut","forest":[{"ident":13,"label":"R,P,Q:|-:Q","rule":"XL","forest":[{"ident":58,"label":"Q,P,R:|-:Q","rule":"WL","forest":[{"ident":59,"label":"Q:|-:Q","rule":"Ax","forest":[{"ident":14,"label":"","rule":"","forest":[]}]}]}]},{"ident":14,"label":"Q,P:|-:Q,R","rule":"XR","forest":[{"ident":57,"label":"Q,P:|-:R,Q","rule":"WR","forest":[{"ident":10,"label":"Q,P:|-:Q","rule":"WL","forest":[{"ident":12,"label":"Q:|-:Q","rule":"Ax","forest":[{"ident":13,"label":"","rule":"","forest":[]}]}]}]}]}]},{"ident":15,"label":"P:|-:Q,P","rule":"WR","forest":[{"ident":16,"label":"P:|-:P","rule":"Ax","forest":[{"ident":11,"label":"","rule":"","forest":[]}]}]}]}
 </div>
 </div>
@@ -661,7 +661,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-Playground" class="exercise">
 <span>Playground</span>
-<div data-carnap-type="sequentchecker" data-carnap-init="now" data-carnap-system="propLK" data-carnap-options="displayJSON">
+<div data-carnap-options="displayJSON" data-carnap-system="propLK" data-carnap-type="sequentchecker" data-carnap-init="now">
 
 </div>
 </div>

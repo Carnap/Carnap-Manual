@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "The Carnap Manual",
     "section": "",
-    "text": "Preface\nThis is a guide to using Carnap for teaching and learning logic.\nHere’s an example of what Carnap can do:\n Show ((P -&gt; Q)-&gt; P) -&gt; P \nIt’s still very much a work in progress. Please consider contributing!"
+    "text": "Preface\nThis is a guide to using Carnap for teaching and learning logic.\nIt’s still very much a work in progress. Please consider contributing!"
   },
   {
     "objectID": "quickstart.html#get-an-account",
