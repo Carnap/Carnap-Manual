@@ -440,7 +440,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-Ex1" class="exercise">
 <span>Ex1</span>
-<div data-carnap-system="zachPropEq" data-carnap-type="proofchecker" data-carnap-goal="A \/ ~(B \/ C) :|-: (A \/ ~C) /\ (A \/ ~B)" data-carnap-submission="saveAs:Ex1">A \/ ~(B \/ C) :PR
+<div data-carnap-system="zachPropEq" data-carnap-goal="A \/ ~(B \/ C) :|-: (A \/ ~C) /\ (A \/ ~B)" data-carnap-submission="saveAs:Ex1" data-carnap-type="proofchecker">A \/ ~(B \/ C) :PR
 A \/ ~(C \/ B) :Comm
 A \/ (~C /\ ~B) :DeM
 (A \/ ~C) /\ (A \/ ~B) :Dist</div>
@@ -596,7 +596,7 @@ Ex1 A \/ ~(B \/ C) :|-:
 <div>
 <div id="exercise-Ex1" class="exercise">
 <span>Ex1</span>
-<div data-carnap-type="proofchecker" data-carnap-system="zachPropEq" data-carnap-submission="saveAs:Ex1" data-carnap-goal="A \/ ~(B \/ C) :|-: " data-carnap-tests="CNF">A \/ ~(B \/ C) :PR</div>
+<div data-carnap-tests="CNF" data-carnap-type="proofchecker" data-carnap-goal="A \/ ~(B \/ C) :|-: " data-carnap-submission="saveAs:Ex1" data-carnap-system="zachPropEq">A \/ ~(B \/ C) :PR</div>
 </div>
 </div>
 <p>A proof playground is also supported.</p>
@@ -785,7 +785,7 @@ Ex2 ~(Ax P(x) &lt;-&gt; Ey Q(y)) :|-:
 <div>
 <div id="exercise-Ex2" class="exercise">
 <span>Ex2</span>
-<div data-carnap-type="proofchecker" data-carnap-system="zachFOLEq" data-carnap-submission="saveAs:Ex2" data-carnap-options="resize" data-carnap-feedback="manual" data-carnap-goal="~(Ax P(x) <-> Ey Q(y)) :|-: " data-carnap-tests="PNF">~(Ax P(x) &lt;-&gt; Ey Q(y)) :PR
+<div data-carnap-tests="PNF" data-carnap-submission="saveAs:Ex2" data-carnap-type="proofchecker" data-carnap-options="resize" data-carnap-goal="~(Ax P(x) <-> Ey Q(y)) :|-: " data-carnap-feedback="manual" data-carnap-system="zachFOLEq">~(Ax P(x) &lt;-&gt; Ey Q(y)) :PR
 ~((Ax P(x) -&gt; Ey Q(y)) /\ (Ey Q(y) -&gt; Ax P(x))) :Bicond
 ~(Ax P(x) -&gt; Ey Q(y)) \/ ~(Ey Q(y) -&gt; Ax P(x)) :DeM
 ~(Ax P(x) -&gt; Ey Q(y)) \/ ~Ay( Q(y) -&gt; Ax P(x)) :QSA
