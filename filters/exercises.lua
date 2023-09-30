@@ -112,7 +112,6 @@ return {
     simpleCipher = simpleCipher,
     simpleHash = simpleHash,
     formatChunk = formatChunk,
-    contentOf = contentOf,
     sanitizeHTML = sanitizeHTML,
     lines = lines
 }
