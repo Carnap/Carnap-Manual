@@ -30,9 +30,7 @@ return {
                             ["data-carnap-problem"] = target,
                             ["data-carnap-submission"] = "saveAs:"..chunk.label
                         }
-                        for k,v in pairs(elem.attributes) do
-                            newOpts["data-carnap-" .. k] = v
-                        end
+                        exercises.transferAttributes(elem.attributes, newOpts)
 
                         table.insert(problems, exercises.wrapper({}, chunk.label, pandoc.Div({},newOpts)))
                     end

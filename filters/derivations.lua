@@ -123,12 +123,10 @@ return {
                 local problems = {}
 
                 local newOpts = { ["data-carnap-type"] = "proofchecker", }
-                for k,v in pairs(systems[config] or {}) do
-                    newOpts["data-carnap-" .. k] = v
-                end
-                for k,v in pairs(elem.attributes) do
-                    newOpts["data-carnap-" .. k] = v
-                end
+
+                exercises.transferAttributes(systems[config] or {}, newOpts)
+                exercises.transferAttributes(elem.attributes, newOpts)
+
                 local optstring = ""
                 for k, v in pairs(newOpts) do
                     optstring = optstring .. k .. "=\"" .. v .. "\" "
@@ -147,12 +145,10 @@ return {
                         ["data-carnap-goal"] = chunk.problem,
                         ["data-carnap-submission"] = "saveAs:"..chunk.label,
                     }
-                    for k,v in pairs(systems[config] or {}) do
-                        newOpts["data-carnap-" .. k] = v
-                    end
-                    for k,v in pairs(elem.attributes) do
-                        newOpts["data-carnap-" .. k] = v
-                    end
+
+                    exercises.transferAttributes(systems[config] or {}, newOpts)
+                    exercises.transferAttributes(elem.attributes, newOpts)
+
                     local optstring = ""
                     for k, v in pairs(newOpts) do
                         optstring = optstring .. k .. "=\"" .. v .. "\" "

@@ -50,9 +50,8 @@ return {
                             ["data-carnap-goal"] = exercises.sanitizeHTML(chunk.problem),
                             ["data-carnap-submission"] = "saveAs:"..chunk.label
                         }
-                        for k,v in pairs(elem.attributes) do
-                            newOpts["data-carnap-" .. k] = v
-                        end
+
+                        exercises.transferAttributes(elem.attributes, newOpts)
 
                         local optstring = ""
                         for k, v in pairs(newOpts) do
@@ -83,9 +82,8 @@ return {
                             ["data-carnap-submission"] = "saveAs:"..chunk.label
                         }
 
-                        for k,v in pairs(elem.attributes) do
-                            newOpts["data-carnap-" .. k] = v
-                        end
+                        exercises.transferAttributes(elem.attributes, newOpts)
+
                         local optstring = ""
                         for k, v in pairs(newOpts) do
                             optstring = optstring .. k .. "=\"" .. v .. "\" "
@@ -112,9 +110,8 @@ return {
                             ["data-carnap-submission"] = "saveAs:"..chunk.label,
                         }
 
-                        for k,v in pairs(elem.attributes) do
-                            newOpts["data-carnap-" .. k] = v
-                        end
+                        exercises.transferAttributes(elem.attributes, newOpts)
+
                         table.insert(problems, exercises.wrapper({}, chunk.label, pandoc.Div(chunk.body,newOpts)))
                     end
                     return pandoc.Div(problems)

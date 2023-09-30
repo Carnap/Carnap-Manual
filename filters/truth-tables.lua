@@ -25,9 +25,8 @@ return {
                             ["data-carnap-submission"] = "saveAs:"..chunk.label
                         }
 
-                        for k,v in pairs(elem.attributes) do
-                            newOpts["data-carnap-" .. k] = v
-                        end
+                        exercises.transferAttributes(elem.attributes, newOpts)
+
                         local body = {}
                         if chunk.body then
                             body = pandoc.Str(chunk.body)

@@ -106,6 +106,12 @@ local function sanitizeHTML(s)
     return s
 end
 
+local function transferAttributes(attrs,new)
+    for k,v in pairs(attrs) do
+        new["data-carnap-" .. k] = v
+    end
+end
+
 return {
     wrapper = wrapper,
     chunks = chunks,
@@ -113,5 +119,6 @@ return {
     simpleHash = simpleHash,
     formatChunk = formatChunk,
     sanitizeHTML = sanitizeHTML,
-    lines = lines
+    lines = lines,
+    transferAttributes = transferAttributes,
 }

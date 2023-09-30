@@ -33,9 +33,9 @@ return {
                     ["data-carnap-type"] = "sequentchecker",
                     ["data-carnap-system"] = system --unnecessary actually, because of next line
                 }
-                for k,v in pairs(elem.attributes) do
-                    newOpts["data-carnap-" .. k] = v
-                end
+
+                exercises.transferAttributes(elem.attributes, newOpts)
+
                 local body = pandoc.Str(contents)
                 table.insert(problems, exercises.wrapper({}, "Playground", pandoc.Div(body,newOpts)))
                 return pandoc.Div(problems)
@@ -46,15 +46,13 @@ return {
                 for _,chunk in ipairs(chunks) do
                     local newOpts = {
                         ["data-carnap-type"] = "sequentchecker",
-                        --shortcircut evaluation with `and`
                         ["data-carnap-goal"] = chunk.problem,
                         ["data-carnap-submission"] = "saveAs:"..chunk.label,
                         ["data-carnap-system"] = system
                     }
 
-                    for k,v in pairs(elem.attributes) do
-                        newOpts["data-carnap-" .. k] = v
-                    end
+                    exercises.transferAttributes(elem.attributes, newOpts)
+
                     local body = {}
                     if chunk.body then
                         body = pandoc.Str(chunk.body)
