@@ -43,6 +43,7 @@ return {
                 exercises.transferAttributes(elem.attributes, newOpts)
 
                 local body = pandoc.Str(contents)
+
                 table.insert(problems, exercises.wrapper({}, "Playground", pandoc.Div(body,newOpts)))
                 return pandoc.Div(problems)
             elseif isTreeDeduction then
@@ -59,10 +60,8 @@ return {
 
                     exercises.transferAttributes(elem.attributes, newOpts)
 
-                    local body = {}
-                    if chunk.body then
-                        body = pandoc.Str(chunk.body)
-                    end
+                    local body = chunk.body and pandoc.Str(chunk.body) or {}
+
                     table.insert(problems, exercises.wrapper({}, chunk.label, pandoc.Div(body,newOpts)))
                 end
                 return pandoc.Div(problems)
