@@ -32,7 +32,12 @@ return {
                         }
                         exercises.transferAttributes(elem.attributes, newOpts)
 
-                        table.insert(problems, exercises.wrapper({}, chunk.label, pandoc.Div({},newOpts)))
+                        local body = {}
+                        if chunk.body then
+                            body = pandoc.Str(chunk.body)
+                        end
+
+                        table.insert(problems, exercises.wrapper({}, chunk.label, pandoc.Div(body ,newOpts)))
                     end
                     return pandoc.Div(problems)
                 else return elem
