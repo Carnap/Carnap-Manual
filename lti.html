@@ -526,12 +526,14 @@ Configuring Brightspace/D2L to use Carnap
 <h2 data-number="24.3" class="anchored" data-anchor-id="step-2---configuring-carnap-to-recognize-your-lms"><span class="header-section-number">24.3</span> Step 2 - Configuring Carnap to recognize your LMS</h2>
 <p>After your LMS is configured to talk to Carnap, it needs to be registered on the Carnap server. For setup with the public Carnap instance at Carnap.io, <a href="mailto:gleachkr@gmail.com">contact Graham</a> with the following details from your LMS:</p>
 <ul>
+<li>Your LTI issuer identifier</li>
 <li>Public JWKs URL</li>
 <li>Authorization Redirect URL</li>
 <li>Client ID</li>
 </ul>
 <p>For example, for a cloud Canvas (production environment), these would be:</p>
 <ul>
+<li>Issuer: <code>https://canvas.instructure.com/</code></li>
 <li>JWK URL: <code>https://canvas.instructure.com/api/lti/security/jwks</code></li>
 <li>Authorization redirect URL: <code>https://canvas.instructure.com/api/lti/authorize_redirect</code></li>
 <li>Client ID: from your LTI developer key</li>
