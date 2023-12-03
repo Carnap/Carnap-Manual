@@ -159,12 +159,14 @@ the Carnap server. For setup with the public Carnap instance at Carnap.io,
 [contact Graham](mailto:gleachkr@gmail.com) with the following details from your
 LMS:
 
+* Your LTI issuer identifier
 * Public JWKs URL
 * Authorization Redirect URL
 * Client ID
 
 For example, for a cloud Canvas (production environment), these would be:
 
+* Issuer: `https://canvas.instructure.com/`
 * JWK URL: `https://canvas.instructure.com/api/lti/security/jwks`
 * Authorization redirect URL: `https://canvas.instructure.com/api/lti/authorize_redirect`
 * Client ID: from your LTI developer key
