@@ -45,7 +45,7 @@ The systems supported are:
 
 ### Sentential logic
 
-For the corresponding proof systems, [see here](logic-book.html).
+For the corresponding proof systems, [see here](logicbook.html).
 
   + Selected with `system="..."`: `LogicBookSD` `LogicBookSDPlus`
   + Sentence letters:`A`...`Z`
