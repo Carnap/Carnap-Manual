@@ -119,6 +119,7 @@ And-Intro.             `∧I`         $φ,ψ$        $φ∧ψ$
 Or-Intro               `∨I`         $φ/ψ$        $φ∨ψ$
 Negation-Elim          `¬E`         $φ,¬φ$       $⊥$
 Explosion              `X`          $⊥$          $ψ$
+Conditional-Elim       `→E`         $φ→ψ,φ$      $ψ$
 Biconditional-Elim     `↔E`         $φ/ψ,φ↔ψ$    $ψ/φ$
 ---------------------- ------------ ------------ ------------
 
