@@ -58,8 +58,6 @@ book:
     logo: ./images/carnap-logo.png
     collapse-level: 1
 
-bibliography: references.bib
-
 format:
   html:
     filters:
@@ -91,6 +89,3 @@ format:
         <script defer src='https://carnap.io/static/ghcjs/allactions/lib.js'></script>
         <script defer src='https://carnap.io/static/ghcjs/allactions/out.js'></script>
         <script defer src='https://carnap.io/static/ghcjs/allactions/runmain.js'></script>
-  pdf:
-    documentclass: scrreprt
-
