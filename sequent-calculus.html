@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 <link type="text/css" href="https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.css" rel="stylesheet">
 <!-- ↓ override bootstrap to prevent visual glitches -->
 <style type="text/css"> svg { vertical-align: unset } .exercise { margin-bottom: 10pt }</style>
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0"></script>
 <script src="https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.js"></script>
 
@@ -436,7 +436,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-1.1" class="exercise">
 <span>1.1</span>
-<div data-carnap-system="propLK" data-carnap-type="sequentchecker" data-carnap-submission="saveAs:1.1" data-carnap-goal="P->Q, Q->R :|-: P->R">
+<div data-carnap-goal="P->Q, Q->R :|-: P->R" data-carnap-submission="saveAs:1.1" data-carnap-type="sequentchecker" data-carnap-system="propLK">
 
 </div>
 </div>
@@ -446,7 +446,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-1.2" class="exercise">
 <span>1.2</span>
-<div data-carnap-submission="saveAs:1.2" data-carnap-init="now" data-carnap-goal="P, P->Q :|-: Q" data-carnap-system="propLK" data-carnap-options="displayJSON" data-carnap-type="sequentchecker">
+<div data-carnap-goal="P, P->Q :|-: Q" data-carnap-submission="saveAs:1.2" data-carnap-init="now" data-carnap-options="displayJSON" data-carnap-type="sequentchecker" data-carnap-system="propLK">
 {"ident":11,"label":"P-&gt;Q,P:|-:Q","rule":"-&gt;L","forest":[{"ident":12,"label":"Q,P:|-:Q","rule":"Cut","forest":[{"ident":13,"label":"R,P,Q:|-:Q","rule":"XL","forest":[{"ident":58,"label":"Q,P,R:|-:Q","rule":"WL","forest":[{"ident":59,"label":"Q:|-:Q","rule":"Ax","forest":[{"ident":14,"label":"","rule":"","forest":[]}]}]}]},{"ident":14,"label":"Q,P:|-:Q,R","rule":"XR","forest":[{"ident":57,"label":"Q,P:|-:R,Q","rule":"WR","forest":[{"ident":10,"label":"Q,P:|-:Q","rule":"WL","forest":[{"ident":12,"label":"Q:|-:Q","rule":"Ax","forest":[{"ident":13,"label":"","rule":"","forest":[]}]}]}]}]}]},{"ident":15,"label":"P:|-:Q,P","rule":"WR","forest":[{"ident":16,"label":"P:|-:P","rule":"Ax","forest":[{"ident":11,"label":"","rule":"","forest":[]}]}]}]}
 </div>
 </div>
@@ -660,7 +660,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-Playground" class="exercise">
 <span>Playground</span>
-<div data-carnap-type="sequentchecker" data-carnap-system="propLK" data-carnap-options="displayJSON" data-carnap-init="now">
+<div data-carnap-options="displayJSON" data-carnap-system="propLK" data-carnap-type="sequentchecker" data-carnap-init="now">
 {"ident":11,"label":"P-&gt;Q,P:|-:Q","rule":"-&gt;L","forest":[{"ident":12,"label":"Q,P:|-:Q","rule":"Cut","forest":[{"ident":13,"label":"R,P,Q:|-:Q","rule":"XL","forest":[{"ident":58,"label":"Q,P,R:|-:Q","rule":"WL","forest":[{"ident":59,"label":"Q:|-:Q","rule":"Ax","forest":[{"ident":14,"label":"","rule":"","forest":[]}]}]}]},{"ident":14,"label":"Q,P:|-:Q,R","rule":"XR","forest":[{"ident":57,"label":"Q,P:|-:R,Q","rule":"WR","forest":[{"ident":10,"label":"Q,P:|-:Q","rule":"WL","forest":[{"ident":12,"label":"Q:|-:Q","rule":"Ax","forest":[{"ident":13,"label":"","rule":"","forest":[]}]}]}]}]}]},{"ident":15,"label":"P:|-:Q,P","rule":"WR","forest":[{"ident":16,"label":"P:|-:P","rule":"Ax","forest":[{"ident":11,"label":"","rule":"","forest":[]}]}]}]}
 </div>
 </div>
@@ -669,7 +669,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-Playground" class="exercise">
 <span>Playground</span>
-<div data-carnap-type="sequentchecker" data-carnap-system="propLK" data-carnap-options="displayJSON" data-carnap-init="now">
+<div data-carnap-options="displayJSON" data-carnap-system="propLK" data-carnap-type="sequentchecker" data-carnap-init="now">
 
 </div>
 </div>

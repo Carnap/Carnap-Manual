@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 <link type="text/css" href="https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.css" rel="stylesheet">
 <!-- ↓ override bootstrap to prevent visual glitches -->
 <style type="text/css"> svg { vertical-align: unset } .exercise { margin-bottom: 10pt }</style>
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0"></script>
 <script src="https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.js"></script>
 
@@ -478,7 +478,7 @@ window.Quarto = {
 <div>
 <div id="exercise-Ex" class="exercise">
 <span>Ex</span>
-<div data-carnap-init="now" data-carnap-type="proofchecker" data-carnap-system="magnusSL" data-carnap-options="render resize fonts" data-carnap-goal=":|-: (A \/ B) -> (B \/ A)" data-carnap-submission="saveAs:Ex">   A \/ B:AS
+<div data-carnap-system="magnusSL" data-carnap-goal=":|-: (A \/ B) -> (B \/ A)" data-carnap-options="render resize fonts" data-carnap-submission="saveAs:Ex" data-carnap-type="proofchecker" data-carnap-init="now">   A \/ B:AS
       A:AS
       B \/ A:\/I 2
    --
@@ -492,7 +492,7 @@ window.Quarto = {
 <div>
 <div id="exercise-Playground" class="exercise">
 <span>Playground</span>
-<div data-carnap-guides="fitch" data-carnap-options="render resize fonts" data-carnap-system="magnusSL" data-carnap-init="now" data-carnap-type="proofchecker">   A \/ B:AS
+<div data-carnap-system="magnusSL" data-carnap-options="render resize fonts" data-carnap-type="proofchecker" data-carnap-init="now" data-carnap-guides="fitch">   A \/ B:AS
       A:AS
       B \/ A:\/I 2
    --
@@ -506,7 +506,7 @@ window.Quarto = {
 <div>
 <div id="exercise-Playground" class="exercise">
 <span>Playground</span>
-<div data-carnap-system="magnusSL" data-carnap-init="now" data-carnap-options="render resize fonts" data-carnap-type="proofchecker"></div>
+<div data-carnap-type="proofchecker" data-carnap-init="now" data-carnap-options="render resize fonts" data-carnap-system="magnusSL"></div>
 </div>
 </div>
 </section>

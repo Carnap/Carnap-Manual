@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 <link type="text/css" href="https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.css" rel="stylesheet">
 <!-- ↓ override bootstrap to prevent visual glitches -->
 <style type="text/css"> svg { vertical-align: unset } .exercise { margin-bottom: 10pt }</style>
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0"></script>
 <script src="https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.js"></script>
 
@@ -469,7 +469,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-1.1" class="exercise">
 <span>1.1</span>
-<div data-carnap-type="treedeductionchecker" data-carnap-system="propNK" data-carnap-goal="P\/Q, ~P :|-: Q " data-carnap-submission="saveAs:1.1">
+<div data-carnap-system="propNK" data-carnap-submission="saveAs:1.1" data-carnap-goal="P\/Q, ~P :|-: Q " data-carnap-type="treedeductionchecker">
 
 </div>
 </div>
@@ -480,7 +480,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-1.2" class="exercise">
 <span>1.2</span>
-<div data-carnap-goal=":|-: (P->Q)->((R->P)->(R->Q))" data-carnap-submission="saveAs:1.2" data-carnap-type="treedeductionchecker" data-carnap-system="propNK" data-carnap-init="now">
+<div data-carnap-submission="saveAs:1.2" data-carnap-init="now" data-carnap-system="propNK" data-carnap-goal=":|-: (P->Q)->((R->P)->(R->Q))" data-carnap-type="treedeductionchecker">
 {
    "label": "(P-&gt;Q)-&gt;((R-&gt;P)-&gt;(R-&gt;Q))",
    "rule": "-&gt;I(1)",
@@ -772,7 +772,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-Playground" class="exercise">
 <span>Playground</span>
-<div data-carnap-type="treedeductionchecker" data-carnap-system="openLogicArithNK" data-carnap-init="now" data-carnap-options="displayJSON">
+<div data-carnap-options="displayJSON" data-carnap-type="treedeductionchecker" data-carnap-init="now" data-carnap-system="openLogicArithNK">
 {"ident":7,"label":"Ax ~ x &lt; 0","rule":"AI","forest":[{"ident":11,"label":"~ a &lt; 0","rule":"~I 1","forest":[{"ident":11,"label":"_|_","rule":"~E","forest":[{"ident":12,"label":"Ez z' + a = 0","rule":"-&gt;E","forest":[{"ident":14,"label":"a &lt; 0","rule":"1","forest":[{"ident":51,"label":"","rule":"","forest":[]}]},{"ident":15,"label":"a &lt; 0 -&gt; Ez z'+a = 0","rule":"-&gt;I 2","forest":[{"ident":52,"label":"Ez z'+a = 0","rule":"&lt;-&gt;E","forest":[{"ident":52,"label":"a &lt; 0 &lt;-&gt; Ez z'+a = 0","rule":"AE","forest":[{"ident":53,"label":"Ay(a &lt; y &lt;-&gt; Ez z'+a = y)","rule":"AE","forest":[{"ident":54,"label":"AxAy(x &lt; y &lt;-&gt; Ez z'+x = y)","rule":"","forest":[]}]}]},{"ident":62,"label":"a &lt; 0","rule":"2","forest":[{"ident":63,"label":"","rule":"","forest":[]}]}]}]}]},{"ident":13,"label":"~Ez z' + a = 0","rule":"AE","forest":[{"ident":64,"label":"Ax~Ez z' + x = 0","rule":"","forest":[]}]}]}]}]}
 </div>
 </div>
@@ -817,7 +817,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-Playground" class="exercise">
 <span>Playground</span>
-<div data-carnap-type="treedeductionchecker" data-carnap-system="openLogicExArithNK" data-carnap-axiom-flip="'P('a*'b) :|-: 'P('b*'a); 'P('a+'b) :|-: 'P('b+'a)" data-carnap-init="now">
+<div data-carnap-axiom-flip="'P('a*'b) :|-: 'P('b*'a); 'P('a+'b) :|-: 'P('b+'a)" data-carnap-type="treedeductionchecker" data-carnap-init="now" data-carnap-system="openLogicExArithNK">
 { "ident": 13, "label": "a+b=c", "rule": "Ax-flip", "forest": [
     { "ident": 15, "label": "b+a=c", "rule": "", "forest": [] }
 ]}
@@ -831,7 +831,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-1.1" class="exercise">
 <span>1.1</span>
-<div data-carnap-goal="P\/Q, ~P :|-: Q" data-carnap-submission="saveAs:1.1" data-carnap-type="treedeductionchecker" data-carnap-system="propNK" data-carnap-init="now" data-carnap-options="displayJSON">
+<div data-carnap-submission="saveAs:1.1" data-carnap-init="now" data-carnap-system="propNK" data-carnap-options="displayJSON" data-carnap-goal="P\/Q, ~P :|-: Q" data-carnap-type="treedeductionchecker">
 {"ident":12,"label":"Q","rule":"\\/E", "forest":[
    {"ident":13,"label":"P\\/Q","rule":"", "forest":[]},
    {"ident":14,"label":"Q","rule":"(1)",  "forest":[
@@ -883,7 +883,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div id="exercise-Playground" class="exercise">
 <span>Playground</span>
-<div data-carnap-type="treedeductionchecker" data-carnap-system="propNK" data-carnap-init="now" data-carnap-options="displayJSON">
+<div data-carnap-options="displayJSON" data-carnap-type="treedeductionchecker" data-carnap-init="now" data-carnap-system="propNK">
 {"ident":12,"label":"Q","rule":"\\/E (1) (2)","forest":[
    {"ident":13,"label":"P\\/Q","rule":"","forest":[]},
    {"ident":14,"label":"Q","rule":"(1)","forest":[

@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 <link type="text/css" href="https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.css" rel="stylesheet">
 <!-- ↓ override bootstrap to prevent visual glitches -->
 <style type="text/css"> svg { vertical-align: unset } .exercise { margin-bottom: 10pt }</style>
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0"></script>
 <script src="https://cdn.jsdelivr.net/gh/gleachkr/ProofJS@gh-pages/proof.js"></script>
 
@@ -475,7 +475,7 @@ window.Quarto = {
 <div>
 <div id="exercise-Ex1" class="exercise">
 <span>Ex1</span>
-<div data-carnap-type="proofchecker" data-carnap-system="zachPropEq" data-carnap-goal="A \/ ~(B \/ C) :|-: (A \/ ~C) /\ (A \/ ~B)" data-carnap-submission="saveAs:Ex1">A \/ ~(B \/ C) :PR
+<div data-carnap-system="zachPropEq" data-carnap-submission="saveAs:Ex1" data-carnap-goal="A \/ ~(B \/ C) :|-: (A \/ ~C) /\ (A \/ ~B)" data-carnap-type="proofchecker">A \/ ~(B \/ C) :PR
 A \/ ~(C \/ B) :Comm
 A \/ (~C /\ ~B) :DeM
 (A \/ ~C) /\ (A \/ ~B) :Dist</div>
@@ -631,7 +631,7 @@ Ex1 A \/ ~(B \/ C) :|-:
 <div>
 <div id="exercise-Ex1" class="exercise">
 <span>Ex1</span>
-<div data-carnap-system="zachPropEq" data-carnap-type="proofchecker" data-carnap-tests="CNF" data-carnap-goal="A \/ ~(B \/ C) :|-: " data-carnap-submission="saveAs:Ex1">A \/ ~(B \/ C) :PR</div>
+<div data-carnap-system="zachPropEq" data-carnap-tests="CNF" data-carnap-type="proofchecker" data-carnap-submission="saveAs:Ex1" data-carnap-goal="A \/ ~(B \/ C) :|-: ">A \/ ~(B \/ C) :PR</div>
 </div>
 </div>
 <p>A proof playground is also supported.</p>
@@ -640,7 +640,7 @@ Ex1 A \/ ~(B \/ C) :|-:
 <div>
 <div id="exercise-Playground" class="exercise">
 <span>Playground</span>
-<div data-carnap-type="proofchecker" data-carnap-system="zachPropEq"></div>
+<div data-carnap-system="zachPropEq" data-carnap-type="proofchecker"></div>
 </div>
 </div>
 <p>The available tests are the same as for <a href="translations.md#translation-tests">translation exercises</a>, and can be combined. If combined, multiple tests have to be separated by spaces. Tests also work on playgrounds.</p>
@@ -820,7 +820,7 @@ Ex2 ~(Ax P(x) &lt;-&gt; Ey Q(y)) :|-:
 <div>
 <div id="exercise-Ex2" class="exercise">
 <span>Ex2</span>
-<div data-carnap-tests="PNF" data-carnap-system="zachFOLEq" data-carnap-feedback="manual" data-carnap-type="proofchecker" data-carnap-options="resize" data-carnap-goal="~(Ax P(x) <-> Ey Q(y)) :|-: " data-carnap-submission="saveAs:Ex2">~(Ax P(x) &lt;-&gt; Ey Q(y)) :PR
+<div data-carnap-options="resize" data-carnap-type="proofchecker" data-carnap-system="zachFOLEq" data-carnap-tests="PNF" data-carnap-feedback="manual" data-carnap-submission="saveAs:Ex2" data-carnap-goal="~(Ax P(x) <-> Ey Q(y)) :|-: ">~(Ax P(x) &lt;-&gt; Ey Q(y)) :PR
 ~((Ax P(x) -&gt; Ey Q(y)) /\ (Ey Q(y) -&gt; Ax P(x))) :Bicond
 ~(Ax P(x) -&gt; Ey Q(y)) \/ ~(Ey Q(y) -&gt; Ax P(x)) :DeM
 ~(Ax P(x) -&gt; Ey Q(y)) \/ ~Ay( Q(y) -&gt; Ax P(x)) :QSA
