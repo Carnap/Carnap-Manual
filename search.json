@@ -421,7 +421,7 @@
     "href": "modelchecker.html#advanced-usage",
     "title": "9  Countermodels",
     "section": "9.4 Advanced Usage",
-    "text": "9.4 Advanced Usage\n\n9.4.0.1 Options\nIn addition to setting a custom point value or turning off submission by adding points=VALUE and submission=\"none\", several other options are available for countermodels:\n\n\n\n\n\nName\nEffect\n\n\n\n\nnocheck\nDisables the “check” button\n\n\nexam\nAllows for submission of work which is incomplete or incorrect\n\n\nstrictGivens\nMakes givens immutable (see below)\n\n\ndouble-turnstile\nDisplays a double turnstile (like so ⊨) rather than the single turnstile\n\n\nnegated-double-turnstile\nDisplays a negated double turnstile (like so ⊭) rather than the single turnstile\n\n\n\n\n\n9.4.0.2 Counterexamples\nThere are also a number of options that affect what counts as a successful countermodel. these are set using the counterexample-to attribute. The options are:\n\n\n\n\nName\nCounterexample is\n\n\n\n\nvalidity\na situation in which all formulas are false\n\n\ntautology\nSame as validity\n\n\nequivalence\na situation in which two formulas have different truth values\n\n\ninconsistency\na situation in which all formulas are true\n\n\n\n\nIn the case of simple countermodels, these apply to all formulas. In the case of validity countermodels, a successful countermodel is a situation in which the formulas to the left of the turnstile are all true, and the ones to the right of the turnstile have the counterexample property. Similarly in the case of a constraint countermodel problem—all the constraints must be true, and the other formulas must have the counterexample property.\n\n\n9.4.0.3 Systems\nThe way that formulas are parsed and displayed can also be customized. This is done by setting the system attribute to indicate which formal system you are drawing your syntax from. So for example,\n~~~{.CounterModeler .Simple  system=\"LogicBookPD\"}\n1.5 (Ax)(Ax-&gt;Bx)\n~~~\nwill generate:\n\n\n1.5\n\n\n\n\n\nThe available systems are firstOrder montagueQC magnusQL thomasBolducAndZachFOL thomasBolducAndZachFOL2019 thomasBolducAndZachFOLPlus LogicBookPD LogicBookPDPlus hausmanPL howardSnyderPL ichikawaJenkinsQL hardegreePL goldfarbAltND goldfarbNDPlus and goldfarbAltNDPlus.\n\n\n9.4.0.4 Givens\nIt is also possible to give a “partial solution” to a countermodeling problem, in which the model is partly filled in, and the student needs either to complete it or correct it. To pre-populate models with “givens” in this way, write each field you want filled in, preceded by the bar character | and followed by a colon and what you want it filled in with, like this:\n```{.CounterModeler .Simple}\n1.1 AxF(x), ExG(x)\n| Domain : 0,1,2\n| F(_) : 1,2\n| a : 1\n```\nWhich will produce:\n\n\n1.1\n\n\n\n\n\nThe field-names for the givens should match how the field-names would be displayed in the exercise.\nOrdinarily, givens function as hints. However, you can make it impossible for students to change them (thereby turning them into requirements) by adding the strictGivens option to your problem. Use this, for instance, to require students to use a specific domain, or to prevent them from making universal sentences vacuously true.",
+    "text": "9.4 Advanced Usage\n\n9.4.0.1 Options\nIn addition to setting a custom point value or turning off submission by adding points=VALUE and submission=\"none\", several other options are available for countermodels:\n\n\n\n\nName\nEffect\n\n\n\n\nnocheck\nDisables the “check” button\n\n\nexam\nAllows for submission of work which is incomplete or incorrect\n\n\nstrictGivens\nMakes givens immutable (see below)\n\n\ndouble-turnstile\nDisplays a double turnstile (like so ⊨) rather than the single turnstile\n\n\nnegated-double-turnstile\nDisplays a negated double turnstile (like so ⊭) rather than the single turnstile\n\n\n\n\n9.4.0.2 Counterexamples\nThere are also a number of options that affect what counts as a successful countermodel. these are set using the counterexample-to attribute. The options are:\n\n\n\n\nName\nCounterexample is\n\n\n\n\nvalidity\na situation in which all formulas are false\n\n\ntautology\nSame as validity\n\n\nequivalence\na situation in which two formulas have different truth values\n\n\ninconsistency\na situation in which all formulas are true\n\n\n\n\nIn the case of simple countermodels, these apply to all formulas. In the case of validity countermodels, a successful countermodel is a situation in which the formulas to the left of the turnstile are all true, and the ones to the right of the turnstile have the counterexample property. Similarly in the case of a constraint countermodel problem—all the constraints must be true, and the other formulas must have the counterexample property.\n\n\n9.4.0.3 Systems\nThe way that formulas are parsed and displayed can also be customized. This is done by setting the system attribute to indicate which formal system you are drawing your syntax from. So for example,\n~~~{.CounterModeler .Simple  system=\"LogicBookPD\"}\n1.5 (Ax)(Ax-&gt;Bx)\n~~~\nwill generate:\n\n\n1.5\n\n\n\n\n\nThe available systems are firstOrder montagueQC magnusQL thomasBolducAndZachFOL thomasBolducAndZachFOL2019 thomasBolducAndZachFOLPlus LogicBookPD LogicBookPDPlus hausmanPL howardSnyderPL ichikawaJenkinsQL hardegreePL goldfarbAltND goldfarbNDPlus and goldfarbAltNDPlus.\n\n\n9.4.0.4 Givens\nIt is also possible to give a “partial solution” to a countermodeling problem, in which the model is partly filled in, and the student needs either to complete it or correct it. To pre-populate models with “givens” in this way, write each field you want filled in, preceded by the bar character | and followed by a colon and what you want it filled in with, like this:\n```{.CounterModeler .Simple}\n1.1 AxF(x), ExG(x)\n| Domain : 0,1,2\n| F(_) : 1,2\n| a : 1\n```\nWhich will produce:\n\n\n1.1\n\n\n\n\n\nThe field-names for the givens should match how the field-names would be displayed in the exercise.\nOrdinarily, givens function as hints. However, you can make it impossible for students to change them (thereby turning them into requirements) by adding the strictGivens option to your problem. Use this, for instance, to require students to use a specific domain, or to prevent them from making universal sentences vacuously true.",
     "crumbs": [
       "Exercises",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Countermodels</span>"
@@ -656,186 +656,6 @@
     "crumbs": [
       "Exercises",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Syntax Check Exercises</span>"
-    ]
-  },
-  {
-    "objectID": "systems.html",
-    "href": "systems.html",
-    "title": "Supported Systems",
-    "section": "",
-    "text": "Bergmann, Moore & Nelson, The Logic Book",
-    "crumbs": [
-      "Supported Systems"
-    ]
-  },
-  {
-    "objectID": "systems.html#bergmann-moore-nelson-the-logic-book",
-    "href": "systems.html#bergmann-moore-nelson-the-logic-book",
-    "title": "Supported Systems",
-    "section": "",
-    "text": "Sentential logic\nFor the corresponding proof systems, see here.\n\nSelected with system=\"...\": LogicBookSD LogicBookSDPlus\nSentence letters:A…Z\nBrackets allowed (, )\nAssociative \\(\\land\\), \\(\\lor\\): left\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n⊃\n-&gt;, =&gt;,&gt;\n\n\n&\n/\\, &, and\n\n\n∨\n\\/, |, or\n\n\n↔︎\n&lt;-&gt;, &lt;=&gt;\n\n\n~\n-, ~, not\n\n\n\nExample:\n`A /\\ B /\\ (C_1 -&gt; (~R_2 \\/ (S &lt;-&gt; T)))`{system=\"LogicBookSD\"}\nproduces A /\\ B /\\ (C_1 -&gt; (~R_2 \\/ (S &lt;-&gt; T))).\n\n\nPredicate logic\n\nSelected with system=\"...\": LogicBookPD\nSentence letters: A … Z\nPredicate symbols: A …Z\nConstant symbols: a … v\nFunction symbols: no\nVariables: w…z\nAtomic formulas: \\(Fax\\)\nIdentity: no\nQuantifiers: \\((\\forall x)\\), \\((\\exists x)\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∀\nA\n\n\n∃\nE\n\n\n\nExample:\n`(Ax)(Gabx -&gt; (Ew)(Hxw /\\ P))`{system=\"LogicBookPD\"}\nproduces (Ax)(Gabx -&gt; (Ew)(Hx /\\ P))\n\n\nPredicate logic with equality\n\nSelected with system=\"...\": LogicBookPDE\nFunction symbols: a…t\nVariables: w…z\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n=\n=\n\n\n\nExample:\n`(Ax)(Gabx -&gt; (Ew)(Hxw /\\ P /\\ ~f(x)=w))`{system=\"LogicBookPDE\"}\nproduces (Ax)(Gabx -&gt; (Ew)(Hxw /\\ P /\\ ~f(x)=w))",
-    "crumbs": [
-      "Supported Systems"
-    ]
-  },
-  {
-    "objectID": "systems.html#bonevac-deduction",
-    "href": "systems.html#bonevac-deduction",
-    "title": "Supported Systems",
-    "section": "Bonevac, Deduction",
-    "text": "Bonevac, Deduction\n\nSentential logic\n\nSelected with system=\"...\": bonevacSL\nSentence letters: a…z\nBrackets allowed (, )\nAssociative \\(\\land\\), \\(\\lor\\): no\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n→\n-&gt;, =&gt;, &gt;\n\n\n&\n/\\, &, and\n\n\n∨\n\\/, |, or\n\n\n↔︎\n&lt;-&gt;, &lt;=&gt;\n\n\n¬\n-, ~, not\n\n\n\nExample:\n`(a & b) & (c_1 -&gt; (~r_2 \\/ (s &lt;-&gt; t)))`{system=\"bonevacSL\"}\nproduces (a /\\ b) /\\ (c_1 -&gt; (~r_2 \\/ (s &lt;-&gt; t))).\n\n\nQuantificational logic\n\nSelected with system=\"...\": bonevacQL\nSentence letters: none\nPredicate symbols: A …Z\nConstant symbols: a … w\nFunction symbols: none\nVariables: x…z\nAtomic formulas: \\(Fax\\)\nIdentity: =\nQuantifiers: \\(\\forall x\\), \\(\\exists x\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∀\nA\n\n\n∃\nE\n\n\n=\n=\n\n\n\nExample:\n`Ax(Gabx -&gt; Ey(Hxy & Pa & ~x=v))`{system=\"bonevacQL\"}\nproduces Ax(Gabx -&gt; Ey(Hxy & Pa & ~x=v))",
-    "crumbs": [
-      "Supported Systems"
-    ]
-  },
-  {
-    "objectID": "systems.html#gallow-forall-x-pittsburgh",
-    "href": "systems.html#gallow-forall-x-pittsburgh",
-    "title": "Supported Systems",
-    "section": "Gallow, forall x: Pittsburgh",
-    "text": "Gallow, forall x: Pittsburgh\nFor the corresponding proof systems, see here.\n\nSentential logic\n\nSelected with system=\"...\": gallowSL\nSentence letters: A…Z\nBrackets allowed (, ), [, ]\nAssociative \\(\\land\\), \\(\\lor\\): left\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n→\n-&gt;, =&gt;, &gt;\n\n\n∧\n/\\, &, and\n\n\n∨\n\\/, |, or\n\n\n↔︎\n&lt;-&gt;, &lt;=&gt;\n\n\n¬\n-, ~, not\n\n\n⊥\n!?, _|_\n\n\n\nExample:\n`A /\\ B /\\ (C_1 -&gt; (~R_2 \\/ [S &lt;-&gt; T]))`{system=\"gallowSL\"}\nproduces A /\\ B /\\ (C_1 -&gt; (~R_2 \\/ [_|_ &lt;-&gt; T])).\n\n\nFirst-order logic\n\nSelected with system=\"...\": gallowPL\nSentence letters: A …. Z\nPredicate symbols: A …Z\nConstant symbols: a … v\nFunction symbols: none\nVariables: w…z\nIdentity: no\nAtomic formulas: \\(Fax\\)\nQuantifiers: \\(\\forall x\\), \\(\\exists x\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∀\nA\n\n\n∃\nE\n\n\n\nExample:\n`Ax(Gabx -&gt; Ew((Hxw /\\ P) /\\ Qs))`{system=\"gallowPL\"}\nproduces Ax(Gabx -&gt; Ew((Hxw /\\ P) /\\ Qs))",
-    "crumbs": [
-      "Supported Systems"
-    ]
-  },
-  {
-    "objectID": "systems.html#gamut-logic-language-and-meaning",
-    "href": "systems.html#gamut-logic-language-and-meaning",
-    "title": "Supported Systems",
-    "section": "Gamut, Logic, Language, and Meaning",
-    "text": "Gamut, Logic, Language, and Meaning\n\nPropositional logic\n\nSelected with system=\"...\": gamutIPND gamutPND gamutPNDPlus\nSentence letters: a…z\nBrackets allowed (, )\nAssociative \\(\\land\\), \\(\\lor\\): no\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n→\n-&gt;, =&gt;, &gt;\n\n\n∧\n/\\, &, and\n\n\n∨\n\\/, |, or\n\n\n↔︎\n&lt;-&gt;, &lt;=&gt;\n\n\n¬\n-, ~, not\n\n\n⊥\n!?, _|_\n\n\n\nExample:\n`(a /\\ b) /\\ (c_1 -&gt; (~r_2 \\/ (_|_ &lt;-&gt; t)))`{system=\"gamutIPND\"}\nproduces (a /\\ b) /\\ (c_1 -&gt; (~r_2 \\/ (_|_ &lt;-&gt; t))).\n\n\nPredicate logic\n\nSelected with system=\"...\": gamutND\nSentence letters: none\nPredicate symbols: A …Z\nConstant symbols: a … r\nFunction symbols: none\nVariables: s…z\nAtomic formulas: \\(Fax\\)\nIdentity: =\nQuantifiers: \\(\\forall x\\), \\(\\exists x\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∀\nA\n\n\n∃\nE\n\n\n=\n=\n\n\n\nExample:\n`Ax(Gabx -&gt; Ew(Hxw /\\ (_|_ \\/ ~x=w)))`{system=\"gamutND\"}\nproduces Ax(Gabx -&gt; Ew(Hxw /\\ (_|_ \\/ ~x=w)))",
-    "crumbs": [
-      "Supported Systems"
-    ]
-  },
-  {
-    "objectID": "systems.html#goldfarb-deductive-logic",
-    "href": "systems.html#goldfarb-deductive-logic",
-    "title": "Supported Systems",
-    "section": "Goldfarb, Deductive Logic",
-    "text": "Goldfarb, Deductive Logic\n\nPropositional logic\n\nSelected with system=\"...\": goldfarbPropND\nSentence letters: a…z\nBrackets allowed (, )\nAssociative \\(\\land\\), \\(\\lor\\): no\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n⊃\n&gt;, -&gt;, ⊃, →\n\n\n∙\n., ∧, ∙\n\n\n∨\n\\/, |, or\n\n\n≡\n&lt;-&gt;, &lt;=&gt;, &lt;&gt;\n\n\n-\n-, ~, not\n\n\n⊥\n!?, _|_\n\n\n\nExample:\n`(a /\\ b) /\\ (c_1 -&gt; (~r_2 \\/ (_|_ &lt;-&gt; t)))`{system=\"goldfarbPropND\"}\nproduces (a /\\ b) /\\ (c_1 -&gt; (~r_2 \\/ (_|_ &lt;-&gt; t))).\n\n\nPredicate logic\n\nSelected with system=\"...\": goldfarbND\nSentence letters: none\nPredicate symbols: A …Z\nConstant symbols: none\nFunction symbols: none\nVariables: a … z\nAtomic formulas: \\(Fxy\\)\nIdentity: no\nQuantifiers: \\((\\forall x)\\), \\((\\exists x)\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∀\nA\n\n\n∃\nE\n\n\n\nExample:\n`(Ax)(Gabx -&gt; (Ew)(Hxw /\\ P))`{system=\"goldfarbND\"}\nproduces Ax(Gax -&gt; Ew(Hxw /\\ Pw))",
-    "crumbs": [
-      "Supported Systems"
-    ]
-  },
-  {
-    "objectID": "systems.html#hardegree-symbolic-logic",
-    "href": "systems.html#hardegree-symbolic-logic",
-    "title": "Supported Systems",
-    "section": "Hardegree, Symbolic Logic",
-    "text": "Hardegree, Symbolic Logic\n\nSentential logic\n\nSelected with system=\"...\": hardegreeSL\nSentence letters: A … Z\nBrackets allowed (, )\nAssociative \\(\\land\\), \\(\\lor\\): left\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n→\n-&gt;, =&gt;,&gt;\n\n\n&\n/\\, &, and\n\n\n∨\n\\/, |, or\n\n\n↔︎\n&lt;-&gt;, &lt;=&gt;\n\n\n~\n-, ~, not\n\n\n⨳\n!?, _|_\n\n\n\nExample:\n`A & G & (R_1 -&gt; (~R_2 \\/ (_|_ &lt;-&gt; T)))`{system=\"hardegreeSL\"}\nproduces A & G & (R_1 -&gt; (~R_2 \\/ (_|_ &lt;-&gt; T))).\n\n\nPredicate logic\n\nSelected with system=\"...\": hardegreePL\nSentence letters: none\nPredicate symbols: A …Z\nConstant symbols: a … s\nFunction symbols: none\nVariables: t…z\nAtomic formulas: \\(Fax\\)\nIdentity: no\nQuantifiers: \\(\\forall x\\), \\(\\exists x\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∀\nA\n\n\n∃\nE\n\n\n\nExample:\n`Ax(Gabx -&gt; Ev(Hxe & Ov & _|_))`{system=\"hardegreePL\"}\nproduces Ax(Gabx -&gt; Ev(Hxe & Ov & _|_))",
-    "crumbs": [
-      "Supported Systems"
-    ]
-  },
-  {
-    "objectID": "systems.html#hausman-kahane-tidman-logic-and-philosophy",
-    "href": "systems.html#hausman-kahane-tidman-logic-and-philosophy",
-    "title": "Supported Systems",
-    "section": "Hausman, Kahane & Tidman, Logic and Philosophy",
-    "text": "Hausman, Kahane & Tidman, Logic and Philosophy\n\nSentential logic\n\nSelected with system=\"...\": hausmanSL\nSentence letters: A…Z\nBrackets allowed [, ], (, ), {, }, (only in that order)\nAssociative \\(\\land\\), \\(\\lor\\): no\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n⊃\n⊃, →,&gt;\n\n\n∙\n., ∧, ∙\n\n\n∨\n\\/, |, or\n\n\n≡\n&lt;-&gt;, &lt;=&gt;, &lt;&gt;\n\n\n~\n-, ~, not\n\n\n\nExample:\n`[A . B] . [C_1 &gt; (~R_2 \\/ {S &lt;&gt; T})]`{system=\"hausmanSL\"}\nproduces [A . B] . [C_1 &gt; (~R_2 \\/ {S &lt;&gt; T})].\n\n\nPredicate logic\n\nSelected with system=\"...\": hausmanPL\nSentence letters: A … Z\nPredicate symbols: A …Z\nConstant symbols: a … t\nFunction symbols: no\nVariables: u…z\nAtomic formulas: \\(Fax\\)\nIdentity: =\nQuantifiers: \\((x)\\), \\((\\exists x)\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∃\nE\n\n\n=\n=\n\n\n\nExample:\n`(x)[Gabx &gt; (Eu)(Hxu . {P \\/ ~x=u})]`{system=\"hausmanPL\"}\nproduces (x)[Gabx &gt; (Eu)(Hxu . {P \\/ ~x=u})]",
-    "crumbs": [
-      "Supported Systems"
-    ]
-  },
-  {
-    "objectID": "systems.html#howard-snyder-howard-snyder-wasserman-the-power-of-logic",
-    "href": "systems.html#howard-snyder-howard-snyder-wasserman-the-power-of-logic",
-    "title": "Supported Systems",
-    "section": "Howard-Snyder, Howard-Snyder & Wasserman, The Power of Logic",
-    "text": "Howard-Snyder, Howard-Snyder & Wasserman, The Power of Logic\n\nSentential logic\n\nSelected with system=\"...\": howardSnyderSL\nSentence letters: A…Z\nWith subscripts: ?\nBrackets allowed (, ), [, ], {, }\nAssociative \\(\\land\\), \\(\\lor\\): no\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n→\n-&gt;, =&gt;,&gt;\n\n\n∙\n., ∧, ∙\n\n\n∨\n\\/, |, or\n\n\n↔︎\n&lt;-&gt;, &lt;=&gt;, &lt;&gt;\n\n\n~\n-, ~, not\n\n\n\nExample:\n`(A . B) . [C_1 -&gt; (~R_2 \\/ {S &lt;-&gt; T})]`{system=\"howardSnyderSL\"}\nproduces (A . B) . [C_1 -&gt; (~R_2 \\/ {S &lt;-&gt; T})].\n\n\nPredicate logic\n\nSelected with system=\"...\": howardSnyderPL\nSentence letters: A … Z\nPredicate symbols: A …Z\nConstant symbols: a … u\nFunction symbols: no\nVariables: v…z\nAtomic formulas: \\(Fax\\)\nIdentity: =\nQuantifiers: \\((x)\\), \\((\\exists x)\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∃\nE\n\n\n=\n=\n\n\n\nExample:\n`(x)[Gabx -&gt; (Ev)(Hxv . (P \\/ ~x=v))]`{system=\"howardSnyderPL\"}\nproduces (x)[Gabx -&gt; (Ev)(Hxv . (P \\/ ~x=v))]",
-    "crumbs": [
-      "Supported Systems"
-    ]
-  },
-  {
-    "objectID": "systems.html#hurley-concise-introduction-to-logic",
-    "href": "systems.html#hurley-concise-introduction-to-logic",
-    "title": "Supported Systems",
-    "section": "Hurley, Concise Introduction to Logic",
-    "text": "Hurley, Concise Introduction to Logic\n\nSentential logic\n\nSelected with system=\"...\": hurleySL\nSentence letters: A…Z\nWith subscripts: ?\nBrackets allowed (, ), [, ], {, }\nAssociative \\(\\land\\), \\(\\lor\\): no\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n⊃\n⊃, →,&gt;\n\n\n∙\n., ∧, ∙\n\n\n∨\n\\/, |, or\n\n\n≡\n&lt;-&gt;, &lt;=&gt;, &lt;&gt;\n\n\n~\n-, ~, not\n\n\n\nExample:\n`(A . B) . [C_1 &gt; (~R_2 \\/ {S &lt;-&gt; T})]`{system=\"hurleySL\"}\nproduces (A . B) . [C_1 &gt; (~R_2 \\/ {S &lt;-&gt; T})].\n\n\nPredicate logic\n\nSelected with system=\"...\": hurleyPL\nSentence letters: A … Z\nPredicate symbols: A …Z\nConstant symbols: a … w\nFunction symbols: no\nVariables: x…z\nAtomic formulas: \\(Fax\\)\nIdentity: =\nQuantifiers: \\((x)\\), \\((\\exists x)\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∃\nE\n\n\n=\n=\n\n\n\nExample:\n`(x)[Gabx &gt; (Ey)(Hxy . {P \\/ ~x=y})]`{system=\"hurleyPL\"}\nproduces (x)[Gabx &gt; (Ey)(Hxy . {P \\/ ~x=y})]",
-    "crumbs": [
-      "Supported Systems"
-    ]
-  },
-  {
-    "objectID": "systems.html#ichikawa-jenkins-forall-x-ubc",
-    "href": "systems.html#ichikawa-jenkins-forall-x-ubc",
-    "title": "Supported Systems",
-    "section": "Ichikawa-Jenkins, forall x: UBC",
-    "text": "Ichikawa-Jenkins, forall x: UBC\n\nSentential logic\n\nSelected with system=\"...\": ichikawaJenkinsSL\nSentence letters: A…Z\nBrackets allowed (, ), [, ]\nAssociative \\(\\land\\), \\(\\lor\\): yes\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n⊃\n-&gt;, =&gt;,&gt;\n\n\n&\n/\\, &, and\n\n\n∨\n\\/, |, or\n\n\n≡\n&lt;-&gt;, &lt;=&gt;\n\n\n¬\n-, ~, not\n\n\n\nExample:\n`A /\\ B /\\ (C_1 -&gt; (~R_2 \\/ [S &lt;-&gt; T]))`{system=\"ichikawaJenkinsSL\"}\nproduces A /\\ B /\\ (C_1 -&gt; (~R_2 \\/ [S &lt;-&gt; T])).\n\n\nQuantificational logic\n\nSelected with system=\"...\": ichikawaJenkinsQL\nSentence letters: none\nPredicate symbols: A …Z\nConstant symbols: a … w\nFunction symbols: none\nVariables: x…z\nAtomic formulas: \\(Fax\\)\nIdentity: =\nQuantifiers: \\(\\forall x\\), \\(\\exists x\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∀\nA\n\n\n∃\nE\n\n\n=\n=\n\n\n\nExample:\n`Ax(Gabx -&gt; Ey(Hxy /\\ Pa /\\ ~x=y))`{system=\"ichikawaJenkinsQL\"}\nproduces Ax(Gabx -&gt; Ey(Hxy /\\ (Pa /\\ ~x=y)))",
-    "crumbs": [
-      "Supported Systems"
-    ]
-  },
-  {
-    "objectID": "systems.html#johnson-forall-x-mississippi-state",
-    "href": "systems.html#johnson-forall-x-mississippi-state",
-    "title": "Supported Systems",
-    "section": "Johnson, forall x: Mississippi State",
-    "text": "Johnson, forall x: Mississippi State\nFor the corresponding proof systems, see here.\n\nSelected with system=\"...\": johnsonSL\nSentence letters: A…Z\nBrackets allowed (, ), [, ]\nAssociative \\(\\land\\), \\(\\lor\\): yes\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n→\n-&gt;, =&gt;,&gt;\n\n\n&\n/\\, &, and\n\n\n∨\nv, \\/, |, or\n\n\n↔︎\n&lt;-&gt;, &lt;=&gt;\n\n\n¬\n-, ~, not\n\n\n\nExample:\n`A & B & (C_1 -&gt; (~R_2 \\/ [S &lt;-&gt; T]))`{system=\"johnsonSL\"}\nproduces A & B & (C_1 -&gt; (~R_2 \\/ [S &lt;-&gt; T])).",
-    "crumbs": [
-      "Supported Systems"
-    ]
-  },
-  {
-    "objectID": "systems.html#leach-krouse-the-carnap-book",
-    "href": "systems.html#leach-krouse-the-carnap-book",
-    "title": "Supported Systems",
-    "section": "Leach-Krouse, The Carnap Book",
-    "text": "Leach-Krouse, The Carnap Book",
-    "crumbs": [
-      "Supported Systems"
-    ]
-  },
-  {
-    "objectID": "systems.html#kalish-montague-logic",
-    "href": "systems.html#kalish-montague-logic",
-    "title": "Supported Systems",
-    "section": "Kalish & Montague, Logic",
-    "text": "Kalish & Montague, Logic\nFor the corresponding proof systems, see here.\n\nPropositional logic\n\nSelected with system=\"...\": prop, montagueSC\nSentence letters: P … W\nBrackets allowed (, )\nAssociative \\(\\land\\), \\(\\lor\\): left\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n→\n-&gt;, =&gt;,&gt;\n\n\n∧\n/\\, &, and\n\n\n∨\n\\/, |, or\n\n\n↔︎\n&lt;-&gt;, &lt;=&gt;\n\n\n¬\n-, ~, not\n\n\n\nExample:\n`P /\\ Q /\\ (R_1 -&gt; (~R_2 \\/ (S &lt;-&gt; T)))`{system=\"prop\"}\nproduces P /\\ Q /\\ (R_1 -&gt; (~R_2 \\/ (S &lt;-&gt; T))).\n\n\nFirst-order logic\n\nSelected with system=\"...\": firstOrder, montagueQC\nSentence letters: P … W\nPredicate symbols: F …O\nConstant symbols: a … e\nFunction symbols: f … h\nVariables: v…z\nAtomic formulas: \\(F(a,x)\\)\nIdentity: =\nQuantifiers: \\(\\forall x\\), \\(\\exists x\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∀\nA\n\n\n∃\nE\n\n\n=\n=\n\n\n\nExample:\n`Ax(G(a,f(b),x) -&gt; Ev(H(x,v) /\\ P /\\ ~(x=v)))`{system=\"firstOrder\"}\nproduces Ax(G(a,f(b),x) -&gt; Ev(H(x,v) /\\ P /\\ ~(x=v)))\n\n\nMonadic second-order logic\n\nSelected with system=\"...\": secondOrder\nSecond-order variables: X … Z\n\nSymbols:\n\n\n\nConnective\nKeyboard\n\n\n\n\nλ\n\\\n\n\n\nExample:\nExample:\n`AX(\\x[Ey(F(y) /\\ X(x))](a))`{system=\"secondOrder\"}\nproduces AX(\\x[Ey(F(y) /\\ X(x))](a))\n\n\nPolyadic second-order logic\n\nSelected with system=\"...\": polyadicSecondOrder\nSecond-order variables: Xn … Zn\nArity: given by \\(n\\)\n\nExample:\n`AX2(\\x[Ay(F(y) -&gt; X2(x,y))](a))`{system=\"polyadicSecondOrder\"}\nproduces AX2(\\x[Ay(F(y) -&gt; X2(x,y))](a))",
-    "crumbs": [
-      "Supported Systems"
-    ]
-  },
-  {
-    "objectID": "systems.html#magnus-forall-x",
-    "href": "systems.html#magnus-forall-x",
-    "title": "Supported Systems",
-    "section": "Magnus, forall x",
-    "text": "Magnus, forall x\n\nSentential logic\n\nSelected with system=\"...\": magnusSL magnusSLPlus\nSentence letters: A…Z\nBrackets allowed (, ), [, ]\nAssociative \\(\\land\\), \\(\\lor\\): yes\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n→\n-&gt;, =&gt;,&gt;\n\n\n&\n/\\, &, and\n\n\n∨\n\\/, |, or\n\n\n↔︎\n&lt;-&gt;, &lt;=&gt;\n\n\n¬\n-, ~, not\n\n\n\nExample:\n`A & B & (C_1 -&gt; (~R_2 \\/ [S &lt;-&gt; T]))`{system=\"magnusSL\"}\nproduces A & B & (C_1 -&gt; (~R_2 \\/ [S &lt;-&gt; T])).\n\n\nQuantificational logic\n\nSelected with system=\"...\": magnusQL\nSentence letters: none\nPredicate symbols: A …Z\nConstant symbols: a … w\nFunction symbols: none\nVariables: x…z\nAtomic formulas: \\(Fax\\)\nIdentity: =\nQuantifiers: \\(\\forall x\\), \\(\\exists x\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∀\nA\n\n\n∃\nE\n\n\n=\n=\n\n\n\nExample:\n`Ax(Gabx -&gt; Ey(Hxy & Pa & ~x=v))`{system=\"magnusQL\"}\nproduces Ax(Gabx -&gt; Ey(Hxy & Pa & ~x=v))",
-    "crumbs": [
-      "Supported Systems"
-    ]
-  },
-  {
-    "objectID": "systems.html#open-logic-project",
-    "href": "systems.html#open-logic-project",
-    "title": "Supported Systems",
-    "section": "Open Logic Project",
-    "text": "Open Logic Project\nPlain propositional and first-order logic uses the same syntax as the TFL and FOL systems of forall x: Calgary, 2019+ version (see below. The parser for openLogicNK and openLogicLK is synonymous with thomasBolducAndZachTFL2019; and openLogicFOLNK and openLogicFOLLK with thomasBolducAndZachFOL2019.\nTwo OLP proof systems are supported: sequent calculus and natural deduction.\nIn addition, there are special systems supporting the language of arithmetic and the language of set theory.\n\nArithmetic\n\nSelected with system=\"...\": openLogicArithNK\nPredicate symbols: &lt; (two-place, infix)\nConstant symbols: a … r, 0\nFunction symbols: ' (one-place, postfix), +, * (two-place, infix)\nVariables: s…z\nIdentity: =, ≠\n\n\n\n\nSymbol\nKeyboard\n\n\n\n\n×\n*\n\n\n≠\n!=\n\n\n\nExample:\n`AxAy x * y' = (x * y) + y /\\ Ax(0!=x -&gt; 0&lt;x)`{system=\"openLogicArithNK\"}\nproduces AxAy x * y' = (x * y) + y /\\ Ax(0!=x -&gt; 0&lt;x)\n\n\nExtended Arithmetic\n\nSelected with system=\"...\": openLogicExArithNK\nPredicate symbols: strings beginning with uppercase letter, &lt; (two-place, infix)\nConstant symbols: strings beginning with lowercase letter, 0\nFunction symbols: strings beginning with lowercase letter, ' (one-place, postfix), +, * (two-place, infix)\nVariables: s…z\nIdentity: =, ≠\n\n\n\n\nSymbol\nKeyboard\n\n\n\n\n×\n*\n\n\n≠\n!=\n\n\n\nExample:\n`Q_1(0,0') /\\ Ax(0&lt;x -&gt; Sq_a(0,x))`{system=\"openLogicExArithNK\"}\nproduces Q_1(0,0') /\\ Ax(0&lt;x -&gt; Sq_a(0,x))\n\n\nSet theory\n\nSelected with system=\"...\": openLogicSTNK\nPredicate symbols: ∈ (two-place, infix)\nConstant symbols: a … r\nVariables: s…z\nIdentity: =, ≠\n\nThe system openLogicExSTNK is like the above but adds arbitrary string predicates and function symbols:\n\nSelected with system=\"...\": openLogicExESTNK\nPredicate symbols: strings beginning with uppercase letter\nConstant symbols: strings beginning with lowercase letter\nFunction symbols: strings beginning with lowercase letter\n\n\n\n\nSymbol\nKeyboard\n\n\n\n\n∈\n&lt;&lt;, &lt;e\n\n\n≠\n!=\n\n\n\nExample:\n`Ex(Ay ~y&lt;&lt;x /\\ Az(z!=x -&gt; Eu u&lt;&lt;z))`{system=\"openLogicSTNK\"}\nproduces Ex(Ay ~y&lt;&lt;x /\\ Az(z!=x -&gt; Eu u&lt;&lt;z))\n\n\nExtended set theory\n\nSelected with system=\"...\": openLogicESTNK, openLogicExESTNK\nPredicate symbols: ∈, ⊆ (two-place, infix)\nConstant symbols: ∅, a … r\nFunction symbols: ∪, ∩, /, Pow (two-place, infix)\nVariables: s…z\nIdentity: =, ≠\n\nThe system openLogicExESTNK is like the above but adds arbitrary string predicates and function symbols:\n\nSelected with system=\"...\": openLogicExESTNK\nPredicate symbols: strings beginning with uppercase letter\nConstant symbols: strings beginning with lowercase letter\nFunction symbols: strings beginning with lowercase letter\n\n\n\n\nSymbol\nKeyboard\n\n\n\n\n∅\n{}, empty\n\n\n∈\n&lt;&lt;, &lt;e, in\n\n\n⊆\n&lt;(, &lt;s, within, sub\n\n\n∪\nU, cup\n\n\n∩\nI, cap\n\n\n/\n\\\n\n\nPow\nP\n\n\n≠\n!=\n\n\n\nExample:\n`Ex(Ay ~y&lt;&lt;x /\\ Az(z!={} -&gt; Eu u &lt;( P(z)))`{system=\"openLogicESTNK\"}\nproduces Ex(Ay ~y&lt;&lt;x /\\ Az(z!={} -&gt; Eu u &lt;( P(z)))",
-    "crumbs": [
-      "Supported Systems"
-    ]
-  },
-  {
-    "objectID": "systems.html#thomas-bolduc-zach-forall-x-calgary",
-    "href": "systems.html#thomas-bolduc-zach-forall-x-calgary",
-    "title": "Supported Systems",
-    "section": "Thomas-Bolduc & Zach, forall x: Calgary",
-    "text": "Thomas-Bolduc & Zach, forall x: Calgary\nFor the corresponding proof systems, see here.\n\nFall 2019 and after\nThe 2019 systems refer to the syntax used in forall x: Carnap, Fall 2019 and after. The TFL system allows leaving out extra parentheses in conjunctions and disjunctions of more than 2 sentences. The pre-2019 systems do not, so can be used if stricter parenthesis rules are desired.\nThe major change is in the syntax of the FOL systems, which wrap arguments in parentheses. This allows support of function symbols and terms. The FOL2019 system also allows entering negated identities as x != y. This is not done in forall x: Calgary, but is the convention in the Open Logic Project.\n\nTruth-functional logic\n\nSelected with system=\"...\": thomasBolducAndZachTFL2019\nSentence letters: A…Z\nBrackets allowed (, ), [, ]\nAssociative \\(\\land\\), \\(\\lor\\): left\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n→\n-&gt;, =&gt;, &gt;\n\n\n∧\n/\\, &, and\n\n\n∨\n\\/, |, or\n\n\n↔︎\n&lt;-&gt;, &lt;=&gt;\n\n\n¬\n-, ~, not\n\n\n⊥\n!?, _|_\n\n\n\nExample:\n`A /\\ B /\\ (C_1 -&gt; (~R_2 \\/ [S &lt;-&gt; T]))`{system=\"thomasBolducAndZachTFL2019\"}\nproduces A /\\ B /\\ (C_1 -&gt; (~R_2 \\/ [_|_ &lt;-&gt; T])).\n\n\nFirst-order logic\n\nSelected with system=\"...\": thomasBolducAndZachFOL2019, thomasBolducAndZachFOLPlus2019\nSentence letters: A …. Z\nPredicate symbols: A …Z\nConstant symbols: a … r\nFunction symbols: a…t\nVariables: s…z\nAtomic formulas: \\(F(a,x)\\)\nIdentity: =, ≠\nQuantifiers: \\(\\forall x\\), \\(\\exists x\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∀\nA\n\n\n∃\nE\n\n\n=\n=\n\n\n≠\n!=\n\n\n\nExample:\n`Ax(G(a,f(b),x) -&gt; Es(H(x,s) /\\ P /\\ x!=s))`{system=\"thomasBolducAndZachFOL2019\"}\nproduces Ax(G(a,f(b),x) -&gt; Es(H(x,s) /\\ P /\\ x!=s))\n\n\n\npre-Fall 2019\nThese syntax conventions were in force before the Fall 2019 edition of forall x: Calgary. They are still useful: (a) They coincide with the syntax conventions of Tim Button’s forall x: Cambridge and the text by Sean Ebbels-Duggan. (b) The TFL system requires all parentheses be included and displays with all parentheses. So it can be used in exercises that require TFL sentences be entered or displayed without bracketing conventions.\n\nTruth-functional logic\n\nSelected with system=\"...\": thomasBolducAndZachTFL, ebelsDugganTFL\nSentence letters: A…Z\nBrackets allowed (, ), [, ]\nAssociative \\(\\land\\), \\(\\lor\\): no\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n→\n-&gt;, =&gt;, &gt;\n\n\n∧\n/\\, &, and\n\n\n∨\n\\/, |, or\n\n\n↔︎\n&lt;-&gt;, &lt;=&gt;\n\n\n¬\n-, ~, not\n\n\n⊥\n!?, _|_\n\n\n\nExample:\n`(A /\\ B) /\\ (C_1 -&gt; (~R_2 \\/ [_|_ &lt;-&gt; T]))`{system=\"thomasBolducAndZachTFL\"}\nproduces (A /\\ B) /\\ (C_1 -&gt; (~R_2 \\/ [_|_ &lt;-&gt; T])).\nExample:\n`(A /\\ B) /\\ (C_1 -&gt; (~R_2 \\/ [_|_ &lt;-&gt; T]))`{system=\"ebelsDugganTFL\"}\nproduces (A /\\ B) /\\ (C_1 -&gt; (~R_2 \\/ [_|_ &lt;-&gt; T])).\n\n\nFirst-order logic\n\nSelected with system=\"...\": thomasBolducAndZachFOL\nSentence letters: A …. Z\nPredicate symbols: A …Z\nConstant symbols: a … r\nFunction symbols: none\nVariables: s…z\nAtomic formulas: \\(Fax\\)\nIdentity: =\nQuantifiers: \\(\\forall x\\), \\(\\exists x\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∀\nA\n\n\n∃\nE\n\n\n=\n=\n\n\n\nExample:\n`Ax(Gabx -&gt; Es(Hxs /\\ P /\\ ~x=s))`{system=\"thomasBolducAndZachFOL\"}\nproduces Ax(Gabx -&gt; Es(Hxs /\\ (P \\/ ~x=s)))",
-    "crumbs": [
-      "Supported Systems"
-    ]
-  },
-  {
-    "objectID": "systems.html#tomassi-logic",
-    "href": "systems.html#tomassi-logic",
-    "title": "Supported Systems",
-    "section": "Tomassi, Logic",
-    "text": "Tomassi, Logic\n\nPropositional logic\n\nSelected with system=\"...\": tomassiPL\nSentence letters: P … W\nBrackets allowed (, )\nAssociative \\(\\land\\), \\(\\lor\\): left\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n→\n-&gt;, =&gt;,&gt;\n\n\n&\n/\\, &, and\n\n\n∨\n\\/, |, or\n\n\n↔︎\n&lt;-&gt;, &lt;=&gt;\n\n\n~\n-, ~, not\n\n\n\nExample:\n`P /\\ Q /\\ (R_1 -&gt; (~R_2 \\/ (S &lt;-&gt; T)))`{system=\"tomassiPL\"}\nproduces P /\\ Q /\\ (R_1 -&gt; (~R_2 \\/ (S &lt;-&gt; T))).\n\n\nPredicate logic\n\nSelected with system=\"...\": tomassiQL\nSentence letters: none\nPredicate symbols: A …Z\nConstant symbols: a … t\nFunction symbols: none\nVariables: u…z\nAtomic formulas: \\(Fax\\)\nIdentity: =\nQuantifiers: \\(\\forall x\\), \\(\\exists x\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∀\nA\n\n\n∃\nE\n\n\n=\n=\n\n\n\nExample:\n`Ax[Gabx -&gt; Ev(Hxv /\\ Pr /\\ ~(x=v))]`{system=\"tomassiQL\"}\nproduces Ax[Gabx -&gt; Ev(Hxv /\\ Pr /\\ ~(x=v))]",
-    "crumbs": [
-      "Supported Systems"
     ]
   },
   {
@@ -1485,6 +1305,186 @@
     "crumbs": [
       "Advanced Usage",
       "<span class='chapter-number'>29</span>  <span class='chapter-title'>Configuring Carnap</span>"
+    ]
+  },
+  {
+    "objectID": "systems.html",
+    "href": "systems.html",
+    "title": "Supported Systems",
+    "section": "",
+    "text": "Bergmann, Moore & Nelson, The Logic Book",
+    "crumbs": [
+      "Supported Systems"
+    ]
+  },
+  {
+    "objectID": "systems.html#bergmann-moore-nelson-the-logic-book",
+    "href": "systems.html#bergmann-moore-nelson-the-logic-book",
+    "title": "Supported Systems",
+    "section": "",
+    "text": "Sentential logic\nFor the corresponding proof systems, see here.\n\nSelected with system=\"...\": LogicBookSD LogicBookSDPlus\nSentence letters:A…Z\nBrackets allowed (, )\nAssociative \\(\\land\\), \\(\\lor\\): left\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n⊃\n-&gt;, =&gt;,&gt;\n\n\n&\n/\\, &, and\n\n\n∨\n\\/, |, or\n\n\n↔︎\n&lt;-&gt;, &lt;=&gt;\n\n\n~\n-, ~, not\n\n\n\nExample:\n`A /\\ B /\\ (C_1 -&gt; (~R_2 \\/ (S &lt;-&gt; T)))`{system=\"LogicBookSD\"}\nproduces A /\\ B /\\ (C_1 -&gt; (~R_2 \\/ (S &lt;-&gt; T))).\n\n\nPredicate logic\n\nSelected with system=\"...\": LogicBookPD\nSentence letters: A … Z\nPredicate symbols: A …Z\nConstant symbols: a … v\nFunction symbols: no\nVariables: w…z\nAtomic formulas: \\(Fax\\)\nIdentity: no\nQuantifiers: \\((\\forall x)\\), \\((\\exists x)\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∀\nA\n\n\n∃\nE\n\n\n\nExample:\n`(Ax)(Gabx -&gt; (Ew)(Hxw /\\ P))`{system=\"LogicBookPD\"}\nproduces (Ax)(Gabx -&gt; (Ew)(Hx /\\ P))\n\n\nPredicate logic with equality\n\nSelected with system=\"...\": LogicBookPDE\nFunction symbols: a…t\nVariables: w…z\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n=\n=\n\n\n\nExample:\n`(Ax)(Gabx -&gt; (Ew)(Hxw /\\ P /\\ ~f(x)=w))`{system=\"LogicBookPDE\"}\nproduces (Ax)(Gabx -&gt; (Ew)(Hxw /\\ P /\\ ~f(x)=w))",
+    "crumbs": [
+      "Supported Systems"
+    ]
+  },
+  {
+    "objectID": "systems.html#bonevac-deduction",
+    "href": "systems.html#bonevac-deduction",
+    "title": "Supported Systems",
+    "section": "Bonevac, Deduction",
+    "text": "Bonevac, Deduction\n\nSentential logic\n\nSelected with system=\"...\": bonevacSL\nSentence letters: a…z\nBrackets allowed (, )\nAssociative \\(\\land\\), \\(\\lor\\): no\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n→\n-&gt;, =&gt;, &gt;\n\n\n&\n/\\, &, and\n\n\n∨\n\\/, |, or\n\n\n↔︎\n&lt;-&gt;, &lt;=&gt;\n\n\n¬\n-, ~, not\n\n\n\nExample:\n`(a & b) & (c_1 -&gt; (~r_2 \\/ (s &lt;-&gt; t)))`{system=\"bonevacSL\"}\nproduces (a /\\ b) /\\ (c_1 -&gt; (~r_2 \\/ (s &lt;-&gt; t))).\n\n\nQuantificational logic\n\nSelected with system=\"...\": bonevacQL\nSentence letters: none\nPredicate symbols: A …Z\nConstant symbols: a … w\nFunction symbols: none\nVariables: x…z\nAtomic formulas: \\(Fax\\)\nIdentity: =\nQuantifiers: \\(\\forall x\\), \\(\\exists x\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∀\nA\n\n\n∃\nE\n\n\n=\n=\n\n\n\nExample:\n`Ax(Gabx -&gt; Ey(Hxy & Pa & ~x=v))`{system=\"bonevacQL\"}\nproduces Ax(Gabx -&gt; Ey(Hxy & Pa & ~x=v))",
+    "crumbs": [
+      "Supported Systems"
+    ]
+  },
+  {
+    "objectID": "systems.html#gallow-forall-x-pittsburgh",
+    "href": "systems.html#gallow-forall-x-pittsburgh",
+    "title": "Supported Systems",
+    "section": "Gallow, forall x: Pittsburgh",
+    "text": "Gallow, forall x: Pittsburgh\nFor the corresponding proof systems, see here.\n\nSentential logic\n\nSelected with system=\"...\": gallowSL\nSentence letters: A…Z\nBrackets allowed (, ), [, ]\nAssociative \\(\\land\\), \\(\\lor\\): left\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n→\n-&gt;, =&gt;, &gt;\n\n\n∧\n/\\, &, and\n\n\n∨\n\\/, |, or\n\n\n↔︎\n&lt;-&gt;, &lt;=&gt;\n\n\n¬\n-, ~, not\n\n\n⊥\n!?, _|_\n\n\n\nExample:\n`A /\\ B /\\ (C_1 -&gt; (~R_2 \\/ [S &lt;-&gt; T]))`{system=\"gallowSL\"}\nproduces A /\\ B /\\ (C_1 -&gt; (~R_2 \\/ [_|_ &lt;-&gt; T])).\n\n\nFirst-order logic\n\nSelected with system=\"...\": gallowPL\nSentence letters: A …. Z\nPredicate symbols: A …Z\nConstant symbols: a … v\nFunction symbols: none\nVariables: w…z\nIdentity: no\nAtomic formulas: \\(Fax\\)\nQuantifiers: \\(\\forall x\\), \\(\\exists x\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∀\nA\n\n\n∃\nE\n\n\n\nExample:\n`Ax(Gabx -&gt; Ew((Hxw /\\ P) /\\ Qs))`{system=\"gallowPL\"}\nproduces Ax(Gabx -&gt; Ew((Hxw /\\ P) /\\ Qs))",
+    "crumbs": [
+      "Supported Systems"
+    ]
+  },
+  {
+    "objectID": "systems.html#gamut-logic-language-and-meaning",
+    "href": "systems.html#gamut-logic-language-and-meaning",
+    "title": "Supported Systems",
+    "section": "Gamut, Logic, Language, and Meaning",
+    "text": "Gamut, Logic, Language, and Meaning\n\nPropositional logic\n\nSelected with system=\"...\": gamutIPND gamutPND gamutPNDPlus\nSentence letters: a…z\nBrackets allowed (, )\nAssociative \\(\\land\\), \\(\\lor\\): no\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n→\n-&gt;, =&gt;, &gt;\n\n\n∧\n/\\, &, and\n\n\n∨\n\\/, |, or\n\n\n↔︎\n&lt;-&gt;, &lt;=&gt;\n\n\n¬\n-, ~, not\n\n\n⊥\n!?, _|_\n\n\n\nExample:\n`(a /\\ b) /\\ (c_1 -&gt; (~r_2 \\/ (_|_ &lt;-&gt; t)))`{system=\"gamutIPND\"}\nproduces (a /\\ b) /\\ (c_1 -&gt; (~r_2 \\/ (_|_ &lt;-&gt; t))).\n\n\nPredicate logic\n\nSelected with system=\"...\": gamutND\nSentence letters: none\nPredicate symbols: A …Z\nConstant symbols: a … r\nFunction symbols: none\nVariables: s…z\nAtomic formulas: \\(Fax\\)\nIdentity: =\nQuantifiers: \\(\\forall x\\), \\(\\exists x\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∀\nA\n\n\n∃\nE\n\n\n=\n=\n\n\n\nExample:\n`Ax(Gabx -&gt; Ew(Hxw /\\ (_|_ \\/ ~x=w)))`{system=\"gamutND\"}\nproduces Ax(Gabx -&gt; Ew(Hxw /\\ (_|_ \\/ ~x=w)))",
+    "crumbs": [
+      "Supported Systems"
+    ]
+  },
+  {
+    "objectID": "systems.html#goldfarb-deductive-logic",
+    "href": "systems.html#goldfarb-deductive-logic",
+    "title": "Supported Systems",
+    "section": "Goldfarb, Deductive Logic",
+    "text": "Goldfarb, Deductive Logic\n\nPropositional logic\n\nSelected with system=\"...\": goldfarbPropND\nSentence letters: a…z\nBrackets allowed (, )\nAssociative \\(\\land\\), \\(\\lor\\): no\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n⊃\n&gt;, -&gt;, ⊃, →\n\n\n∙\n., ∧, ∙\n\n\n∨\n\\/, |, or\n\n\n≡\n&lt;-&gt;, &lt;=&gt;, &lt;&gt;\n\n\n-\n-, ~, not\n\n\n⊥\n!?, _|_\n\n\n\nExample:\n`(a /\\ b) /\\ (c_1 -&gt; (~r_2 \\/ (_|_ &lt;-&gt; t)))`{system=\"goldfarbPropND\"}\nproduces (a /\\ b) /\\ (c_1 -&gt; (~r_2 \\/ (_|_ &lt;-&gt; t))).\n\n\nPredicate logic\n\nSelected with system=\"...\": goldfarbND\nSentence letters: none\nPredicate symbols: A …Z\nConstant symbols: none\nFunction symbols: none\nVariables: a … z\nAtomic formulas: \\(Fxy\\)\nIdentity: no\nQuantifiers: \\((\\forall x)\\), \\((\\exists x)\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∀\nA\n\n\n∃\nE\n\n\n\nExample:\n`(Ax)(Gabx -&gt; (Ew)(Hxw /\\ P))`{system=\"goldfarbND\"}\nproduces Ax(Gax -&gt; Ew(Hxw /\\ Pw))",
+    "crumbs": [
+      "Supported Systems"
+    ]
+  },
+  {
+    "objectID": "systems.html#hardegree-symbolic-logic",
+    "href": "systems.html#hardegree-symbolic-logic",
+    "title": "Supported Systems",
+    "section": "Hardegree, Symbolic Logic",
+    "text": "Hardegree, Symbolic Logic\n\nSentential logic\n\nSelected with system=\"...\": hardegreeSL\nSentence letters: A … Z\nBrackets allowed (, )\nAssociative \\(\\land\\), \\(\\lor\\): left\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n→\n-&gt;, =&gt;,&gt;\n\n\n&\n/\\, &, and\n\n\n∨\n\\/, |, or\n\n\n↔︎\n&lt;-&gt;, &lt;=&gt;\n\n\n~\n-, ~, not\n\n\n⨳\n!?, _|_\n\n\n\nExample:\n`A & G & (R_1 -&gt; (~R_2 \\/ (_|_ &lt;-&gt; T)))`{system=\"hardegreeSL\"}\nproduces A & G & (R_1 -&gt; (~R_2 \\/ (_|_ &lt;-&gt; T))).\n\n\nPredicate logic\n\nSelected with system=\"...\": hardegreePL\nSentence letters: none\nPredicate symbols: A …Z\nConstant symbols: a … s\nFunction symbols: none\nVariables: t…z\nAtomic formulas: \\(Fax\\)\nIdentity: no\nQuantifiers: \\(\\forall x\\), \\(\\exists x\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∀\nA\n\n\n∃\nE\n\n\n\nExample:\n`Ax(Gabx -&gt; Ev(Hxe & Ov & _|_))`{system=\"hardegreePL\"}\nproduces Ax(Gabx -&gt; Ev(Hxe & Ov & _|_))",
+    "crumbs": [
+      "Supported Systems"
+    ]
+  },
+  {
+    "objectID": "systems.html#hausman-kahane-tidman-logic-and-philosophy",
+    "href": "systems.html#hausman-kahane-tidman-logic-and-philosophy",
+    "title": "Supported Systems",
+    "section": "Hausman, Kahane & Tidman, Logic and Philosophy",
+    "text": "Hausman, Kahane & Tidman, Logic and Philosophy\n\nSentential logic\n\nSelected with system=\"...\": hausmanSL\nSentence letters: A…Z\nBrackets allowed [, ], (, ), {, }, (only in that order)\nAssociative \\(\\land\\), \\(\\lor\\): no\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n⊃\n⊃, →,&gt;\n\n\n∙\n., ∧, ∙\n\n\n∨\n\\/, |, or\n\n\n≡\n&lt;-&gt;, &lt;=&gt;, &lt;&gt;\n\n\n~\n-, ~, not\n\n\n\nExample:\n`[A . B] . [C_1 &gt; (~R_2 \\/ {S &lt;&gt; T})]`{system=\"hausmanSL\"}\nproduces [A . B] . [C_1 &gt; (~R_2 \\/ {S &lt;&gt; T})].\n\n\nPredicate logic\n\nSelected with system=\"...\": hausmanPL\nSentence letters: A … Z\nPredicate symbols: A …Z\nConstant symbols: a … t\nFunction symbols: no\nVariables: u…z\nAtomic formulas: \\(Fax\\)\nIdentity: =\nQuantifiers: \\((x)\\), \\((\\exists x)\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∃\nE\n\n\n=\n=\n\n\n\nExample:\n`(x)[Gabx &gt; (Eu)(Hxu . {P \\/ ~x=u})]`{system=\"hausmanPL\"}\nproduces (x)[Gabx &gt; (Eu)(Hxu . {P \\/ ~x=u})]",
+    "crumbs": [
+      "Supported Systems"
+    ]
+  },
+  {
+    "objectID": "systems.html#howard-snyder-howard-snyder-wasserman-the-power-of-logic",
+    "href": "systems.html#howard-snyder-howard-snyder-wasserman-the-power-of-logic",
+    "title": "Supported Systems",
+    "section": "Howard-Snyder, Howard-Snyder & Wasserman, The Power of Logic",
+    "text": "Howard-Snyder, Howard-Snyder & Wasserman, The Power of Logic\n\nSentential logic\n\nSelected with system=\"...\": howardSnyderSL\nSentence letters: A…Z\nWith subscripts: ?\nBrackets allowed (, ), [, ], {, }\nAssociative \\(\\land\\), \\(\\lor\\): no\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n→\n-&gt;, =&gt;,&gt;\n\n\n∙\n., ∧, ∙\n\n\n∨\n\\/, |, or\n\n\n↔︎\n&lt;-&gt;, &lt;=&gt;, &lt;&gt;\n\n\n~\n-, ~, not\n\n\n\nExample:\n`(A . B) . [C_1 -&gt; (~R_2 \\/ {S &lt;-&gt; T})]`{system=\"howardSnyderSL\"}\nproduces (A . B) . [C_1 -&gt; (~R_2 \\/ {S &lt;-&gt; T})].\n\n\nPredicate logic\n\nSelected with system=\"...\": howardSnyderPL\nSentence letters: A … Z\nPredicate symbols: A …Z\nConstant symbols: a … u\nFunction symbols: no\nVariables: v…z\nAtomic formulas: \\(Fax\\)\nIdentity: =\nQuantifiers: \\((x)\\), \\((\\exists x)\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∃\nE\n\n\n=\n=\n\n\n\nExample:\n`(x)[Gabx -&gt; (Ev)(Hxv . (P \\/ ~x=v))]`{system=\"howardSnyderPL\"}\nproduces (x)[Gabx -&gt; (Ev)(Hxv . (P \\/ ~x=v))]",
+    "crumbs": [
+      "Supported Systems"
+    ]
+  },
+  {
+    "objectID": "systems.html#hurley-concise-introduction-to-logic",
+    "href": "systems.html#hurley-concise-introduction-to-logic",
+    "title": "Supported Systems",
+    "section": "Hurley, Concise Introduction to Logic",
+    "text": "Hurley, Concise Introduction to Logic\n\nSentential logic\n\nSelected with system=\"...\": hurleySL\nSentence letters: A…Z\nWith subscripts: ?\nBrackets allowed (, ), [, ], {, }\nAssociative \\(\\land\\), \\(\\lor\\): no\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n⊃\n⊃, →,&gt;\n\n\n∙\n., ∧, ∙\n\n\n∨\n\\/, |, or\n\n\n≡\n&lt;-&gt;, &lt;=&gt;, &lt;&gt;\n\n\n~\n-, ~, not\n\n\n\nExample:\n`(A . B) . [C_1 &gt; (~R_2 \\/ {S &lt;-&gt; T})]`{system=\"hurleySL\"}\nproduces (A . B) . [C_1 &gt; (~R_2 \\/ {S &lt;-&gt; T})].\n\n\nPredicate logic\n\nSelected with system=\"...\": hurleyPL\nSentence letters: A … Z\nPredicate symbols: A …Z\nConstant symbols: a … w\nFunction symbols: no\nVariables: x…z\nAtomic formulas: \\(Fax\\)\nIdentity: =\nQuantifiers: \\((x)\\), \\((\\exists x)\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∃\nE\n\n\n=\n=\n\n\n\nExample:\n`(x)[Gabx &gt; (Ey)(Hxy . {P \\/ ~x=y})]`{system=\"hurleyPL\"}\nproduces (x)[Gabx &gt; (Ey)(Hxy . {P \\/ ~x=y})]",
+    "crumbs": [
+      "Supported Systems"
+    ]
+  },
+  {
+    "objectID": "systems.html#ichikawa-jenkins-forall-x-ubc",
+    "href": "systems.html#ichikawa-jenkins-forall-x-ubc",
+    "title": "Supported Systems",
+    "section": "Ichikawa-Jenkins, forall x: UBC",
+    "text": "Ichikawa-Jenkins, forall x: UBC\n\nSentential logic\n\nSelected with system=\"...\": ichikawaJenkinsSL\nSentence letters: A…Z\nBrackets allowed (, ), [, ]\nAssociative \\(\\land\\), \\(\\lor\\): yes\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n⊃\n-&gt;, =&gt;,&gt;\n\n\n&\n/\\, &, and\n\n\n∨\n\\/, |, or\n\n\n≡\n&lt;-&gt;, &lt;=&gt;\n\n\n¬\n-, ~, not\n\n\n\nExample:\n`A /\\ B /\\ (C_1 -&gt; (~R_2 \\/ [S &lt;-&gt; T]))`{system=\"ichikawaJenkinsSL\"}\nproduces A /\\ B /\\ (C_1 -&gt; (~R_2 \\/ [S &lt;-&gt; T])).\n\n\nQuantificational logic\n\nSelected with system=\"...\": ichikawaJenkinsQL\nSentence letters: none\nPredicate symbols: A …Z\nConstant symbols: a … w\nFunction symbols: none\nVariables: x…z\nAtomic formulas: \\(Fax\\)\nIdentity: =\nQuantifiers: \\(\\forall x\\), \\(\\exists x\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∀\nA\n\n\n∃\nE\n\n\n=\n=\n\n\n\nExample:\n`Ax(Gabx -&gt; Ey(Hxy /\\ Pa /\\ ~x=y))`{system=\"ichikawaJenkinsQL\"}\nproduces Ax(Gabx -&gt; Ey(Hxy /\\ (Pa /\\ ~x=y)))",
+    "crumbs": [
+      "Supported Systems"
+    ]
+  },
+  {
+    "objectID": "systems.html#johnson-forall-x-mississippi-state",
+    "href": "systems.html#johnson-forall-x-mississippi-state",
+    "title": "Supported Systems",
+    "section": "Johnson, forall x: Mississippi State",
+    "text": "Johnson, forall x: Mississippi State\nFor the corresponding proof systems, see here.\n\nSelected with system=\"...\": johnsonSL\nSentence letters: A…Z\nBrackets allowed (, ), [, ]\nAssociative \\(\\land\\), \\(\\lor\\): yes\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n→\n-&gt;, =&gt;,&gt;\n\n\n&\n/\\, &, and\n\n\n∨\nv, \\/, |, or\n\n\n↔︎\n&lt;-&gt;, &lt;=&gt;\n\n\n¬\n-, ~, not\n\n\n\nExample:\n`A & B & (C_1 -&gt; (~R_2 \\/ [S &lt;-&gt; T]))`{system=\"johnsonSL\"}\nproduces A & B & (C_1 -&gt; (~R_2 \\/ [S &lt;-&gt; T])).",
+    "crumbs": [
+      "Supported Systems"
+    ]
+  },
+  {
+    "objectID": "systems.html#leach-krouse-the-carnap-book",
+    "href": "systems.html#leach-krouse-the-carnap-book",
+    "title": "Supported Systems",
+    "section": "Leach-Krouse, The Carnap Book",
+    "text": "Leach-Krouse, The Carnap Book",
+    "crumbs": [
+      "Supported Systems"
+    ]
+  },
+  {
+    "objectID": "systems.html#kalish-montague-logic",
+    "href": "systems.html#kalish-montague-logic",
+    "title": "Supported Systems",
+    "section": "Kalish & Montague, Logic",
+    "text": "Kalish & Montague, Logic\nFor the corresponding proof systems, see here.\n\nPropositional logic\n\nSelected with system=\"...\": prop, montagueSC\nSentence letters: P … W\nBrackets allowed (, )\nAssociative \\(\\land\\), \\(\\lor\\): left\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n→\n-&gt;, =&gt;,&gt;\n\n\n∧\n/\\, &, and\n\n\n∨\n\\/, |, or\n\n\n↔︎\n&lt;-&gt;, &lt;=&gt;\n\n\n¬\n-, ~, not\n\n\n\nExample:\n`P /\\ Q /\\ (R_1 -&gt; (~R_2 \\/ (S &lt;-&gt; T)))`{system=\"prop\"}\nproduces P /\\ Q /\\ (R_1 -&gt; (~R_2 \\/ (S &lt;-&gt; T))).\n\n\nFirst-order logic\n\nSelected with system=\"...\": firstOrder, montagueQC\nSentence letters: P … W\nPredicate symbols: F …O\nConstant symbols: a … e\nFunction symbols: f … h\nVariables: v…z\nAtomic formulas: \\(F(a,x)\\)\nIdentity: =\nQuantifiers: \\(\\forall x\\), \\(\\exists x\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∀\nA\n\n\n∃\nE\n\n\n=\n=\n\n\n\nExample:\n`Ax(G(a,f(b),x) -&gt; Ev(H(x,v) /\\ P /\\ ~(x=v)))`{system=\"firstOrder\"}\nproduces Ax(G(a,f(b),x) -&gt; Ev(H(x,v) /\\ P /\\ ~(x=v)))\n\n\nMonadic second-order logic\n\nSelected with system=\"...\": secondOrder\nSecond-order variables: X … Z\n\nSymbols:\n\n\n\nConnective\nKeyboard\n\n\n\n\nλ\n\\\n\n\n\nExample:\nExample:\n`AX(\\x[Ey(F(y) /\\ X(x))](a))`{system=\"secondOrder\"}\nproduces AX(\\x[Ey(F(y) /\\ X(x))](a))\n\n\nPolyadic second-order logic\n\nSelected with system=\"...\": polyadicSecondOrder\nSecond-order variables: Xn … Zn\nArity: given by \\(n\\)\n\nExample:\n`AX2(\\x[Ay(F(y) -&gt; X2(x,y))](a))`{system=\"polyadicSecondOrder\"}\nproduces AX2(\\x[Ay(F(y) -&gt; X2(x,y))](a))",
+    "crumbs": [
+      "Supported Systems"
+    ]
+  },
+  {
+    "objectID": "systems.html#magnus-forall-x",
+    "href": "systems.html#magnus-forall-x",
+    "title": "Supported Systems",
+    "section": "Magnus, forall x",
+    "text": "Magnus, forall x\n\nSentential logic\n\nSelected with system=\"...\": magnusSL magnusSLPlus\nSentence letters: A…Z\nBrackets allowed (, ), [, ]\nAssociative \\(\\land\\), \\(\\lor\\): yes\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n→\n-&gt;, =&gt;,&gt;\n\n\n&\n/\\, &, and\n\n\n∨\n\\/, |, or\n\n\n↔︎\n&lt;-&gt;, &lt;=&gt;\n\n\n¬\n-, ~, not\n\n\n\nExample:\n`A & B & (C_1 -&gt; (~R_2 \\/ [S &lt;-&gt; T]))`{system=\"magnusSL\"}\nproduces A & B & (C_1 -&gt; (~R_2 \\/ [S &lt;-&gt; T])).\n\n\nQuantificational logic\n\nSelected with system=\"...\": magnusQL\nSentence letters: none\nPredicate symbols: A …Z\nConstant symbols: a … w\nFunction symbols: none\nVariables: x…z\nAtomic formulas: \\(Fax\\)\nIdentity: =\nQuantifiers: \\(\\forall x\\), \\(\\exists x\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∀\nA\n\n\n∃\nE\n\n\n=\n=\n\n\n\nExample:\n`Ax(Gabx -&gt; Ey(Hxy & Pa & ~x=v))`{system=\"magnusQL\"}\nproduces Ax(Gabx -&gt; Ey(Hxy & Pa & ~x=v))",
+    "crumbs": [
+      "Supported Systems"
+    ]
+  },
+  {
+    "objectID": "systems.html#open-logic-project",
+    "href": "systems.html#open-logic-project",
+    "title": "Supported Systems",
+    "section": "Open Logic Project",
+    "text": "Open Logic Project\nPlain propositional and first-order logic uses the same syntax as the TFL and FOL systems of forall x: Calgary, 2019+ version (see below. The parser for openLogicNK and openLogicLK is synonymous with thomasBolducAndZachTFL2019; and openLogicFOLNK and openLogicFOLLK with thomasBolducAndZachFOL2019.\nTwo OLP proof systems are supported: sequent calculus and natural deduction.\nIn addition, there are special systems supporting the language of arithmetic and the language of set theory.\n\nArithmetic\n\nSelected with system=\"...\": openLogicArithNK\nPredicate symbols: &lt; (two-place, infix)\nConstant symbols: a … r, 0\nFunction symbols: ' (one-place, postfix), +, * (two-place, infix)\nVariables: s…z\nIdentity: =, ≠\n\n\n\n\nSymbol\nKeyboard\n\n\n\n\n×\n*\n\n\n≠\n!=\n\n\n\nExample:\n`AxAy x * y' = (x * y) + y /\\ Ax(0!=x -&gt; 0&lt;x)`{system=\"openLogicArithNK\"}\nproduces AxAy x * y' = (x * y) + y /\\ Ax(0!=x -&gt; 0&lt;x)\n\n\nExtended Arithmetic\n\nSelected with system=\"...\": openLogicExArithNK\nPredicate symbols: strings beginning with uppercase letter, &lt; (two-place, infix)\nConstant symbols: strings beginning with lowercase letter, 0\nFunction symbols: strings beginning with lowercase letter, ' (one-place, postfix), +, * (two-place, infix)\nVariables: s…z\nIdentity: =, ≠\n\n\n\n\nSymbol\nKeyboard\n\n\n\n\n×\n*\n\n\n≠\n!=\n\n\n\nExample:\n`Q_1(0,0') /\\ Ax(0&lt;x -&gt; Sq_a(0,x))`{system=\"openLogicExArithNK\"}\nproduces Q_1(0,0') /\\ Ax(0&lt;x -&gt; Sq_a(0,x))\n\n\nSet theory\n\nSelected with system=\"...\": openLogicSTNK\nPredicate symbols: ∈ (two-place, infix)\nConstant symbols: a … r\nVariables: s…z\nIdentity: =, ≠\n\nThe system openLogicExSTNK is like the above but adds arbitrary string predicates and function symbols:\n\nSelected with system=\"...\": openLogicExESTNK\nPredicate symbols: strings beginning with uppercase letter\nConstant symbols: strings beginning with lowercase letter\nFunction symbols: strings beginning with lowercase letter\n\n\n\n\nSymbol\nKeyboard\n\n\n\n\n∈\n&lt;&lt;, &lt;e\n\n\n≠\n!=\n\n\n\nExample:\n`Ex(Ay ~y&lt;&lt;x /\\ Az(z!=x -&gt; Eu u&lt;&lt;z))`{system=\"openLogicSTNK\"}\nproduces Ex(Ay ~y&lt;&lt;x /\\ Az(z!=x -&gt; Eu u&lt;&lt;z))\n\n\nExtended set theory\n\nSelected with system=\"...\": openLogicESTNK, openLogicExESTNK\nPredicate symbols: ∈, ⊆ (two-place, infix)\nConstant symbols: ∅, a … r\nFunction symbols: ∪, ∩, /, Pow (two-place, infix)\nVariables: s…z\nIdentity: =, ≠\n\nThe system openLogicExESTNK is like the above but adds arbitrary string predicates and function symbols:\n\nSelected with system=\"...\": openLogicExESTNK\nPredicate symbols: strings beginning with uppercase letter\nConstant symbols: strings beginning with lowercase letter\nFunction symbols: strings beginning with lowercase letter\n\n\n\n\nSymbol\nKeyboard\n\n\n\n\n∅\n{}, empty\n\n\n∈\n&lt;&lt;, &lt;e, in\n\n\n⊆\n&lt;(, &lt;s, within, sub\n\n\n∪\nU, cup\n\n\n∩\nI, cap\n\n\n/\n\\\n\n\nPow\nP\n\n\n≠\n!=\n\n\n\nExample:\n`Ex(Ay ~y&lt;&lt;x /\\ Az(z!={} -&gt; Eu u &lt;( P(z)))`{system=\"openLogicESTNK\"}\nproduces Ex(Ay ~y&lt;&lt;x /\\ Az(z!={} -&gt; Eu u &lt;( P(z)))",
+    "crumbs": [
+      "Supported Systems"
+    ]
+  },
+  {
+    "objectID": "systems.html#thomas-bolduc-zach-forall-x-calgary",
+    "href": "systems.html#thomas-bolduc-zach-forall-x-calgary",
+    "title": "Supported Systems",
+    "section": "Thomas-Bolduc & Zach, forall x: Calgary",
+    "text": "Thomas-Bolduc & Zach, forall x: Calgary\nFor the corresponding proof systems, see here.\n\nFall 2019 and after\nThe 2019 systems refer to the syntax used in forall x: Carnap, Fall 2019 and after. The TFL system allows leaving out extra parentheses in conjunctions and disjunctions of more than 2 sentences. The pre-2019 systems do not, so can be used if stricter parenthesis rules are desired.\nThe major change is in the syntax of the FOL systems, which wrap arguments in parentheses. This allows support of function symbols and terms. The FOL2019 system also allows entering negated identities as x != y. This is not done in forall x: Calgary, but is the convention in the Open Logic Project.\n\nTruth-functional logic\n\nSelected with system=\"...\": thomasBolducAndZachTFL2019\nSentence letters: A…Z\nBrackets allowed (, ), [, ]\nAssociative \\(\\land\\), \\(\\lor\\): left\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n→\n-&gt;, =&gt;, &gt;\n\n\n∧\n/\\, &, and\n\n\n∨\n\\/, |, or\n\n\n↔︎\n&lt;-&gt;, &lt;=&gt;\n\n\n¬\n-, ~, not\n\n\n⊥\n!?, _|_\n\n\n\nExample:\n`A /\\ B /\\ (C_1 -&gt; (~R_2 \\/ [S &lt;-&gt; T]))`{system=\"thomasBolducAndZachTFL2019\"}\nproduces A /\\ B /\\ (C_1 -&gt; (~R_2 \\/ [_|_ &lt;-&gt; T])).\n\n\nFirst-order logic\n\nSelected with system=\"...\": thomasBolducAndZachFOL2019, thomasBolducAndZachFOLPlus2019\nSentence letters: A …. Z\nPredicate symbols: A …Z\nConstant symbols: a … r\nFunction symbols: a…t\nVariables: s…z\nAtomic formulas: \\(F(a,x)\\)\nIdentity: =, ≠\nQuantifiers: \\(\\forall x\\), \\(\\exists x\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∀\nA\n\n\n∃\nE\n\n\n=\n=\n\n\n≠\n!=\n\n\n\nExample:\n`Ax(G(a,f(b),x) -&gt; Es(H(x,s) /\\ P /\\ x!=s))`{system=\"thomasBolducAndZachFOL2019\"}\nproduces Ax(G(a,f(b),x) -&gt; Es(H(x,s) /\\ P /\\ x!=s))\n\n\n\npre-Fall 2019\nThese syntax conventions were in force before the Fall 2019 edition of forall x: Calgary. They are still useful: (a) They coincide with the syntax conventions of Tim Button’s forall x: Cambridge and the text by Sean Ebbels-Duggan. (b) The TFL system requires all parentheses be included and displays with all parentheses. So it can be used in exercises that require TFL sentences be entered or displayed without bracketing conventions.\n\nTruth-functional logic\n\nSelected with system=\"...\": thomasBolducAndZachTFL, ebelsDugganTFL\nSentence letters: A…Z\nBrackets allowed (, ), [, ]\nAssociative \\(\\land\\), \\(\\lor\\): no\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n→\n-&gt;, =&gt;, &gt;\n\n\n∧\n/\\, &, and\n\n\n∨\n\\/, |, or\n\n\n↔︎\n&lt;-&gt;, &lt;=&gt;\n\n\n¬\n-, ~, not\n\n\n⊥\n!?, _|_\n\n\n\nExample:\n`(A /\\ B) /\\ (C_1 -&gt; (~R_2 \\/ [_|_ &lt;-&gt; T]))`{system=\"thomasBolducAndZachTFL\"}\nproduces (A /\\ B) /\\ (C_1 -&gt; (~R_2 \\/ [_|_ &lt;-&gt; T])).\nExample:\n`(A /\\ B) /\\ (C_1 -&gt; (~R_2 \\/ [_|_ &lt;-&gt; T]))`{system=\"ebelsDugganTFL\"}\nproduces (A /\\ B) /\\ (C_1 -&gt; (~R_2 \\/ [_|_ &lt;-&gt; T])).\n\n\nFirst-order logic\n\nSelected with system=\"...\": thomasBolducAndZachFOL\nSentence letters: A …. Z\nPredicate symbols: A …Z\nConstant symbols: a … r\nFunction symbols: none\nVariables: s…z\nAtomic formulas: \\(Fax\\)\nIdentity: =\nQuantifiers: \\(\\forall x\\), \\(\\exists x\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∀\nA\n\n\n∃\nE\n\n\n=\n=\n\n\n\nExample:\n`Ax(Gabx -&gt; Es(Hxs /\\ P /\\ ~x=s))`{system=\"thomasBolducAndZachFOL\"}\nproduces Ax(Gabx -&gt; Es(Hxs /\\ (P \\/ ~x=s)))",
+    "crumbs": [
+      "Supported Systems"
+    ]
+  },
+  {
+    "objectID": "systems.html#tomassi-logic",
+    "href": "systems.html#tomassi-logic",
+    "title": "Supported Systems",
+    "section": "Tomassi, Logic",
+    "text": "Tomassi, Logic\n\nPropositional logic\n\nSelected with system=\"...\": tomassiPL\nSentence letters: P … W\nBrackets allowed (, )\nAssociative \\(\\land\\), \\(\\lor\\): left\nConnectives:\n\n\n\n\nConnective\nKeyboard\n\n\n\n\n→\n-&gt;, =&gt;,&gt;\n\n\n&\n/\\, &, and\n\n\n∨\n\\/, |, or\n\n\n↔︎\n&lt;-&gt;, &lt;=&gt;\n\n\n~\n-, ~, not\n\n\n\nExample:\n`P /\\ Q /\\ (R_1 -&gt; (~R_2 \\/ (S &lt;-&gt; T)))`{system=\"tomassiPL\"}\nproduces P /\\ Q /\\ (R_1 -&gt; (~R_2 \\/ (S &lt;-&gt; T))).\n\n\nPredicate logic\n\nSelected with system=\"...\": tomassiQL\nSentence letters: none\nPredicate symbols: A …Z\nConstant symbols: a … t\nFunction symbols: none\nVariables: u…z\nAtomic formulas: \\(Fax\\)\nIdentity: =\nQuantifiers: \\(\\forall x\\), \\(\\exists x\\)\n\nQuantifiers:\n\n\n\nConnective\nKeyboard\n\n\n\n\n∀\nA\n\n\n∃\nE\n\n\n=\n=\n\n\n\nExample:\n`Ax[Gabx -&gt; Ev(Hxv /\\ Pr /\\ ~(x=v))]`{system=\"tomassiQL\"}\nproduces Ax[Gabx -&gt; Ev(Hxv /\\ Pr /\\ ~(x=v))]",
+    "crumbs": [
+      "Supported Systems"
     ]
   }
 ]
